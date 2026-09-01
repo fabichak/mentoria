@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{width:1000px;height:1000px;overflow:hidden;font-family:-apple-system,"Segoe UI","Helvetica Neue",sans-serif}
+  .banner{
+    position:relative;width:1000px;height:1000px;
+    background:
+      radial-gradient(55% 35% at 20% 0%, rgba(45,125,210,.35), transparent 60%),
+      radial-gradient(50% 30% at 90% 12%, rgba(47,212,165,.18), transparent 60%),
+      #050505;
+    color:#f5f5f0;overflow:hidden;
+  }
+  .grain{position:absolute;inset:0;opacity:.05;mix-blend-mode:overlay;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");}
+  svg.map{position:absolute;inset:0;width:1000px;height:1000px}
+  .content{position:relative;z-index:2;padding:70px;height:100%;display:flex;flex-direction:column;justify-content:space-between}
+  .eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:ui-monospace,Menlo,monospace;font-size:20px;letter-spacing:.14em;text-transform:uppercase;color:#2d7dd2;background:rgba(45,125,210,.14);border:1px solid rgba(45,125,210,.35);padding:10px 20px 10px 16px;border-radius:999px;width:fit-content}
+  .eyebrow::before{content:"●";font-size:12px;color:#2fd4a5}
+  h1{font-size:78px;line-height:1.1;letter-spacing:-.02em;font-weight:700;margin-top:36px;max-width:820px}
+  h1 .accent{color:#2d7dd2}
+  .sub{margin-top:24px;font-size:30px;line-height:1.5;color:#a7a9ad;max-width:760px}
+  .data{font-family:ui-monospace,Menlo,monospace;font-size:26px;color:#f5f5f0;margin-bottom:0;font-weight:600;letter-spacing:.02em}
+  .datawrap{display:flex;align-items:center;gap:14px;background:rgba(47,212,165,.12);border:1px solid rgba(47,212,165,.4);border-radius:16px;padding:20px 26px;width:fit-content}
+  .datawrap::before{content:"📅";font-size:26px}
+</style></head>
+<body>
+<div class="banner">
+  <div class="grain"></div>
+  <svg class="map" viewBox="0 0 1000 1000" fill="none">
+    <path d="M60 950 C 220 870, 260 700, 400 620 C 540 540, 500 380, 640 290 C 740 230, 780 130, 850 60"
+      stroke="rgba(245,245,240,.16)" stroke-width="3" stroke-dasharray="1 10" stroke-linecap="round"/>
+    <circle cx="60" cy="950" r="9" fill="#2fd4a5"/>
+    <circle cx="400" cy="620" r="8" fill="rgba(245,245,240,.5)"/>
+    <circle cx="640" cy="290" r="8" fill="rgba(245,245,240,.5)"/>
+    <circle cx="850" cy="60" r="11" fill="#2d7dd2"/>
+    <circle cx="850" cy="60" r="20" fill="none" stroke="#2d7dd2" stroke-width="2" opacity=".5"/>
+  </svg>
+  <div class="content">
+    <div class="eyebrow">grupo do evento</div>
+    <div>
+      <h1>A <span class="accent">Jornada</span> do Desenvolvedor</h1>
+      <p class="sub">Trilhas, dinheiro e os pontos cegos que travam 90% dos devs.</p>
+      <div class="datawrap" style="margin-top:40px"><span class="data">23/09 · 19h</span></div>
+    </div>
+  </div>
+</div>
+</body></html>

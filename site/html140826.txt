@@ -1,0 +1,578 @@
+<style>
+/* ===== Martin Fabichak — Code Leadership™ — LP embutida (Elementor HTML Widget) ===== */
+#mf-lp{
+  --blue:#2D7DD2;
+  --blue-hover:#1a65b8;
+  --bg:#000000;
+  --bg-2:#0A0A0A;
+  --bg-3:#111111;
+  --bg-4:#080808;
+  --card:#161616;
+  --card-2:#131313;
+  --border:#1E1E1E;
+  --text:#F5F5F0;
+  --muted:#AAAAAA;
+  --dim:#666666;
+  --dim-2:#444444;
+  background:var(--bg);
+  color:var(--text);
+  font-family:"Montserrat",Arial,Helvetica,sans-serif;
+  overflow-x:hidden;
+}
+#mf-lp *{box-sizing:border-box;}
+#mf-lp img{max-width:100%;display:block;}
+#mf-lp a{text-decoration:none;}
+#mf-lp .mf-wrap{max-width:1140px;margin:0 auto;padding:0 20px;}
+#mf-lp .mf-eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--blue);
+}
+#mf-lp .mf-eyebrow-pill{
+  background:rgba(45,125,210,.1);border:1px solid rgba(45,125,210,.25);
+  padding:6px 14px;border-radius:2px;
+}
+#mf-lp .mf-center{text-align:center;}
+#mf-lp h1,#mf-lp h2,#mf-lp h3{margin:0;font-family:"Montserrat",Arial,sans-serif;font-weight:800;line-height:1.2em;color:var(--text);}
+#mf-lp p{margin:0;font-family:"Montserrat",Arial,sans-serif;font-weight:300;line-height:1.7em;color:var(--muted);}
+#mf-lp .mf-btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  background:var(--blue);color:var(--text)!important;
+  font-family:"Montserrat",Arial,sans-serif;font-size:14px;font-weight:700;letter-spacing:1px;
+  text-transform:none;padding:18px 40px;border-radius:2px;border:none;cursor:pointer;
+  transition:background .25s ease;text-align:center;
+}
+#mf-lp .mf-btn:hover{background:var(--blue-hover);}
+
+/* ---------- HERO ---------- */
+#mf-lp .mf-hero{
+  position:relative;
+  padding:100px 0 80px;
+  background-image:url('https://martinfabichak.com/wp-content/uploads/2026/04/TOPO-DESKTOP-1.png');
+  background-position:top center;background-size:cover;background-repeat:no-repeat;
+}
+#mf-lp .mf-hero::after{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(180deg,rgba(10,10,10,0) 76%,rgba(10,10,10,1) 100%);
+}
+#mf-lp .mf-hero-inner{position:relative;z-index:1;max-width:1140px;margin:0 auto;padding:0 20px;}
+#mf-lp .mf-hero-col{max-width:640px;}
+#mf-lp .mf-hero h1.mf-h1a{font-size:43px;font-weight:800;margin-top:24px;}
+#mf-lp .mf-hero h1.mf-h1a span{color:var(--blue);}
+#mf-lp .mf-hero h1.mf-h1b{font-size:24px;font-weight:400;margin-top:24px;line-height:1.2em;}
+#mf-lp .mf-hero .mf-lead{font-size:18px;color:var(--muted);margin-top:24px;max-width:98%;}
+#mf-lp .mf-hero .mf-btn{margin-top:32px;}
+
+/* ---------- VIDEO + TESTEMUNHOS ---------- */
+#mf-lp .mf-vt{padding:0;}
+#mf-lp .mf-vt-grid{
+  max-width:1140px;margin:0 auto;padding:0 20px;
+  display:flex;gap:20px;align-items:flex-start;justify-content:center;flex-wrap:wrap;
+}
+#mf-lp .mf-video-box{
+  flex:1 1 417px;max-width:460px;
+  border:1px solid var(--blue);border-radius:15px;padding:10px;
+}
+#mf-lp .mf-video-frame{
+  position:relative;width:100%;aspect-ratio:9/16;border-radius:10px;overflow:hidden;
+  background:#000 center/cover no-repeat;cursor:pointer;
+}
+#mf-lp .mf-video-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0;}
+#mf-lp .mf-play{
+  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  width:68px;height:48px;background:rgba(20,20,20,.75);border-radius:14px;
+  display:flex;align-items:center;justify-content:center;
+  transition:background .2s ease;
+}
+#mf-lp .mf-video-frame:hover .mf-play{background:#FF0000;}
+#mf-lp .mf-play svg{width:22px;height:22px;fill:#fff;margin-left:3px;}
+
+#mf-lp .mf-testi{flex:1 1 400px;max-width:460px;padding:10px;}
+#mf-lp .mf-testi .mf-eyebrow{display:block;margin-bottom:8px;}
+#mf-lp .mf-testi h2{font-size:36px;margin-bottom:20px;}
+
+#mf-lp .mf-gallery{
+  display:grid;gap:8px;
+  grid-template-columns:23% 77%;
+  grid-template-rows:274px 203px 142px;
+}
+#mf-lp .mf-gallery a{position:relative;display:block;overflow:hidden;border-radius:2px;}
+#mf-lp .mf-gallery a img{width:100%;height:100%;object-fit:cover;transition:transform .35s ease;}
+#mf-lp .mf-gallery a:hover img{transform:scale(1.04);}
+#mf-lp .mf-gallery a:nth-child(1){grid-column:1/3;grid-row:1;}
+#mf-lp .mf-gallery a:nth-child(2){grid-column:1;grid-row:2;}
+#mf-lp .mf-gallery a:nth-child(3){grid-column:2;grid-row:2;}
+#mf-lp .mf-gallery a:nth-child(4){grid-column:1/3;grid-row:3;}
+
+/* ---------- DIAGNÓSTICO ---------- */
+#mf-lp .mf-diag{background:var(--bg-2);padding:80px 0;}
+#mf-lp .mf-diag h2{font-size:36px;margin:14px 0 40px;}
+#mf-lp .mf-diag > .mf-wrap > .mf-eyebrow{display:block;}
+#mf-lp .mf-cards2{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+#mf-lp .mf-card{border-radius:8px;padding:32px;overflow:hidden;}
+#mf-lp .mf-card.mf-yes{border:1px solid var(--blue);background:var(--card);}
+#mf-lp .mf-card.mf-no{border:1px solid var(--border);background:var(--bg-3);}
+#mf-lp .mf-card-head{
+  padding:18px 24px 16px;margin:-32px -32px 0;
+  font-family:"Montserrat",Arial,sans-serif;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
+}
+#mf-lp .mf-yes .mf-card-head{background:rgba(45,125,210,.12);border-bottom:1px solid var(--border);color:var(--blue);}
+#mf-lp .mf-no .mf-card-head{border-bottom:1px solid var(--border);color:var(--dim);}
+#mf-lp .mf-card-list{margin-top:8px;}
+#mf-lp .mf-card-item{display:flex;gap:12px;padding:14px 0;border-bottom:1px solid var(--border);align-items:flex-start;}
+#mf-lp .mf-card-item:last-child{border-bottom:none;}
+#mf-lp .mf-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0;margin-top:7px;}
+#mf-lp .mf-yes .mf-dot{background:var(--blue);}
+#mf-lp .mf-no .mf-dot{background:var(--dim-2);}
+#mf-lp .mf-card-item h4{font-family:"Montserrat",Arial,sans-serif;font-size:14px;font-weight:600;color:var(--text);margin:0 0 3px;}
+#mf-lp .mf-card-item p{font-size:13px;color:var(--muted);margin:0;line-height:1.55;}
+
+#mf-lp .mf-vetor{
+  margin:32px 10px 0;border:1px solid #2A2A2A;background:var(--card-2);border-radius:15px;
+  padding:20px;text-align:center;
+}
+#mf-lp .mf-vetor h3{font-size:20px;font-weight:700;color:#fff;}
+#mf-lp .mf-vetor p{max-width:70%;margin:12px auto 0;font-size:16px;}
+
+/* ---------- MÉTODO ---------- */
+#mf-lp .mf-metodo-title{text-align:center;margin-bottom:40px;}
+#mf-lp .mf-metodo-title h2{font-size:40px;}
+#mf-lp .mf-metodo-title h2 span{color:var(--blue);}
+
+/* ---------- TRILHA ---------- */
+#mf-lp .mf-trilha{background:var(--bg-2);padding:60px 0 4px;}
+#mf-lp .mf-trilha-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;}
+#mf-lp .mf-trilha-col{margin:15px;padding:40px;border-radius:18px;}
+#mf-lp .mf-trilha-col.mf-dev{border:1px solid #54595F;}
+#mf-lp .mf-trilha-col.mf-lead{border:1px solid var(--blue);}
+#mf-lp .mf-trilha-col .mf-eyebrow{display:block;text-align:center;font-size:12px;}
+#mf-lp .mf-trilha-col h2{font-size:40px;color:var(--blue);text-align:center;margin-top:16px;}
+#mf-lp .mf-trilha-col .mf-sub{font-size:17px;text-align:center;margin-top:16px;}
+#mf-lp .mf-sprint{display:flex;background:var(--card);border:1px solid var(--border);margin-top:20px;margin-bottom:1px;}
+#mf-lp .mf-sprint-num{
+  width:80px;min-width:80px;background:var(--bg-3);display:flex;align-items:center;justify-content:center;padding:20px 0;
+}
+#mf-lp .mf-sprint-num span{
+  font-family:"Montserrat",Arial,sans-serif;font-size:10px;font-weight:700;letter-spacing:.08em;color:var(--blue);
+  text-transform:uppercase;writing-mode:vertical-lr;
+}
+#mf-lp .mf-sprint-body{padding:24px 28px;}
+#mf-lp .mf-sprint-body h4{font-family:"Montserrat",Arial,sans-serif;font-size:17px;font-weight:700;color:var(--text);margin:0 0 8px;}
+#mf-lp .mf-sprint-body p{font-size:14px;font-weight:300;color:var(--muted);line-height:1.6;margin:0;}
+
+#mf-lp .mf-cta-mid{background:var(--bg-2);text-align:center;padding:0 0 47px;}
+#mf-lp .mf-cta-mid .mf-btn{margin-top:32px;}
+
+/* ---------- QUEM É ---------- */
+#mf-lp .mf-quem{background:var(--bg-3);padding:80px 0;}
+#mf-lp .mf-quem-grid{display:grid;grid-template-columns:38% 62%;gap:0;align-items:start;}
+#mf-lp .mf-quem-img{padding:0 20px;}
+#mf-lp .mf-quem-img img{border:1px solid #353535;border-radius:2px;width:100%;height:auto;aspect-ratio:596/856;object-fit:cover;}
+#mf-lp .mf-quem-text{padding:0 40px;}
+#mf-lp .mf-quem-text .mf-eyebrow{display:block;}
+#mf-lp .mf-quem-text h2{font-size:44px;margin-top:12px;}
+#mf-lp .mf-quem-text .mf-bio{margin-top:16px;font-size:16px;line-height:1.7em;}
+#mf-lp .mf-quem-text .mf-bio p{margin-bottom:14px;font-size:16px;color:var(--muted);}
+#mf-lp .mf-quem-text .mf-bio strong{color:var(--text);font-weight:700;}
+#mf-lp .mf-stats{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px;}
+#mf-lp .mf-stat{border:1px solid var(--border);padding:20px;}
+#mf-lp .mf-stat .mf-num{font-family:"Montserrat",Arial,sans-serif;font-size:24px;font-weight:800;color:var(--blue);margin:0;}
+#mf-lp .mf-stat .mf-label{font-family:"Montserrat",Arial,sans-serif;font-size:12px;font-weight:300;color:var(--muted);margin:4px 0 0;line-height:1.4;}
+
+/* ---------- A ESCOLHA ---------- */
+#mf-lp .mf-escolha{background:var(--bg-2);padding:80px 0;}
+#mf-lp .mf-escolha h2{font-size:40px;margin-top:14px;}
+#mf-lp .mf-escolha h2 span{color:var(--blue);}
+#mf-lp .mf-escolha-table{
+  display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border:1px solid var(--border);
+  margin-top:40px;
+}
+#mf-lp .mf-escolha-col{padding:36px 32px;}
+#mf-lp .mf-escolha-col.mf-off{background:var(--bg-3);}
+#mf-lp .mf-escolha-col.mf-on{background:var(--card);}
+#mf-lp .mf-escolha-col .mf-head{
+  font-family:"Montserrat",Arial,sans-serif;font-size:16px;font-weight:700;margin:0 0 20px;
+  padding-bottom:16px;border-bottom:1px solid var(--border);
+}
+#mf-lp .mf-off .mf-head{color:#999999;}
+#mf-lp .mf-on .mf-head{color:var(--text);}
+#mf-lp .mf-escolha-col .mf-row{
+  font-family:"Montserrat",Arial,sans-serif;font-size:15px;font-weight:300;display:flex;gap:10px;margin-bottom:14px;
+}
+#mf-lp .mf-off .mf-row{color:#999999;}
+#mf-lp .mf-on .mf-row{color:#bbbbbb;}
+#mf-lp .mf-on .mf-row .mf-arrow{color:var(--blue);flex-shrink:0;}
+
+/* ---------- PRÓXIMO PASSO ---------- */
+#mf-lp .mf-proximo{background:var(--bg-3);padding:100px 0;text-align:center;}
+#mf-lp .mf-proximo h2{font-size:40px;max-width:820px;margin:14px auto 0;}
+#mf-lp .mf-proximo h2 span{color:var(--blue);}
+#mf-lp .mf-proximo p.mf-desc{font-size:17px;max-width:700px;margin:20px auto 0;}
+#mf-lp .mf-proximo .mf-btn{margin-top:32px;}
+#mf-lp .mf-proximo .mf-small{text-align:center;font-size:13px;color:var(--dim-2);margin-top:16px;}
+#mf-lp .mf-proximo .mf-small span{color:#999999;}
+
+/* ---------- FOOTER ---------- */
+#mf-lp .mf-footer{background:var(--bg-4);border-top:1px solid var(--border);padding:28px 20px;text-align:center;}
+#mf-lp .mf-footer p{font-size:13px;color:#333333;}
+
+/* ---------- Reveal on scroll ---------- */
+#mf-lp .mf-reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease;}
+#mf-lp .mf-reveal.mf-in{opacity:1;transform:translateY(0);}
+
+/* ---------- Lightbox ---------- */
+#mf-lightbox{
+  position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:99999;
+  display:none;align-items:center;justify-content:center;padding:20px;
+}
+#mf-lightbox.mf-open{display:flex;}
+#mf-lightbox img{max-width:92vw;max-height:88vh;border-radius:4px;}
+#mf-lightbox .mf-lb-close{
+  position:absolute;top:20px;right:28px;width:44px;height:44px;border-radius:50%;
+  background:rgba(255,255,255,.08);color:#fff;font-size:24px;line-height:44px;text-align:center;cursor:pointer;
+}
+#mf-lightbox .mf-lb-nav{
+  position:absolute;top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:50%;
+  background:rgba(255,255,255,.08);color:#fff;font-size:22px;display:flex;align-items:center;justify-content:center;cursor:pointer;
+}
+#mf-lightbox .mf-lb-prev{left:20px;}
+#mf-lightbox .mf-lb-next{right:20px;}
+
+/* ===================== TABLET ===================== */
+@media(max-width:1024px){
+  #mf-lp .mf-hero h1.mf-h1a{font-size:50px;}
+  #mf-lp .mf-hero h1.mf-h1b{font-size:50px;}
+  #mf-lp .mf-hero .mf-lead{font-size:18px;}
+}
+
+/* ===================== MOBILE ===================== */
+@media(max-width:767px){
+  #mf-lp .mf-hero{
+    background-image:url('https://martinfabichak.com/wp-content/uploads/2026/04/TOPO-MOBILE-1.png');
+    padding:170px 10px 60px;
+  }
+  #mf-lp .mf-hero-inner{padding:0 10px;}
+  #mf-lp .mf-hero-col{max-width:100%;text-align:center;}
+  #mf-lp .mf-hero .mf-eyebrow{font-size:14px;}
+  #mf-lp .mf-hero h1.mf-h1a{font-size:23px;text-align:center;}
+  #mf-lp .mf-hero h1.mf-h1b{font-size:17px;text-align:center;}
+  #mf-lp .mf-hero .mf-lead{font-size:14px;text-align:center;max-width:100%;}
+  #mf-lp .mf-hero .mf-btn{font-size:14px;}
+
+  #mf-lp .mf-vt-grid{flex-direction:column;align-items:stretch;}
+  #mf-lp .mf-video-box,#mf-lp .mf-testi{max-width:100%;}
+  #mf-lp .mf-testi h2{font-size:24px;text-align:center;}
+  #mf-lp .mf-testi .mf-eyebrow{text-align:center;font-size:13px;}
+  #mf-lp .mf-gallery{grid-template-columns:76.7% 23.3%;grid-template-rows:167px 136px 116px;}
+
+  #mf-lp .mf-diag{padding:60px 0;}
+  #mf-lp .mf-diag h2{font-size:24px;}
+  #mf-lp .mf-cards2{grid-template-columns:1fr;}
+  #mf-lp .mf-vetor{margin:24px 0 0;}
+  #mf-lp .mf-vetor p{max-width:100%;font-size:14px;}
+
+  #mf-lp .mf-metodo-title h2{font-size:23px;}
+
+  #mf-lp .mf-trilha{padding:5px 0 60px;}
+  #mf-lp .mf-trilha-grid{grid-template-columns:1fr;}
+  #mf-lp .mf-trilha-col{margin:10px 0 0;padding:10px;}
+  #mf-lp .mf-trilha-col h2{font-size:35px;}
+  #mf-lp .mf-trilha-col .mf-sub{font-size:14px;}
+  #mf-lp .mf-sprint-body h4{font-size:15px;}
+  #mf-lp .mf-sprint-body p{font-size:14px;}
+  #mf-lp .mf-cta-mid{margin-top:-58px;padding-bottom:51px;}
+
+  #mf-lp .mf-quem{padding:60px 0;}
+  #mf-lp .mf-quem-grid{grid-template-columns:1fr;}
+  #mf-lp .mf-quem-img{padding:0 0 30px;max-width:320px;margin:0 auto;}
+  #mf-lp .mf-quem-text{padding:0;}
+  #mf-lp .mf-quem-text h2{font-size:25px;}
+  #mf-lp .mf-quem-text .mf-bio p{font-size:14px;}
+  #mf-lp .mf-stats{grid-template-columns:1fr 1fr;}
+  #mf-lp .mf-stat .mf-num{font-size:20px;}
+
+  #mf-lp .mf-escolha{padding:60px 0;}
+  #mf-lp .mf-escolha h2{font-size:23px;}
+  #mf-lp .mf-escolha-table{grid-template-columns:1fr;margin-top:24px;}
+
+  #mf-lp .mf-proximo{padding:60px 0;}
+  #mf-lp .mf-proximo h2{font-size:23px;}
+  #mf-lp .mf-proximo p.mf-desc{font-size:14px;}
+
+  #mf-lightbox .mf-lb-nav{width:38px;height:38px;font-size:18px;}
+  #mf-lightbox .mf-lb-prev{left:8px;}
+  #mf-lightbox .mf-lb-next{right:8px;}
+}
+
+/* ===================== DESKTOP ≥768 ===================== */
+@media(min-width:768px){
+  #mf-lp .mf-hero-col{width:54.7%;}
+}
+</style>
+
+<div id="mf-lp">
+
+  <!-- HERO -->
+  <section class="mf-hero">
+    <div class="mf-hero-inner">
+      <div class="mf-hero-col">
+        <span class="mf-eyebrow mf-eyebrow-pill mf-reveal">// Mentoria para Tech Lead e dev sênior</span>
+        <h1 class="mf-h1a mf-reveal">Se torne o melhor tech lead da sua empresa. <span>Mesmo sem ninguém ter te preparado</span></h1>
+        <h1 class="mf-h1b mf-reveal">Tenha um tech lead, Head e CTO com 20 anos de experiência, 10 deles na Europa, como seu mentor.</h1>
+        <p class="mf-lead mf-reveal">Para <b>devs sênior</b> e <b>tech leads</b> que querem dominar a liderança técnica e parar de aprender na base do erro.</p>
+        <a href="https://martinfabichak.com/redirect/" class="mf-btn mf-reveal">Quero falar com o Martin</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIDEO + TESTEMUNHOS -->
+  <section class="mf-vt">
+    <div class="mf-vt-grid">
+      <div class="mf-video-box mf-reveal">
+        <div class="mf-video-frame" id="mf-video" style="background-image:url('https://i.ytimg.com/vi/GJ-5etj1QV0/hqdefault.jpg');">
+          <div class="mf-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+        </div>
+      </div>
+      <div class="mf-testi mf-reveal">
+        <span class="mf-eyebrow">// mentoria</span>
+        <h2>O que dizem</h2>
+        <div class="mf-gallery" id="mf-gallery">
+          <a href="https://martinfabichak.com/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-27-at-16.44.48.jpeg" data-title="Depoimento 02"><img src="https://martinfabichak.com/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-27-at-16.44.48.jpeg" alt="Depoimento 02" loading="lazy"></a>
+          <a href="https://martinfabichak.com/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-27-at-16.44.09.jpeg" data-title="Depoimento 01"><img src="https://martinfabichak.com/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-27-at-16.44.09.jpeg" alt="Depoimento 01" loading="lazy"></a>
+          <a href="https://martinfabichak.com/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-27-at-16.45.30.jpeg" data-title="Depoimento 03"><img src="https://martinfabichak.com/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-27-at-16.45.30.jpeg" alt="Depoimento 03" loading="lazy"></a>
+          <a href="https://martinfabichak.com/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-27-at-16.45.43.jpeg" data-title="Depoimento 04"><img src="https://martinfabichak.com/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-27-at-16.45.43.jpeg" alt="Depoimento 04" loading="lazy"></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIAGNÓSTICO -->
+  <section class="mf-diag">
+    <div class="mf-wrap">
+      <span class="mf-eyebrow mf-center mf-reveal" style="display:block;">// O diagnóstico</span>
+      <h2 class="mf-center mf-reveal">Para quem é a mentoria?</h2>
+      <div class="mf-cards2 mf-reveal">
+        <div class="mf-card mf-yes">
+          <p class="mf-card-head">Se você é líder técnico ou dev senior</p>
+          <div class="mf-card-list">
+            <div class="mf-card-item"><div class="mf-dot"></div><div><h4>É um desenvolvedor experiênte</h4><p>Independente dos anos de experiência, é uma referência técnica</p></div></div>
+            <div class="mf-card-item"><div class="mf-dot"></div><div><h4>Gosta e quer liderar</h4><p>Já viu muita coisa dar errado e sabe que pode fazer melhor</p></div></div>
+            <div class="mf-card-item"><div class="mf-dot"></div><div><h4>Quer mais responsabilidade e dinheiro</h4><p>Sabe que no Brasil Líderes se destacam e por isso ganham mais, e quer assumir essa bronca</p></div></div>
+            <div class="mf-card-item"><div class="mf-dot"></div><div><h4>Sabe que pode melhorar</h4><p>É bom, mas sabe que pode aprender mais em todos os fatores: técnico, comunicação e visão de negócios</p></div></div>
+          </div>
+        </div>
+        <div class="mf-card mf-no">
+          <p class="mf-card-head">Para quem não é</p>
+          <div class="mf-card-list">
+            <div class="mf-card-item"><div class="mf-dot"></div><div><h4>Acha que sabe tudo</h4><p>Se você acha que sua liderança não pode melhorar, não importa o que eu diga, nada vai mudar</p></div></div>
+            <div class="mf-card-item"><div class="mf-dot"></div><div><h4>Não gosta de feedback</h4><p>Vou ser honesto com você em todo momento.</p></div></div>
+            <div class="mf-card-item"><div class="mf-dot"></div><div><h4>Quer uma pilula magica</h4><p>Nada acontece do dia pra noite, ou em semanas. Por isso vamos trabalhar juntos por 6 meses.</p></div></div>
+            <div class="mf-card-item"><div class="mf-dot"></div><div><h4>Não se importa com o seu time</h4><p>Se só você sabe e é importante, seu time nunca vai progredir, nem sua liderança.</p></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="mf-vetor mf-reveal">
+        <h3>Outro vetor de aprendizado</h3>
+        <p>O mercado tech te condiziu a evoluir tecnicamente — mas nunca te ensinou a evoluir profissionalmente. Liderança tem método. E método se aprende com quem já fez.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MÉTODO + TRILHA -->
+  <section class="mf-trilha">
+    <div class="mf-wrap">
+      <div class="mf-metodo-title mf-reveal">
+        <h2>Método <span>Code Leadership™</span></h2>
+      </div>
+    <div class="mf-trilha-grid">
+      <div class="mf-trilha-col mf-dev mf-reveal">
+        <span class="mf-eyebrow">// trilha para quem é</span>
+        <h2>Dev Sênior</h2>
+        <p class="mf-sub">3 sprints para se tornar um tech lead</p>
+        <div class="mf-sprint">
+          <div class="mf-sprint-num"><span>sprint 01</span></div>
+          <div class="mf-sprint-body"><h4>Moldando a mentalidade de Líder</h4><p>Planejar uma liderança emergente no contexto da sua empresa</p></div>
+        </div>
+        <div class="mf-sprint">
+          <div class="mf-sprint-num"><span>sprint 02</span></div>
+          <div class="mf-sprint-body"><h4>Criando espaço</h4><p>Criar oportunidades em seu trabalho atual para mostrar que você quer e pode ser líder</p></div>
+        </div>
+        <div class="mf-sprint">
+          <div class="mf-sprint-num"><span>sprint 03</span></div>
+          <div class="mf-sprint-body"><h4>Líder sem cargo</h4><p>Operar como líder ainda sem cargo criando evidência para promoção.</p></div>
+        </div>
+      </div>
+      <div class="mf-trilha-col mf-lead mf-reveal">
+        <span class="mf-eyebrow">// trilha para quem é</span>
+        <h2>Tech Lead</h2>
+        <p class="mf-sub">3 sprints para ser o melhor tech lead da empresa</p>
+        <div class="mf-sprint">
+          <div class="mf-sprint-num"><span>sprint 01</span></div>
+          <div class="mf-sprint-body"><h4>Líder reconhecido</h4><p>Ser tido como líder pela equipe, colegas e chefes</p></div>
+        </div>
+        <div class="mf-sprint">
+          <div class="mf-sprint-num"><span>sprint 02</span></div>
+          <div class="mf-sprint-body"><h4>Líder eficaz</h4><p>Se tornar eficiente, eficaz e reconhecido como Líder</p></div>
+        </div>
+        <div class="mf-sprint">
+          <div class="mf-sprint-num"><span>sprint 03</span></div>
+          <div class="mf-sprint-body"><h4>Líder influente</h4><p>Se tornar influente e uma peça estratégica da corporação.</p></div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="mf-cta-mid mf-reveal">
+      <a href="https://martinfabichak.com/redirect/" class="mf-btn">Quero minha conversa gratuita com o Martin</a>
+    </div>
+  </section>
+
+  <!-- QUEM É -->
+  <section class="mf-quem">
+    <div class="mf-wrap">
+      <div class="mf-quem-grid">
+        <div class="mf-quem-img mf-reveal">
+          <img src="https://martinfabichak.com/wp-content/uploads/2026/04/MARTIN2.png" alt="Martin Fabichak" width="596" height="856" loading="lazy">
+        </div>
+        <div class="mf-quem-text mf-reveal">
+          <span class="mf-eyebrow">// Quem é</span>
+          <h2>Martin Fabichak</h2>
+          <div class="mf-bio">
+            <p>Desenvolvedor desde os 14 anos. Líder desde 2009. <strong>Mais de 10 anos vivendo e trabalhando fora do Brasil</strong> — liderando times de jogos, frontend, backend e devops na Europa.</p>
+            <p>Foi CTO da Magic Media, onde liderou até <strong>160 desenvolvedores em 20+ projetos simultâneos</strong>, para inúmeras plataformas como PS4 e PS5, XBOX Series X/S, Switch 1 e 2, PC, mobile e diversas aplicações que escalaram para milhões de usuários.</p>
+            <p>O divisor de águas foi meu mentor, americano, ex-EA Games e DARPA, que me mostrou o que nenhuma empresa quis ensinar: como comunicar com stakeholders, medir sucesso em KPIs reais e navegar a corporação.</p>
+            <p>Em menos de 4 anos após esse mentor: CTO. €25 milhões em projetos vendidos, €100 milhões em projetos operados. 30+ líderes formados.</p>
+          </div>
+          <div class="mf-stats">
+            <div class="mf-stat"><p class="mf-num">+10 anos</p><p class="mf-label">liderando fora do Brasil</p></div>
+            <div class="mf-stat"><p class="mf-num">+160 devs</p><p class="mf-label">liderados como CTO</p></div>
+            <div class="mf-stat"><p class="mf-num">€100M</p><p class="mf-label">em projetos operados</p></div>
+            <div class="mf-stat"><p class="mf-num">30+</p><p class="mf-label">líderes formados</p></div>
+            <div class="mf-stat"><p class="mf-num">20+</p><p class="mf-label">projetos simultâneos</p></div>
+            <div class="mf-stat"><p class="mf-num">Formado em matemática aplicada</p><p class="mf-label">Honra ao mérito. IME-USP</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- A ESCOLHA -->
+  <section class="mf-escolha">
+    <div class="mf-wrap">
+      <span class="mf-eyebrow mf-center mf-reveal" style="display:block;">// A escolha</span>
+      <h2 class="mf-center mf-reveal">A decisão <span>é sua</span></h2>
+      <div class="mf-escolha-table mf-reveal">
+        <div class="mf-escolha-col mf-off">
+          <p class="mf-head">Continuar tentando sozinho</p>
+          <p class="mf-row">— Aguardar a promoção que nunca é explicada</p>
+          <p class="mf-row">— Estudar mais sem saber se vai mudar alguma coisa</p>
+          <p class="mf-row">— Trocar de empresa achando que o problema é o lugar</p>
+          <p class="mf-row">— Aprender na base do erro, sem ter alguém que já foi pelo caminho</p>
+        </div>
+        <div class="mf-escolha-col mf-on">
+          <p class="mf-head">Entender de vez o que está te travando</p>
+          <p class="mf-row"><span class="mf-arrow">→</span>Clareza do que separa você do próximo nível</p>
+          <p class="mf-row"><span class="mf-arrow">→</span>Método que funciona no mundo real — não em livro</p>
+          <p class="mf-row"><span class="mf-arrow">→</span>A visão de quem liderou 160 devs e €100M em projetos</p>
+          <p class="mf-row"><span class="mf-arrow">→</span>O que levei 15 anos pra eu aprender — em 6 meses</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRÓXIMO PASSO -->
+  <section class="mf-proximo">
+    <div class="mf-wrap">
+      <span class="mf-eyebrow mf-reveal">// Próximo passo</span>
+      <h2 class="mf-reveal">Clica no botão abaixo e fala <span>diretamente comigo, Martin.</span></h2>
+      <p class="mf-desc mf-reveal">Vou entender onde você está, o que está travando sua carreira — e te mostrar com clareza o que fazer a partir daqui. A primeira conversa é gratuita. As vagas são limitadas.</p>
+      <a href="https://martinfabichak.com/redirect/" class="mf-btn mf-reveal">Quero minha conversa gratuita com o Martin</a>
+      <p class="mf-small mf-reveal"><span>Mentoria 1:1 — vagas limitadas — sem compromisso</span></p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="mf-footer">
+    <p>© 2026 Code Leadership™ — Martin Fabichak. Todos os direitos reservados.</p>
+  </footer>
+
+</div>
+
+<!-- Lightbox da galeria -->
+<div id="mf-lightbox">
+  <div class="mf-lb-close" id="mf-lb-close">&times;</div>
+  <div class="mf-lb-nav mf-lb-prev" id="mf-lb-prev">&#10094;</div>
+  <img id="mf-lb-img" src="" alt="">
+  <div class="mf-lb-nav mf-lb-next" id="mf-lb-next">&#10095;</div>
+</div>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<script>
+(function(){
+  // Reveal on scroll
+  var els = document.querySelectorAll('#mf-lp .mf-reveal');
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){ e.target.classList.add('mf-in'); io.unobserve(e.target); }
+      });
+    },{threshold:0.12, rootMargin:'0px 0px -40px 0px'});
+    els.forEach(function(el){ io.observe(el); });
+  } else {
+    els.forEach(function(el){ el.classList.add('mf-in'); });
+  }
+
+  // Video click-to-play (YouTube facade)
+  var videoFrame = document.getElementById('mf-video');
+  if(videoFrame){
+    videoFrame.addEventListener('click', function(){
+      var iframe = document.createElement('iframe');
+      iframe.src = 'https://www.youtube.com/embed/GJ-5etj1QV0?autoplay=1&rel=0&playsinline=1';
+      iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+      iframe.allowFullscreen = true;
+      videoFrame.innerHTML = '';
+      videoFrame.style.cursor = 'default';
+      videoFrame.appendChild(iframe);
+    });
+  }
+
+  // Lightbox da galeria
+  var gallery = document.getElementById('mf-gallery');
+  var lb = document.getElementById('mf-lightbox');
+  var lbImg = document.getElementById('mf-lb-img');
+  var links = gallery ? Array.prototype.slice.call(gallery.querySelectorAll('a')) : [];
+  var current = 0;
+
+  function openLB(i){
+    current = i;
+    lbImg.src = links[current].getAttribute('href');
+    lbImg.alt = links[current].dataset.title || '';
+    lb.classList.add('mf-open');
+  }
+  function closeLB(){ lb.classList.remove('mf-open'); }
+  function nav(dir){
+    current = (current + dir + links.length) % links.length;
+    lbImg.src = links[current].getAttribute('href');
+    lbImg.alt = links[current].dataset.title || '';
+  }
+
+  links.forEach(function(a,i){
+    a.addEventListener('click', function(e){
+      e.preventDefault();
+      openLB(i);
+    });
+  });
+  document.getElementById('mf-lb-close').addEventListener('click', closeLB);
+  document.getElementById('mf-lb-prev').addEventListener('click', function(){ nav(-1); });
+  document.getElementById('mf-lb-next').addEventListener('click', function(){ nav(1); });
+  lb.addEventListener('click', function(e){ if(e.target === lb){ closeLB(); } });
+  document.addEventListener('keydown', function(e){
+    if(!lb.classList.contains('mf-open')) return;
+    if(e.key === 'Escape') closeLB();
+    if(e.key === 'ArrowLeft') nav(-1);
+    if(e.key === 'ArrowRight') nav(1);
+  });
+})();
+</script>

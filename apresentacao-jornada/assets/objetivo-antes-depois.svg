@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" font-family="Segoe UI, system-ui, sans-serif">
+  <defs>
+    <marker id="seta" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#ff3db4"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="640" fill="#0a1220"/>
+
+  <text x="600" y="70" text-anchor="middle" fill="#8aa0c6" font-size="22" letter-spacing="4">OBJETIVO MAL ESCRITO × BEM ESCRITO</text>
+
+  <!-- antes -->
+  <rect x="70" y="140" rx="14" width="440" height="320" fill="rgba(255,61,180,.05)" stroke="#ff3db4" stroke-width="2" stroke-dasharray="10 8"/>
+  <text x="290" y="200" text-anchor="middle" fill="#ff3db4" font-size="26" font-weight="800">✗ ANTES</text>
+  <text x="290" y="280" text-anchor="middle" fill="#eaf2ff" font-size="32" font-style="italic">“crescer na carreira”</text>
+  <text x="290" y="360" text-anchor="middle" fill="#8aa0c6" font-size="21">vago · sem prazo · sem como verificar</text>
+  <text x="290" y="394" text-anchor="middle" fill="#8aa0c6" font-size="21">vira sonho, não plano</text>
+
+  <!-- seta -->
+  <path d="M520 300 L 660 300" fill="none" stroke="#ff3db4" stroke-width="4" marker-end="url(#seta)"/>
+
+  <!-- depois -->
+  <rect x="690" y="140" rx="14" width="440" height="320" fill="rgba(34,211,255,.07)" stroke="#22d3ff" stroke-width="2.5"/>
+  <text x="910" y="200" text-anchor="middle" fill="#22d3ff" font-size="26" font-weight="800">✓ DEPOIS</text>
+  <text x="910" y="268" text-anchor="middle" fill="#eaf2ff" font-size="27" font-weight="700">“virar EM de um time de</text>
+  <text x="910" y="306" text-anchor="middle" fill="#eaf2ff" font-size="27" font-weight="700">produto até dez/2027”</text>
+  <text x="910" y="374" text-anchor="middle" fill="#8aa0c6" font-size="21">cargo específico · contexto · prazo</text>
+  <text x="910" y="408" text-anchor="middle" fill="#8aa0c6" font-size="21">dá pra responder: cheguei ou não?</text>
+
+  <text x="600" y="560" text-anchor="middle" fill="#eaf2ff" font-size="24">Teste: em 12–24 meses, dá pra verificar se aconteceu?</text>
+</svg>

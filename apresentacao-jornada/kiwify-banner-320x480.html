@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{width:320px;height:480px;overflow:hidden;font-family:-apple-system,"Segoe UI","Helvetica Neue",sans-serif}
+  .banner{
+    position:relative;width:320px;height:480px;
+    background:
+      radial-gradient(55% 35% at 20% 0%, rgba(45,125,210,.35), transparent 60%),
+      radial-gradient(50% 30% at 90% 12%, rgba(47,212,165,.18), transparent 60%),
+      #050505;
+    color:#f5f5f0;overflow:hidden;
+  }
+  .grain{position:absolute;inset:0;opacity:.05;mix-blend-mode:overlay;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");}
+  svg.map{position:absolute;inset:0;width:320px;height:480px}
+  .content{position:relative;z-index:2;padding:26px 26px 30px;height:100%;display:flex;flex-direction:column;justify-content:space-between}
+  .eyebrow{display:inline-flex;align-items:center;gap:7px;font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#2d7dd2;background:rgba(45,125,210,.14);border:1px solid rgba(45,125,210,.35);padding:6px 12px 6px 10px;border-radius:999px;width:fit-content}
+  .eyebrow::before{content:"●";font-size:7px;color:#2fd4a5}
+  h1{font-size:34px;line-height:1.12;letter-spacing:-.02em;font-weight:700;margin-top:20px;max-width:260px}
+  h1 .accent{color:#2d7dd2}
+  .sub{margin-top:16px;font-size:16px;line-height:1.5;color:#a7a9ad;max-width:250px}
+  .data{font-family:ui-monospace,Menlo,monospace;font-size:12.5px;color:#a7a9ad;margin-bottom:14px}
+  .cta{display:inline-flex;align-items:center;gap:8px;font-size:16px;font-weight:600;color:#04101c;background:linear-gradient(180deg,#4a97e0,#2d7dd2);border-radius:999px;padding:13px 20px;width:fit-content}
+  .cta .go{width:22px;height:22px;border-radius:50%;background:rgba(4,16,28,.18);display:flex;align-items:center;justify-content:center;font-size:12px}
+</style></head>
+<body>
+<div class="banner">
+  <div class="grain"></div>
+  <svg class="map" viewBox="0 0 320 480" fill="none">
+    <path d="M24 430 C 80 400, 90 330, 140 300 C 190 270, 175 190, 230 150 C 265 125, 280 80, 296 40"
+      stroke="rgba(245,245,240,.16)" stroke-width="2" stroke-dasharray="1 8" stroke-linecap="round"/>
+    <circle cx="24" cy="430" r="4.5" fill="#2fd4a5"/>
+    <circle cx="140" cy="300" r="4" fill="rgba(245,245,240,.5)"/>
+    <circle cx="230" cy="150" r="4" fill="rgba(245,245,240,.5)"/>
+    <circle cx="296" cy="40" r="5.5" fill="#2d7dd2"/>
+    <circle cx="296" cy="40" r="10" fill="none" stroke="#2d7dd2" stroke-width="1.5" opacity=".5"/>
+  </svg>
+  <div class="content">
+    <div>
+      <div class="eyebrow">aula ao vivo · 90 min</div>
+      <h1>A jornada do dev n&atilde;o &eacute; s&oacute; c&oacute;digo. &Eacute; <span class="accent">sonhar alto</span> e chegar l&aacute;.</h1>
+      <p class="sub">Trilhas, dinheiro e os pontos cegos que travam 90% dos devs.</p>
+    </div>
+    <div>
+      <div class="data">23/09 · 19h · Google Meet</div>
+      <div class="cta"><span>Quero participar</span><span class="go">&#8599;</span></div>
+    </div>
+  </div>
+</div>
+</body></html>

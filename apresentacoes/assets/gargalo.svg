@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" font-family="Segoe UI, system-ui, sans-serif">
+  <defs>
+    <marker id="s1" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#ff3db4"/>
+    </marker>
+    <marker id="s2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#22d3ff"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="640" fill="#0a1220"/>
+
+  <!-- lado A: gargalo -->
+  <text x="300" y="80" text-anchor="middle" fill="#ff3db4" font-size="28" font-weight="800" letter-spacing="2">GARGALO</text>
+  <circle cx="300" cy="330" r="70" fill="rgba(255,61,180,.08)" stroke="#ff3db4" stroke-width="3"/>
+  <text x="300" y="325" text-anchor="middle" fill="#eaf2ff" font-size="22" font-weight="700">VOCÊ</text>
+  <text x="300" y="352" text-anchor="middle" fill="#8aa0c6" font-size="17">tudo passa aqui</text>
+  <g stroke="#ff3db4" stroke-width="2.5" fill="none">
+    <path d="M110 160 L 252 278" marker-end="url(#s1)"/>
+    <path d="M470 150 L 342 272" marker-end="url(#s1)"/>
+    <path d="M90 330 L 218 330" marker-end="url(#s1)"/>
+    <path d="M510 340 L 382 335" marker-end="url(#s1)"/>
+    <path d="M120 520 L 250 386" marker-end="url(#s1)"/>
+    <path d="M480 515 L 348 384" marker-end="url(#s1)"/>
+  </g>
+  <g fill="#8aa0c6" font-size="19" text-anchor="middle">
+    <text x="95" y="145">dúvida</text>
+    <text x="490" y="135">code review</text>
+    <text x="62" y="320">bug</text>
+    <text x="545" y="330">decisão</text>
+    <text x="110" y="550">deploy</text>
+    <text x="495" y="545">incidente</text>
+  </g>
+  <text x="300" y="565" text-anchor="middle" fill="#ff3db4" font-size="21">você de férias = time parado</text>
+
+  <!-- divisor -->
+  <line x1="600" y1="60" x2="600" y2="580" stroke="#22d3ff" stroke-opacity=".3" stroke-width="1.5" stroke-dasharray="8 8"/>
+
+  <!-- lado B: sistema -->
+  <text x="900" y="80" text-anchor="middle" fill="#22d3ff" font-size="28" font-weight="800" letter-spacing="2">SISTEMA</text>
+  <rect x="720" y="250" rx="14" width="360" height="160" fill="rgba(34,211,255,.06)" stroke="#22d3ff" stroke-width="3"/>
+  <text x="900" y="315" text-anchor="middle" fill="#eaf2ff" font-size="22" font-weight="700">TIME + SISTEMA</text>
+  <text x="900" y="348" text-anchor="middle" fill="#8aa0c6" font-size="18">runbooks · critérios · donos claros</text>
+  <g stroke="#22d3ff" stroke-width="2.5" fill="none">
+    <path d="M700 160 L 790 240" marker-end="url(#s2)"/>
+    <path d="M1100 160 L 1010 240" marker-end="url(#s2)"/>
+    <path d="M700 510 L 790 420" marker-end="url(#s2)"/>
+    <path d="M1100 510 L 1010 420" marker-end="url(#s2)"/>
+  </g>
+  <circle cx="1090" cy="330" r="46" fill="rgba(34,211,255,.08)" stroke="#22d3ff" stroke-width="2" stroke-dasharray="6 6"/>
+  <text x="1090" y="326" text-anchor="middle" fill="#eaf2ff" font-size="17" font-weight="700">VOCÊ</text>
+  <text x="1090" y="347" text-anchor="middle" fill="#8aa0c6" font-size="14">ao lado</text>
+  <text x="900" y="565" text-anchor="middle" fill="#22d3ff" font-size="21">você de férias = time roda</text>
+</svg>

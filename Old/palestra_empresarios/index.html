@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Gerência de Expectativa</title>
+<style>
+  :root {
+    --bg: #0e1116;
+    --fg: #e8eaed;
+    --muted: #8b949e;
+    --accent: #f5a524;
+    --accent-soft: #ffd98a;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; width: 100%; overflow: hidden; }
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, system-ui, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #slide {
+    width: 90vw;
+    max-width: 1100px;
+    padding: 4rem 5rem;
+    animation: fade 0.25s ease;
+  }
+  @keyframes fade { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+
+  h1 { font-size: clamp(2.2rem, 5vw, 4rem); line-height: 1.1; margin-bottom: 1.5rem; }
+  h2 { font-size: clamp(1.6rem, 3.5vw, 2.6rem); margin-bottom: 0.4rem; line-height: 1.2; }
+  .subtitle { font-size: clamp(1.1rem, 2vw, 1.4rem); color: var(--muted); margin-bottom: 2rem; font-style: italic; }
+  ul { list-style: none; }
+  li {
+    font-size: clamp(1.05rem, 1.7vw, 1.5rem);
+    padding: 0.7rem 0 0.7rem 2rem;
+    position: relative;
+    line-height: 1.4;
+  }
+  li::before {
+    content: "›";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: bold;
+  }
+  .quote {
+    text-align: center;
+    border-left: 4px solid var(--accent);
+    padding: 1.5rem 2rem;
+    font-size: clamp(1.6rem, 3.5vw, 2.8rem);
+    font-style: italic;
+    color: var(--accent-soft);
+    line-height: 1.3;
+  }
+  .quote-caption {
+    text-align: center;
+    margin-top: 1.5rem;
+    color: var(--muted);
+    font-size: 1rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+  .title-slide { text-align: center; }
+  .title-slide h1 { color: var(--accent); }
+
+  #footer {
+    position: fixed;
+    bottom: 1rem;
+    right: 1.5rem;
+    color: var(--muted);
+    font-size: 0.85rem;
+    font-variant-numeric: tabular-nums;
+  }
+  #help {
+    position: fixed;
+    bottom: 1rem;
+    left: 1.5rem;
+    color: var(--muted);
+    font-size: 0.75rem;
+    opacity: 0.6;
+  }
+  .accent { color: var(--accent); }
+</style>
+</head>
+<body>
+
+<div id="slide"></div>
+<div id="footer"></div>
+<div id="help">← → espaço · F tela cheia</div>
+
+<script src="slides.js"></script>
+<script>
+  let idx = 0;
+  const el = document.getElementById("slide");
+  const footer = document.getElementById("footer");
+
+  function escapeHtml(s) {
+    return String(s)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;");
+  }
+
+  function render() {
+    const s = slides[idx];
+    let html = "";
+
+    if (s.type === "title") {
+      html = `<div class="title-slide">
+        <h1>${escapeHtml(s.title)}</h1>
+        ${s.subtitle ? `<div class="subtitle">${escapeHtml(s.subtitle)}</div>` : ""}
+      </div>`;
+    } else if (s.type === "quote") {
+      html = `<div class="quote">"${escapeHtml(s.text)}"</div>
+              ${s.caption ? `<div class="quote-caption">${escapeHtml(s.caption)}</div>` : ""}`;
+    } else if (s.type === "questions") {
+      html = `<h2>${escapeHtml(s.title)}</h2>
+              <div style="height: 1.5rem;"></div>
+              <ul>${s.items.map(i => `<li>${escapeHtml(i)}</li>`).join("")}</ul>`;
+    } else {
+      // content
+      html = `<h2>${escapeHtml(s.title)}</h2>
+              ${s.subtitle ? `<div class="subtitle">${escapeHtml(s.subtitle)}</div>` : ""}
+              ${s.bullets ? `<ul>${s.bullets.map(b => `<li>${escapeHtml(b)}</li>`).join("")}</ul>` : ""}`;
+    }
+
+    el.innerHTML = html;
+    footer.textContent = `${idx + 1} / ${slides.length}`;
+  }
+
+  function next() { if (idx < slides.length - 1) { idx++; render(); } }
+  function prev() { if (idx > 0) { idx--; render(); } }
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowRight" || e.key === " " || e.key === "PageDown") { e.preventDefault(); next(); }
+    else if (e.key === "ArrowLeft" || e.key === "PageUp") { e.preventDefault(); prev(); }
+    else if (e.key === "Home") { idx = 0; render(); }
+    else if (e.key === "End") { idx = slides.length - 1; render(); }
+    else if (e.key === "f" || e.key === "F") {
+      if (!document.fullscreenElement) document.documentElement.requestFullscreen();
+      else document.exitFullscreen();
+    }
+  });
+
+  document.addEventListener("click", (e) => {
+    if (e.clientX > window.innerWidth / 2) next(); else prev();
+  });
+
+  render();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" font-family="Segoe UI, system-ui, sans-serif">
+  <rect width="1200" height="640" fill="#0a1220"/>
+
+  <text x="600" y="60" text-anchor="middle" fill="#eaf2ff" font-size="34" font-weight="800">1 SEMANA · BLOCOS DE 30 MIN</text>
+
+  <!-- painel esquerdo: onde o tempo foi -->
+  <rect x="60" y="100" rx="14" width="520" height="440" fill="rgba(255,61,180,.05)" stroke="#ff3db4" stroke-width="2"/>
+  <text x="320" y="150" text-anchor="middle" fill="#ff3db4" font-size="26" font-weight="800" letter-spacing="2">ONDE O TEMPO FOI</text>
+
+  <text x="100" y="205" fill="#eaf2ff" font-size="21">Reativo (Slack, incêndio, reunião s/ pauta)</text>
+  <rect x="100" y="218" rx="6" width="416" height="28" fill="#ff3db4"/>
+  <text x="528" y="240" fill="#eaf2ff" font-size="22" font-weight="700">65%</text>
+
+  <text x="100" y="290" fill="#eaf2ff" font-size="21">Reuniões com pauta</text>
+  <rect x="100" y="303" rx="6" width="128" height="28" fill="#3d9bff"/>
+  <text x="240" y="325" fill="#eaf2ff" font-size="22" font-weight="700">20%</text>
+
+  <text x="100" y="375" fill="#eaf2ff" font-size="21">Código planejado</text>
+  <rect x="100" y="388" rx="6" width="83" height="28" fill="#22d3ff"/>
+  <text x="195" y="410" fill="#eaf2ff" font-size="22" font-weight="700">13%</text>
+
+  <text x="100" y="460" fill="#eaf2ff" font-size="21">Lacunas do seu plano</text>
+  <rect x="100" y="473" rx="6" width="13" height="28" fill="#eaf2ff"/>
+  <text x="125" y="495" fill="#ff3db4" font-size="22" font-weight="800">2%</text>
+
+  <!-- painel direito: onde o plano precisava -->
+  <rect x="620" y="100" rx="14" width="520" height="440" fill="rgba(34,211,255,.05)" stroke="#22d3ff" stroke-width="2"/>
+  <text x="880" y="150" text-anchor="middle" fill="#22d3ff" font-size="26" font-weight="800" letter-spacing="2">ONDE O PLANO PRECISAVA</text>
+
+  <text x="660" y="205" fill="#eaf2ff" font-size="21">Reativo — sob controle</text>
+  <rect x="660" y="218" rx="6" width="192" height="28" fill="#3d9bff"/>
+  <text x="864" y="240" fill="#eaf2ff" font-size="22" font-weight="700">30%</text>
+
+  <text x="660" y="290" fill="#eaf2ff" font-size="21">Reuniões que importam</text>
+  <rect x="660" y="303" rx="6" width="128" height="28" fill="#3d9bff"/>
+  <text x="800" y="325" fill="#eaf2ff" font-size="22" font-weight="700">20%</text>
+
+  <text x="660" y="375" fill="#eaf2ff" font-size="21">Código planejado</text>
+  <rect x="660" y="388" rx="6" width="192" height="28" fill="#22d3ff"/>
+  <text x="864" y="410" fill="#eaf2ff" font-size="22" font-weight="700">30%</text>
+
+  <text x="660" y="460" fill="#eaf2ff" font-size="21">Lacunas do seu plano</text>
+  <rect x="660" y="473" rx="6" width="128" height="28" fill="#ff3db4"/>
+  <text x="800" y="495" fill="#ff3db4" font-size="22" font-weight="800">20%</text>
+
+  <text x="600" y="600" text-anchor="middle" fill="#8aa0c6" font-size="22" letter-spacing="3">PRIMEIRO MEDIR · DEPOIS OTIMIZAR — SEM JULGAR DURANTE A COLETA</text>
+</svg>

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" font-family="Segoe UI, system-ui, sans-serif">
+  <defs>
+    <marker id="seta" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#ff3db4"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="640" fill="#0a1220"/>
+
+  <text x="600" y="70" text-anchor="middle" fill="#eaf2ff" font-size="34" font-weight="800">A JORNADA COMEÇA AQUI</text>
+
+  <!-- 1. onboarding (você está aqui) -->
+  <rect x="60" y="240" rx="14" width="240" height="160" fill="rgba(255,61,180,.08)" stroke="#ff3db4" stroke-width="3"/>
+  <text x="180" y="300" text-anchor="middle" fill="#ff3db4" font-size="27" font-weight="800">ONBOARDING</text>
+  <text x="180" y="336" text-anchor="middle" fill="#eaf2ff" font-size="20">questionário + DISC</text>
+  <text x="180" y="366" text-anchor="middle" fill="#8aa0c6" font-size="19">← você está aqui</text>
+
+  <!-- seta -->
+  <path d="M310 320 L 360 320" fill="none" stroke="#ff3db4" stroke-width="3" marker-end="url(#seta)"/>
+
+  <!-- 2. diagnóstico -->
+  <rect x="380" y="240" rx="14" width="240" height="160" fill="rgba(34,211,255,.06)" stroke="#22d3ff" stroke-width="2"/>
+  <text x="500" y="300" text-anchor="middle" fill="#22d3ff" font-size="27" font-weight="800">DIAGNÓSTICO</text>
+  <text x="500" y="336" text-anchor="middle" fill="#eaf2ff" font-size="20">aula 0.7 + 1ª sessão</text>
+  <text x="500" y="366" text-anchor="middle" fill="#8aa0c6" font-size="19">onde você está de verdade</text>
+
+  <!-- seta -->
+  <path d="M630 320 L 680 320" fill="none" stroke="#ff3db4" stroke-width="3" marker-end="url(#seta)"/>
+
+  <!-- 3. plano de ação -->
+  <rect x="700" y="240" rx="14" width="240" height="160" fill="rgba(34,211,255,.06)" stroke="#22d3ff" stroke-width="2"/>
+  <text x="820" y="300" text-anchor="middle" fill="#22d3ff" font-size="27" font-weight="800">PLANO DE AÇÃO</text>
+  <text x="820" y="336" text-anchor="middle" fill="#eaf2ff" font-size="20">3 lacunas + KPIs</text>
+  <text x="820" y="366" text-anchor="middle" fill="#8aa0c6" font-size="19">o que atacar primeiro</text>
+
+  <!-- seta -->
+  <path d="M950 320 L 1000 320" fill="none" stroke="#ff3db4" stroke-width="3" marker-end="url(#seta)"/>
+
+  <!-- 4. loop do método -->
+  <circle cx="1090" cy="320" r="82" fill="rgba(61,155,255,.08)" stroke="#22d3ff" stroke-width="3"/>
+  <text x="1090" y="308" text-anchor="middle" fill="#22d3ff" font-size="24" font-weight="800">LOOP</text>
+  <text x="1090" y="338" text-anchor="middle" fill="#eaf2ff" font-size="19">do método</text>
+  <text x="1090" y="372" text-anchor="middle" fill="#ff3db4" font-size="30" font-weight="800">↻</text>
+
+  <text x="600" y="580" text-anchor="middle" fill="#8aa0c6" font-size="22" letter-spacing="3">QUANTO MAIS HONESTO O COMEÇO, MAIS RÁPIDO O LOOP GIRA</text>
+</svg>

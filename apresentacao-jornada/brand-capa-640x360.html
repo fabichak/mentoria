@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{width:640px;height:360px;overflow:hidden;font-family:-apple-system,"Segoe UI","Helvetica Neue",sans-serif}
+  .banner{
+    position:relative;width:640px;height:360px;
+    background:
+      radial-gradient(50% 55% at 12% 0%, rgba(45,125,210,.35), transparent 60%),
+      radial-gradient(45% 45% at 92% 15%, rgba(47,212,165,.18), transparent 60%),
+      #050505;
+    color:#f5f5f0;overflow:hidden;
+  }
+  .grain{position:absolute;inset:0;opacity:.05;mix-blend-mode:overlay;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");}
+  svg.map{position:absolute;inset:0;width:640px;height:360px}
+  .content{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;justify-content:center;padding:0 46px}
+  .mark{display:flex;align-items:center;gap:10px;margin-bottom:20px}
+  .dotbox{position:relative;width:32px;height:32px;border-radius:9px;background:linear-gradient(160deg,#111214,#0a0a0a);border:1px solid rgba(245,245,240,.14);display:flex;align-items:center;justify-content:center}
+  .dotbox .dot{width:11px;height:11px;border-radius:50%;background:#2d7dd2;box-shadow:0 0 10px rgba(45,125,210,.7)}
+  .tag{font-family:ui-monospace,Menlo,monospace;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:#2fd4a5}
+  h1{font-size:34px;line-height:1.14;letter-spacing:-.02em;font-weight:700;max-width:480px}
+  h1 .accent{color:#2d7dd2}
+  .sub{margin-top:14px;font-size:14px;color:#a7a9ad}
+  .sub b{color:#f5f5f0;font-weight:600}
+</style></head>
+<body>
+<div class="banner">
+  <div class="grain"></div>
+  <svg class="map" viewBox="0 0 640 360" fill="none">
+    <path d="M30 320 C 110 290, 130 220, 200 200 C 270 180, 260 108, 330 86 C 390 66, 420 38, 500 24 C 540 17, 570 12, 610 7"
+      stroke="rgba(245,245,240,.16)" stroke-width="2" stroke-dasharray="1 9" stroke-linecap="round"/>
+    <circle cx="30" cy="320" r="5" fill="#2fd4a5"/>
+    <circle cx="200" cy="200" r="4" fill="rgba(245,245,240,.5)"/>
+    <circle cx="330" cy="86" r="4" fill="rgba(245,245,240,.5)"/>
+    <circle cx="610" cy="7" r="6" fill="#2d7dd2"/>
+    <circle cx="610" cy="7" r="11" fill="none" stroke="#2d7dd2" stroke-width="1.5" opacity=".5"/>
+  </svg>
+  <div class="content">
+    <div class="mark">
+      <div class="dotbox"><div class="dot"></div></div>
+      <div class="tag">Mentoria Code Leadership</div>
+    </div>
+    <h1>O mapa de decis&otilde;es pra <span class="accent">acelerar</span> sua carreira.</h1>
+    <div class="sub">Com <b>Martin Fabichak</b> &middot; ex-CTO Magic Media</div>
+  </div>
+</div>
+</body></html>

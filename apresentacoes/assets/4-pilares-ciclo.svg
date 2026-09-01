@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" font-family="Segoe UI, system-ui, sans-serif">
+  <defs>
+    <marker id="seta" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#ff3db4"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="640" fill="#0a1220"/>
+
+  <text x="600" y="54" text-anchor="middle" fill="#8aa0c6" font-size="22" letter-spacing="4">OS 4 PILARES SE REFORÇAM</text>
+
+  <!-- topo: entrevistas -->
+  <rect x="440" y="90" rx="12" width="320" height="90" fill="rgba(34,211,255,.06)" stroke="#22d3ff" stroke-width="2"/>
+  <text x="600" y="128" text-anchor="middle" fill="#22d3ff" font-size="24" font-weight="800">ENTREVISTAS SEMPRE</text>
+  <text x="600" y="160" text-anchor="middle" fill="#8aa0c6" font-size="18">régua externa do seu nível real</text>
+
+  <!-- direita: ocupar espaço -->
+  <rect x="820" y="275" rx="12" width="320" height="90" fill="rgba(34,211,255,.06)" stroke="#22d3ff" stroke-width="2"/>
+  <text x="980" y="313" text-anchor="middle" fill="#22d3ff" font-size="24" font-weight="800">OCUPAR ESPAÇO</text>
+  <text x="980" y="345" text-anchor="middle" fill="#8aa0c6" font-size="18">posição clara em toda reunião</text>
+
+  <!-- baixo: problema = oportunidade -->
+  <rect x="440" y="460" rx="12" width="320" height="90" fill="rgba(34,211,255,.06)" stroke="#22d3ff" stroke-width="2"/>
+  <text x="600" y="498" text-anchor="middle" fill="#22d3ff" font-size="23" font-weight="800">PROBLEMA = OPORTUNIDADE</text>
+  <text x="600" y="530" text-anchor="middle" fill="#8aa0c6" font-size="18">adotar o problema órfão</text>
+
+  <!-- esquerda: régua calibrada -->
+  <rect x="60" y="275" rx="12" width="320" height="90" fill="rgba(255,61,180,.06)" stroke="#ff3db4" stroke-width="2"/>
+  <text x="220" y="313" text-anchor="middle" fill="#ff3db4" font-size="24" font-weight="800">RÉGUA CALIBRADA</text>
+  <text x="220" y="345" text-anchor="middle" fill="#8aa0c6" font-size="18">evidência cala o impostor</text>
+
+  <!-- setas do ciclo -->
+  <path d="M770 155 C 930 175, 990 210, 990 270" fill="none" stroke="#ff3db4" stroke-width="3" marker-end="url(#seta)"/>
+  <path d="M985 370 C 980 430, 900 480, 770 500" fill="none" stroke="#ff3db4" stroke-width="3" marker-end="url(#seta)"/>
+  <path d="M430 500 C 300 480, 220 430, 218 372" fill="none" stroke="#ff3db4" stroke-width="3" marker-end="url(#seta)"/>
+  <path d="M215 270 C 215 210, 275 175, 432 152" fill="none" stroke="#ff3db4" stroke-width="3" marker-end="url(#seta)"/>
+
+  <!-- legendas das setas -->
+  <text x="920" y="205" text-anchor="middle" fill="#eaf2ff" font-size="18">calibram → coragem</text>
+  <text x="920" y="440" text-anchor="middle" fill="#eaf2ff" font-size="18">espaço → território órfão</text>
+  <text x="280" y="440" text-anchor="middle" fill="#eaf2ff" font-size="18">resultado → evidência</text>
+  <text x="280" y="205" text-anchor="middle" fill="#eaf2ff" font-size="18">confiança → mais treino</text>
+
+  <text x="600" y="330" text-anchor="middle" fill="#eaf2ff" font-size="26" font-weight="700">↻</text>
+</svg>

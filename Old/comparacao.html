@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mentoria — Planos</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0d0d0d;
+    --bg-card: #1a1a1a;
+    --text: #f5f5f0;
+    --text-dim: #999;
+    --border: #2a2a2a;
+    --green: #00d084;
+    --red: #e63946;
+    --black-accent: #c9a227;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body { height: 100%; }
+
+  body {
+    font-family: 'Montserrat', -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.3;
+    padding: 28px 32px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .container { max-width: 1400px; margin: 0 auto; width: 100%; flex: 1; display: flex; flex-direction: column; }
+
+  .header { text-align: center; margin-bottom: 16px; }
+
+  .header .comment {
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--green);
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+  }
+
+  .header h1 {
+    font-size: 2.6rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+  }
+
+  .header p { color: var(--text-dim); font-size: 1.15rem; }
+
+  .plans {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 14px;
+    flex: 1;
+    align-items: stretch;
+  }
+
+  .plan {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 22px 22px 18px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .plan.green { border-top: 3px solid var(--green); }
+  .plan.green .plan-label, .plan.green .total strong { color: var(--green); }
+  .plan.green .icon.yes { background: rgba(0,208,132,0.15); color: var(--green); }
+  .plan.green .tag { background: rgba(0,208,132,0.15); color: var(--green); }
+
+  .plan.red { border-top: 3px solid var(--red); }
+  .plan.red .plan-label, .plan.red .total strong { color: var(--red); }
+  .plan.red .icon.yes { background: rgba(230,57,70,0.15); color: var(--red); }
+  .plan.red .tag { background: rgba(230,57,70,0.15); color: var(--red); }
+
+  .plan.black {
+    border: 1px solid var(--black-accent);
+    background: linear-gradient(180deg, #1f1a0d 0%, var(--bg-card) 100%);
+  }
+  .plan.black .plan-label, .plan.black .total strong { color: var(--black-accent); }
+  .plan.black .icon.yes { background: rgba(201,162,39,0.18); color: var(--black-accent); }
+  .plan.black .tag { background: rgba(201,162,39,0.18); color: var(--black-accent); }
+
+  .badge {
+    position: absolute;
+    top: -9px;
+    right: 14px;
+    background: var(--black-accent);
+    color: #1a1a1a;
+    padding: 3px 9px;
+    border-radius: 12px;
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  .plan-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .plan h2 {
+    font-size: 1.7rem;
+    font-weight: 700;
+    margin: 4px 0 8px;
+  }
+
+  .price-row {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .price {
+    font-size: 2.3rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+  }
+
+  .price small { font-size: 1rem; color: var(--text-dim); font-weight: 400; }
+
+  .duration {
+    color: var(--text-dim);
+    font-size: 0.95rem;
+    margin-left: auto;
+  }
+
+  .features { list-style: none; flex: 1; }
+
+  .features li {
+    padding: 5px 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+    font-size: 1rem;
+    line-height: 1.35;
+  }
+
+  .icon {
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 700;
+    margin-top: 2px;
+  }
+
+  .icon.no { background: rgba(170,170,170,0.06); color: #3a3a3a; }
+
+  .features li.absent { color: #3a3a3a; text-decoration: line-through; }
+
+  .tag {
+    display: inline-block;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    padding: 2px 6px;
+    border-radius: 3px;
+    margin-left: 5px;
+    vertical-align: middle;
+  }
+
+  .total {
+    margin-top: 10px;
+    padding: 10px;
+    background: rgba(0,0,0,0.35);
+    border-radius: 6px;
+    text-align: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.95rem;
+  }
+
+  .total strong { font-size: 1.15rem; }
+
+  @media (max-width: 1024px) {
+    body { overflow: auto; }
+    .plans { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="comment">// escolha seu plano</div>
+      <h1>Mentoria de Liderança</h1>
+      <p>Três caminhos · 6 meses · escolha o nível</p>
+    </div>
+
+    <div class="plans">
+
+      <!-- GREEN -->
+      <div class="plan green">
+        <div class="plan-label">// green</div>
+        <h2>Green</h2>
+        <div class="price-row">
+          <div class="price">R$2.000</div>
+          <span class="duration">6 meses</span>
+        </div>
+
+        <ul class="features">
+          <li><span class="icon yes">✓</span><span>5 módulos gravados (1h cada)</span></li>
+          <li><span class="icon yes">✓</span><span>24 encontros em grupo (semanal)</span></li>
+          <li><span class="icon yes">✓</span><span>Suporte grupo WhatsApp <span class="tag">green</span></span></li>
+          <li><span class="icon yes">✓</span><span>Grupo networking com mentorados</span></li>
+          <li class="absent"><span class="icon no">–</span><span>Recomendação LinkedIn</span></li>
+		  <hr class="double">
+          <li><span class="icon yes">✓</span><span>Roteiro negociação salarial + simulação</span></li>
+          <li><span class="icon yes">✓</span><span>Playbook bio LinkedIn, GitHub e CV</span></li>
+          <li><span class="icon yes">✓</span><span>Biblioteca Tech Leader Vault</span></li>
+          <li><span class="icon yes">✓</span><span>Pasta Crisis Playbook</span></li>
+          <li><span class="icon yes">✓</span><span>Selo Tech Leader Code Certified</span></li>
+          <li><span class="icon yes">✓</span><span>Kit apresentação executiva</span></li>
+          <li><span class="icon yes">✓</span><span>Roteiro primeiros 30 dias como tech lead</span></li>
+          <li><span class="icon yes">✓</span><span>Playbook contratação dev</span></li>
+          <li><span class="icon yes">✓</span><span>Template runbook técnico</span></li>
+        </ul>
+
+        <div class="total">individual <strong>0h</strong> · grupo <strong>24x</strong></div>
+      </div>
+
+      <!-- RED -->
+      <div class="plan red">
+        <div class="plan-label">// red</div>
+        <h2>Red</h2>
+        <div class="price-row">
+          <div class="price">R$4.000</div>
+          <span class="duration">6 meses</span>
+        </div>
+
+        <ul class="features">
+          <li><span class="icon yes">✓</span><span>3 encontros individuais (1h cada)</span></li>
+          <li><span class="icon yes">✓</span><span>24 encontros em grupo (semanal)</span></li>
+          <li><span class="icon yes">✓</span><span>Suporte WhatsApp</span></li>
+          <li><span class="icon yes">✓</span><span>Grupo networking com mentorados</span></li>
+          <li class="absent"><span class="icon no">–</span><span>Recomendação LinkedIn</span></li>
+		  <hr class="double">
+          <li><span class="icon yes">✓</span><span>Roteiro negociação salarial + simulação</span></li>
+          <li><span class="icon yes">✓</span><span>Playbook bio LinkedIn, GitHub e CV</span></li>
+          <li><span class="icon yes">✓</span><span>Biblioteca Tech Leader Vault</span></li>
+          <li><span class="icon yes">✓</span><span>Pasta Crisis Playbook</span></li>
+          <li><span class="icon yes">✓</span><span>Selo Tech Leader Code Certified</span></li>
+          <li><span class="icon yes">✓</span><span>Kit apresentação executiva</span></li>
+          <li><span class="icon yes">✓</span><span>Roteiro primeiros 30 dias como tech lead</span></li>
+          <li><span class="icon yes">✓</span><span>Playbook contratação dev</span></li>
+          <li><span class="icon yes">✓</span><span>Template runbook técnico</span></li>
+        </ul>
+
+        <div class="total">individual <strong>3h</strong> · grupo <strong>24x</strong></div>
+      </div>
+
+      <!-- BLACK -->
+      <div class="plan black">
+        <span class="badge">Completo</span>
+        <div class="plan-label">// black</div>
+        <h2>Black</h2>
+        <div class="price-row">
+          <div class="price">R$6.500</div>
+          <span class="duration">6 meses</span>
+        </div>
+
+        <ul class="features">
+          <li><span class="icon yes">✓</span><span>24 encontros individuais (6× 1h + 18× 30min)</span></li>
+          <li><span class="icon yes">✓</span><span>24 encontros em grupo (semanal)</span></li>
+          <li><span class="icon yes">✓</span><span>Suporte WhatsApp</span></li>
+          <li><span class="icon yes">✓</span><span>Grupo networking com mentorados</span></li>
+          <li><span class="icon yes">✓</span><span>Recomendação LinkedIn <span class="tag">exclusivo</span></span></li>
+		  <hr class="double">
+          <li><span class="icon yes">✓</span><span>Roteiro negociação salarial + simulação</span></li>
+          <li><span class="icon yes">✓</span><span>Playbook bio LinkedIn, GitHub e CV</span></li>
+          <li><span class="icon yes">✓</span><span>Biblioteca Tech Leader Vault</span></li>
+          <li><span class="icon yes">✓</span><span>Pasta Crisis Playbook</span></li>
+          <li><span class="icon yes">✓</span><span>Selo Tech Leader Code Certified</span></li>
+          <li><span class="icon yes">✓</span><span>Kit apresentação executiva</span></li>
+          <li><span class="icon yes">✓</span><span>Roteiro primeiros 30 dias como tech lead</span></li>
+          <li><span class="icon yes">✓</span><span>Playbook contratação dev</span></li>
+          <li><span class="icon yes">✓</span><span>Template runbook técnico</span></li>
+        </ul>
+
+        <div class="total">individual <strong>15h</strong> · grupo <strong>24x</strong></div>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>

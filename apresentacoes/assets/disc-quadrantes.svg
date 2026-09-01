@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" font-family="Segoe UI, system-ui, sans-serif">
+  <rect width="1200" height="640" fill="#0a1220"/>
+
+  <text x="600" y="52" text-anchor="middle" fill="#eaf2ff" font-size="32" font-weight="800">DISC — cada perfil tem superpoder e armadilha</text>
+
+  <!-- D -->
+  <rect x="90" y="86" rx="14" width="500" height="240" fill="rgba(255,61,180,.06)" stroke="#ff3db4" stroke-width="2"/>
+  <text x="130" y="150" fill="#ff3db4" font-size="52" font-weight="800">D</text>
+  <text x="190" y="150" fill="#eaf2ff" font-size="26" font-weight="700">Dominância</text>
+  <text x="130" y="210" fill="#22d3ff" font-size="22" font-weight="700">▲ decide rápido, encara conflito</text>
+  <text x="130" y="252" fill="#8aa0c6" font-size="22">▼ lidera pelo confronto e atropela</text>
+  <text x="130" y="300" fill="#eaf2ff" font-size="19">com um D: bullet points, direto ao resultado</text>
+
+  <!-- I -->
+  <rect x="610" y="86" rx="14" width="500" height="240" fill="rgba(34,211,255,.06)" stroke="#22d3ff" stroke-width="2"/>
+  <text x="650" y="150" fill="#22d3ff" font-size="52" font-weight="800">I</text>
+  <text x="700" y="150" fill="#eaf2ff" font-size="26" font-weight="700">Influência</text>
+  <text x="650" y="210" fill="#22d3ff" font-size="22" font-weight="700">▲ engaja, comunica, vende ideia</text>
+  <text x="650" y="252" fill="#8aa0c6" font-size="22">▼ dispersa, promete além da entrega</text>
+  <text x="650" y="300" fill="#eaf2ff" font-size="19">com um I: energia, contexto, espaço pra falar</text>
+
+  <!-- S -->
+  <rect x="90" y="346" rx="14" width="500" height="240" fill="rgba(34,211,255,.06)" stroke="#22d3ff" stroke-width="2"/>
+  <text x="130" y="410" fill="#22d3ff" font-size="52" font-weight="800">S</text>
+  <text x="190" y="410" fill="#eaf2ff" font-size="26" font-weight="700">eStabilidade</text>
+  <text x="130" y="470" fill="#22d3ff" font-size="22" font-weight="700">▲ constância, escuta, sustenta o time</text>
+  <text x="130" y="512" fill="#8aa0c6" font-size="22">▼ evita conflito, resiste a mudança</text>
+  <text x="130" y="560" fill="#eaf2ff" font-size="19">com um S: segurança antes da mudança</text>
+
+  <!-- C -->
+  <rect x="610" y="346" rx="14" width="500" height="240" fill="rgba(61,155,255,.06)" stroke="#3d9bff" stroke-width="2"/>
+  <text x="650" y="410" fill="#3d9bff" font-size="52" font-weight="800">C</text>
+  <text x="702" y="410" fill="#eaf2ff" font-size="26" font-weight="700">Conformidade</text>
+  <text x="650" y="470" fill="#22d3ff" font-size="22" font-weight="700">▲ decide com dados, qualidade alta</text>
+  <text x="650" y="512" fill="#8aa0c6" font-size="22">▼ trava por perfeccionismo</text>
+  <text x="650" y="560" fill="#eaf2ff" font-size="19">com um C: dados, critérios, tempo pra analisar</text>
+
+  <text x="600" y="622" text-anchor="middle" fill="#8aa0c6" font-size="20" letter-spacing="3">MEDE COMO VOCÊ TENDE A AGIR — TENDÊNCIA, NÃO TETO</text>
+</svg>

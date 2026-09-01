@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" font-family="Segoe UI, system-ui, sans-serif">
+  <defs>
+    <marker id="p" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#ff3db4"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="640" fill="#0a1220"/>
+
+  <text x="330" y="80" text-anchor="middle" fill="#22d3ff" font-size="30" font-weight="800" letter-spacing="3">TRILHA IC</text>
+  <text x="330" y="112" text-anchor="middle" fill="#8aa0c6" font-size="19">profundidade + influência sem autoridade</text>
+  <text x="870" y="80" text-anchor="middle" fill="#22d3ff" font-size="30" font-weight="800" letter-spacing="3">TRILHA GESTÃO</text>
+  <text x="870" y="112" text-anchor="middle" fill="#8aa0c6" font-size="19">pessoas, direção, resultados via time</text>
+
+  <!-- degraus IC -->
+  <g stroke="#22d3ff" stroke-width="2">
+    <rect x="180" y="480" rx="10" width="300" height="64" fill="rgba(34,211,255,.06)"/>
+    <rect x="180" y="380" rx="10" width="300" height="64" fill="rgba(34,211,255,.06)"/>
+    <rect x="180" y="280" rx="10" width="300" height="64" fill="rgba(34,211,255,.06)"/>
+    <rect x="180" y="180" rx="10" width="300" height="64" fill="rgba(34,211,255,.06)"/>
+  </g>
+  <g fill="#eaf2ff" font-size="25" font-weight="700" text-anchor="middle">
+    <text x="330" y="520">Sênior</text>
+    <text x="330" y="420">Staff</text>
+    <text x="330" y="320">Principal</text>
+    <text x="330" y="220">Distinguished</text>
+  </g>
+
+  <!-- degraus gestão -->
+  <g stroke="#22d3ff" stroke-width="2">
+    <rect x="720" y="480" rx="10" width="300" height="64" fill="rgba(34,211,255,.06)"/>
+    <rect x="720" y="380" rx="10" width="300" height="64" fill="rgba(34,211,255,.06)"/>
+    <rect x="720" y="280" rx="10" width="300" height="64" fill="rgba(34,211,255,.06)"/>
+    <rect x="720" y="180" rx="10" width="300" height="64" fill="rgba(34,211,255,.06)"/>
+  </g>
+  <g fill="#eaf2ff" font-size="25" font-weight="700" text-anchor="middle">
+    <text x="870" y="520">Tech Lead</text>
+    <text x="870" y="420">EM</text>
+    <text x="870" y="320">Head</text>
+    <text x="870" y="220">CTO</text>
+  </g>
+
+  <!-- pontes (pêndulo) -->
+  <g stroke="#ff3db4" stroke-width="2.5" fill="none" stroke-dasharray="9 7">
+    <path d="M490 505 C 600 505, 600 512, 710 512" marker-end="url(#p)"/>
+    <path d="M710 405 C 600 405, 600 412, 490 412" marker-end="url(#p)"/>
+  </g>
+  <text x="600" y="470" text-anchor="middle" fill="#ff3db4" font-size="19" font-weight="700">pêndulo: dá pra ir e voltar</text>
+
+  <text x="600" y="608" text-anchor="middle" fill="#8aa0c6" font-size="22" letter-spacing="4">NÃO É PROMOÇÃO · É MUDANÇA DE PROFISSÃO</text>
+</svg>

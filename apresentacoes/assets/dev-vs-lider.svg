@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" font-family="Segoe UI, system-ui, sans-serif">
+  <rect width="1200" height="640" fill="#0a1220"/>
+
+  <!-- cabeçalhos -->
+  <rect x="330" y="60" rx="12" width="400" height="70" fill="rgba(34,211,255,.08)" stroke="#22d3ff" stroke-width="2"/>
+  <text x="530" y="106" text-anchor="middle" fill="#22d3ff" font-size="30" font-weight="800">BOM DEV</text>
+  <rect x="760" y="60" rx="12" width="400" height="70" fill="rgba(255,61,180,.07)" stroke="#ff3db4" stroke-width="2"/>
+  <text x="960" y="106" text-anchor="middle" fill="#ff3db4" font-size="30" font-weight="800">BOM LÍDER</text>
+
+  <!-- linhas -->
+  <g font-size="23">
+    <text x="60" y="205" fill="#8aa0c6" font-weight="700" letter-spacing="2">MÉTRICA</text>
+    <text x="530" y="205" text-anchor="middle" fill="#eaf2ff">o que EU entrego</text>
+    <text x="960" y="205" text-anchor="middle" fill="#eaf2ff">o que acontece por causa de mim</text>
+    <line x1="60" y1="235" x2="1140" y2="235" stroke="#22d3ff" stroke-opacity=".25" stroke-width="1.5"/>
+
+    <text x="60" y="305" fill="#8aa0c6" font-weight="700" letter-spacing="2">FOCO</text>
+    <text x="530" y="305" text-anchor="middle" fill="#eaf2ff">resolver o problema</text>
+    <text x="960" y="305" text-anchor="middle" fill="#eaf2ff">construir o sistema que resolve</text>
+    <line x1="60" y1="335" x2="1140" y2="335" stroke="#22d3ff" stroke-opacity=".25" stroke-width="1.5"/>
+
+    <text x="60" y="405" fill="#8aa0c6" font-weight="700" letter-spacing="2">DIA PRODUTIVO</text>
+    <text x="530" y="405" text-anchor="middle" fill="#eaf2ff">muito código mergeado</text>
+    <text x="960" y="405" text-anchor="middle" fill="#eaf2ff">3 pessoas destravadas</text>
+    <line x1="60" y1="435" x2="1140" y2="435" stroke="#22d3ff" stroke-opacity=".25" stroke-width="1.5"/>
+
+    <text x="60" y="505" fill="#8aa0c6" font-weight="700" letter-spacing="2">MEDO TÍPICO</text>
+    <text x="530" y="505" text-anchor="middle" fill="#eaf2ff">bug em produção</text>
+    <text x="960" y="505" text-anchor="middle" fill="#eaf2ff">"não entreguei nada hoje"</text>
+  </g>
+
+  <text x="600" y="600" text-anchor="middle" fill="#8aa0c6" font-size="22" letter-spacing="4">MESMA PESSOA · JOGO DIFERENTE</text>
+</svg>

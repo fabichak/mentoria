@@ -1,0 +1,272 @@
+/* Mentoria LRPG — estilo DevAdvance.club (preto + azul neon) com tema cyberpunk RPG.
+   16:9. Cada .slide vira 1 screenshot no export_pptx.py. */
+
+:root{
+  --bg:#04060c;
+  --panel:#0a1220;
+  --ink:#eaf2ff;
+  --muted:#8aa0c6;
+  --cyan:#22d3ff;
+  --blue:#3d9bff;
+  --magenta:#ff3db4;
+  --green:#57d98a;
+  --line:rgba(61,155,255,.22);
+  --glow:0 0 22px rgba(34,211,255,.35);
+  --sans:'Segoe UI',system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif;
+  --mono:ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{background:#000;color:var(--ink);font-family:var(--sans);overflow:hidden;
+  height:100vh;display:flex;align-items:center;justify-content:center}
+
+/* ---- palco 16:9 (centralizado por flex, sem offset negativo) ---- */
+.palco{position:relative;width:100vw;height:56.25vw;max-height:100vh;max-width:177.78vh;
+  background:var(--bg);overflow:hidden}
+
+.slide{position:absolute;inset:0;display:none;flex-direction:column;justify-content:center;
+  padding:6.5% 7.5%;
+  background:
+    radial-gradient(120% 90% at 85% -10%, rgba(61,155,255,.10), transparent 55%),
+    radial-gradient(110% 80% at -10% 110%, rgba(255,61,180,.08), transparent 55%),
+    linear-gradient(180deg,#05070e,#04060c);
+}
+.slide::before{ /* grid cyberpunk */
+  content:"";position:absolute;inset:0;pointer-events:none;opacity:.5;
+  background:
+    linear-gradient(rgba(61,155,255,.06) 1px,transparent 1px) 0 0/100% 3.2vw,
+    linear-gradient(90deg,rgba(61,155,255,.06) 1px,transparent 1px) 0 0/3.2vw 100%;
+  mask:linear-gradient(180deg,transparent,#000 30%,#000 70%,transparent);
+}
+.slide.ativo{display:flex;animation:fade .45s ease}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+
+h1,h2{font-weight:800;letter-spacing:-.01em;line-height:1.05}
+h2{font-size:3.1vw;color:var(--blue)}
+.lead{color:var(--muted);font-size:1.5vw;margin:.6vw 0 2vw;max-width:78%}
+
+/* ---- logo (duas barras inclinadas, azul + cinza) ---- */
+.logo{display:inline-flex;gap:.35vw;transform:skewX(-14deg)}
+.logo i{width:.75vw;height:2.1vw;display:block;border-radius:1px}
+.logo i:first-child{background:var(--blue);box-shadow:0 0 10px rgba(61,155,255,.6)}
+.logo i:last-child{background:#5a6b86}
+
+/* ---- badge / HUD label ---- */
+.badge{position:absolute;top:6%;left:7.5%;font-family:var(--mono);font-size:1.05vw;
+  letter-spacing:.28em;color:var(--cyan);text-transform:uppercase;
+  padding:.4vw .9vw;border:1px solid var(--line);border-radius:.4vw;
+  background:rgba(34,211,255,.06);box-shadow:var(--glow)}
+.tag{font-family:var(--mono);font-size:1vw;letter-spacing:.22em;color:var(--magenta);
+  text-transform:uppercase;border:1px solid rgba(255,61,180,.35);border-radius:.35vw;
+  padding:.3vw .7vw;align-self:center}
+
+/* ---- footer ---- */
+.hud-footer{position:absolute;left:7.5%;right:7.5%;bottom:5.5%;
+  display:flex;align-items:center;justify-content:space-between;
+  font-family:var(--mono);font-size:1vw;letter-spacing:.14em;color:#4f658a;text-transform:uppercase}
+.hud-footer .logo i{height:1.5vw;width:.55vw}
+.hud-qr{position:absolute;right:7.5%;top:6%;width:9vw;height:9vw;
+  border-radius:.4vw;background:#fff;padding:.3vw;z-index:5}
+
+/* ================= CAPA ================= */
+.t-capa{justify-content:flex-end}
+.t-capa::after{ /* code rain */
+  content:"01001100 var promise(){return b} 0xF3 async fn(l) 1||b!== corp.ICE netrun eddies";
+  position:absolute;inset:0;font-family:var(--mono);font-size:2.4vw;line-height:2.2;
+  color:rgba(61,155,255,.12);white-space:normal;word-break:break-all;padding:4vw;
+  mask:radial-gradient(90% 70% at 80% 30%,#000,transparent 70%);pointer-events:none}
+.capa-logo{position:absolute;top:8%;left:7.5%}
+.capa-logo .logo i{height:3vw;width:1vw}
+.capa-body{position:relative;z-index:1;margin-bottom:2vw}
+.t-capa .selo{display:inline-block;font-family:var(--mono);font-size:1.1vw;letter-spacing:.24em;
+  text-transform:uppercase;color:var(--cyan);border:1px solid var(--line);border-radius:.4vw;
+  padding:.5vw 1vw;margin-bottom:1.6vw;box-shadow:var(--glow)}
+.t-capa h1{font-size:6.4vw}
+.t-capa h1 .neon{color:var(--cyan);text-shadow:0 0 24px rgba(34,211,255,.55)}
+.t-capa .sub{color:var(--muted);font-size:1.7vw;margin-top:1.4vw;max-width:70%}
+.t-capa .rodape{margin-top:2.2vw;font-family:var(--mono);font-size:1.1vw;letter-spacing:.14em;color:#5a729b}
+
+/* ================= AGENDA ================= */
+.fases{list-style:none;margin-top:1vw;display:grid;gap:1vw}
+.fases li{display:flex;align-items:baseline;gap:1.6vw;padding:1vw 1.4vw;
+  border-left:3px solid var(--cyan);background:linear-gradient(90deg,rgba(34,211,255,.07),transparent);
+  border-radius:.3vw}
+.fases .fk{font-family:var(--mono);font-size:1.5vw;color:var(--cyan);letter-spacing:.08em;min-width:14vw}
+.fases .fd{font-size:1.5vw;color:var(--ink)}
+
+/* ================= PILAR / LISTA ================= */
+.pilar-head{display:flex;align-items:center;gap:1.4vw}
+.t-pilar h2,.t-lista h2,.t-stack h2{font-size:3.6vw;color:var(--ink)}
+.t-pilar h2{color:var(--cyan);text-shadow:0 0 20px rgba(34,211,255,.35)}
+.bul{list-style:none;margin-top:1.6vw;display:grid;gap:1.05vw}
+.bul li{position:relative;padding-left:2.2vw;font-size:1.55vw;color:var(--muted);line-height:1.35}
+.bul li::before{content:"▸";position:absolute;left:0;color:var(--magenta);font-size:1.4vw}
+.bul li b{color:var(--ink);font-weight:700}
+.bul.big li{font-size:1.8vw}
+.bul .d{color:var(--muted)}
+
+/* reveal progressivo */
+.slide[data-revela] .reveal{opacity:0;transform:translateY(12px);filter:blur(2px);
+  transition:opacity .35s,transform .35s,filter .35s}
+.slide[data-revela] .reveal.on{opacity:1;transform:none;filter:none}
+
+/* ================= STACK (value stack) ================= */
+.stack{list-style:none;margin-top:1.4vw;display:grid;gap:.7vw;max-width:80%}
+.stack li{display:flex;justify-content:space-between;align-items:center;
+  padding:1vw 1.4vw;border:1px solid var(--line);border-radius:.5vw;
+  background:rgba(61,155,255,.05);font-size:1.6vw}
+.stack .s-t{color:var(--ink)}
+.stack .s-v{font-family:var(--mono);color:var(--cyan);font-weight:700}
+.stack .total{margin-top:.6vw;border:1px solid var(--magenta);
+  background:rgba(255,61,180,.08);box-shadow:0 0 22px rgba(255,61,180,.25)}
+.stack .total .s-t{font-weight:800;font-size:1.8vw}
+.stack .total .s-v{color:var(--magenta);font-size:1.9vw}
+.stack .s-de{text-decoration:line-through;text-decoration-color:var(--magenta);color:var(--muted);
+  font-size:.6em;margin-right:.5vw}
+
+/* ================= PREÇO ================= */
+.t-preco{align-items:center;text-align:center}
+.t-preco .de{font-family:var(--mono);font-size:2.4vw;color:var(--muted);text-decoration:line-through;
+  text-decoration-color:var(--magenta);opacity:.8}
+.t-preco .valor{font-size:8vw;font-weight:800;color:var(--cyan);text-shadow:0 0 34px rgba(34,211,255,.5);
+  line-height:1;margin:1vw 0}
+.t-preco .lead{max-width:64%;text-align:center;color:var(--ink)}
+
+/* ================= CONFRONTO (valor x preço) ================= */
+.t-confronto{align-items:center;justify-content:center;text-align:center}
+.cf-row{display:flex;align-items:center;justify-content:center;gap:4vw;width:100%}
+.cf-col{display:flex;flex-direction:column;align-items:center;gap:1.8vw}
+.cf-word{font-size:5vw;font-weight:800;letter-spacing:-.01em}
+.cf-col:first-child .cf-word{color:var(--cyan);text-shadow:0 0 30px rgba(34,211,255,.5)}
+.cf-col:last-child .cf-word{color:var(--magenta);text-shadow:0 0 30px rgba(255,61,180,.4)}
+.cf-x{font-size:3vw;color:var(--muted);font-family:var(--mono)}
+.cf-icon{width:4.6vw;height:4.6vw;border-radius:50%;border:2px solid currentColor;
+  display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:1.7vw;font-weight:700}
+.cf-col:first-child .cf-icon{color:var(--cyan);box-shadow:var(--glow)}
+.cf-col:last-child .cf-icon{color:var(--magenta);box-shadow:0 0 22px rgba(255,61,180,.35)}
+
+/* ================= CHECKPOINT / DIVISOR / FIM ================= */
+.t-checkpoint,.t-divisor,.t-fim{align-items:center;text-align:center}
+.t-checkpoint h1,.t-fim h1{font-size:5.4vw;color:var(--ink)}
+.t-checkpoint h1{text-shadow:0 0 30px rgba(61,155,255,.4)}
+.t-divisor h1{font-size:5vw;color:var(--cyan);text-shadow:0 0 30px rgba(34,211,255,.5)}
+.t-divisor .sub,.t-fim .rodape{color:var(--muted);font-family:var(--mono);letter-spacing:.14em;
+  margin-top:1.4vw;font-size:1.4vw}
+
+/* ================= RESULTADO ================= */
+.t-resultado{align-items:center;text-align:center}
+.shots{display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:1.8vw;width:100%;height:62vh}
+.shot{flex:1 1 0;min-height:0;max-width:60%;display:flex;align-items:center;justify-content:center;
+  border:1px solid var(--line);border-radius:.8vw;overflow:hidden;padding:.5vw;
+  box-shadow:0 0 40px rgba(34,211,255,.18);background:#0a1220}
+.shots-1 .shot{flex:none;height:100%;max-width:56%}
+.shot img{display:block;max-width:100%;max-height:100%;width:auto;height:auto;
+  object-fit:contain;border-radius:.4vw}
+.legenda{color:var(--muted);font-size:1.2vw;margin-top:.8vw}
+
+/* variante lado a lado — para prints de mobile (retrato) */
+.shots-row{flex-direction:row;align-items:stretch;justify-content:center;gap:2.6vw}
+.shots-row .shot{flex:1 1 0;min-width:0;max-width:38%;height:100%}
+
+/* ================= TIMELINE (gráfico econômico) ================= */
+.t-timeline h2{font-size:2.5vw;max-width:82%;margin-bottom:5vw;color:var(--ink)}
+.tl-wrap{position:relative;height:2vw}
+.tl-track{position:absolute;left:0;right:12%;top:0;height:1.4vw;border-radius:.3vw;
+  background:rgba(138,160,198,.16);overflow:hidden}
+.tl-fill{position:absolute;inset:0;transform:scaleX(0);transform-origin:left;
+  background:repeating-linear-gradient(90deg,var(--cyan) 0 1.1vw,transparent 1.1vw 1.8vw);
+  box-shadow:0 0 16px rgba(34,211,255,.5);transition:transform .5s ease}
+.tl-wrap:has(.tl-group2.on) .tl-fill{transform:scaleX(1)}
+.tl-mark{position:absolute;top:0;display:flex;flex-direction:column;align-items:flex-start;gap:.5vw}
+.tl-mark i{width:2px;height:2.6vw;background:var(--cyan);display:block;box-shadow:0 0 8px rgba(34,211,255,.6)}
+.tl-mark b{font-family:var(--mono);font-size:1.3vw;color:var(--ink);margin-top:.3vw}
+.tl-mark-a{left:0}
+.tl-mark-b{left:88%}
+.tl-tag{position:absolute;top:-4.6vw;display:flex;flex-direction:column;align-items:center;gap:.4vw;
+  font-family:var(--mono);font-size:1.05vw;letter-spacing:.08em;color:var(--ink);text-align:center;
+  text-transform:uppercase;line-height:1.3;white-space:nowrap}
+.tl-tag .tl-chev{width:1.7vw;height:1.7vw;border-radius:50%;border:1px solid var(--cyan);color:var(--cyan);
+  display:flex;align-items:center;justify-content:center;font-size:1vw}
+.tl-tag-b{left:auto;right:12%;align-items:flex-end}
+.tl-tag-a{left:0}
+.tl-nota{position:absolute;left:0;top:6vw;max-width:56%;color:var(--muted);font-size:1.4vw;line-height:1.4}
+
+/* ================= CRONOLOGIA (roadmap conectado) ================= */
+.t-cronologia h2{font-size:2.6vw;margin-bottom:1.6vw}
+.cronologia{list-style:none;display:grid;gap:1.15vw;max-width:88%}
+.cronologia li{list-style:none}
+.cr-row{display:flex;align-items:center;gap:1.3vw;position:relative}
+.cr-num{position:relative;flex:0 0 auto;width:2.4vw;height:2.4vw;border-radius:50%;
+  border:2px solid var(--cyan);display:flex;align-items:center;justify-content:center;
+  font-family:var(--mono);font-weight:700;font-size:1.2vw;color:var(--cyan);
+  background:rgba(34,211,255,.08);box-shadow:var(--glow)}
+.cr-linked .cr-num::before{content:"";position:absolute;bottom:100%;left:50%;width:2px;height:1.15vw;
+  transform:translateX(-50%);background:var(--cyan);box-shadow:0 0 8px rgba(34,211,255,.5)}
+.cr-box{flex:1;font-size:1.35vw;color:var(--ink);background:rgba(61,155,255,.05);
+  border:1px solid var(--line);border-radius:.5vw;padding:.75vw 1.2vw}
+.cr-cycle-group{position:relative;display:grid;gap:1.15vw;padding-right:3.2vw}
+.cr-bracket{position:absolute;top:1.2vw;bottom:1.2vw;right:0;width:1.7vw;
+  border:2px solid var(--magenta);border-left:none;border-radius:0 1vw 1vw 0;
+  opacity:0;transition:opacity .4s ease}
+.cronologia li.cr-cycle-group:has(.cr-row:nth-last-child(2).on) .cr-bracket{opacity:1}
+.cr-bracket-arrow{position:absolute;right:-.8vw;top:50%;transform:translateY(-50%);
+  background:var(--bg);color:var(--magenta);font-family:var(--mono);font-size:1.2vw;padding:0 .15vw}
+
+/* ================= PREÇO DUPLA (downsell vs protagonista) ================= */
+.t-precodupla{flex-direction:row;align-items:center}
+.pd-col{flex:1;display:flex;flex-direction:column;align-items:center;text-align:center;gap:.6vw}
+.pd-div{width:1px;align-self:stretch;margin:0 4%;
+  background:linear-gradient(180deg,transparent,var(--line) 20%,var(--line) 80%,transparent)}
+.pd-k{font-family:var(--mono);font-size:1.15vw;letter-spacing:.2em;text-transform:uppercase;color:var(--magenta)}
+.pd-v{font-size:3vw;font-weight:800;color:var(--cyan);text-shadow:0 0 26px rgba(34,211,255,.45);line-height:1.1}
+.pd-v-alt{color:var(--ink);text-shadow:0 0 26px rgba(255,61,180,.35)}
+.pd-p{font-family:var(--mono);font-size:1.3vw;color:var(--muted)}
+
+/* ================= CHROME (progress, dots) ================= */
+.progresso{position:fixed;left:0;top:0;height:3px;background:linear-gradient(90deg,var(--cyan),var(--magenta));
+  width:0;box-shadow:0 0 12px var(--cyan);transition:width .35s;z-index:9}
+.dots{position:fixed;bottom:2.5vh;left:50%;transform:translateX(-50%);display:flex;gap:.7vw;z-index:9}
+.dot{width:.7vw;height:.7vw;border-radius:50%;border:1px solid var(--line);background:transparent;cursor:pointer;padding:0}
+.dot.ativo{background:var(--cyan);box-shadow:var(--glow);border-color:var(--cyan)}
+.nav-hint{position:fixed;right:2vw;bottom:2.2vh;font-family:var(--mono);font-size:1vh;letter-spacing:.2em;
+  color:#3d5171;text-transform:uppercase;z-index:9}
+
+/* ================= LOGOS (background / empresas) ================= */
+.t-logos h2{font-size:3.6vw;color:var(--ink)}
+.logos-grid{display:flex;flex-wrap:wrap;gap:1.6vw;margin-top:2.4vw;max-width:90%}
+.logo-card{flex:1 1 28%;min-width:26%;height:11vw;display:flex;align-items:center;justify-content:center;
+  border:1px solid var(--line);border-radius:.6vw;background:rgba(61,155,255,.05);padding:1.4vw;
+  box-shadow:0 0 22px rgba(34,211,255,.10)}
+.logo-card img{max-width:82%;max-height:72%;object-fit:contain}
+.logo-card.cl{gap:1.1vw;font-weight:800;font-size:1.7vw;color:var(--ink)}
+.logo-card.cl .logo i{height:2.4vw;width:.85vw}
+
+/* ================= FOTO (imagem grande com título) ================= */
+.t-foto h2{font-size:3.6vw;color:var(--ink)}
+.foto-frame{margin-top:1.6vw;height:60vh;border:1px solid var(--line);border-radius:.8vw;overflow:hidden;
+  box-shadow:0 0 40px rgba(34,211,255,.18);background:#0a1220}
+.foto-frame img{width:100%;height:100%;object-fit:cover;display:block}
+.foto-frame.contain{background:#fff}
+.foto-frame.contain img{object-fit:contain}
+
+/* ================= PERFIL (foto/logo + bullets) ================= */
+.t-perfil h2{font-size:3.6vw;color:var(--ink)}
+.perfil-row{display:flex;align-items:center;gap:3.4vw;margin-top:1.8vw}
+.perfil-img{flex:0 0 22vw;height:22vw;border:1px solid var(--line);border-radius:.8vw;overflow:hidden;
+  box-shadow:0 0 40px rgba(34,211,255,.18);background:#0a1220}
+.perfil-img img{width:100%;height:100%;object-fit:cover;display:block}
+.perfil-row .bul{margin-top:0;flex:1}
+
+/* ================= LOOP (ciclo da carreira) ================= */
+.t-loop h2{font-size:3.6vw;color:var(--ink)}
+.loop-wrap{position:relative;flex:1;margin-top:1vw;min-height:0}
+.loop-ring{position:absolute;left:25%;top:12%;width:50%;height:72%;border-radius:50%;
+  border:2px dashed rgba(34,211,255,.45);box-shadow:0 0 30px rgba(34,211,255,.15),inset 0 0 30px rgba(34,211,255,.08)}
+.loop-node{position:absolute;transform:translate(-50%,-50%);white-space:nowrap;
+  font-size:1.45vw;font-weight:700;color:var(--ink);
+  background:rgba(61,155,255,.08);border:1px solid var(--cyan);border-radius:.5vw;
+  padding:.7vw 1.3vw;box-shadow:var(--glow)}
+.loop-arrow{position:absolute;transform:translate(-50%,-50%) rotate(var(--r));
+  color:var(--magenta);font-size:2.2vw;line-height:1;text-shadow:0 0 12px rgba(255,61,180,.6)}

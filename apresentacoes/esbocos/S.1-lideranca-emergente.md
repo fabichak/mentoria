@@ -1,0 +1,37 @@
+# S.1: Liderança Emergente: Liderar Sem Cargo
+
+**Trilha Sênior → Lead**
+
+## Esqueleto (o que falar)
+
+- Gancho: "Ninguém vira lead no dia da promoção. A promoção é o reconhecimento de algo que você já vinha fazendo há 6 meses." Se você está esperando o cargo pra começar a liderar, você está na fila errada.
+- O erro clássico do sênior: acreditar que liderança = autoridade formal. Na prática, o chefe promove quem já resolve problemas de time, não quem escreve o melhor código.
+- Nomear a dor: "será que sou bom o suficiente pra liderar?" Inverta a pergunta. Liderança não é um traço de personalidade, é um conjunto de comportamentos observáveis. Comportamento se treina.
+- Exemplo pessoal (Martin): antes de liderar 150 engenheiros, comecei mentorando um júnior e escrevendo docs que ninguém pediu. Liderança em escala começou com liderança invisível.
+- Ideia central: liderança emergente = influência sem autoridade. Três alavancas concretas:
+  - **Mentorar um júnior**: escolher UMA pessoa, oferecer pareamento semanal recorrente. Não esperar ser designado.
+    - O que isso sinaliza pro gestor: você multiplica o time, não só a si mesmo.
+    - Como fazer sem parecer arrogante: "posso te mostrar como eu faria?" em vez de "tá errado".
+  - **Iniciativa transversal**: pegar um problema que incomoda todo mundo mas não é de ninguém (CI lento, onboarding ruim, flaky tests) e assumir a dona.
+    - Regra: problema pequeno o suficiente pra resolver em 2–4 semanas, visível o suficiente pra ser notado.
+    - Anti-padrão: pegar o refactor gigante que nunca termina. Isso queima capital, não constrói.
+  - **Escrever RFC**: transformar uma opinião técnica em documento estruturado (contexto → opções → recomendação → trade-offs).
+    - RFC é liderança por escrito: você organiza o pensamento do time antes da reunião acontecer.
+    - Mesmo que a sua proposta perca, você ganhou: virou a pessoa que estrutura decisões.
+- Transição: "ok, mas em que ordem?" Encaixe no método PREPARAR→AGIR→MOSTRAR→OTIMIZAR:
+  - PREPARAR: mapear onde o time sangra (1 semana observando, anotando fricções).
+  - AGIR: escolher UMA das três alavancas e executar por 30 dias. Uma. Não três.
+  - MOSTRAR: dar visibilidade sem se gabar, com update quinzenal por escrito pro gestor ("resolvi X, próximo passo Y").
+  - OTIMIZAR: pedir feedback direto: "isso que fiz ajudou o time? o que faria diferente?"
+- Objeção comum: "meu chefe nem vai notar". Resposta: visibilidade é responsabilidade sua, não do chefe. É por isso que MOSTRAR é uma fase do método, não um acidente.
+- Ação prática da aula: esta semana, escreva uma lista de 3 fricções do seu time. Escolha a menor. Mande uma mensagem hoje se oferecendo pra resolver. Traga o print pra mentoria.
+- Fechamento: cargo é consequência, não pré-requisito. Quem age como lead antes do cargo elimina a dúvida "será que sou bom o suficiente", porque acumula evidência de que já é.
+
+## O que mostrar (complementos visuais)
+
+- Diagrama das 3 alavancas (mentoria / iniciativa transversal / RFC) com o critério de escolha de cada uma
+- Template de RFC de 1 página (Contexto, Opções, Recomendação, Trade-offs, Decisão)
+- Exemplo antes/depois: mensagem no Slack opinando vs. RFC estruturado sobre o mesmo tema
+- Template de update quinzenal pro gestor (3 bullets: fiz / impacto / próximo)
+- Quadro do ciclo PREPARAR→AGIR→MOSTRAR→OTIMIZAR aplicado à liderança emergente
+- Checklist "sinais de que você já lidera sem perceber" (pessoas te procuram? você desbloqueia os outros?)

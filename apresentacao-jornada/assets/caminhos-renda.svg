@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" font-family="Segoe UI, system-ui, sans-serif">
+  <defs>
+    <marker id="seta" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#ff3db4"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="640" fill="#0a1220"/>
+
+  <!-- nó de origem -->
+  <rect x="80" y="270" rx="12" width="240" height="100" fill="rgba(61,155,255,.08)" stroke="#22d3ff" stroke-width="2"/>
+  <text x="200" y="312" text-anchor="middle" fill="#eaf2ff" font-size="30" font-weight="700">DEV SÊNIOR</text>
+  <text x="200" y="346" text-anchor="middle" fill="#8aa0c6" font-size="20">mesmo método</text>
+
+  <!-- setas -->
+  <path d="M330 300 C 460 300, 480 140, 600 140" fill="none" stroke="#ff3db4" stroke-width="3" marker-end="url(#seta)"/>
+  <path d="M330 320 L 600 320" fill="none" stroke="#ff3db4" stroke-width="3" marker-end="url(#seta)"/>
+  <path d="M330 340 C 460 340, 480 500, 600 500" fill="none" stroke="#ff3db4" stroke-width="3" stroke-dasharray="10 8" marker-end="url(#seta)"/>
+
+  <!-- caminho técnico -->
+  <rect x="620" y="80" rx="12" width="480" height="120" fill="rgba(34,211,255,.06)" stroke="#22d3ff" stroke-width="2"/>
+  <text x="860" y="130" text-anchor="middle" fill="#22d3ff" font-size="30" font-weight="800">PATH TÉCNICO</text>
+  <text x="860" y="168" text-anchor="middle" fill="#eaf2ff" font-size="22">Sênior → Staff → Principal</text>
+
+  <!-- caminho liderança -->
+  <rect x="620" y="260" rx="12" width="480" height="120" fill="rgba(34,211,255,.06)" stroke="#22d3ff" stroke-width="2"/>
+  <text x="860" y="310" text-anchor="middle" fill="#22d3ff" font-size="30" font-weight="800">PATH LIDERANÇA</text>
+  <text x="860" y="348" text-anchor="middle" fill="#eaf2ff" font-size="22">Tech Lead → Head → CTO</text>
+
+  <!-- caminho empreendedor -->
+  <rect x="620" y="440" rx="12" width="480" height="120" fill="rgba(255,61,180,.05)" stroke="#ff3db4" stroke-width="2" stroke-dasharray="10 8"/>
+  <text x="860" y="490" text-anchor="middle" fill="#ff3db4" font-size="30" font-weight="800">EMPREENDEDOR</text>
+  <text x="860" y="528" text-anchor="middle" fill="#8aa0c6" font-size="22">dev → dono do próprio produto (futuro)</text>
+
+  <!-- rodapé -->
+  <text x="600" y="616" text-anchor="middle" fill="#8aa0c6" font-size="22" letter-spacing="4">NORTE: MAIS DINHEIRO · CAMINHO DE RENDA</text>
+</svg>

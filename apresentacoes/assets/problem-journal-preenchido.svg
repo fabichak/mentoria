@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" font-family="Segoe UI, system-ui, sans-serif">
+  <rect width="1200" height="640" fill="#0a1220"/>
+
+  <text x="600" y="58" text-anchor="middle" fill="#eaf2ff" font-size="32" font-weight="800">PROBLEM JOURNAL — entrada de exemplo</text>
+  <text x="600" y="92" text-anchor="middle" fill="#8aa0c6" font-size="20">4 campos · 1–2 frases cada · sem firula</text>
+
+  <!-- PROBLEMA -->
+  <rect x="80" y="122" rx="12" width="1040" height="102" fill="rgba(34,211,255,.06)" stroke="#22d3ff" stroke-width="2"/>
+  <text x="110" y="164" fill="#22d3ff" font-size="24" font-weight="800" letter-spacing="2">PROBLEMA</text>
+  <text x="110" y="200" fill="#eaf2ff" font-size="24">Deploys travando toda sexta — time perdendo a noite, incidentes recorrentes.</text>
+
+  <!-- HIPÓTESE -->
+  <rect x="80" y="240" rx="12" width="1040" height="102" fill="rgba(255,61,180,.05)" stroke="#ff3db4" stroke-width="2"/>
+  <text x="110" y="282" fill="#ff3db4" font-size="24" font-weight="800" letter-spacing="2">HIPÓTESE</text>
+  <text x="110" y="318" fill="#eaf2ff" font-size="24">Falta janela de deploy e checklist — o campo que treina seu raciocínio de líder.</text>
+
+  <!-- AÇÃO -->
+  <rect x="80" y="358" rx="12" width="1040" height="102" fill="rgba(34,211,255,.06)" stroke="#22d3ff" stroke-width="2"/>
+  <text x="110" y="400" fill="#22d3ff" font-size="24" font-weight="800" letter-spacing="2">AÇÃO</text>
+  <text x="110" y="436" fill="#eaf2ff" font-size="24">Propus freeze de sexta + checklist de deploy e alinhei com o time.</text>
+
+  <!-- RESULTADO -->
+  <rect x="80" y="476" rx="12" width="1040" height="102" fill="rgba(61,155,255,.10)" stroke="#3d9bff" stroke-width="3"/>
+  <text x="110" y="518" fill="#3d9bff" font-size="24" font-weight="800" letter-spacing="2">RESULTADO</text>
+  <text x="110" y="554" fill="#eaf2ff" font-size="26" font-weight="700">0 incidentes de deploy em 6 semanas.</text>
+
+  <text x="600" y="620" text-anchor="middle" fill="#8aa0c6" font-size="20" letter-spacing="3">RESULTADO COM NÚMERO SEMPRE QUE POSSÍVEL — INCLUSIVE "NÃO FUNCIONOU, APRENDI X"</text>
+</svg>

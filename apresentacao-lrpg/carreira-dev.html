@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Carreira de Dev — LRPG</title>
+<style>
+:root{
+  --bg:#04060c; --panel:#0a1220; --ink:#eaf2ff; --muted:#8aa0c6;
+  --cyan:#22d3ff; --blue:#3d9bff; --magenta:#ff3db4; --green:#57d98a;
+  --gold:#ffd166;
+  --line:rgba(61,155,255,.22);
+  --sans:'Segoe UI',system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif;
+  --mono:ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#000;font-family:var(--sans);color:var(--ink)}
+.poster{position:relative;width:1080px;height:1500px;overflow:hidden;
+  background:
+    radial-gradient(120% 60% at 85% -10%, rgba(61,155,255,.12), transparent 55%),
+    radial-gradient(110% 50% at -10% 110%, rgba(255,61,180,.10), transparent 55%),
+    linear-gradient(180deg,#05070e,#04060c 60%,#070512)}
+.poster::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.5;
+  background:
+    linear-gradient(rgba(61,155,255,.06) 1px,transparent 1px) 0 0/100% 44px,
+    linear-gradient(90deg,rgba(61,155,255,.06) 1px,transparent 1px) 0 0/44px 100%;
+  mask:linear-gradient(180deg,transparent,#000 12%,#000 88%,transparent)}
+
+/* header */
+.header{position:absolute;top:44px;left:56px;width:400px;z-index:3}
+.tag{font-family:var(--mono);font-size:15px;color:var(--cyan);letter-spacing:.18em}
+.header h1{font-size:52px;font-weight:800;letter-spacing:-.01em;line-height:1.04;margin-top:10px}
+.header h1 em{font-style:normal;color:var(--blue);text-shadow:0 0 22px rgba(61,155,255,.5)}
+.header p{margin-top:14px;color:var(--muted);font-size:19px;line-height:1.4}
+.brand{position:absolute;top:52px;right:56px;font-family:var(--mono);font-size:16px;
+  color:var(--cyan);letter-spacing:.22em;z-index:3;text-shadow:0 0 14px rgba(34,211,255,.6)}
+
+/* trunk + branch lines (SVG) */
+svg.wire{position:absolute;inset:0;z-index:1}
+
+/* level node */
+.node{position:absolute;z-index:3;display:flex;align-items:center;gap:14px}
+.orb{width:64px;height:64px;border-radius:50%;flex:none;display:flex;align-items:center;justify-content:center;
+  font-family:var(--mono);font-weight:700;font-size:15px;color:#04060c;
+  border:2px solid rgba(255,255,255,.25)}
+.badge{padding:7px 16px;border-radius:8px;font-weight:800;font-size:22px;letter-spacing:.02em;
+  background:var(--panel);border:1px solid var(--line)}
+.lvl{display:block;font-family:var(--mono);font-weight:400;font-size:12px;color:var(--muted);letter-spacing:.12em}
+
+.c-cyan .orb{background:var(--cyan);box-shadow:0 0 26px rgba(34,211,255,.55)}
+.c-cyan .badge{color:var(--cyan);border-color:rgba(34,211,255,.4)}
+.c-blue .orb{background:var(--blue);box-shadow:0 0 26px rgba(61,155,255,.55)}
+.c-blue .badge{color:var(--blue);border-color:rgba(61,155,255,.4)}
+.c-magenta .orb{background:var(--magenta);box-shadow:0 0 26px rgba(255,61,180,.55)}
+.c-magenta .badge{color:var(--magenta);border-color:rgba(255,61,180,.4)}
+.c-green .orb{background:var(--green);box-shadow:0 0 26px rgba(87,217,138,.55)}
+.c-green .badge{color:var(--green);border-color:rgba(87,217,138,.4)}
+.c-gold .orb{background:var(--gold);box-shadow:0 0 26px rgba(255,209,102,.55)}
+.c-gold .badge{color:var(--gold);border-color:rgba(255,209,102,.4)}
+
+/* skills row (trunk levels) */
+.skills{position:absolute;z-index:3;display:flex;gap:20px;width:420px}
+.skills div{font-size:15px;line-height:1.35;color:var(--ink);flex:1}
+.skills div::before{content:"▸ ";font-family:var(--mono);color:var(--green)}
+
+/* branch cards */
+.card{position:absolute;z-index:3;width:360px}
+.card .node{position:static;margin-bottom:8px}
+.card .orb{width:52px;height:52px;font-size:13px}
+.card .badge{font-size:19px;padding:6px 14px}
+.card p{font-size:16px;line-height:1.42;color:var(--muted);margin-left:66px}
+
+/* decision box */
+.decision{position:absolute;z-index:3;width:330px;text-align:center;
+  background:var(--panel);border:1px solid rgba(34,211,255,.45);border-radius:16px;
+  padding:20px 24px;box-shadow:0 0 30px rgba(34,211,255,.25)}
+.decision .q{font-family:var(--mono);font-size:13px;color:var(--cyan);letter-spacing:.16em}
+.decision h3{font-size:22px;margin-top:8px;line-height:1.25}
+.decision small{display:block;margin-top:10px;color:var(--muted);font-size:14px}
+
+.route{position:absolute;z-index:3;font-family:var(--mono);font-size:14px;letter-spacing:.18em;
+  padding:6px 14px;border-radius:6px;background:var(--panel)}
+.route.tech{color:var(--magenta);border:1px solid rgba(255,61,180,.45)}
+.route.people{color:var(--cyan);border:1px solid rgba(34,211,255,.45)}
+
+/* footer */
+.footer{position:absolute;left:56px;right:56px;bottom:34px;z-index:3;
+  display:flex;justify-content:space-between;align-items:center;
+  border-top:1px solid var(--line);padding-top:16px}
+.footer span{font-family:var(--mono);font-size:14px;color:var(--muted);letter-spacing:.08em}
+.footer b{color:var(--cyan)}
+</style>
+</head>
+<body>
+<div class="poster">
+
+  <svg class="wire" width="1080" height="1500" viewBox="0 0 1080 1500" fill="none">
+    <defs>
+      <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#22d3ff"/><stop offset="1" stop-color="#3d9bff"/>
+      </linearGradient>
+    </defs>
+    <!-- trunk -->
+    <path d="M540 90 V 640" stroke="url(#g)" stroke-width="10" stroke-linecap="round" opacity=".9"/>
+    <path d="M540 90 V 640" stroke="#22d3ff" stroke-width="26" stroke-linecap="round" opacity=".12"/>
+    <!-- split left (tech/IC) -->
+    <path d="M540 640 C 540 740, 96 700, 96 810 V 1196" stroke="#ff3db4" stroke-width="8" fill="none" stroke-linecap="round" opacity=".85"/>
+    <path d="M540 640 C 540 740, 96 700, 96 810 V 1196" stroke="#ff3db4" stroke-width="22" fill="none" stroke-linecap="round" opacity=".10"/>
+    <!-- split right (gestão) -->
+    <path d="M540 640 C 540 740, 686 700, 686 810 V 1286" stroke="#22d3ff" stroke-width="8" fill="none" stroke-linecap="round" opacity=".85"/>
+    <path d="M540 640 C 540 740, 686 700, 686 810 V 1286" stroke="#22d3ff" stroke-width="22" fill="none" stroke-linecap="round" opacity=".10"/>
+  </svg>
+
+  <div class="brand">MENTORIA&nbsp;LRPG</div>
+
+  <div class="header">
+    <div class="tag">&gt;_ SKILL TREE</div>
+    <h1>CARREIRA<br>DE DEV:<br><em>CAMINHOS &amp; DESAFIOS</em></h1>
+    <p>Do primeiro commit até o endgame — cada nível desbloqueia novas quests.</p>
+  </div>
+
+  <!-- trunk levels -->
+  <div class="node c-green" style="left:508px;top:88px">
+    <div class="orb">LV 1</div>
+    <div class="badge">Dev Júnior<span class="lvl">MAIN QUEST</span></div>
+  </div>
+  <div class="skills" style="left:600px;top:170px">
+    <div>Entende o básico da lógica</div>
+    <div>Escolheu uma linguagem</div>
+    <div>Pede ajuda sempre que precisa</div>
+  </div>
+
+  <div class="node c-blue" style="left:508px;top:280px">
+    <div class="orb">LV 2</div>
+    <div class="badge">Dev Pleno<span class="lvl">LEVEL UP</span></div>
+  </div>
+  <div class="skills" style="left:600px;top:362px">
+    <div>Aprendeu a pesquisar bem</div>
+    <div>Consegue se virar sozinho</div>
+    <div>Pega tasks mais difíceis</div>
+  </div>
+
+  <div class="node c-magenta" style="left:508px;top:472px">
+    <div class="orb">LV 3</div>
+    <div class="badge">Dev Sênior<span class="lvl">BOSS CLEARED</span></div>
+  </div>
+  <div class="skills" style="left:600px;top:554px">
+    <div>Domina linguagem e framework</div>
+    <div>Multiplica devs menos seniores</div>
+    <div>Revisa o código da squad</div>
+  </div>
+
+  <!-- decision -->
+  <div class="decision" style="left:375px;top:690px">
+    <div class="q">// CHOOSE YOUR CLASS</div>
+    <h3>O que faz seu coração bater mais forte?</h3>
+    <small>Não é escolha permanente: dá pra respeccar a build depois.</small>
+  </div>
+
+  <div class="route tech" style="left:130px;top:768px">ROTA TÉCNICA</div>
+  <div class="route people" style="left:716px;top:768px">ROTA GESTÃO</div>
+
+  <!-- left branch: IC -->
+  <div class="card" style="left:70px;top:830px">
+    <div class="node c-magenta"><div class="orb">LV 4</div><div class="badge">Staff Engineer</div></div>
+    <p>Resolve problemas que cruzam squads. Influência técnica sem precisar de autoridade.</p>
+  </div>
+  <div class="card" style="left:70px;top:1000px">
+    <div class="node c-magenta"><div class="orb">LV 5</div><div class="badge">Principal</div></div>
+    <p>Define arquitetura e direção técnica da empresa. As decisões difíceis passam por você.</p>
+  </div>
+  <div class="card" style="left:70px;top:1170px">
+    <div class="node c-gold"><div class="orb">LV 6</div><div class="badge">Distinguished</div></div>
+    <p>Referência na indústria. Seu impacto técnico vai além da empresa — endgame de especialista.</p>
+  </div>
+
+  <!-- right branch: management -->
+  <div class="card" style="left:660px;top:830px">
+    <div class="node c-cyan"><div class="orb">LV 4</div><div class="badge">Tech Lead</div></div>
+    <p>Referência técnica do time. Garante qualidade do código e destrava a squad.</p>
+  </div>
+  <div class="card" style="left:660px;top:975px">
+    <div class="node c-cyan"><div class="orb">LV 5</div><div class="badge">Eng. Manager</div></div>
+    <p>Entrega através do time. Desenvolve pessoas com 1:1s, feedback e carreira.</p>
+  </div>
+  <div class="card" style="left:660px;top:1120px">
+    <div class="node c-blue"><div class="orb">LV 6</div><div class="badge">Head</div></div>
+    <p>Estratégia de várias squads. Ponte entre engenharia e negócio.</p>
+  </div>
+  <div class="card" style="left:660px;top:1260px">
+    <div class="node c-gold"><div class="orb">LV 7</div><div class="badge">CTO</div></div>
+    <p>Muitas vezes sócio. Alinha tecnologia com toda a visão estratégica do negócio.</p>
+  </div>
+
+  <div class="footer">
+    <span>&gt;_ protagonismo não é cargo — é <b>build</b></span>
+    <span><b>MENTORIA LRPG</b></span>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<svg width="1080" height="1920" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg" font-family="DejaVu Sans, Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="1" stop-color="#111c33"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#16233d"/>
+      <stop offset="1" stop-color="#101a2e"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1080" height="1920" fill="url(#bg)"/>
+  <rect x="0" y="0" width="1080" height="10" fill="#e7c873"/>
+
+  <!-- Header -->
+  <text x="540" y="175" text-anchor="middle" fill="#ffffff" font-size="72" font-weight="bold">Diagnóstico técnico</text>
+  <text x="540" y="265" text-anchor="middle" fill="#e7c873" font-size="72" font-weight="bold">para empresas</text>
+
+  <!-- 3 pilares -->
+  <text x="540" y="450" text-anchor="middle" fill="#8597b8" font-size="28" letter-spacing="2">DO COMEÇO AO FIM — 3 FRENTES</text>
+  <g>
+    <rect x="70" y="495" width="290" height="140" rx="18" fill="url(#card)" stroke="#2a3a5c" stroke-width="2"/>
+    <text x="215" y="585" text-anchor="middle" fill="#ffffff" font-size="36" font-weight="bold">PROCESSO</text>
+
+    <rect x="395" y="495" width="290" height="140" rx="18" fill="url(#card)" stroke="#2a3a5c" stroke-width="2"/>
+    <text x="540" y="585" text-anchor="middle" fill="#ffffff" font-size="36" font-weight="bold">PESSOAS</text>
+
+    <rect x="720" y="495" width="290" height="140" rx="18" fill="url(#card)" stroke="#2a3a5c" stroke-width="2"/>
+    <text x="865" y="585" text-anchor="middle" fill="#ffffff" font-size="34" font-weight="bold">TECNOLOGIA</text>
+  </g>
+
+  <!-- O que faço -->
+  <rect x="70" y="695" width="940" height="320" rx="22" fill="url(#card)" stroke="#2a3a5c" stroke-width="2"/>
+  <text x="110" y="760" fill="#e7c873" font-size="40" font-weight="bold">1 · ENTENDO COMO FUNCIONA</text>
+  <text x="110" y="830" fill="#d7e0f0" font-size="33">•  Quais softwares e processos você usa</text>
+  <text x="110" y="890" fill="#d7e0f0" font-size="33">•  Onde a empresa é ineficiente</text>
+  <text x="110" y="950" fill="#d7e0f0" font-size="33">•  O que é manual e poderia ser automático</text>
+  <text x="110" y="1000" fill="#8597b8" font-size="27">Mapa real de Processo · Pessoas · Tecnologia</text>
+
+  <!-- Modernizar com IA -->
+  <rect x="70" y="1045" width="940" height="375" rx="22" fill="url(#card)" stroke="#2a3a5c" stroke-width="2"/>
+  <text x="110" y="1110" fill="#e7c873" font-size="28" font-weight="bold">2 · MODERNIZO COM IA, PROCESSOS E TREINAMENTO</text>
+  <text x="110" y="1180" fill="#d7e0f0" font-size="33">•  Atualizo softwares antigos</text>
+  <text x="110" y="1240" fill="#d7e0f0" font-size="33">•  TI que apaga incêndio  →  TI proativa</text>
+  <text x="110" y="1300" fill="#d7e0f0" font-size="33">•  IA cria processos novos e melhores</text>
+  <text x="110" y="1360" fill="#d7e0f0" font-size="33">•  Automatizo tarefas repetitivas</text>
+  <text x="110" y="1410" fill="#8597b8" font-size="27">Menos retrabalho, mais tempo pro que importa</text>
+
+  <!-- Resultado / venda -->
+  <text x="540" y="1510" text-anchor="middle" fill="#8597b8" font-size="28" letter-spacing="2">O QUE VOCÊ GANHA</text>
+  <g>
+    <rect x="70" y="1545" width="290" height="130" rx="18" fill="#13233f" stroke="#e7c873" stroke-width="2"/>
+    <text x="215" y="1602" text-anchor="middle" fill="#e7c873" font-size="26" font-weight="bold">+ PERFORMANCE</text>
+    <text x="215" y="1648" text-anchor="middle" fill="#9fb0cc" font-size="21">empresa mais rápida</text>
+
+    <rect x="395" y="1545" width="290" height="130" rx="18" fill="#13233f" stroke="#e7c873" stroke-width="2"/>
+    <text x="540" y="1602" text-anchor="middle" fill="#e7c873" font-size="26" font-weight="bold">− TEMPO</text>
+    <text x="540" y="1648" text-anchor="middle" fill="#9fb0cc" font-size="21">menos trabalho manual</text>
+
+    <rect x="720" y="1545" width="290" height="130" rx="18" fill="#13233f" stroke="#e7c873" stroke-width="2"/>
+    <text x="865" y="1602" text-anchor="middle" fill="#e7c873" font-size="26" font-weight="bold">+ MARGEM</text>
+    <text x="865" y="1648" text-anchor="middle" fill="#9fb0cc" font-size="21">mais lucro</text>
+  </g>
+
+  <!-- Garantia -->
+  <rect x="70" y="1725" width="940" height="125" rx="22" fill="#e7c873"/>
+  <text x="540" y="1782" text-anchor="middle" fill="#0b1220" font-size="37" font-weight="bold">Você só paga depois da</text>
+  <text x="540" y="1828" text-anchor="middle" fill="#0b1220" font-size="37" font-weight="bold">economia comprovada.</text>
+</svg>

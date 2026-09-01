@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" font-family="Segoe UI, system-ui, sans-serif">
+  <rect width="1200" height="640" fill="#0a1220"/>
+
+  <text x="600" y="56" text-anchor="middle" fill="#eaf2ff" font-size="32" font-weight="800">MAPA DE COMPETÊNCIAS — caso real: TL recém-promovido</text>
+
+  <!-- legenda -->
+  <rect x="380" y="80" width="26" height="26" rx="5" fill="#22d3ff"/>
+  <text x="416" y="101" fill="#eaf2ff" font-size="21">autoavaliação</text>
+  <rect x="600" y="80" width="26" height="26" rx="5" fill="none" stroke="#ff3db4" stroke-width="3" stroke-dasharray="6 5"/>
+  <text x="636" y="101" fill="#eaf2ff" font-size="21">régua do próximo nível</text>
+
+  <!-- grade 1..5 -->
+  <g stroke="rgba(138,160,198,.25)" stroke-width="1">
+    <line x1="420" y1="140" x2="420" y2="560"/>
+    <line x1="556" y1="140" x2="556" y2="560"/>
+    <line x1="692" y1="140" x2="692" y2="560"/>
+    <line x1="828" y1="140" x2="828" y2="560"/>
+    <line x1="964" y1="140" x2="964" y2="560"/>
+    <line x1="1100" y1="140" x2="1100" y2="560"/>
+  </g>
+  <g fill="#8aa0c6" font-size="19" text-anchor="middle">
+    <text x="556" y="586">2</text><text x="692" y="586">3</text><text x="828" y="586">4</text><text x="964" y="586">5</text>
+  </g>
+
+  <!-- TÉCNICO: auto 4 / régua 4 -->
+  <text x="395" y="192" text-anchor="end" fill="#22d3ff" font-size="24" font-weight="800">TÉCNICO</text>
+  <text x="395" y="220" text-anchor="end" fill="#8aa0c6" font-size="18">arquitetura · visão de sistema</text>
+  <rect x="420" y="168" width="544" height="34" rx="8" fill="#22d3ff"/>
+  <rect x="420" y="164" width="544" height="42" rx="10" fill="none" stroke="#ff3db4" stroke-width="3" stroke-dasharray="6 5"/>
+  <text x="940" y="193" text-anchor="end" fill="#0a1220" font-size="21" font-weight="800">4</text>
+
+  <!-- EXECUÇÃO: auto 3 / régua 4 -->
+  <text x="395" y="298" text-anchor="end" fill="#22d3ff" font-size="24" font-weight="800">EXECUÇÃO</text>
+  <text x="395" y="326" text-anchor="end" fill="#8aa0c6" font-size="18">priorização · entrega · risco</text>
+  <rect x="420" y="274" width="408" height="34" rx="8" fill="#22d3ff"/>
+  <rect x="420" y="270" width="544" height="42" rx="10" fill="none" stroke="#ff3db4" stroke-width="3" stroke-dasharray="6 5"/>
+  <text x="804" y="299" text-anchor="end" fill="#0a1220" font-size="21" font-weight="800">3</text>
+
+  <!-- PESSOAS: auto 2 / régua 4 -->
+  <text x="395" y="404" text-anchor="end" fill="#22d3ff" font-size="24" font-weight="800">PESSOAS</text>
+  <text x="395" y="432" text-anchor="end" fill="#8aa0c6" font-size="18">feedback · delegação · conflito</text>
+  <rect x="420" y="380" width="272" height="34" rx="8" fill="#22d3ff"/>
+  <rect x="420" y="376" width="544" height="42" rx="10" fill="none" stroke="#ff3db4" stroke-width="3" stroke-dasharray="6 5"/>
+  <text x="668" y="405" text-anchor="end" fill="#0a1220" font-size="21" font-weight="800">2</text>
+  <text x="1000" y="405" fill="#ff3db4" font-size="22" font-weight="800">← LACUNA</text>
+
+  <!-- INFLUÊNCIA: auto 2 / régua 4 -->
+  <text x="395" y="510" text-anchor="end" fill="#22d3ff" font-size="24" font-weight="800">INFLUÊNCIA</text>
+  <text x="395" y="538" text-anchor="end" fill="#8aa0c6" font-size="18">stakeholders · visibilidade · escrita</text>
+  <rect x="420" y="486" width="272" height="34" rx="8" fill="#22d3ff"/>
+  <rect x="420" y="482" width="544" height="42" rx="10" fill="none" stroke="#ff3db4" stroke-width="3" stroke-dasharray="6 5"/>
+  <text x="668" y="511" text-anchor="end" fill="#0a1220" font-size="21" font-weight="800">2</text>
+  <text x="1000" y="511" fill="#ff3db4" font-size="22" font-weight="800">← LACUNA</text>
+
+  <text x="600" y="626" text-anchor="middle" fill="#8aa0c6" font-size="20" letter-spacing="3">NOTA 1–5 · RÉGUA DO PRÓXIMO NÍVEL, NÃO DO ATUAL · CALIBRE COM 2–3 PESSOAS</text>
+</svg>

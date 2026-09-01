@@ -1,0 +1,79 @@
+/* Overrides retrato 1080×1412 (stream Instagram via OBS).
+   Carregar DEPOIS de styles.css. Fonte base ~1.35x maior (frame mais estreito). */
+
+/* palco 1080:1412 ≈ 27:35 */
+.palco{width:100vw;height:130.74vw;max-height:100vh;max-width:76.49vh}
+
+.slide{padding:9% 7.5%}
+.slide::before{background:
+  linear-gradient(rgba(61,155,255,.06) 1px,transparent 1px) 0 0/100% 4.4vw,
+  linear-gradient(90deg,rgba(61,155,255,.06) 1px,transparent 1px) 0 0/4.4vw 100%}
+
+h2{font-size:4.2vw}
+.lead{font-size:2vw;max-width:100%}
+
+.badge{top:4.5%;font-size:1.5vw;padding:.6vw 1.2vw}
+.hud-footer{bottom:3.6%;right:7.5%;font-size:1.35vw}
+.hud-footer .logo i{height:2vw;width:.75vw}
+.hud-qr{width:13vw;height:13vw;top:4.5%}
+
+/* capa */
+.t-capa h1{font-size:8.8vw}
+.t-capa .selo{font-size:1.5vw;padding:.7vw 1.3vw}
+.t-capa .sub{font-size:2.3vw;max-width:90%}
+.t-capa .rodape{font-size:1.5vw}
+.t-capa::after{font-size:3.2vw}
+.capa-logo .logo i{height:4vw;width:1.35vw}
+
+/* lista / pilar */
+.t-pilar h2,.t-lista h2,.t-stack h2{font-size:4.8vw}
+.bul{gap:1.6vw;margin-top:2.2vw}
+.bul li{font-size:2.1vw;padding-left:3vw}
+.bul li::before{font-size:1.9vw}
+.bul.big li{font-size:2.5vw}
+
+/* agenda */
+.fases{gap:1.6vw}
+.fases li{flex-direction:column;gap:.5vw;padding:1.5vw 2vw}
+.fases .fk{font-size:1.9vw;min-width:0}
+.fases .fd{font-size:2.1vw}
+
+/* cronologia */
+.t-cronologia h2{font-size:3.6vw}
+.cronologia{gap:1.7vw;max-width:100%}
+.cr-num{width:3.6vw;height:3.6vw;font-size:1.8vw}
+.cr-linked .cr-num::before{height:1.7vw}
+.cr-box{font-size:2vw;padding:1.1vw 1.7vw}
+.cr-bracket{width:2.4vw}
+.cr-bracket-arrow{font-size:1.8vw}
+
+/* checkpoint / divisor */
+.t-checkpoint h1,.t-fim h1{font-size:7.4vw}
+.t-divisor h1{font-size:7vw}
+.t-divisor .sub,.t-fim .rodape{font-size:1.9vw}
+
+/* logos: 2 por linha */
+.logos-grid{gap:2.2vw;margin-top:3vw;max-width:100%}
+.logo-card{flex:1 1 40%;min-width:40%;height:18vw;padding:2vw}
+.logo-card.cl{font-size:2.4vw}
+.logo-card.cl .logo i{height:3.2vw;width:1.1vw}
+.t-logos h2,.t-foto h2,.t-perfil h2,.t-loop h2{font-size:4.8vw}
+
+/* foto */
+.foto-frame{height:56vh;margin-top:2.2vw}
+
+/* perfil: foto em cima, bullets embaixo */
+.perfil-row{flex-direction:column;align-items:center;gap:3vw;margin-top:2.4vw}
+.perfil-img{flex:0 0 auto;width:34vw;height:34vw}
+.perfil-row .bul{width:100%}
+
+/* loop (nós e setas em % do wrap — geometria original se mantém).
+   Retrato é estreito: nó quebra linha pra não colidir com o vizinho. */
+.loop-node{font-size:1.9vw;padding:.9vw 1.6vw;
+  white-space:normal;max-width:24vw;text-align:center;line-height:1.25}
+.loop-arrow{font-size:2.8vw}
+
+/* chrome — sem hint no stream (colide com o QR) */
+.nav-hint{display:none}
+.dots{gap:1vw}
+.dot{width:1vw;height:1vw}
