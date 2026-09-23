@@ -1,5 +1,6 @@
 # L.9: TL;DR: Team Topologies (Skelton & Pais)
 **Biblioteca de livros**
+*Conteúdo útil tanto pra quem lidera quanto pra staff/arquiteto técnico. Se você não mexe com desenho de times ainda, pode deixar pra depois.*
 
 ## Esqueleto (o que falar)
 - Por que importa: é o livro pra quando o problema não é o código nem as pessoas, é o DESENHO dos times. Se sua entrega trava em dependência entre squads, reunião de alinhamento infinita e "isso é com o outro time", o bug é topológico.

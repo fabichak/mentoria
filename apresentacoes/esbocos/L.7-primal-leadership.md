@@ -1,5 +1,6 @@
 # L.7: TL;DR: Primal Leadership (Daniel Goleman)
 **Biblioteca de livros**
+*Conteúdo da trilha de liderança/gestão. Se você está na trilha técnica ou não lidera pessoas, pode pular.*
 
 ## Esqueleto (o que falar)
 - Por que importa: você pode ser o líder mais técnico da sala, mas seu humor é contagioso, literalmente. Goleman mostra que o estado emocional do líder se espalha pelo time e afeta performance. Dev virando líder subestima isso brutalmente.

@@ -4,6 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>A jornada do desenvolvedor não é só código.</title>
+<link rel="preconnect" href="https://forms.kommo.com" crossorigin>
+<link rel="dns-prefetch" href="//forms.kommo.com">
 <style>
 :root { --ink:#05070a; --panel:#0b0f16; --panel-2:#111722; --line:#253044; --blue:#4d88e7; --blue-light:#79a9f4; --white:#f5f7fb; --muted:#a9b2c1; --max:1180px; }
 * { box-sizing:border-box; }
@@ -12,30 +14,30 @@ body { margin:0; background:var(--ink); color:var(--white); font-family:Arial, s
 a { color:inherit; text-decoration:none; }
 button, a, summary { -webkit-tap-highlight-color:transparent; }
 .container { width:min(var(--max), calc(100% - 48px)); margin:0 auto; }
-.topbar { height:76px; display:flex; align-items:center; justify-content:space-between; padding:0 max(24px, calc((100vw - var(--max))/2)); position:absolute; top:0; width:100%; z-index:5; border-bottom:1px solid rgba(255,255,255,.12); }
 .brand { display:flex; align-items:center; gap:12px; font-size:12px; letter-spacing:.14em; font-weight:700; }
 .brand sup { font-size:7px; margin-left:2px; }
 .brand-mark { display:grid; place-items:center; width:36px; height:36px; background:var(--blue); color:#fff; font-weight:800; letter-spacing:-.08em; }
-.topbar-link { font-size:13px; color:#dbe7fb; display:flex; gap:12px; align-items:center; transition:color .2s ease; }
-.topbar-link:hover { color:var(--blue-light); }
-.hero { min-height:980px; display:flex; align-items:center; position:relative; overflow:hidden; background:#05070a; padding:96px 0 132px; }
+.special-offer-bar { position:sticky; top:0; z-index:20; display:flex; align-items:center; justify-content:center; gap:12px; min-height:58px; padding:10px 20px; background:#c41524; border-bottom:1px solid #f36570; box-shadow:0 10px 30px rgba(104,0,9,.38); text-align:center; }
+.special-offer-label { color:#fff; font-size:12px; font-weight:800; letter-spacing:.16em; text-transform:uppercase; }
+.special-offer-timer { min-width:92px; padding:5px 11px; background:#780914; border:1px solid rgba(255,255,255,.72); color:#fff; font:800 22px/1 ui-monospace,Menlo,Consolas,monospace; letter-spacing:.04em; font-variant-numeric:tabular-nums; box-shadow:inset 0 0 0 1px rgba(0,0,0,.15); }
+.hero { min-height:calc(100vh - 58px); display:flex; align-items:center; position:relative; overflow:hidden; background:#05070a; padding:54px 0 82px; }
 .hero-photo { position:absolute; inset:0 0 0 48%; background-position:center 14%; background-size:cover; background-repeat:no-repeat; filter:saturate(.65) contrast(1.08); }
 .hero-shade { position:absolute; inset:0; background:linear-gradient(90deg,#05070a 0%,#05070a 39%,rgba(5,7,10,.8) 58%,rgba(5,7,10,.22) 100%),linear-gradient(0deg,#05070a 0%,transparent 24%); }
-.hero-content { position:relative; z-index:2; padding-top:86px; }
+.hero-content { position:relative; z-index:2; padding-top:0; }
 .eyebrow { margin:0 0 24px; text-transform:uppercase; letter-spacing:.19em; color:var(--blue-light); font-size:12px; font-weight:700; }
 .eyebrow::before { content:"//"; margin-right:9px; color:var(--blue); }
 h1,h2,h3,p { margin-top:0; }
-h1 { max-width:820px; font-size:clamp(50px,5.7vw,86px); line-height:.98; letter-spacing:-.055em; margin-bottom:32px; font-weight:720; }
+h1 { max-width:780px; font-size:clamp(44px,4.6vw,70px); line-height:1; letter-spacing:-.05em; margin-bottom:24px; font-weight:720; }
 h1 em, .final-cta h2 em { color:var(--blue); font-style:normal; }
-.hero-lead { max-width:710px; font-size:20px; line-height:1.62; color:#ced4de; margin-bottom:34px; }
+.hero-lead { max-width:710px; font-size:18px; line-height:1.52; color:#ced4de; margin-bottom:22px; }
 .hero-actions { display:flex; align-items:center; gap:24px; flex-wrap:wrap; }
 .hero-actions > span { color:var(--white); font-size:14px; font-weight:700; background:rgba(77,136,231,.16); border:1px solid var(--blue); padding:12px 18px; }
 .cta { display:inline-flex; align-items:center; justify-content:center; min-width:330px; padding:18px 22px; background:var(--blue); border:1px solid var(--blue); color:#fff; font-weight:700; font-size:14px; line-height:1.4; text-align:center; transition:background .2s,border-color .2s; cursor:pointer; }
 .cta:hover { background:#336fcf; border-color:#336fcf; }
-.cta:focus-visible, summary:focus-visible, .topbar-link:focus-visible { outline:3px solid #fff; outline-offset:4px; }
+.cta:focus-visible, summary:focus-visible { outline:3px solid #fff; outline-offset:4px; }
 .cta-secondary { min-width:0; width:100%; background:transparent; border-color:#34435c; color:#dce8fb; margin-top:auto; }
 .cta-secondary:hover { background:#14233a; border-color:var(--blue); }
-.hero-proof { display:flex; gap:0; margin-top:72px; border-top:1px solid rgba(255,255,255,.16); width:min(1040px,100%); flex-wrap:wrap; }
+.hero-proof { display:flex; gap:0; margin-top:46px; border-top:1px solid rgba(255,255,255,.16); width:min(1040px,100%); flex-wrap:wrap; }
 .hero-proof div { display:flex; align-items:center; gap:14px; padding:22px 24px 0 0; margin-right:24px; border-right:1px solid rgba(255,255,255,.14); }
 .hero-proof div:last-child { border:0; }
 .hero-proof strong { font-size:34px; color:var(--blue-light); line-height:1; }
@@ -108,6 +110,25 @@ h1 em, .final-cta h2 em { color:var(--blue); font-style:normal; }
 footer { padding:35px 0; border-top:1px solid #202936; background:#05070a; }
 footer .container { display:flex; justify-content:space-between; align-items:center; }
 footer p { color:#667286; font-size:11px; margin:0; }
+html.checkout-modal-open { overflow:hidden; }
+.checkout-modal { position:fixed; inset:0; z-index:9999; display:block; overflow-y:auto; overscroll-behavior:contain; padding:32px 20px; visibility:hidden; opacity:0; pointer-events:none; transition:opacity .2s ease,visibility .2s ease; }
+.checkout-modal.is-open { visibility:visible; opacity:1; pointer-events:auto; }
+.checkout-backdrop { position:fixed; inset:0; background:rgba(1,4,9,.86); backdrop-filter:blur(8px); }
+.checkout-dialog { position:relative; width:min(720px,100%); min-height:240px; margin:0 auto; padding:42px; overflow:visible; background:var(--panel); color:var(--white); border:1px solid #34435c; box-shadow:0 28px 90px rgba(0,0,0,.62); }
+.checkout-close { appearance:none; position:absolute; z-index:5; top:16px; right:16px; display:grid; place-items:center; width:44px; height:44px; padding:0; border:1px solid #34435c; border-radius:0; background:var(--panel-2); color:#fff; font:400 26px/1 Arial,sans-serif; cursor:pointer; transition:background .2s,border-color .2s; }
+.checkout-close:hover { background:#182236; border-color:var(--blue); }
+.checkout-close:focus-visible { outline:3px solid var(--blue-light); outline-offset:3px; }
+.checkout-dialog .eyebrow { margin-bottom:14px; }
+.checkout-dialog h2 { max-width:530px; padding-right:48px; margin-bottom:14px; font-size:clamp(32px,5vw,48px); line-height:1.04; letter-spacing:-.04em; }
+.checkout-intro { max-width:590px; margin-bottom:28px; color:var(--muted); }
+.kommo-form-shell { position:relative; isolation:isolate; width:100%; min-height:190px; }
+.kommo-form-shell::after { content:""; position:absolute; z-index:2147483647; right:0; bottom:5px; width:160px; height:35px; background:var(--panel); pointer-events:none; }
+.kommo-form-host { position:relative; z-index:1; display:grid; justify-items:center; width:100%; }
+.kommo-form-host > iframe,.kommo-form-host > div { display:block!important; max-width:100%!important; margin-right:auto!important; margin-left:auto!important; }
+.kommo-form-loading { margin:0; padding:54px 0; color:#8b96a8; font-size:14px; text-align:center; }
+.kommo-form-loading::before { content:""; display:block; width:28px; height:28px; margin:0 auto 14px; border:2px solid #26354b; border-top-color:var(--blue); border-radius:50%; animation:kommo-spin .75s linear infinite; }
+.kommo-form-note { margin:16px 0 0; color:#7f8999; font-size:11px; line-height:1.45; text-align:center; }
+@keyframes kommo-spin { to { transform:rotate(360deg); } }
 .ticker { position:relative; background:var(--blue); overflow:hidden; width:100%; padding:13px 0; }
 .ticker-track { display:flex; align-items:center; gap:26px; width:max-content; animation:ticker 46s linear infinite; }
 .ticker-item { color:#fff; font-size:14px; font-weight:600; white-space:nowrap; }
@@ -128,14 +149,18 @@ footer p { color:#667286; font-size:11px; margin:0; }
 @media (max-width:640px) {
   body { font-size:15px; }
   .container { width:min(100% - 32px,var(--max)); }
-  .topbar { display:none; }
+  .special-offer-bar { min-height:54px; gap:9px; padding:9px 12px; }
+  .special-offer-label { font-size:10px; letter-spacing:.13em; }
+  .special-offer-timer { min-width:82px; font-size:19px; }
   .hero { min-height:0; display:block; padding:0; }
   .hero-photo { inset:auto 0 0; height:350px; background-position:center 8%; }
   .hero-shade { background:linear-gradient(180deg,#05070a 0%,#05070a calc(100% - 350px),rgba(5,7,10,.18) calc(100% - 285px),rgba(5,7,10,.06) 88%,#080b10 100%); }
-  .hero-content { padding-top:64px; padding-bottom:390px; }
-  h1 { font-size:40px; margin-bottom:22px; }
-  .hero-lead { font-size:16px; line-height:1.55; }
+  .hero-content { padding-top:34px; padding-bottom:390px; }
+  h1 { font-size:32px; line-height:1.03; margin-bottom:16px; }
+  .hero .eyebrow { margin-bottom:14px; }
+  .hero-lead { font-size:14px; line-height:1.43; margin-bottom:15px; }
   .hero-actions .cta { width:100%; min-width:0; }
+  .section-cta .cta { width:100%; min-width:0; }
   .section { padding:82px 0; }
   .section-heading h2,.editorial-grid h2,.faq-grid h2 { font-size:38px; }
   .method-grid { grid-template-columns:1fr!important; }
@@ -146,16 +171,21 @@ footer p { color:#667286; font-size:11px; margin:0; }
   .final-cta h2 { font-size:46px; }
   .final-cta .cta { min-width:0; width:100%; }
   footer .container { gap:24px; align-items:flex-start; flex-direction:column; }
+  .checkout-modal { padding:10px; }
+  .checkout-dialog { padding:30px 12px 22px; }
+  .checkout-close { top:10px; right:10px; width:40px; height:40px; }
+  .checkout-dialog h2 { padding-right:44px; font-size:34px; }
+  .checkout-intro { margin-bottom:22px; }
 }
-@media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } * { transition:none!important; } }
+@media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } * { transition:none!important; } .ticker-track,.kommo-form-loading::before { animation:none!important; } .checkout-backdrop { backdrop-filter:none; } }
 </style>
 </head>
 <body>
+<aside class="special-offer-bar" aria-label="Condição especial com tempo limitado">
+  <span class="special-offer-label">Condição especial encerra em</span>
+  <time class="special-offer-timer" id="special-offer-timer" role="timer" datetime="PT15M" aria-label="15 minutos restantes">15:00</time>
+</aside>
 <main>
-<header class="topbar">
-  <a class="brand" href="#aula"><span class="brand-mark">CL</span><span>Code Leadership &middot; Martin Fabichak</span></a>
-</header>
-
 <section class="hero" id="aula">
   <div class="hero-photo" style="background-image:url('https://martinfabichak.com/wp-content/uploads/2026/07/martin-hero.jpg')" aria-hidden="true"></div>
   <div class="hero-shade" aria-hidden="true"></div>
@@ -165,7 +195,7 @@ footer p { color:#667286; font-size:11px; margin:0; }
     <p class="hero-lead">Você quer ganhar mais, mas não sabe qual alavanca puxar? Convive com síndrome do impostor mesmo entregando resultado? Cansou do chefe tóxico e quer escolher com quem e no que trabalhar? Quer provar pra <strong>você</strong> que é capaz?</p>
     <p class="hero-lead">Eu passei pelos 3 caminhos: dev, líder, empreendedor. Em 90 minutos, entrego 20 anos de estrada pra você sair da estagnação e acelerar sua carreira. Não é palestra motivacional, é exercício prático: você mapeia suas próximas decisões ao vivo, com o que eu vou ensinar.</p>
     <div class="hero-actions">
-      <a class="cta" href="#cta"><span>Quero avançar na minha carreira</span></a>
+      <a class="cta" href="#checkout" data-checkout-open><span>Quero avançar na minha carreira</span></a>
       <span>Terça-feira, 23/09 &middot; 19h &middot; Ao vivo pelo Google Meet &middot; R$47,00</span>
     </div>
     <div class="hero-proof" aria-label="Sobre a aula">
@@ -226,6 +256,9 @@ footer p { color:#667286; font-size:11px; margin:0; }
         <p>Estúdio próprio, produto lançado, o risco e a liberdade de construir algo seu. Hoje tenho 3 empresas diferentes.</p>
       </article>
     </div>
+    <div class="section-cta section-cta-center">
+      <a class="cta" href="#checkout" data-checkout-open><span>Quero garantir meu ingresso</span></a>
+    </div>
   </div>
 </section>
 
@@ -252,6 +285,9 @@ footer p { color:#667286; font-size:11px; margin:0; }
         <h3>Trilha empreendedora</h3>
         <p>SaaS/produto próprio, consultoria/freela high-ticket, ou agência/estúdio. Risco alto, mas é a única trilha sem teto. As skills que te levam a Staff ou a CTO são as mesmas que você precisa pra empreender: comunicação, visão de negócio, vender ideia.</p>
       </article>
+    </div>
+    <div class="section-cta section-cta-center">
+      <a class="cta" href="#checkout" data-checkout-open><span>Quero garantir meu ingresso</span></a>
     </div>
   </div>
 </section>
@@ -280,6 +316,9 @@ footer p { color:#667286; font-size:11px; margin:0; }
         <p>Como tudo que você aprendeu, isso é técnica. Vou te ensinar alguns passos de como alcançar isso.</p>
       </article>
     </div>
+    <div class="section-cta section-cta-center">
+      <a class="cta" href="#checkout" data-checkout-open><span>Quero garantir meu ingresso</span></a>
+    </div>
   </div>
 </section>
 
@@ -296,6 +335,9 @@ footer p { color:#667286; font-size:11px; margin:0; }
       <div>3. <b>DESTINO 24 MESES</b></div>
       <div>4. <b>MEUS 2 PITFALLS</b></div>
       <div>5. <b>PRÓXIMOS 3 PASSOS DE MELHORA</b></div>
+    </div>
+    <div class="section-cta section-cta-center">
+      <a class="cta" href="#checkout" data-checkout-open><span>Quero garantir meu ingresso</span></a>
     </div>
   </div>
 </section>
@@ -321,6 +363,9 @@ footer p { color:#667286; font-size:11px; margin:0; }
       <div><strong>+10 anos</strong><span>liderando fora do Brasil</span></div>
       <div><strong>&euro;100M</strong><span>em projetos operados</span></div>
     </div>
+    <div class="section-cta section-cta-center">
+      <a class="cta" href="#checkout" data-checkout-open><span>Quero garantir meu ingresso</span></a>
+    </div>
   </div>
 </section>
 
@@ -329,7 +374,7 @@ footer p { color:#667286; font-size:11px; margin:0; }
     <p class="eyebrow">23/09, 19h, R$47</p>
     <h2>Descubra os próximos passos da sua jornada.</h2>
     <p>A diferença entre quem chega e quem fica parado nunca foi talento; é rota escolhida, constância e gente certa do seu lado.</p>
-    <a class="cta" href="https://pay.kiwify.com.br/tBNuiPc"><span>Compre seu ingresso e entre no grupo</span></a>
+    <a class="cta" href="#checkout" data-checkout-open><span>Compre seu ingresso e entre no grupo</span></a>
   </div>
 </section>
 
@@ -356,6 +401,9 @@ footer p { color:#667286; font-size:11px; margin:0; }
         <summary>Você vai me vender alguma coisa?<span>+</span></summary>
         <p>No final eu apresento a comunidade que estamos criando para quem quiser continuar. Os 90 minutos de conteúdo acontecem independente disso.</p>
       </details>
+      <div class="section-cta section-cta-center">
+        <a class="cta" href="#checkout" data-checkout-open><span>Quero garantir meu ingresso</span></a>
+      </div>
     </div>
   </div>
 </section>
@@ -368,6 +416,22 @@ footer p { color:#667286; font-size:11px; margin:0; }
   </div>
 </footer>
 
+<div class="checkout-modal" id="checkout" aria-hidden="true">
+  <div class="checkout-backdrop" data-checkout-close></div>
+  <section class="checkout-dialog" role="dialog" aria-modal="true" aria-labelledby="checkout-title" tabindex="-1">
+    <button class="checkout-close" type="button" aria-label="Fechar formulário" data-checkout-close>&times;</button>
+    <p class="eyebrow">garanta sua vaga</p>
+    <h2 id="checkout-title">Complete sua inscrição.</h2>
+    <p class="checkout-intro">Preencha seus dados para continuar para o pagamento seguro na Kiwify.</p>
+    <div class="kommo-form-shell">
+      <div class="kommo-form-host" id="kommo-form-host">
+        <p class="kommo-form-loading" role="status">Carregando formulário...</p>
+      </div>
+    </div>
+    <p class="kommo-form-note">Seus dados serão enviados com segurança. Depois, você será direcionado ao pagamento.</p>
+  </section>
+</div>
+
 <script>
 document.querySelectorAll('.faq-list details').forEach(function(item){
   item.addEventListener('toggle', function(){
@@ -375,6 +439,133 @@ document.querySelectorAll('.faq-list details').forEach(function(item){
     document.querySelectorAll('.faq-list details').forEach(function(o){ if (o !== item) o.open = false; });
   });
 });
+
+(function(){
+  const timer = document.getElementById('special-offer-timer');
+  const duration = 15 * 60 * 1000;
+  let deadline = Date.now() + duration;
+  let intervalId;
+
+  function renderTimer(){
+    const remaining = Math.max(0, deadline - Date.now());
+    const totalSeconds = Math.ceil(remaining / 1000);
+    const minutes = Math.floor(totalSeconds / 60);
+    const seconds = totalSeconds % 60;
+    const value = String(minutes).padStart(2,'0') + ':' + String(seconds).padStart(2,'0');
+    timer.textContent = value;
+    timer.setAttribute('aria-label', minutes + ' minutos e ' + seconds + ' segundos restantes');
+    if (remaining <= 0 && intervalId) {
+      window.clearInterval(intervalId);
+      intervalId = null;
+    }
+  }
+
+  function startTimer(){
+    deadline = Date.now() + duration;
+    if (intervalId) window.clearInterval(intervalId);
+    renderTimer();
+    intervalId = window.setInterval(renderTimer, 250);
+  }
+
+  startTimer();
+  window.addEventListener('pageshow', function(event){
+    if (event.persisted) startTimer();
+  });
+})();
+
+(function(){
+  const modal = document.getElementById('checkout');
+  const dialog = modal.querySelector('.checkout-dialog');
+  const closeButton = modal.querySelector('.checkout-close');
+  const openButtons = Array.from(document.querySelectorAll('[data-checkout-open]'));
+  let previousFocus = null;
+  let formRequested = false;
+  let formReady = false;
+
+  function resizeKommoForm(){
+    if (window.amo_forms_params && typeof window.amo_forms_params.resizeForm === 'function') {
+      window.amo_forms_params.resizeForm('amoforms_iframe_1726915');
+    }
+  }
+
+  function requestKommoForm(){
+    if (formRequested) return;
+    formRequested = true;
+    const host = document.getElementById('kommo-form-host');
+    host.innerHTML = '';
+
+    window.amo_forms_loaded = window.amo_forms_loaded || function(callback, key){
+      window.amo_forms_loaded.f = (window.amo_forms_loaded.f || []).concat([[callback, key]]);
+    };
+    window.amo_forms_loaded(function(){
+      formReady = true;
+      window.setTimeout(resizeKommoForm, 50);
+    }, '1726915');
+
+    !function(a,m,o,c,r,m){a[o+c]=a[o+c]||{setMeta:function(p){this.params=(this.params||[]).concat([p])}},a[o+r]=a[o+r]||function(f){a[o+r].f=(a[o+r].f||[]).concat([f])},a[o+r]({id:"1726915",hash:"cec16d8d3129534d276456c3382a5e42",locale:"pt"}),a[o+m]=a[o+m]||function(f,k){a[o+m].f=(a[o+m].f||[]).concat([[f,k]])}}(window,0,"amo_forms_","params","load","loaded");
+
+    const script = document.createElement('script');
+    script.id = 'amoforms_script_1726915';
+    script.async = true;
+    script.charset = 'utf-8';
+    script.src = 'https://forms.kommo.com/forms/assets/js/amoforms.js?1788106878';
+    script.onerror = function(){
+      formRequested = false;
+      document.getElementById('kommo-form-host').innerHTML = '<p class="kommo-form-loading" role="status">Não foi possível carregar o formulário. Feche e tente novamente.</p>';
+    };
+    host.appendChild(script);
+  }
+
+  function openModal(event){
+    if (event) event.preventDefault();
+    previousFocus = document.activeElement;
+    modal.classList.add('is-open');
+    modal.setAttribute('aria-hidden','false');
+    document.documentElement.classList.add('checkout-modal-open');
+    modal.scrollTop = 0;
+    requestKommoForm();
+    window.setTimeout(function(){
+      closeButton.focus();
+      if (formReady) resizeKommoForm();
+    }, 30);
+  }
+
+  function closeModal(){
+    modal.classList.remove('is-open');
+    modal.setAttribute('aria-hidden','true');
+    document.documentElement.classList.remove('checkout-modal-open');
+    if (previousFocus && typeof previousFocus.focus === 'function') previousFocus.focus();
+  }
+
+  function trapFocus(event){
+    if (event.key !== 'Tab') return;
+    const focusable = Array.from(dialog.querySelectorAll('button,[href],input,select,textarea,[tabindex]:not([tabindex="-1"])')).filter(function(element){
+      return !element.disabled && element.offsetParent !== null;
+    });
+    if (!focusable.length) { event.preventDefault(); dialog.focus(); return; }
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+    if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+  }
+
+  openButtons.forEach(function(button){
+    button.addEventListener('click', openModal);
+    button.addEventListener('pointerenter', requestKommoForm, { once:true });
+    button.addEventListener('focus', requestKommoForm, { once:true });
+  });
+  modal.querySelectorAll('[data-checkout-close]').forEach(function(element){ element.addEventListener('click', closeModal); });
+  modal.addEventListener('keydown', trapFocus);
+  document.addEventListener('keydown', function(event){
+    if (event.key === 'Escape' && modal.classList.contains('is-open')) closeModal();
+  });
+
+  if ('requestIdleCallback' in window) {
+    window.requestIdleCallback(requestKommoForm, { timeout:2000 });
+  } else {
+    window.setTimeout(requestKommoForm, 900);
+  }
+})();
 </script>
 </body>
 </html>

@@ -41,10 +41,11 @@ Buffer implícito: blocos D/E podem comprimir se Q&A comer tempo.
 **Gancho de abertura (escolher 1):**
 - Opção 1 — pergunta: "Quantos anos você tem de carreira? E quantas vezes você *escolheu* conscientemente o próximo passo — vs. simplesmente aceitou o que apareceu?"
 - Opção 2 — confronto: "Ninguém te ensinou a ter carreira. Te ensinaram a programar. São coisas diferentes."
-- Opção 3 — dado: "Dev sênior no Brasil: R$12–18k. Mesmo dev, mesma stack, remoto pra fora: $8–12k/mês. A diferença não é técnica."
+- Opção 3 — dado (sênior/exterior): "Dev sênior no Brasil: R$12–18k. Mesmo dev, mesma stack, remoto pra fora: $8–12k/mês. A diferença não é técnica."
+- Opção 4 — dado (júnior/pleno, público principal): "Você programa bem. Mas ninguém te disse quais das próximas decisões definem se você trava em R$4–6k ou chega em R$15k daqui a 3 anos."
 
-**História do Martin (comprimida, 5–6 min) — usar como fio condutor da aula inteira, não só abertura:**
-- Adolescente com Flash/ActionScript → USP matemática → PHP/web → jogos
+**História do Martin (comprimida, 5–6 min) — usar como fio condutor da aula inteira, não só abertura. Começar pelo início: quem tá começando precisa se ver aí, não só admirar o resultado final:**
+- Adolescente sozinho com Flash/ActionScript, aprendendo sem saber se tava certo, fazendo freela pequeno → USP matemática → PHP/web → jogos — *o "eu também não sabia nada no começo"*
 - Sócio de estúdio (Chico Bento 5M+ jogadores, primeiro jogo PSP da América Latina) — *primeira passada por empreendedorismo*
 - Alemanha: "primeira vez que percebi que eu era bom — não só tecnicamente: eu juntava pessoas pra resolver problemas" ← **momento-chave da narrativa, é a tese da aula encarnada**
 - Chimera/Munique: Monopoly, "golden boy", lead de múltiplas equipes
@@ -84,7 +85,8 @@ Buffer implícito: blocos D/E podem comprimir se Q&A comer tempo.
 
 **Narrativa do bloco:**
 - Histórico: como salário dev evoluiu no BR (boom 2020–22, correção 2023–24, cenário atual com IA)
-- **O platô dos R$15k:** onde a maioria dos sêniors trava — e por que ficar "só técnico" é o que causa o platô (ponte pro bloco E)
+- **A subida júnior→pleno→sênior (foco principal):** não é tempo de casa, é progressão de escopo de impacto — o dev que trava não é o menos técnico, é o que não sabe o próximo passo
+- **O platô dos R$15k (espelho do sênior):** onde a maioria dos sêniors trava — e por que ficar "só técnico" é o que causa o platô (ponte pro bloco E)
 - IA: endereçar o elefante — "IA não substitui dev; muda o que é valioso: julgamento, arquitetura, liderança, comunicação — exatamente o conteúdo desta aula"
 
 **Trabalhar fora (subtema, ~5 min):**
@@ -97,7 +99,13 @@ Buffer implícito: blocos D/E podem comprimir se Q&A comer tempo.
 
 **Estrutura visual: confronto lado a lado → depois convergência no centro.**
 
-**Desafios da trilha técnica:**
+**Desafios de quem tá começando (Jr/Pleno):**
+- Síndrome do impostor: não saber se sabe o suficiente pra opinar, perguntar, aplicar pra vaga
+- Não saber o que estudar: fundamento vs framework da vez, sem ninguém pra calibrar
+- Medo de pedir ajuda: achar que perguntar expõe fraqueza (é o oposto)
+- Ritos de passagem: primeiro code review, primeira produção quebrada — ninguém avisa que vai doer
+
+**Desafios da trilha técnica (Sr+):**
 - Obsolescência: stack de hoje morre em 5 anos — o que sobrevive é fundamento
 - Teto invisível: de Sr pra Staff a barreira não é código, é influência/escrita/comunicação
 - Solidão do especialista: quanto mais fundo, menos pares
@@ -177,7 +185,9 @@ Por que com outras pessoas?
 **Pitch Mentoria 2.0 (clube de devs) — estrutura:**
 1. O que é: comunidade + método completo (PREPARAR→AGIR→MOSTRAR→OTIMIZAR) + Martin próximo
 2. O que tem dentro (mostrar concretude, não promessa):
-   - Método gravado completo (fases 0–4 + trilha técnica + recolocação/exterior)
+   - Método gravado completo em módulos (Mapear→Pessoas/Processos/Produto→Mostrar→Próximo Nível + trilhas específicas)
+   - Módulo Júnior→Pleno (público principal): sair do júnior sem depender de sorte, autonomia técnica, ritos de passagem, o que estudar
+   - Trilha técnica, recolocação/exterior, sênior→lead pra quem escolhe liderança
    - Encontros semanais, hot seat mensal, clube do livro, mock interviews
    - Discord: #wins, #vagas, #exterior, peer review de CV
    - Trilha de auto-estima (Alan) ← conecta direto com pitfall 1

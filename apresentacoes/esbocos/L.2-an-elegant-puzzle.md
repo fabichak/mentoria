@@ -1,5 +1,6 @@
 # L.2: TL;DR: An Elegant Puzzle (Will Larson)
 **Biblioteca de livros**
+*Conteúdo da trilha de liderança/gestão. Se você está na trilha técnica ou ainda não pensa em liderar pessoas, pode pular.*
 
 ## Esqueleto (o que falar)
 - Por que importa: Fournier te dá o mapa da carreira; Larson te dá a engenharia de sistemas da gestão. É o livro pra quem gosta de pensar em times como sistemas, perfeito pra cabeça de dev.

@@ -1,5 +1,6 @@
 # L.6: TL;DR: Never Split the Difference (Chris Voss)
 **Biblioteca de livros**
+*Conteúdo da trilha de liderança/gestão, mas negociação serve pra qualquer carreira (salário, escopo, prazo). Se seu interesse é só a trilha técnica, ainda vale uma olhada.*
 
 ## Esqueleto (o que falar)
 - Por que importa: líder técnico negocia o dia inteiro sem perceber, prazo com produto, escopo com diretor, salário com RH, prioridade com outro time. Voss (ex-negociador de reféns do FBI) ensina negociação pra quando a outra parte tem mais poder que você. Soa familiar?

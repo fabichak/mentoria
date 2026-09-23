@@ -1,5 +1,6 @@
 # L.10: TL;DR: High Output Management (Andy Grove)
 **Biblioteca de livros**
+*Conteúdo da trilha de liderança/gestão. Se você está na trilha técnica ou não lidera pessoas, pode pular.*
 
 ## Esqueleto (o que falar)
 - Por que importa: escrito em 1983 pelo CEO da Intel e ainda é a bíblia de gestão do Vale, porque trata gestão como engenharia de produção. Se você pensa em throughput, gargalo e alavancagem, esse livro fala a sua língua.

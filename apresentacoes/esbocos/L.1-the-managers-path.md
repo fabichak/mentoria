@@ -1,5 +1,6 @@
 # L.1: TL;DR: The Manager's Path (Camille Fournier)
 **Biblioteca de livros**
+*Conteúdo da trilha de liderança/gestão. Se você está na trilha técnica ou ainda não pensa em liderar pessoas, pode pular.*
 
 ## Esqueleto (o que falar)
 - Por que importa: é O mapa da carreira de liderança em tech, de mentor a CTO. Se você é sênior virando líder, esse livro mostra o que muda em cada degrau antes de você tropeçar nele.

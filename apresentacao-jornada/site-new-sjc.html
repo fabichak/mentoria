@@ -1,0 +1,636 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A jornada do desenvolvedor &middot; Presencial em São José dos Campos</title>
+<link rel="preconnect" href="https://forms.kommo.com" crossorigin>
+<link rel="dns-prefetch" href="//forms.kommo.com">
+<style>
+:root { --ink:#05070a; --panel:#0b0f16; --panel-2:#111722; --line:#253044; --blue:#4d88e7; --blue-light:#79a9f4; --white:#f5f7fb; --muted:#a9b2c1; --max:1180px; }
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; background:var(--ink); }
+body { margin:0; background:var(--ink); color:var(--white); font-family:Arial, sans-serif; font-size:16px; line-height:1.65; }
+a { color:inherit; text-decoration:none; }
+button, a, summary { -webkit-tap-highlight-color:transparent; }
+.container { width:min(var(--max), calc(100% - 48px)); margin:0 auto; }
+.brand { display:flex; align-items:center; gap:12px; font-size:12px; letter-spacing:.14em; font-weight:700; }
+.brand sup { font-size:7px; margin-left:2px; }
+.brand-mark { display:grid; place-items:center; width:36px; height:36px; background:var(--blue); color:#fff; font-weight:800; letter-spacing:-.08em; }
+.special-offer-bar { position:sticky; top:0; z-index:20; display:flex; align-items:center; justify-content:center; gap:12px; min-height:58px; padding:10px 20px; background:#c41524; border-bottom:1px solid #f36570; box-shadow:0 10px 30px rgba(104,0,9,.38); text-align:center; }
+.special-offer-label { color:#fff; font-size:12px; font-weight:800; letter-spacing:.16em; text-transform:uppercase; }
+.special-offer-timer { min-width:92px; padding:5px 11px; background:#780914; border:1px solid rgba(255,255,255,.72); color:#fff; font:800 22px/1 ui-monospace,Menlo,Consolas,monospace; letter-spacing:.04em; font-variant-numeric:tabular-nums; box-shadow:inset 0 0 0 1px rgba(0,0,0,.15); }
+.hero { min-height:calc(100vh - 58px); display:flex; align-items:center; position:relative; overflow:hidden; background:#05070a; padding:54px 0 82px; }
+.hero-photo { position:absolute; inset:0 0 0 48%; background-position:center 14%; background-size:cover; background-repeat:no-repeat; filter:saturate(.65) contrast(1.08); }
+.hero-shade { position:absolute; inset:0; background:linear-gradient(90deg,#05070a 0%,#05070a 39%,rgba(5,7,10,.8) 58%,rgba(5,7,10,.22) 100%),linear-gradient(0deg,#05070a 0%,transparent 24%); }
+.hero-content { position:relative; z-index:2; padding-top:0; }
+.eyebrow { margin:0 0 24px; text-transform:uppercase; letter-spacing:.19em; color:var(--blue-light); font-size:12px; font-weight:700; }
+.eyebrow::before { content:"//"; margin-right:9px; color:var(--blue); }
+h1,h2,h3,p { margin-top:0; }
+h1 { max-width:780px; font-size:clamp(44px,4.6vw,70px); line-height:1; letter-spacing:-.05em; margin-bottom:24px; font-weight:720; }
+h1 em, .final-cta h2 em { color:var(--blue); font-style:normal; }
+.hero-lead { max-width:710px; font-size:18px; line-height:1.52; color:#ced4de; margin-bottom:22px; }
+.hero-actions { display:flex; align-items:center; gap:24px; flex-wrap:wrap; }
+.hero-actions > span { color:var(--white); font-size:14px; font-weight:700; background:rgba(77,136,231,.16); border:1px solid var(--blue); padding:12px 18px; }
+.cta { display:inline-flex; align-items:center; justify-content:center; min-width:330px; padding:18px 22px; background:var(--blue); border:1px solid var(--blue); color:#fff; font-weight:700; font-size:14px; line-height:1.4; text-align:center; transition:background .2s,border-color .2s; cursor:pointer; }
+.cta:hover { background:#336fcf; border-color:#336fcf; }
+.cta:focus-visible, summary:focus-visible { outline:3px solid #fff; outline-offset:4px; }
+.cta-secondary { min-width:0; width:100%; background:transparent; border-color:#34435c; color:#dce8fb; margin-top:auto; }
+.cta-secondary:hover { background:#14233a; border-color:var(--blue); }
+.hero-proof { display:flex; gap:0; margin-top:46px; border-top:1px solid rgba(255,255,255,.16); width:min(1040px,100%); flex-wrap:wrap; }
+.hero-proof div { display:flex; align-items:center; gap:14px; padding:22px 24px 0 0; margin-right:24px; border-right:1px solid rgba(255,255,255,.14); }
+.hero-proof div:last-child { border:0; }
+.hero-proof strong { font-size:34px; color:var(--blue-light); line-height:1; }
+.hero-proof span { font-size:11px; line-height:1.35; text-transform:uppercase; letter-spacing:.08em; color:#9ea8b7; max-width:132px; }
+.section { padding:124px 0; }
+.section-heading { margin-bottom:54px; }
+.section-heading h2, .editorial-grid h2, .fit-grid h2, .faq-grid h2 { font-size:clamp(40px,5vw,68px); line-height:1.04; letter-spacing:-.045em; max-width:880px; margin-bottom:0; }
+.split-heading { display:grid; grid-template-columns:1.45fr .7fr; gap:80px; align-items:end; }
+.split-heading > p { color:var(--muted); margin:0 0 4px; font-size:17px; }
+.profile-section { background:#080b10; }
+.profile-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+.profile-card { min-height:0; padding:34px; border:1px solid #202938; background:linear-gradient(145deg,#101620,#090d13); display:flex; flex-direction:column; transition:border-color .25s,background .25s; }
+.profile-card:hover { border-color:#456ca7; background:linear-gradient(145deg,#121c2b,#090d13); }
+.card-index { color:#43516a; font-size:12px; letter-spacing:.14em; margin-bottom:24px; }
+.card-label { color:var(--blue-light)!important; text-transform:uppercase; font-size:11px!important; font-weight:700; letter-spacing:.15em; }
+.profile-card h3 { font-size:25px; line-height:1.2; letter-spacing:-.025em; margin-bottom:18px; margin-top:12px; }
+.profile-card > p { color:var(--muted); font-size:15px; }
+.turning-point { background:var(--white); color:#0b1018; }
+.editorial-grid { display:grid; grid-template-columns:1fr 1fr; gap:100px; }
+.turning-point .eyebrow { color:#386fc6; }
+.cost-list > div { display:grid; grid-template-columns:92px 1fr; gap:18px; padding:25px 0; border-bottom:1px solid #d7dce3; }
+.cost-list span { color:#4b7dca; font-size:12px; font-weight:700; font-family:ui-monospace,Menlo,Consolas,monospace; letter-spacing:.04em; }
+.cost-list p { margin:0; color:#4c5665; }
+.cost-list strong { color:#141a23; }
+.mapa-box { border:1px dashed #2c3a50; background:rgba(255,255,255,.03); padding:28px; font-family:ui-monospace,Menlo,Consolas,monospace; font-size:14px; line-height:2.1; color:var(--muted); }
+.mapa-box b { color:var(--white); }
+.method-section { background:#07101d; position:relative; overflow:hidden; }
+.method-heading { position:relative; }
+.method-heading > p:last-child { color:var(--blue-light); font-size:20px; margin-top:20px; }
+.method-grid { display:grid; grid-template-columns:repeat(4,1fr); border-top:1px solid #2c3a50; border-bottom:1px solid #2c3a50; }
+.method-card { padding:32px 27px 42px; min-height:0; border-right:1px solid #2c3a50; }
+.method-card:last-child { border:0; }
+.method-top { display:flex; justify-content:space-between; align-items:center; margin-bottom:24px; }
+.method-top span { font-size:32px; color:#608ed3; font-weight:600; }
+.method-top small { color:#8190a6; text-transform:uppercase; letter-spacing:.14em; }
+.method-card h3 { font-size:22px; line-height:1.2; }
+.method-card p { color:#9ca8b9; font-size:14px; }
+.section-cta { margin-top:48px; display:flex; justify-content:flex-start; align-items:center; }
+.section-cta .cta { width:auto; }
+.section-cta-center { justify-content:center; }
+.mapa-section { background:#0a0d12; }
+.local-section { background:#080b10; }
+.local-grid { display:grid; grid-template-columns:1fr 1.1fr; gap:60px; align-items:center; }
+.map-embed { display:block; width:100%; height:440px; border:1px solid var(--line); filter:grayscale(.25) contrast(1.05); }
+.local-links { display:flex; gap:14px; flex-wrap:wrap; margin-top:26px; }
+.local-links a { border:1px solid #34435c; padding:12px 18px; font-size:13px; font-weight:700; color:#dce8fb; transition:background .2s,border-color .2s; }
+.local-links a:hover { background:#14233a; border-color:var(--blue); }
+.mentor-section { display:grid; grid-template-columns:1fr 1fr; padding:0; background:#080b0f; min-height:0; }
+.mentor-photo { min-height:520px; overflow:hidden; background:#06080b; }
+.mentor-photo img { width:100%; height:100%; object-fit:cover; object-position:center top; filter:saturate(.65) contrast(1.08); }
+.mentor-content { padding:100px max(40px, calc((100vw - var(--max))/2)) 90px 8vw; align-self:center; }
+.mentor-content h2 { font-size:clamp(48px,5vw,74px); letter-spacing:-.05em; margin-bottom:14px; }
+.mentor-content > p { color:#aab3c0; max-width:670px; }
+.mentor-role { color:var(--blue-light); font-size:13px; margin-bottom:24px; }
+.mentor-social { display:flex; gap:16px; margin-bottom:24px; }
+.mentor-social a { color:#dbe7fb; font-size:13px; }
+.mentor-social a:hover { color:var(--blue-light); }
+.mentor-stats { display:flex; gap:36px; flex-wrap:wrap; border-top:1px solid #283241; padding-top:30px; margin-top:40px; }
+.mentor-stats div { display:flex; flex-direction:column; }
+.mentor-stats strong { font-size:30px; color:var(--blue-light); }
+.mentor-stats span { color:#768399; font-size:11px; text-transform:uppercase; letter-spacing:.08em; }
+.faq-section { background:#f6f7f9; color:#0b1017; }
+.faq-grid { display:grid; grid-template-columns:.72fr 1.28fr; gap:100px; }
+.faq-section .eyebrow { color:#3f73c3; }
+.faq-list details { border-top:1px solid #cfd5dc; }
+.faq-list details:last-child { border-bottom:1px solid #cfd5dc; }
+.faq-list summary { list-style:none; cursor:pointer; font-weight:650; padding:24px 0; display:flex; justify-content:space-between; gap:30px; }
+.faq-list summary::-webkit-details-marker { display:none; }
+.faq-list summary span { color:#3971c7; font-size:24px; font-weight:400; transition:transform .2s; }
+.faq-list details[open] summary span { transform:rotate(45deg); }
+.faq-list details p { color:#4f5966; max-width:720px; padding:0 30px 25px 0; margin:0; }
+.final-cta { padding:140px 0; text-align:center; background:radial-gradient(circle at 50% 10%,#162a48 0%,#080b10 48%,#05070a 80%); }
+.final-cta-content { max-width:900px; }
+.final-cta h2 { font-size:clamp(48px,6vw,82px); line-height:1.02; letter-spacing:-.055em; }
+.final-cta p:not(.eyebrow) { max-width:680px; margin:0 auto 32px; color:#b3bdca; font-size:18px; }
+footer { padding:35px 0; border-top:1px solid #202936; background:#05070a; }
+footer .container { display:flex; justify-content:space-between; align-items:center; }
+footer p { color:#667286; font-size:11px; margin:0; }
+html.checkout-modal-open { overflow:hidden; }
+.checkout-modal { position:fixed; inset:0; z-index:9999; display:block; overflow-y:auto; overscroll-behavior:contain; padding:32px 20px; visibility:hidden; opacity:0; pointer-events:none; transition:opacity .2s ease,visibility .2s ease; }
+.checkout-modal.is-open { visibility:visible; opacity:1; pointer-events:auto; }
+.checkout-backdrop { position:fixed; inset:0; background:rgba(1,4,9,.86); backdrop-filter:blur(8px); }
+.checkout-dialog { position:relative; width:min(720px,100%); min-height:240px; margin:0 auto; padding:42px; overflow:visible; background:var(--panel); color:var(--white); border:1px solid #34435c; box-shadow:0 28px 90px rgba(0,0,0,.62); }
+.checkout-close { appearance:none; position:absolute; z-index:5; top:16px; right:16px; display:grid; place-items:center; width:44px; height:44px; padding:0; border:1px solid #34435c; border-radius:0; background:var(--panel-2); color:#fff; font:400 26px/1 Arial,sans-serif; cursor:pointer; transition:background .2s,border-color .2s; }
+.checkout-close:hover { background:#182236; border-color:var(--blue); }
+.checkout-close:focus-visible { outline:3px solid var(--blue-light); outline-offset:3px; }
+.checkout-dialog .eyebrow { margin-bottom:14px; }
+.checkout-dialog h2 { max-width:530px; padding-right:48px; margin-bottom:14px; font-size:clamp(32px,5vw,48px); line-height:1.04; letter-spacing:-.04em; }
+.checkout-intro { max-width:590px; margin-bottom:28px; color:var(--muted); }
+.kommo-form-shell { position:relative; isolation:isolate; width:100%; min-height:190px; }
+.kommo-form-shell::after { content:""; position:absolute; z-index:2147483647; right:0; bottom:5px; width:160px; height:35px; background:var(--panel); pointer-events:none; }
+.kommo-form-host { position:relative; z-index:1; display:grid; justify-items:center; width:100%; }
+.kommo-form-host > iframe,.kommo-form-host > div { display:block!important; max-width:100%!important; margin-right:auto!important; margin-left:auto!important; }
+.kommo-form-loading { margin:0; padding:54px 0; color:#8b96a8; font-size:14px; text-align:center; }
+.kommo-form-loading::before { content:""; display:block; width:28px; height:28px; margin:0 auto 14px; border:2px solid #26354b; border-top-color:var(--blue); border-radius:50%; animation:kommo-spin .75s linear infinite; }
+.kommo-form-note { margin:16px 0 0; color:#7f8999; font-size:11px; line-height:1.45; text-align:center; }
+@keyframes kommo-spin { to { transform:rotate(360deg); } }
+.ticker { position:relative; background:var(--blue); overflow:hidden; width:100%; padding:13px 0; }
+.ticker-track { display:flex; align-items:center; gap:26px; width:max-content; animation:ticker 46s linear infinite; }
+.ticker-item { color:#fff; font-size:14px; font-weight:600; white-space:nowrap; }
+.ticker-sep { color:rgba(255,255,255,.55); font-size:9px; }
+@keyframes ticker { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+@media (prefers-reduced-motion:reduce) { .ticker-track{animation:none} }
+
+@media (max-width:900px) {
+  .split-heading,.editorial-grid,.faq-grid,.local-grid { grid-template-columns:1fr; gap:38px; }
+  .profile-grid { grid-template-columns:1fr; }
+  .method-grid { grid-template-columns:1fr 1fr; }
+  .method-card:nth-child(2) { border-right:0; }
+  .method-card:nth-child(-n+2) { border-bottom:1px solid #2c3a50; }
+  .mentor-section { grid-template-columns:1fr; }
+  .mentor-photo { height:420px; }
+  .mentor-content { padding:80px 32px; }
+}
+@media (max-width:640px) {
+  body { font-size:15px; }
+  .container { width:min(100% - 32px,var(--max)); }
+  .special-offer-bar { min-height:54px; gap:9px; padding:9px 12px; }
+  .special-offer-label { font-size:10px; letter-spacing:.13em; }
+  .special-offer-timer { min-width:0; font-size:19px; }
+  .hero { min-height:0; display:block; padding:0; }
+  .hero-photo { inset:auto 0 0; height:350px; background-position:center 8%; }
+  .hero-shade { background:linear-gradient(180deg,#05070a 0%,#05070a calc(100% - 350px),rgba(5,7,10,.18) calc(100% - 285px),rgba(5,7,10,.06) 88%,#080b10 100%); }
+  .hero-content { padding-top:34px; padding-bottom:390px; }
+  h1 { font-size:32px; line-height:1.03; margin-bottom:16px; }
+  .hero .eyebrow { margin-bottom:14px; }
+  .hero-lead { font-size:14px; line-height:1.43; margin-bottom:15px; }
+  .hero-actions .cta { width:100%; min-width:0; }
+  .section-cta .cta { width:100%; min-width:0; }
+  .section { padding:82px 0; }
+  .section-heading h2,.editorial-grid h2,.faq-grid h2 { font-size:38px; }
+  .method-grid { grid-template-columns:1fr!important; }
+  .method-card { border-right:0; border-bottom:1px solid #2c3a50!important; }
+  .cost-list > div { grid-template-columns:78px 1fr; gap:12px; }
+  .map-embed { height:300px; }
+  .local-links a { width:100%; text-align:center; }
+  .mentor-photo { min-height:0; height:320px; }
+  .mentor-content { padding:70px 20px; }
+  .final-cta { padding:100px 0; }
+  .final-cta h2 { font-size:46px; }
+  .final-cta .cta { min-width:0; width:100%; }
+  footer .container { gap:24px; align-items:flex-start; flex-direction:column; }
+  .checkout-modal { padding:10px; }
+  .checkout-dialog { padding:30px 12px 22px; }
+  .checkout-close { top:10px; right:10px; width:40px; height:40px; }
+  .checkout-dialog h2 { padding-right:44px; font-size:34px; }
+  .checkout-intro { margin-bottom:22px; }
+}
+@media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } * { transition:none!important; } .ticker-track,.kommo-form-loading::before { animation:none!important; } .checkout-backdrop { backdrop-filter:none; } }
+</style>
+</head>
+<body>
+<aside class="special-offer-bar" aria-label="Vagas limitadas">
+  <span class="special-offer-label">Sala com capacidade limitada &middot; apenas</span>
+  <span class="special-offer-timer">30 vagas</span>
+</aside>
+<main>
+<section class="hero" id="encontro">
+  <div class="hero-photo" style="background-image:url('https://martinfabichak.com/wp-content/uploads/2026/07/martin-hero.jpg')" aria-hidden="true"></div>
+  <div class="hero-shade" aria-hidden="true"></div>
+  <div class="container hero-content">
+    <p class="eyebrow">encontro presencial &middot; são josé dos campos &middot; 3 horas</p>
+    <h1>A jornada do desenvolvedor não é só código. É <em>sonhar alto</em> e construir o caminho até lá.</h1>
+    <p class="hero-lead">Você quer ganhar mais, mas não sabe qual alavanca puxar? Convive com síndrome do impostor mesmo entregando resultado? Cansou do chefe tóxico e quer escolher com quem e no que trabalhar? Quer provar pra <strong>você</strong> que é capaz?</p>
+    <p class="hero-lead">Três palestras, três horas, na mesma sala. Eu passei pelos 3 caminhos: dev, líder, empreendedor. Entrego 20 anos de estrada pra você sair da estagnação. Não é palestra motivacional, é exercício prático &mdash; e no coffee break você conhece os devs de SJC que estão na mesma jornada.</p>
+    <div class="hero-actions">
+      <a class="cta" href="#checkout" data-checkout-open><span>Quero minha vaga em São José dos Campos</span></a>
+      <span>Sábado, 10/10 &middot; 15h às 18h (portas 14h30) &middot; ACI SJC &middot; R$97,00</span>
+    </div>
+    <div class="hero-proof" aria-label="Sobre o encontro">
+      <div><strong>3 palestras</strong></div>
+      <div><strong>3 horas</strong></div>
+      <div><strong>30 vagas</strong></div>
+      <div><strong>Coffee break</strong></div>
+    </div>
+  </div>
+</section>
+
+<div class="ticker" aria-label="Você toma suas decisões ou elas são tomadas por você.">
+  <div class="ticker-track" aria-hidden="true">
+    <span class="ticker-item">Você toma suas as decisões ou elas são tomadas por você?</span>
+    <span class="ticker-sep">&#9670;</span>
+    <span class="ticker-item">Quem decide seus próximos passos?</span>
+    <span class="ticker-sep">&#9670;</span>
+    <span class="ticker-item">Você sabe o que fazer para ganhar mais?</span>
+    <span class="ticker-sep">&#9670;</span>
+    <span class="ticker-item">Você acha que merece?</span>
+    <span class="ticker-sep">&#9670;</span>
+    <span class="ticker-item">Você toma suas as decisões ou elas são tomadas por você?</span>
+    <span class="ticker-sep">&#9670;</span>
+    <span class="ticker-item">Quem decide seus próximos passos?</span>
+    <span class="ticker-sep">&#9670;</span>
+    <span class="ticker-item">Você sabe o que fazer para ganhar mais?</span>
+    <span class="ticker-sep">&#9670;</span>
+    <span class="ticker-item">Você acha que merece?</span>
+    <span class="ticker-sep">&#9670;</span>
+  </div>
+</div>
+
+<section class="section method-section" id="palestras">
+  <div class="container">
+    <div class="section-heading method-heading">
+      <p class="eyebrow">o que você vai assistir</p>
+      <h2>Três palestras. Uma tarde.</h2>
+      <p>Do mapa da carreira à cabeça que te sabota, até as habilidades que separam quem avança de quem fica. Na ordem certa, porque uma sustenta a outra.</p>
+    </div>
+    <div class="method-grid" style="grid-template-columns:repeat(3,1fr)">
+      <article class="method-card">
+        <div class="method-top"><span>01</span><small>45 min</small></div>
+        <h3>A jornada do desenvolvedor</h3>
+        <p>As 3 trilhas: técnica, liderança e empreendedora. O que muda em cada nível, os pitfalls invisíveis que travam gente boa por anos, e como escolher rota em vez de esperar a rota escolher você. Você sai com o <strong>Mapa da Jornada</strong> preenchido.</p>
+      </article>
+      <article class="method-card">
+        <div class="method-top"><span>02</span><small>40 min</small></div>
+        <h3>Lidando com seu impostor</h3>
+        <p>Por que o dev que mais entrega é o que mais duvida de si. De onde vem a voz que diz "descobriram que eu não sei nada", por que ela cresce a cada promoção, e o que fazer na prática pra ela parar de decidir sua carreira por você.</p>
+      </article>
+      <article class="method-card">
+        <div class="method-top"><span>03</span><small>45 min</small></div>
+        <h3>As habilidades do desenvolvedor bem-sucedido</h3>
+        <p>O que eu olhava ao decidir quem virava líder e quem ficava. Comunicação com quem não é técnico, visão de negócio, vender ideia, escopo de impacto. Tudo isso é técnica &mdash; e técnica se aprende.</p>
+      </article>
+    </div>
+    <div class="section-cta section-cta-center">
+      <a class="cta" href="#checkout" data-checkout-open><span>Quero garantir meu ingresso</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="section turning-point" id="programacao">
+  <div class="container editorial-grid">
+    <div>
+      <p class="eyebrow">programação</p>
+      <h2>Como vão ser as 3 horas.</h2>
+      <p style="margin-top:22px;color:#4c5665;">Sábado, 10 de outubro de 2026. Portas às 14h30, começa 15h em ponto. Chegue cedo: o credenciamento e o café do início já são networking.</p>
+    </div>
+    <div class="cost-list">
+      <div><span>14:30</span><p><strong>Credenciamento e boas-vindas.</strong> Portas abrem, café, crachá e o Mapa da Jornada impresso na sua mão.</p></div>
+      <div><span>15:00</span><p><strong>Palestra 1 &mdash; A jornada do desenvolvedor.</strong> As 3 trilhas, os níveis e os pitfalls.</p></div>
+      <div><span>15:50</span><p><strong>Palestra 2 &mdash; Lidando com seu impostor.</strong> A voz que sabota e o que fazer com ela.</p></div>
+      <div><span>16:30</span><p><strong>Coffee break e networking.</strong> 30 minutos pra conversar com os outros devs da sala. Essa parte não é intervalo, é conteúdo.</p></div>
+      <div><span>17:00</span><p><strong>Palestra 3 &mdash; As habilidades do desenvolvedor bem-sucedido.</strong> O que faz alguém ser escolhido.</p></div>
+      <div><span>17:45</span><p><strong>Mapa da Jornada e perguntas abertas.</strong> Você fecha o artefato ao vivo e pergunta o que quiser.</p></div>
+      <div><span>18:00</span><p><strong>Encerramento.</strong> Quem quiser fica pra continuar a conversa.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section local-section" id="local">
+  <div class="container">
+    <div class="section-heading">
+      <p class="eyebrow">onde é</p>
+      <h2>ACI São José dos Campos, <em>no Centro</em>.</h2>
+    </div>
+    <div class="local-grid">
+      <div>
+        <div class="mapa-box">
+          <div><b>ACI SJC</b></div>
+          <div>Associação Comercial e Industrial</div>
+          <div>Rua Francisco Paes, 56</div>
+          <div>Centro &mdash; São José dos Campos / SP</div>
+          <div>&nbsp;</div>
+          <div><b>SÁBADO, 10/10/2026</b></div>
+          <div>Portas 14h30 &middot; Início 15h &middot; Fim 18h</div>
+        </div>
+        <div class="local-links">
+          <a href="https://www.google.com/maps/dir/?api=1&destination=Rua%20Francisco%20Paes%2C%2056%20-%20Centro%2C%20S%C3%A3o%20Jos%C3%A9%20dos%20Campos%20-%20SP" target="_blank" rel="noopener noreferrer">Como chegar</a>
+          <a class="cta" href="#checkout" data-checkout-open style="min-width:0;"><span>Garantir minha vaga</span></a>
+        </div>
+      </div>
+      <iframe class="map-embed" title="Mapa: Rua Francisco Paes, 56, Centro, São José dos Campos" src="https://www.google.com/maps?q=Rua%20Francisco%20Paes%2C%2056%20-%20Centro%2C%20S%C3%A3o%20Jos%C3%A9%20dos%20Campos%20-%20SP&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
+<section class="section profile-section" id="historia">
+  <div class="container">
+    <div class="section-heading split-heading">
+      <div>
+        <p class="eyebrow">quem está contando essa história</p>
+        <h2>Passei pelos <em>3 caminhos</em>. Vou te mostrar o mapa que eu não tive.</h2>
+      </div>
+      <p>Desenvolvi Saas, sites e jogos por 20 anos. Me tornei sócio de onde trabalhava. Em 2015 fui para a Alemanha e percebi que eu era bom não só tecnicamente: eu juntava pessoas pra resolver problemas complexos. De lá, lead de múltiplas equipes, head e depois CTO. Hoje sou mentor e quero que desenvolvedores ganhem mais.</p>
+    </div>
+    <div class="profile-grid">
+      <article class="profile-card">
+        <div class="card-index">01</div>
+        <p class="card-label">Trilha técnica</p>
+        <h3>De dev a especialista</h3>
+        <p>Anos de código, jogos, stacks diferentes. A base que sustenta tudo o que veio depois.</p>
+      </article>
+      <article class="profile-card">
+        <div class="card-index">02</div>
+        <p class="card-label">Trilha de liderança</p>
+        <h3>De dev a CTO</h3>
+        <p>Head of Development na Alemanha, depois CTO liderando múltiplas equipes de engenharia.</p>
+      </article>
+      <article class="profile-card">
+        <div class="card-index">03</div>
+        <p class="card-label">Trilha empreendedora</p>
+        <h3>De funcionário a sócio</h3>
+        <p>Estúdio próprio, produto lançado, o risco e a liberdade de construir algo seu. Hoje tenho 3 empresas diferentes.</p>
+      </article>
+    </div>
+    <div class="section-cta section-cta-center">
+      <a class="cta" href="#checkout" data-checkout-open><span>Quero garantir meu ingresso</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="section method-section" id="trilhas">
+  <div class="container">
+    <div class="section-heading method-heading">
+      <p class="eyebrow">o mapa das decisões</p>
+      <h2>Carreira de dev não é linear.</h2>
+      <p>Quem não escolhe rota conscientemente fica parado no mesmo lugar por anos. Não por falta de talento técnico, mas pelos pitfalls invisíveis. Existem 3 trilhas principais, e elas não são mutuamente exclusivas.</p>
+    </div>
+    <div class="method-grid" style="grid-template-columns:repeat(3,1fr)">
+      <article class="method-card">
+        <div class="method-top"><span>01</span><small>desenvolvedor</small></div>
+        <h3>Trilha técnica</h3>
+        <p>Jr &rarr; Pleno &rarr; Sênior &rarr; Staff &rarr; Principal &rarr; Distinguished. O que muda em cada nível é o escopo de impacto: de tarefa pra projeto, de projeto pra time, de time pra organização. Staff+ não é "sênior que programa mais rápido" &mdash; é influência técnica.</p>
+      </article>
+      <article class="method-card">
+        <div class="method-top"><span>02</span><small>liderança</small></div>
+        <h3>Trilha de gestão</h3>
+        <p>Sênior &rarr; Tech Lead &rarr; EM &rarr; Head &rarr; Diretor &rarr; CTO. Não é promoção, é mudança de profissão. Liderar é papel, não cargo.</p>
+      </article>
+      <article class="method-card">
+        <div class="method-top"><span>03</span><small>a porta lateral</small></div>
+        <h3>Trilha empreendedora</h3>
+        <p>SaaS/produto próprio, consultoria/freela high-ticket, ou agência/estúdio. Risco alto, mas é a única trilha sem teto. As skills que te levam a Staff ou a CTO são as mesmas que você precisa pra empreender: comunicação, visão de negócio, vender ideia.</p>
+      </article>
+    </div>
+    <div class="section-cta section-cta-center">
+      <a class="cta" href="#checkout" data-checkout-open><span>Quero garantir meu ingresso</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="section profile-section" id="dinheiro">
+  <div class="container">
+    <div class="section-heading">
+      <p class="eyebrow">dinheiro</p>
+      <h2>A resposta está em <em>você</em>.</h2>
+      <p style="margin-top:18px;color:var(--muted);">Você já se pegou pensando alguma dessas coisas abaixo?</p>
+    </div>
+    <div class="profile-grid">
+      <article class="profile-card">
+        <div class="card-index">01</div>
+        <h3>Não sou bom o suficiente</h3>
+        <p>É sim. E eu vou te provar.</p>
+      </article>
+      <article class="profile-card">
+        <div class="card-index">02</div>
+        <h3>Não sei como aumentar meu salário</h3>
+        <p>Vou te ensinar como subir de nível, e quais habilidades desenvolver e como.</p>
+      </article>
+      <article class="profile-card">
+        <div class="card-index">03</div>
+        <h3>Não sei falar com pessoas não técnicas</h3>
+        <p>Como tudo que você aprendeu, isso é técnica. Vou te ensinar alguns passos de como alcançar isso.</p>
+      </article>
+    </div>
+    <div class="section-cta section-cta-center">
+      <a class="cta" href="#checkout" data-checkout-open><span>Quero garantir meu ingresso</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="section mapa-section" id="mapa-da-jornada">
+  <div class="container">
+    <div class="section-heading">
+      <p class="eyebrow">artefato prático</p>
+      <h2>Você sai do encontro com o <em>Mapa da Jornada</em> preenchido</h2>
+      <p style="margin-top:18px;color:var(--muted);">Uma página, entregue impressa na entrada e preenchida ao vivo. Aplicável em minutos, sem depender de mais nada.</p>
+    </div>
+    <div class="mapa-box">
+      <div>1. <b>ONDE ESTOU</b></div>
+      <div>2. <b>MINHA TRILHA</b></div>
+      <div>3. <b>DESTINO 24 MESES</b></div>
+      <div>4. <b>MEUS 2 PITFALLS</b></div>
+      <div>5. <b>PRÓXIMOS 3 PASSOS DE MELHORA</b></div>
+    </div>
+    <div class="section-cta section-cta-center">
+      <a class="cta" href="#checkout" data-checkout-open><span>Quero garantir meu ingresso</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="mentor-section" id="mentor">
+  <div class="mentor-photo">
+    <img src="https://martinfabichak.com/wp-content/uploads/2026/07/martin-retrato.jpg" alt="Martin Fabichak">
+  </div>
+  <div class="mentor-content">
+    <p class="eyebrow">quem vai dar as palestras</p>
+    <h2>Martin Fabichak</h2>
+    <p class="mentor-role">Code Leadership&trade; &middot; ex-CTO Magic Media</p>
+    <div class="mentor-social">
+      <a href="https://www.instagram.com/martin.fabichak" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a href="https://www.linkedin.com/in/martinfabichak/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    </div>
+    <p>Nos últimos 20 anos, Martin esteve do outro lado da mesa: <strong>contratou mais de 200 engenheiros</strong>, entrevistou centenas e foi quem decidia quem virava líder. Foram <strong>mais de 30 líderes formados</strong>, vários deles promovidos a Tech Lead, Head e CTO.</p>
+    <p>Desenvolvedor desde os 14 anos, líder desde 2009. Foi Head of Development na Alemanha e chegou a CTO aos 34, numa empresa de 600 pessoas. Liderou times de backend, frontend, dados, devops e jogos, com mais de 10 anos vivendo e trabalhando fora do Brasil. Formado em Matemática Aplicada pelo IME-USP, com honra ao mérito.</p>
+    <div class="mentor-stats">
+      <div><strong>30+</strong><span>líderes formados</span></div>
+      <div><strong>+100</strong><span>engenheiros contratados</span></div>
+      <div><strong>+160 devs</strong><span>liderados como CTO</span></div>
+      <div><strong>+10 anos</strong><span>liderando fora do Brasil</span></div>
+      <div><strong>&euro;100M</strong><span>em projetos operados</span></div>
+    </div>
+    <div class="section-cta section-cta-center">
+      <a class="cta" href="#checkout" data-checkout-open><span>Quero garantir meu ingresso</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="final-cta" id="cta">
+  <div class="container final-cta-content">
+    <p class="eyebrow">10/10, 15h, presencial em SJC, R$97</p>
+    <h2>Descubra os próximos passos da sua jornada.</h2>
+    <p>A diferença entre quem chega e quem fica parado nunca foi talento; é rota escolhida, constância e gente certa do seu lado. Em outubro, essa gente vai estar na mesma sala que você.</p>
+    <a class="cta" href="#checkout" data-checkout-open><span>Compre seu ingresso e entre no grupo</span></a>
+  </div>
+</section>
+
+<section class="section faq-section" id="faq">
+  <div class="container faq-grid">
+    <div>
+      <p class="eyebrow">perguntas frequentes</p>
+      <h2>Ainda com dúvida? A gente responde.</h2>
+    </div>
+    <div class="faq-list">
+      <details>
+        <summary>Onde exatamente é o encontro?<span>+</span></summary>
+        <p>Na ACI São José dos Campos &mdash; Rua Francisco Paes, 56, Centro, São José dos Campos / SP. Sábado, 10/10/2026. As portas abrem 14h30 e começamos 15h em ponto. O local fica no Centro, com estacionamentos rotativos e privativos no entorno; chegue com folga.</p>
+      </details>
+      <details>
+        <summary>Tem transmissão online ou gravação?<span>+</span></summary>
+        <p>Não. Esse encontro é 100% presencial, e boa parte do valor está no que acontece fora do palco: o coffee break e o networking com os outros devs da sala.</p>
+      </details>
+      <details>
+        <summary>O coffee break está incluso?<span>+</span></summary>
+        <p>Sim, incluso no ingresso. São 30 minutos entre a segunda e a terceira palestra, mais o café do credenciamento.</p>
+      </details>
+      <details>
+        <summary>Preciso levar alguma coisa?<span>+</span></summary>
+        <p>Só você e uma caneta. O Mapa da Jornada é entregue impresso na entrada, e você preenche ao longo das 3 horas.</p>
+      </details>
+      <details>
+        <summary>Serve pra quem já escolheu trilha?<span>+</span></summary>
+        <p>Sim. Mesmo quem já sabe a trilha sai com o mapa completo das outras duas, os pitfalls e o artefato preenchido.</p>
+      </details>
+      <details>
+        <summary>Preciso já estar pensando em liderar ou empreender?<span>+</span></summary>
+        <p>Não. O encontro cobre as 3 trilhas &mdash; inclusive pra quem quer aprofundar como desenvolvedor em uma empresa.</p>
+      </details>
+      <details>
+        <summary>Você vai me vender alguma coisa?<span>+</span></summary>
+        <p>No final eu apresento a comunidade que estamos criando para quem quiser continuar. As 3 horas de conteúdo acontecem independente disso.</p>
+      </details>
+      <div class="section-cta section-cta-center">
+        <a class="cta" href="#checkout" data-checkout-open><span>Quero garantir meu ingresso</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="brand"><span class="brand-mark">CL</span><span>Code Leadership &middot; Martin Fabichak</span></div>
+    <p>&copy; Martin Fabichak &middot;</p>
+  </div>
+</footer>
+
+<div class="checkout-modal" id="checkout" aria-hidden="true">
+  <div class="checkout-backdrop" data-checkout-close></div>
+  <section class="checkout-dialog" role="dialog" aria-modal="true" aria-labelledby="checkout-title" tabindex="-1">
+    <button class="checkout-close" type="button" aria-label="Fechar formulário" data-checkout-close>&times;</button>
+    <p class="eyebrow">garanta sua vaga &middot; 30 lugares</p>
+    <h2 id="checkout-title">Complete sua inscrição.</h2>
+    <p class="checkout-intro">Preencha seus dados para continuar para o pagamento seguro na Kiwify.</p>
+    <div class="kommo-form-shell">
+      <div class="kommo-form-host" id="kommo-form-host">
+        <p class="kommo-form-loading" role="status">Carregando formulário...</p>
+      </div>
+    </div>
+    <p class="kommo-form-note">Seus dados serão enviados com segurança. Depois, você será direcionado ao pagamento.</p>
+  </section>
+</div>
+
+<script>
+document.querySelectorAll('.faq-list details').forEach(function(item){
+  item.addEventListener('toggle', function(){
+    if (!item.open) return;
+    document.querySelectorAll('.faq-list details').forEach(function(o){ if (o !== item) o.open = false; });
+  });
+});
+
+(function(){
+  const modal = document.getElementById('checkout');
+  const dialog = modal.querySelector('.checkout-dialog');
+  const closeButton = modal.querySelector('.checkout-close');
+  const openButtons = Array.from(document.querySelectorAll('[data-checkout-open]'));
+  let previousFocus = null;
+  let formRequested = false;
+  let formReady = false;
+
+  function resizeKommoForm(){
+    if (window.amo_forms_params && typeof window.amo_forms_params.resizeForm === 'function') {
+      window.amo_forms_params.resizeForm('amoforms_iframe_1729175');
+    }
+  }
+
+  function requestKommoForm(){
+    if (formRequested) return;
+    formRequested = true;
+    const host = document.getElementById('kommo-form-host');
+    host.innerHTML = '';
+
+    window.amo_forms_loaded = window.amo_forms_loaded || function(callback, key){
+      window.amo_forms_loaded.f = (window.amo_forms_loaded.f || []).concat([[callback, key]]);
+    };
+    window.amo_forms_loaded(function(){
+      formReady = true;
+      window.setTimeout(resizeKommoForm, 50);
+    }, '1729175');
+
+    !function(a,m,o,c,r,m){a[o+c]=a[o+c]||{setMeta:function(p){this.params=(this.params||[]).concat([p])}},a[o+r]=a[o+r]||function(f){a[o+r].f=(a[o+r].f||[]).concat([f])},a[o+r]({id:"1729175",hash:"f1ad6bdd6c415381adb9ba9d8bcd0bec",locale:"en"}),a[o+m]=a[o+m]||function(f,k){a[o+m].f=(a[o+m].f||[]).concat([[f,k]])}}(window,0,"amo_forms_","params","load","loaded");
+
+    const script = document.createElement('script');
+    script.id = 'amoforms_script_1729175';
+    script.async = true;
+    script.charset = 'utf-8';
+    script.src = 'https://forms.kommo.com/forms/assets/js/amoforms.js?1789414766';
+    script.onerror = function(){
+      formRequested = false;
+      document.getElementById('kommo-form-host').innerHTML = '<p class="kommo-form-loading" role="status">Não foi possível carregar o formulário. Feche e tente novamente.</p>';
+    };
+    host.appendChild(script);
+  }
+
+  function openModal(event){
+    if (event) event.preventDefault();
+    previousFocus = document.activeElement;
+    modal.classList.add('is-open');
+    modal.setAttribute('aria-hidden','false');
+    document.documentElement.classList.add('checkout-modal-open');
+    modal.scrollTop = 0;
+    requestKommoForm();
+    window.setTimeout(function(){
+      closeButton.focus();
+      if (formReady) resizeKommoForm();
+    }, 30);
+  }
+
+  function closeModal(){
+    modal.classList.remove('is-open');
+    modal.setAttribute('aria-hidden','true');
+    document.documentElement.classList.remove('checkout-modal-open');
+    if (previousFocus && typeof previousFocus.focus === 'function') previousFocus.focus();
+  }
+
+  function trapFocus(event){
+    if (event.key !== 'Tab') return;
+    const focusable = Array.from(dialog.querySelectorAll('button,[href],input,select,textarea,[tabindex]:not([tabindex="-1"])')).filter(function(element){
+      return !element.disabled && element.offsetParent !== null;
+    });
+    if (!focusable.length) { event.preventDefault(); dialog.focus(); return; }
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+    if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+  }
+
+  openButtons.forEach(function(button){
+    button.addEventListener('click', openModal);
+    button.addEventListener('pointerenter', requestKommoForm, { once:true });
+    button.addEventListener('focus', requestKommoForm, { once:true });
+  });
+  modal.querySelectorAll('[data-checkout-close]').forEach(function(element){ element.addEventListener('click', closeModal); });
+  modal.addEventListener('keydown', trapFocus);
+  document.addEventListener('keydown', function(event){
+    if (event.key === 'Escape' && modal.classList.contains('is-open')) closeModal();
+  });
+
+  if ('requestIdleCallback' in window) {
+    window.requestIdleCallback(requestKommoForm, { timeout:2000 });
+  } else {
+    window.setTimeout(requestKommoForm, 900);
+  }
+})();
+</script>
+</body>
+</html>

@@ -1,204 +1,174 @@
 # CONTEÚDO BASE — O que gravar para os mentorados
 
-Catálogo de conteúdo genérico (grava 1x, entrega para todos). Organizado pelo método canônico **PREPARAR → AGIR → MOSTRAR → OTIMIZAR**, com trilhas por ICP. Formato sugerido: vídeos de 10–20min, diretos, problema → framework → ação.
+> **Posicionamento:** Programa ADVANCE / DevAdvance.club. "Transforme sua carreira com quem passou 20 anos em tecnologia." Público principal júnior/pleno; sênior também. Liderança é **uma das trilhas**, não o destino. **Vídeos 0.1–0.6 já gravados com o framing anterior (Code Leadership) — não alterar.**
 
-**Dores que todo vídeo deve atacar (norte):** auto-sabotagem ("será que sou bom o suficiente"), não saber quais passos tomar em qual ordem, não saber o que falta pro próximo nível, ninguém ensina soft-skill/liderança pra programador.
+**Organização = Método ADVANCE (pirâmide do deck `apresentacao-devadvance/`).** Nas três camadas de baixo você cria valor; no topo você captura.
 
-**Norte final:** fazer programadores ganharem mais dinheiro e terem um caminho de renda. O método serve pro path técnico E pro path de liderança — e, no futuro, pra transição dev → empreendedor.
+```
+        Valorização              ← Bloco 3 (topo)
+      Resolução de problemas     ← Bloco 2
+    Liderança e soft-skill       ← Bloco 1
+  Técnico · Fundação             ← Bloco 4 (visto por último)
+```
 
----
+**Ordem em que o aluno vê:** Onboarding → Liderança/soft-skill → Resolução de problemas → Valorização → Técnico → Trilhas. Técnico é fundação, mas é o que o dev já tem mais; por isso fica pro fim. O aluno **não** assiste tudo: no onboarding 1:1 o Martin indica as 10–12 aulas da fase dele.
 
-## Ordem de gravação sugerida
+O ciclo PREPARAR→AGIR→MOSTRAR→OTIMIZAR e o loop Mapear→Priorizar→Agir e Medir→Mostrar continuam existindo como **ferramenta** (ensinados em 0.3 e fechados em 3.13 O Ciclo), mas não organizam mais o catálogo.
 
-1. **Fase 0 + PREPARAR** primeiro — é o que o mentorado usa nas primeiras semanas e o que engancha o diagnóstico→plano de ação do onboarding.
-2. **AGIR** (trilha do ICP dominante — tech lead).
-3. **MOSTRAR** — diferencial do método, ninguém ensina.
-4. **OTIMIZAR** + trilhas específicas (sênior→lead, recolocação).
-5. Bônus/avançado por demanda.
+Formato: vídeos de 10–20min, problema → framework → ação. **Dores que todo vídeo ataca:** auto-sabotagem, não saber a ordem dos passos, não saber o que falta pro próximo nível, ninguém ensina soft-skill/carreira pra dev.
 
----
-
-## FASE 0 — Fundamentos (todos os ICPs)
-
-| # | Vídeo | Conteúdo |
-|---|---|---|
-|0.0| Introdução| Como é o curso, e minha história|
-|0.05| Disclaimer | Algumas coisas não funcionam da maneira esperada |
-| 0.1 | O método Code Leadership | Visão geral PREPARAR→AGIR→MOSTRAR→OTIMIZAR + o loop que repete a carreira inteira (Mapear→Priorizar→Agir e Medir→Mostrar). As 4 dores (incl. ninguém ensina soft-skill pra dev) + norte: mais dinheiro/caminho de renda; método serve path técnico, liderança e (futuro) empreendedor |
-| 0.2 | A mudança de papel | Bom dev ≠ bom líder. Resolver tudo sozinho → construir sistema que funciona. Gerar impacto através de outros. Vale pra lead E não-lead (líder é papel, não cargo) |
-| 0.3 | Trilha IC vs Gestão | Staff/Principal vs TL/Head/CTO — como escolher, o que cada uma exige |
-| 0.4 | Auto-liderança e metas | Meta → estado atual → objetivo profissional → passos (framework da live). Loops de carreira com exemplos reais |
-| 0.5 | Mentalidade | Ocupar espaço, todo problema = oportunidade, fazer entrevistas sempre, Dunning-Kruger e síndrome do impostor |
-| 0.6 | Problem Journal | Como usar o template (problema/hipótese/ação/resultado) — hábito central da mentoria |
-| 0.7 | Autodiagnóstico do líder | Mapa de competências, top-3 lacunas com KPI, como interpretar o DISC |
-| 0.8 | Alta performance e gestão de tempo | Produtividade real, auditoria de tempo, priorização e foco, disciplina, automotivação |
-| 0.85| Disclaimer 2 | Algumas coisas não funcionam da maneira esperada |
-| 0.9 | Onboarding | Boas-vindas + questionário de onboarding (contexto, feedbacks, tempo, destino 12m/24m/5a, quanto quer ganhar, forças/fraquezas, saúde) + teste DISC |
-
-## FASE 1 — PREPARAR (mapear contexto)
-
-| # | Vídeo | Conteúdo |
-|---|---|---|
-| 1.1 | O erro clássico do líder novo | Sair mudando antes de mapear |
-| 1.2 | Conversas com a equipe | 1:1 de mapeamento: o que perguntar, o que anotar (mapa de forças + mapa de riscos) |
-| 1.3 | Conversas com colegas | PM/PO/Designer — mapear o fluxo fora do time |
-| 1.4 | As 3 camadas | Clientes / Processos / Código — o que olhar em cada uma |
-| 1.5 | Mapear pra cima | Alinhar expectativas com o chefe. A pergunta de ouro: "como você vai medir se eu fui bem em 6 meses?" → traduzir em 2–3 métricas escritas |
-| 1.6 | Mapa de stakeholders | Poder × interesse, organograma formal vs real, os 3 grafos (decisão/influência/informação) |
-| 1.7 | Como priorizar | Critério de quick win (visível, baixo risco, dor real), roadmap 90 dias faseado |
-
-## FASE 2 — AGIR (pessoas, processos, tecnologia)
-
-**Pessoas:**
-
-| # | Vídeo | Conteúdo |
-|---|---|---|
-| 2.1 | 1:1 que gera dado | Estrutura 30min, template, cadência |
-| 2.2 | Feedback | Radical Candor (2 eixos, 4 quadrantes), feedback negativo sem perder o dev |
-| 2.3 | Segurança psicológica | 4 sinais, como construir |
-| 2.4 | Delegação | Matriz task × maturidade × risco |
-| 2.5 | Perfis difíceis | Sênior resistente, júnior perdido, performer tóxico, quiet quitter |
-| 2.6 | Conversas difíceis | Script, condução, PIP (informal → review → PIP) |
-| 2.7 | Contratação | Funil completo (JD → triagem → teste → entrevista → decisão) |
-| 2.8 | Demissão | Como conduzir, comunicação ao time, o que NÃO dizer |
-| 2.9 | Onboarding de liderados | Plano 30/60/90 para quem entra no seu time |
-| 2.10 | Avaliação de desempenho + PDI | Periodicidade, condução, criação de PDI, definição de objetivos |
-| 2.11 | Gestão de conflitos | Causas, classificação, etapas de mediação, estilos de resolução |
-| 2.12 | Cultura de time | Definição de valores, rituais, como criar e manter cultura |
-| 2.13 | Engajamento vs motivação | Diferença, alavancas de cada um, retenção de talentos |
-
-**Processos:**
-
-| # | Vídeo | Conteúdo |
-|---|---|---|
-| 2.14 | Observabilidade técnica | Dashboard mínimo: erros, latência, uptime, pipeline |
-| 2.15 | Métricas de engenharia | DORA + métricas próprias (crash rate, api response, bugs) |
-| 2.16 | OKRs e metas | KPI vs OKR, como definir e alinhar a negócio |
-| 2.17 | Metodologias ágeis | Scrum/Kanban na prática, refinamento, auditoria de cerimônias |
-| 2.18 | Fluxo de trabalho | Kanban, WIP, acompanhamento, redução de risco |
-| 2.19 | Gestão de projetos | Garantir sucesso da entrega, métricas de projeto, gestão da execução |
-| 2.20 | Estruturas de time | Team Topologies aplicado, tipos de estrutura organizacional |
-| 2.21 | Débito técnico como negócio | Trade-off de capacity, mapa de débito por ROI, pitch de refatoração |
-| 2.22 | Roadmap técnico | 3–6 meses em 3 slides |
-| 2.23 | Decisões de arquitetura | ADR, decisão reversível vs irreversível |
-| 2.24 | Gestão de crise | Incident Command (papéis IC/Ops/Comms/Scribe), severidades, playbook |
-| 2.25 | Post-mortem blameless | 5 partes, como conduzir |
-| 2.26 | Prevenção | Pre-mortem, feature flags, rollout gradual, rollback, blast radius |
-| 2.27 | IA no time | Claude Code, MCP, multi-agentes, auditoria de uso de IA |
-
-**Produto e dados:**
-
-| # | Vídeo | Conteúdo |
-|---|---|---|
-| 2.28 | Gestão de produto pro líder técnico | Ciclo de vida, product discovery, roadmap de produto vs técnico, priorização |
-| 2.29 | Decisão orientada a dados | Data-driven decision making, métricas de produto, dashboards |
-| 2.30 | Inovação | Gestão e estratégia de inovação no time |
-
-## FASE 3 — MOSTRAR (visibilidade e comunicação)
-
-| # | Vídeo | Conteúdo |
-|---|---|---|
-| 3.1 | "Bom trabalho fala por si" é mentira | Trabalho que ninguém entende = trabalho que não existe |
-| 3.2 | Pirâmide de resposta | Como responder como lead: situação→complicação→pergunta→resposta→impacto. DRIVE a conversa |
-| 3.3 | Status report executivo | 1 página, traffic light, delta, top-3 riscos/vitórias |
-| 3.4 | Executive summary | 5 linhas, decisão explícita |
-| 3.5 | Tradução técnico → negócio | Como justificar tech debt, refactor e prazo pra diretor |
-| 3.6 | Narrativa de impacto | Antes/Ação/Depois/Próximo — construir evidências de promoção |
-| 3.7 | Como comunicar mudança | Ao time, aos pares, ao chefe; comunicar problema crítico proativamente |
-| 3.8 | Visibilidade do time | Dar crédito, all-hands, tech talks |
-| 3.9 | Marketing pessoal | Reputação: como te percebem vs quem você é, ser visto/entendido/lembrado |
-
-## FASE 4 — OTIMIZAR (carreira e próximo nível)
-
-| # | Vídeo | Conteúdo |
-|---|---|---|
-| 4.1 | Networking interno | Sponsor / mentor / peer aliado / insider, plano de 90 dias |
-| 4.2 | Influência sem cargo | 5 bases de poder (French & Raven) |
-| 4.3 | Negociação | Tactical empathy (Voss): mirroring, labels, calibrated questions |
-| 4.4 | Negociação salarial | Script, ancoragem, 15 objeções e respostas |
-| 4.5 | Como ser promovido | Career ladder, evidências, posicionamento na fila |
-| 4.6 | Estilos de liderança | 6 estilos Goleman, auto-avaliação, quando usar cada um |
-| 4.7 | Controle emocional sob pressão | Pausa 90s, fato vs história, zoom out |
-| 4.8 | Energia e burnout | Sinais, prevenção, plano de saúde do líder |
-| 4.9 | Inteligência emocional | Autoconhecimento, empatia, ler a sala, lidar com chefes difíceis |
-
-## TRILHAS ESPECÍFICAS
-** Mentalidade e auto cuidado**
-- vc é substituivel
-- revisitar tudo de antes
-
-
-**Sênior → Lead (Público 1):**
-- Liderança emergente: liderar sem cargo (mentorar júnior, iniciativa transversal, RFC)
-- Como sinalizar ao chefe que quer liderar (1:1 de carreira)
-
-**Recolocação / Internacional** (R.1, R.2 e R.4 recomendadas pra TODOS — poder de negociação, não só troca de emprego):
-- R.1 CV para vagas sênior/lead (posicionamento, métricas, hierarquia)
-- R.2 LinkedIn: headline, sobre, experiências
-- R.3 GitHub contratável
-- R.4 Entrevistas: história STAR, perguntas comuns por estágio (startup/scaleup/enterprise)
-- R.5 Brasil vs exterior: como decidir, como se posicionar globalmente
-- R.6 Inglês e networking externo
-
-**Bônus (v2 / premium):**
-- Hiring Masterclass
-- Orçamento & headcount (pré-CTO), P&L do time
-- Outsourcing e cliente externo
-- Liderança remota/distribuída
-
-## SIDE TRACK — TÉCNICO
-
-Trilha paralela opcional. Visão de líder (decidir/avaliar/cobrar), não de executor — concorrentes vendem curso técnico; aqui é o mínimo que o líder precisa pra não ser enrolado.
-
-| # | Vídeo | Conteúdo |
-|---|---|---|
-| T.1 | Arquitetura de solução | Design patterns de arquitetura, microsserviços vs monolito, event-driven, cloud-native, SAD |
-| T.2 | System Design | Como conduzir e avaliar, system design interview (dos dois lados da mesa) |
-| T.3 | Design Docs | RFC, C4 Model, como instaurar cultura de design doc no time |
-| T.4 | Bancos de dados pro líder | ACID vs BASE, SQL vs NoSQL, quando usar cada um, governança de dados |
-| T.5 | DevOps e SRE | Cultura DevOps, SLO vs SLA, error budget, princípios SRE |
-| T.6 | Platform Engineering | O que é, quando o time precisa, CI/CD, provisioning |
-| T.7 | Code review em escala | Padrões, auditoria do processo, code review como ferramenta de cultura |
-| T.8 | Qualidade de software | Como gerir e medir qualidade, testes como estratégia, revisões |
-| T.9 | Segurança | OWASP Top 10, revisão de segurança, segurança em apps enterprise |
-| T.10 | Cloud e escolha de stack | Critérios de escolha de frameworks/cloud, custo, lock-in, maturidade |
-
-## MENTORIA 2.0 — CONTEÚDO DE COMUNIDADE (novo)
-
-Conteúdo que só existe porque a mentoria virou clube. Alimentação contínua, não gravação única.
-
-**Trilha Auto-estima e Mentalidade (com Alan):**
-
-| # | Vídeo | Conteúdo |
-|---|---|---|
-| A.1 | Baixa auto-estima no dev | Por que quase todo dev sente ("será que sou bom o suficiente"), de onde vem |
-| A.2 | Exercícios práticos de auto-estima | Série de exercícios aplicáveis (formato Alan) |
-| A.3 | Confronto | Como se posicionar em conversas difíceis sem se anular |
-| A.4 | Referência de jogo e sucesso | Modelos de sucesso reais, comparação saudável vs tóxica |
-
-**Podcasts por área (Martin entrevista profissionais):**
-- 1 episódio por área/cargo: o que precisa saber para chegar lá (backend, mobile, dados, staff, EM, head, CTO, exterior)
-- Duplo uso: conteúdo interno + isca de topo de funil (cortes)
-
-**Gravações de encontros (alimentação recorrente):**
-- Reuniões em grupo semanais (dúvidas + conteúdo)
-- Workshops mensais
-- Encontros sobre CV
-- Encontros com convidados externos
-- Palestras de mentorados (ver oportunidades de renda)
-
-**Cases de sucesso de mentorados:**
-- Formato entrevista 20–30min: onde estava → o que fez → onde chegou (promovidos, aprovados, foram pro exterior)
-- Duplo uso: prova social pública + inspiração interna
-
-## BIBLIOTECA DE LIVROS (TL;DR 10–15min cada)
-
-Manager's Path · An Elegant Puzzle · Radical Candor · Staff Engineer · Accelerate · Never Split the Difference · Primal Leadership · Turn the Ship Around! · Team Topologies · High Output Management
-
-## ESTUDOS DE CASO (Problem → Diagnóstico → Plano → Execução → Lição)
-
-Cases reais do Martin — gravar 1 como MVP de conteúdo. Candidatos: crise em produção, virar head, ir pra Europa (110 entrevistas), liderar 150 engenheiros, Monopoly GO.
+Coluna **esboço** = arquivo em `esbocos/` (numeração antiga, não renomear).
 
 ---
 
-*~90 vídeos core + 10 side track técnico + 10 TL;DRs + cases + trilha auto-estima (Alan) + podcasts. Gravação 100% reaproveitável entre tiers — diferenciação é proximidade, não conteúdo. Mentoria 2.0: catálogo vira "onde os vídeos moram" + alimentação contínua de gravações da comunidade.*
+## Ordem de gravação
+
+Gravar na ordem do catálogo: termina o Bloco 0 (falta 0.4, 0.5, 0.8, 0.9, 0.11), depois Bloco 1 → 2 → 3 → 4 → trilhas. Motivo: Bloco 0 é o que todo aluno novo vê nos 14 primeiros dias; o resto é indicado por fase.
+
+---
+
+## Bloco 0 — Onboarding (primeiros 14 dias, todo mundo)
+
+Objetivo: sair com meta de 12 meses, objetivo de 90 dias, primeira vitória e saber quais aulas ver. Casa com o onboarding 1:1 (dias 2 a 5).
+
+| # | Vídeo | Conteúdo | esboço |
+|---|---|---|---|
+| 0.1 | Introdução | Como é o programa e minha história |  |
+| 0.2 | Disclaimer | Algumas coisas não funcionam da maneira esperada |  |
+| 0.3 | O método | Pirâmide (técnico → liderança → resolução → valorização) + o ciclo como ferramenta. Gravado com framing anterior; a pirâmide é apresentada no onboarding 1:1 e em 3.13 |  |
+| 0.4 | Ficha de onboarding + DISC | Boas-vindas + questionário (contexto, feedbacks, tempo, destino 12m/24m/5a, quanto quer ganhar, forças/fraquezas, saúde) + teste DISC | |
+| 0.5 | Autodiagnóstico de carreira | Mapa de competências (técnico, comunicação, carreira), top-3 lacunas com KPI, como ler o DISC |  |
+| 0.6 | O mapa das 3 trilhas | IC vs Liderança vs Empreendedor. O que muda por nível é escopo de impacto. Pêndulo é válido |  |
+| 0.7 | Trilha IC vs Gestão | Staff/Principal vs TL/Head/CTO — como escolher, o que cada uma exige |  |
+| 0.8 | O platô de renda | Histórico salarial dev BR, platô do sênior "só técnico", IA muda o que é valioso | 1.2 |
+| 0.9 | Os 5 pitfalls que travam carreira | Auto-sabotagem, falta de network, foco só técnico, falta de comunidade, baixa auto-estima — sintoma → custo → antídoto |  |
+| 0.10 | Auto-liderança e metas | Meta → estado atual → objetivo → passos. Loops de carreira com exemplos | |
+| 0.11 | Artefato: Mapa da Jornada | Exercício guiado: onde estou → trilha → destino 24 meses → meus 2 pitfalls → próximos 3 passos. Vira a meta de 12m / objetivo de 90 dias do onboarding 1:1 |  |
+| 0.12 | Problem Journal | Template problema/hipótese/ação/resultado — alimenta o check-in semanal |  |
+
+## Bloco 1 — Liderança e soft-skill (camada 2)
+
+Primeiro auto-liderança (vale pra todo mundo), depois gestão de pessoas (quem lidera ou quer liderar).
+
+| # | Vídeo | Conteúdo | esboço |
+|---|---|---|---|
+| 1.1 | A mudança de papel | Bom dev ≠ bom líder. Impacto através de outros. Líder é papel, não cargo |  |
+| 1.2 | Mentalidade | Ocupar espaço, problema = oportunidade, entrevistar sempre, Dunning-Kruger e impostor |  |
+| 1.3 | Alta performance e gestão de tempo | Auditoria de tempo, priorização e foco, disciplina, automotivação | 0.8 |
+| 1.4 | Controle emocional, energia e IE | Pausa 90s, fato vs história, burnout, ler a sala, chefes difíceis | 7.5 |
+| 1.5 | 1:1 que gera dado | Estrutura 30min, template, cadência | 3.1 |
+| 1.6 | Feedback e conversas difíceis | Radical Candor, script de conversa difícil, PIP | 3.2 |
+| 1.7 | Delegação e perfis difíceis | Matriz task × maturidade × risco; sênior resistente, júnior perdido, tóxico, quiet quitter | 3.4 |
+| 1.8 | Segurança psicológica e cultura de time | 4 sinais, valores, rituais, como criar e manter | 3.3 |
+| 1.9 | Contratação e demissão | Funil JD→triagem→teste→entrevista→decisão; conduzir desligamento | 3.5 |
+| 1.10 | Onboarding, PDI e engajamento | Plano 30/60/90 pra quem entra, avaliação + PDI, engajamento vs motivação | 3.6 |
+
+## Bloco 2 — Resolução de problemas (camada 3)
+
+Mapear antes de agir → decidir por dado → liderar situações → influenciar. É o bloco dos hot seats.
+
+| # | Vídeo | Conteúdo | esboço |
+|---|---|---|---|
+| 2.1 | O erro clássico + as 3 camadas | Sair mudando antes de mapear. Clientes / Processos / Código | 2.1 |
+| 2.2 | Conversas de mapeamento | 1:1 com equipe (forças + riscos) e com PM/PO/Designer | 2.2 |
+| 2.3 | Mapear pra cima | Alinhar com o chefe. Pergunta de ouro → 2–3 métricas escritas | 2.3 |
+| 2.4 | Mapa de stakeholders | Poder × interesse, organograma formal vs real, 3 grafos | 2.4 |
+| 2.5 | Como priorizar | Quick win (visível, baixo risco, dor real), roadmap 90 dias | 2.5 |
+| 2.6 | Decisão orientada a dados | Dado, não achismo: métricas de produto, dashboards, inovação | 5.2 |
+| 2.7 | Observabilidade e métricas de engenharia | Dashboard mínimo + DORA e métricas próprias | 4.1 |
+| 2.8 | OKRs, ágil e fluxo de trabalho | KPI vs OKR, Scrum/Kanban na prática, WIP, risco | 4.2 |
+| 2.9 | Gestão de projetos e estruturas de time | Garantir entrega, métricas de projeto, Team Topologies | 4.3 |
+| 2.10 | Débito técnico, roadmap e arquitetura | Capacity, débito por ROI, pitch de refatoração, roadmap em 3 slides, ADR | 4.4 |
+| 2.11 | Gestão de crise e post-mortem | Incident Command, post-mortem blameless, pre-mortem, feature flags, rollback | 4.5 |
+| 2.12 | Gestão de produto pro líder técnico | Ciclo de vida, discovery, roadmap produto vs técnico | 5.1 |
+| 2.13 | Negociação e influência | Tactical empathy (Voss): mirroring, labels, calibrated questions | 7.2 |
+
+## Bloco 3 — Valorização (topo)
+
+Você já gera valor. Aqui é ser reconhecido e pago por ele: mostrar → próximo nível → vender-se → negociar. Fecha com O Ciclo.
+
+| # | Vídeo | Conteúdo | esboço |
+|---|---|---|---|
+| 3.1 | "Bom trabalho fala por si" é mentira | Trabalho que ninguém entende não existe. Pirâmide de resposta | 6.1 |
+| 3.2 | Status report e executive summary | 1 página, traffic light, delta, top-3; 5 linhas, decisão explícita | 6.2 |
+| 3.3 | Tradução técnico → negócio | Justificar tech debt, refactor e prazo pra diretor | 6.3 |
+| 3.4 | Narrativa de impacto | Antes/Ação/Depois/Próximo — evidências de promoção | 6.4 |
+| 3.5 | Visibilidade e marketing pessoal | Dar crédito, all-hands, tech talks. Reputação | 6.5 |
+| 3.6 | Como ser promovido | Career ladder, evidências, posicionamento na fila, estilos de liderança | 7.4 |
+| 3.7 | Networking interno e influência sem cargo | Sponsor/mentor/peer/insider, plano 90 dias, 5 bases de poder | 7.1 |
+| 3.8 | CV pra vagas júnior→lead | Posicionamento, métricas, hierarquia por nível | 11.1 |
+| 3.9 | LinkedIn | Headline, sobre, experiências | 11.2 |
+| 3.10 | GitHub contratável | — | 11.3 |
+| 3.11 | Entrevistas | STAR, perguntas por estágio (startup/scaleup/enterprise) | 11.4 |
+| 3.12 | Negociação salarial | Script, ancoragem, 15 objeções e respostas | 7.3 |
+| 3.13 | O Ciclo (aula ao vivo, 90min) | Amarra blocos 0–3 como um loop só: ciclo pessoal (meses/anos) + ciclo pequeno (dias/semanas). Releitura do Mapa da Jornada ao vivo, diagnóstico da fase, ponte pras trilhas | 8.1 |
+
+## Bloco 4 — Técnico · Fundação (visto por último)
+
+Visão de quem decide/avalia/cobra, não curso técnico. Mínimo pra não ser enrolado (júnior/pleno) ou liderar com propriedade (sênior/lead).
+
+| # | Vídeo | Conteúdo | esboço |
+|---|---|---|---|
+| 4.1 | IA no time | Claude Code, MCP, multi-agentes, auditoria de uso de IA | 4.6 |
+| 4.2 | Arquitetura e system design | Patterns, micro vs mono, event-driven, cloud-native, system design interview | 12.1 |
+| 4.3 | Design docs e code review em escala | RFC, C4, cultura de design doc, auditoria de code review | 12.2 |
+| 4.4 | Bancos de dados | ACID vs BASE, SQL vs NoSQL, governança | 12.3 |
+| 4.5 | DevOps, SRE e platform engineering | SLO vs SLA, error budget, CI/CD, provisioning | 12.4 |
+| 4.6 | Qualidade de software | Gerir e medir qualidade, testes como estratégia | 12.5 |
+| 4.7 | Segurança e escolha de stack | OWASP Top 10, revisão de segurança; frameworks/cloud, custo, lock-in | 12.6 |
+
+---
+
+## Trilhas (indicadas por fase no onboarding)
+
+### Júnior → Pleno (público principal)
+
+| # | Vídeo | Conteúdo | esboço |
+|---|---|---|---|
+| J.1 | Sair do júnior sem depender de sorte | O que sênior espera vs o que júnior entrega | 9.1 |
+| J.2 | Construindo autonomia técnica | Quando perguntar, quando resolver sozinho | 9.2 |
+| J.3 | Ritos de passagem | Primeiro code review, primeira produção quebrada | 9.3 |
+| J.4 | O que estudar | Fundamentos vs framework da vez | 9.4 |
+
+### Sênior → Lead
+
+| # | Vídeo | Conteúdo | esboço |
+|---|---|---|---|
+| S.1 | Liderança emergente | Liderar sem cargo: mentorar júnior, iniciativa transversal, RFC | 10.1 |
+| S.2 | Sinalizar que quer liderar | 1:1 de carreira com o chefe | 10.2 |
+
+### Internacional
+
+| # | Vídeo | Conteúdo | esboço |
+|---|---|---|---|
+| I.1 | Brasil vs exterior | Como decidir, como se posicionar globalmente | 11.5 |
+| I.2 | Inglês e networking externo | — | 11.6 |
+
+### Mentalidade e Auto-estima
+
+| # | Vídeo | Conteúdo | esboço |
+|---|---|---|---|
+| A.1 | Baixa auto-estima no dev | Por que quase todo dev sente, de onde vem | A.1 |
+| A.2 | Exercícios práticos de auto-estima | Série aplicável (formato Alan) + banco de exercícios | A.2 |
+| A.3 | Confronto | Se posicionar em conversas difíceis sem se anular | A.3 |
+| A.4 | Referência de jogo e sucesso | Modelos reais, comparação saudável vs tóxica | A.4 |
+
+Ideias futuras: "você é substituível"; revisitar Problem Journal / autodiagnóstico periodicamente.
+
+---
+
+## CONTEÚDO CONTÍNUO (não é gravação única)
+
+**Bônus liderança avançada** (esboços B.1–B.4): hiring masterclass, orçamento e headcount, outsourcing e cliente externo, liderança remota. Gravar por demanda.
+
+**Podcasts por área** (esboços P.1–P.8): backend, mobile, dados, staff, EM, head, CTO, exterior. Conteúdo interno + cortes de topo de funil.
+
+**Estudos de caso do Martin** (esboços C.1–C.5): crise em produção, virar head, ir pra Europa, liderar 150 engenheiros, Monopoly GO. Problema → Diagnóstico → Plano → Execução → Lição. Gravar 1 como MVP.
+
+**Biblioteca de livros, TL;DR 10–15min** (esboços L.1–L.10): Manager's Path · Elegant Puzzle · Radical Candor · Staff Engineer · Accelerate · Never Split the Difference · Primal Leadership · Turn the Ship Around! · Team Topologies · High Output Management.
+
+**Gravações de encontros e cases de mentorados:** encontros semanais, hot seats, convidados, entrevista 20–30min (onde estava → o que fez → onde chegou).
+
+---
+
+*5 blocos (0–4) = 55 aulas core + 4 trilhas = 12 aulas → **67 aulas**. Removido: Disclaimer 2 (0.85, redundante com 0.2). Tudo reaproveitável entre tiers — diferenciação é proximidade, não conteúdo.*

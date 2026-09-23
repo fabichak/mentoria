@@ -1,5 +1,6 @@
 # B.2 - Orçamento & Headcount
 **Bônus (v2 / premium)**
+*Conteúdo avançado pra quem já lidera orçamento ou está caminhando pra uma posição de liderança (head, EM). Não é pré-requisito da trilha técnica.*
 
 ## Esqueleto (o que falar)
 - Gancho: a pergunta que separa head de gerente sênior não é técnica, é "quanto custa seu time e o que a empresa recebe em troca?". Se você não sabe responder em 30 segundos, alguém acima de você responde por você, geralmente na reunião de corte. Como head na Europa, aprendi que quem não fala a língua do P&L não senta na mesa onde o P&L é decidido.

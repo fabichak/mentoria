@@ -1,5 +1,7 @@
 # MENTORIA 2.0 — Projeto de Lançamento (Clube de Devs)
 
+**Posicionamento:** "Transforme sua carreira com quem passou 20 anos em tecnologia." Público principal: dev júnior/pleno acelerando os primeiros anos; também atende sênior buscando o próximo nível. Liderança é uma trilha entre outras (técnico, liderança, empreendedor), não o foco central — ver nota no topo de `apresentacoes/conteudo_base.md`.
+
 **Visão:** Mentoria deixa de ser "mentoria com o Martin" e vira comunidade/clube, com Martin como figura central. Lançamento da plataforma: **23/09/2026**.
 ---
 

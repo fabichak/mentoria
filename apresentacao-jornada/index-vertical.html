@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Aulas — DevAdvance.club (vertical)</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  body{overflow:auto;display:block;padding:5vh 8vw;background:
+    radial-gradient(120% 90% at 85% -10%, rgba(61,155,255,.10), transparent 55%),
+    radial-gradient(110% 80% at -10% 110%, rgba(255,61,180,.08), transparent 55%),
+    linear-gradient(180deg,#05070e,#04060c)}
+  .idx-head{display:flex;align-items:center;gap:1.2vw;margin-bottom:1vh}
+  .idx-head .logo i{height:2.6vw;width:.9vw}
+  .idx-head h1{font-size:3vw;color:var(--ink)}
+  .idx-head h1 span{color:var(--cyan);text-shadow:0 0 24px rgba(34,211,255,.55)}
+  .idx-sub{font-family:var(--mono);font-size:1vw;letter-spacing:.2em;color:var(--muted);
+    text-transform:uppercase;margin-bottom:4vh}
+  .fase-titulo{font-family:var(--mono);font-size:1.05vw;letter-spacing:.28em;color:var(--cyan);
+    text-transform:uppercase;margin:3vh 0 1.5vh}
+  .aulas-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(20vw,1fr));gap:1.2vw}
+  a.aula-card{display:flex;align-items:baseline;gap:1vw;padding:1.2vw 1.4vw;text-decoration:none;
+    border:1px solid var(--line);border-radius:.6vw;background:rgba(61,155,255,.05);
+    transition:box-shadow .2s,border-color .2s}
+  a.aula-card:hover{border-color:var(--cyan);box-shadow:var(--glow)}
+  .aula-num{font-family:var(--mono);font-size:1.4vw;font-weight:700;color:var(--cyan)}
+  .aula-nome{font-size:1.25vw;color:var(--ink);font-weight:600}
+</style>
+</head>
+<body>
+<div class="idx-head"><span class="logo"><i></i><i></i></span>
+  <h1>Aulas <span>DevAdvance.club</span></h1></div>
+<div class="idx-sub">selecione a aula · ← → navega dentro do deck</div>
+<div id="lista"></div>
+<script src="aulas/manifest.js"></script>
+<script>
+  var porFase = {};
+  window.AULAS.forEach(function(a){ (porFase[a.fase] = porFase[a.fase] || []).push(a); });
+  document.getElementById('lista').innerHTML = Object.keys(porFase).map(function(f){
+    return '<div class="fase-titulo">'+f+'</div><div class="aulas-grid">'
+      + porFase[f].map(function(a){
+          return '<a class="aula-card" href="aula-vertical.html?a='+a.id+'">'
+            +'<span class="aula-num">'+a.id+'</span><span class="aula-nome">'+a.titulo+'</span></a>';
+        }).join('') + '</div>';
+  }).join('');
+</script>
+</body>
+</html>

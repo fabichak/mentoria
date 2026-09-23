@@ -12,7 +12,7 @@ A jornada do desenvolvedor não é uma linha do tempo. É um mapa de decisões.
 (negrito em "decisões")
 
 [hero.sub]
-Ninguém te ensinou a construir sua carreira — te ensinaram a programar. Em 90 minutos, você sai com o mapa das rotas possíveis, os pontos cegos que travam 90% dos devs, e um plano pessoal pros próximos passos.
+Ninguém te ensinou a construir sua carreira — te ensinaram a programar. Seja você júnior tentando sair do lugar ou sênior buscando o próximo nível, em 90 minutos você sai com o mapa das rotas possíveis, os pontos cegos que travam 90% dos devs, e um plano pessoal pros próximos passos.
 
 [hero.data]
 Terça-feira, 23/09 · 19h · ao vivo pelo Google Meet
@@ -38,7 +38,7 @@ Passei pelos 3 caminhos. Vou te mostrar o mapa que eu não tive.
 (negrito em "3 caminhos")
 
 [historia.corpo]
-Fiz matemática no IME-USP, desenvolvi sites e jogos há 20 anos atrás. Me tornei sócio de onde trabalhava. Em 2015 fui para a Alemanha e percebi que eu era bom não só tecnicamente: eu juntava pessoas pra resolver problemas complexos. De lá, lead de múltiplas equipes, head e depois CTO. Hoje sou mentor. 
+Comecei sozinho, adolescente, programando animação em Flash sem saber se tava fazendo certo. Fiz matemática no IME-USP, desenvolvi sites e jogos há 20 anos atrás. Me tornei sócio de onde trabalhava. Em 2015 fui para a Alemanha e percebi que eu era bom não só tecnicamente: eu juntava pessoas pra resolver problemas complexos. De lá, lead de múltiplas equipes, head e depois CTO. Hoje sou mentor. 
 
 [historia.timeline.1.label]
 Trilha técnica
@@ -194,8 +194,8 @@ Nos últimos 16 anos, Martin esteve do outro lado da mesa: contratou mais de 100
 Desenvolvedor desde os 14 anos, líder desde 2009. Foi Head of Development na Alemanha e chegou a CTO aos 34, numa empresa de 600 pessoas. Liderou times de backend, frontend, dados, devops e jogos, com mais de 10 anos vivendo e trabalhando fora do Brasil. Formado em Matemática Aplicada pelo IME-USP, com honra ao mérito.
 
 [mentor.stats]
+- +100 · engenheiros contratados (sabe o que faz alguém sair do júnior)
 - 30+ · líderes formados
-- +100 · engenheiros contratados
 - +160 devs · liderados como CTO
 - +10 anos · liderando fora do Brasil
 - €100M · em projetos operados

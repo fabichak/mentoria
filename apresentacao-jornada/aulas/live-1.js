@@ -3,67 +3,96 @@ window.SLIDES = [
 
   { tipo:'capa',
     selo:'Live · Instagram',
-    titulo:'IC ou', destaque:'Líder?',
-    sub:'o mapa que ninguém te mostrou',
+    titulo:'Técnico ou', destaque:'Gestão?',
+    sub:'',
     rodape:'Martin Fabichak · devAdvance.club' },
 
   /* gancho */
   { tipo:'divisor',
-    titulo:'Ninguém te ensinou a ter carreira',
-    sub:'te ensinaram a programar. são coisas diferentes.' },
+    titulo:'Ninguém te ensinou a programar a sua carreira',
+    sub:'' },
 
   /* confronto que resume o dilema */
   { tipo:'confronto', badge:'A ESCOLHA',
     itens:[
-      {titulo:'Técnico (IC)', icone:'</>'},
-      {titulo:'Líder', icone:'⚑'} ] },
+      {titulo:'Técnico', icone:'</>'},
+      {titulo:'Gestão', icone:'⚑'} ] },
 
   /* trilha técnica */
   { tipo:'agenda', badge:'TRILHA TÉCNICA',
-    titulo:'Jr → Distinguished',
-    texto:'o que muda em cada nível não é "código melhor"',
+    titulo:'Escopo',
+    texto:'Área de influência',
     itens:[
       {k:'Jr → Pleno → Sr', d:'escopo: task → projeto'},
       {k:'Staff',          d:'escopo: time inteiro'},
-      {k:'Principal',      d:'escopo: org / indústria'} ] },
+      {k:'Principal',      d:'escopo: org'},
+      {k:'Distinguished',      d:'escopo: org'}  
+	  ] },
+	  
+{ tipo:'agenda', badge:'TRILHA TÉCNICA',
+    titulo:'Responsabilidades',
+    texto:'No que trabalha',
+    itens:[
+      {k:'Junior', d:'Resolve task com ajuda'},
+      {k:'Pleno', d:'Resolve task'},
+      {k:'Sênior', d:'Ajuda e projeta soluções'},
+      {k:'Staff',          d:'Soluciona problemas complexos'},
+      {k:'Principal',      d:'Especialista de um time ou organização'},
+      {k:'Distinguished',      d:'Especialista de um time ou organização'}  
+	  ] },	  
 
   /* mito 1 */
   { tipo:'lista', revela:false, badge:'MITO',
     titulo:'Staff não é "sênior mais rápido"',
     itens:[
-      {t:'É influência técnica sem cargo de chefia', d:'decide direção sem mandar em ninguém'} ] },
+      {t:'É influência técnica sem cargo de chefia', d:'decide direção'} ] },
+  
+  { tipo:'lista', revela:false, badge:'MITO',
+    titulo:'Liderança',
+    itens:[
+      {t:'Liderar pessoas, projetos ou situações', d:''} ] },
+	  
 
   /* trilha liderança */
-  { tipo:'agenda', badge:'TRILHA LIDERANÇA',
+  { tipo:'agenda', badge:'TRILHA Gestão',
     titulo:'Sr → CTO',
-    texto:'o salto que ninguém avisa que é troca de profissão',
+    texto:'Troca de foco de direção',
     itens:[
-      {k:'Sr → Tech Lead', d:'primeiro passo, ainda perto do código'},
-      {k:'EM → Head',      d:'resultado através dos outros'},
-      {k:'Diretor → CTO',  d:'visão de negócio, não de stack'} ] },
+      {k:'Sr → Tech Lead', d:'Gestão de um equipe'},
+      {k:'EM → Head',      d:'Gestão de multiplas equipes'},
+      {k:'Head → CTO',  d:'Visão de negócio'} ] },
 
   /* mito 2 */
   { tipo:'lista', revela:false, badge:'MITO',
-    titulo:'Virar líder não é promoção',
+    titulo:'Virar gestor não é promoção',
     itens:[
       {t:'É mudança de profissão', d:'boa parte troca código por gente e nem sabia que tava escolhendo isso'} ] },
 
   /* pergunta que fica */
   { tipo:'checkpoint',
-    titulo:'Qual das duas você tá escolhendo hoje — de propósito?' },
+    titulo:'Como escolher?' },
 
   { tipo:'agenda', badge:'Dicas',
-    titulo:'Dicas para o próximo nível',
+    titulo:'Como escolher?',
     texto:'',
     itens:[
-      {k:'Foco em um passo', d:''},
-      {k:'Foco em uma tecnologia',      d:''},
-      {k:'Foco em treinar soft-skills',  d:''} ] },
+      {k:'O que você realmente é bom e te dá prazer no fim do dia?', d:''},
+      {k:'Quais habilidades naturais você tem?',      d:''},
+      {k:'Onde você quer chegar?',  d:''} ] },
 
+{ tipo:'agenda', badge:'Dicas',
+    titulo:'Lembre-se',
+    texto:'',
+    itens:[
+      {k:'Soft-skill é treinável', d:''},
+      {k:'Liderança é treinável',      d:''},
+      {k:'Gestão é treinável',  d:''} ] },
 
+  { tipo:'checkpoint',
+    titulo:'Qual trilha você tá escolhendo hoje? Intencionalmente?' },
 
   /* CTA */
   { tipo:'fim',
-    titulo:'Dia 23: O workshop completo mais detalhes de trilhas e salários e as 5 armadilhas que travam 90% dos devs no mesmo salário.',
+    titulo:'Dia 23: O workshop completo. Mais detalhes das trilhas, salários e as 5 armadilhas que travam 90% dos devs no mesmo nível por anos.',
     rodape:'Workshop completo · link na bio' }
 ];

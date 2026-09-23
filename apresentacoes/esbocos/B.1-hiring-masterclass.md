@@ -1,5 +1,6 @@
 # B.1 - Hiring Masterclass
 **Bônus (v2 / premium)**
+*Conteúdo avançado pra quem já contrata em escala ou está caminhando pra uma posição de liderança. Não é pré-requisito da trilha técnica.*
 
 ## Esqueleto (o que falar)
 - Gancho: contratar 1 pessoa é craft; contratar 15 em dois trimestres é sistema. Quando liderei 150 engenheiros, o gargalo nunca foi achar candidato, foi manter a barra consistente enquanto 8 entrevistadores diferentes decidiam. Esse é o salto desta aula: de entrevistador pra dono da máquina de contratação.

@@ -1,5 +1,6 @@
 # L.4: TL;DR: Staff Engineer (Will Larson)
 **Biblioteca de livros**
+*Conteúdo da trilha técnica avançada (IC), não de gestão. Se você está mirando a trilha de liderança de pessoas, ainda vale como referência, mas o foco aqui é crescer sem virar gestor.*
 
 ## Esqueleto (o que falar)
 - Por que importa: é o único livro sério sobre a trilha desenvolvedor além de sênior. Se você quer liderar SEM virar gestor de pessoas, esse é o mapa, e desmonta a ideia de que "crescer = gerenciar".

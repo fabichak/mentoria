@@ -1,0 +1,448 @@
+/* Mentoria LRPG — estilo DevAdvance.club (preto + azul neon) com tema cyberpunk RPG.
+   16:9. Cada .slide vira 1 screenshot no export_pptx.py. */
+
+:root{
+  --bg:#04060c;
+  --panel:#0a1220;
+  --ink:#eaf2ff;
+  --muted:#8aa0c6;
+  --cyan:#22d3ff;
+  --blue:#3d9bff;
+  --magenta:#ff3db4;
+  --green:#57d98a;
+  --line:rgba(61,155,255,.22);
+  --glow:0 0 22px rgba(34,211,255,.35);
+  --sans:'Segoe UI',system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif;
+  --mono:ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{background:#000;color:var(--ink);font-family:var(--sans);overflow:hidden;
+  height:100vh;display:flex;align-items:center;justify-content:center}
+
+/* ---- palco 16:9 (centralizado por flex, sem offset negativo) ---- */
+.palco{position:relative;width:100vw;height:56.25vw;max-height:100vh;max-width:177.78vh;
+  background:var(--bg);overflow:hidden;container-type:inline-size}
+
+.slide{position:absolute;inset:0;display:none;flex-direction:column;justify-content:center;
+  padding:6.5% 7.5%;
+  background:
+    radial-gradient(120% 90% at 85% -10%, rgba(61,155,255,.10), transparent 55%),
+    radial-gradient(110% 80% at -10% 110%, rgba(255,61,180,.08), transparent 55%),
+    linear-gradient(180deg,#05070e,#04060c);
+}
+.slide::before{ /* grid cyberpunk */
+  content:"";position:absolute;inset:0;pointer-events:none;opacity:.5;
+  background:
+    linear-gradient(rgba(61,155,255,.06) 1px,transparent 1px) 0 0/100% 3.2cqw,
+    linear-gradient(90deg,rgba(61,155,255,.06) 1px,transparent 1px) 0 0/3.2cqw 100%;
+  mask:linear-gradient(180deg,transparent,#000 30%,#000 70%,transparent);
+}
+.slide.ativo{display:flex;animation:fade .45s ease}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+
+h1,h2{font-weight:800;letter-spacing:-.01em;line-height:1.05}
+h2{font-size:3.1cqw;color:var(--blue)}
+.lead{color:var(--muted);font-size:1.5cqw;margin:.6cqw 0 2cqw;max-width:78%}
+
+/* ---- logo (duas barras inclinadas, azul + cinza) ---- */
+.logo{display:inline-flex;gap:.35cqw;transform:skewX(-14deg)}
+.logo i{width:.75cqw;height:2.1cqw;display:block;border-radius:1px}
+.logo i:first-child{background:var(--blue);box-shadow:0 0 10px rgba(61,155,255,.6)}
+.logo i:last-child{background:#5a6b86}
+
+/* ---- badge / HUD label ---- */
+.badge{position:absolute;top:6%;left:7.5%;font-family:var(--mono);font-size:1.05cqw;
+  letter-spacing:.28em;color:var(--cyan);text-transform:uppercase;
+  padding:.4cqw .9cqw;border:1px solid var(--line);border-radius:.4cqw;
+  background:rgba(34,211,255,.06);box-shadow:var(--glow)}
+.tag{font-family:var(--mono);font-size:1cqw;letter-spacing:.22em;color:var(--magenta);
+  text-transform:uppercase;border:1px solid rgba(255,61,180,.35);border-radius:.35cqw;
+  padding:.3cqw .7cqw;align-self:center}
+
+/* ---- footer ---- */
+.hud-footer{position:absolute;left:7.5%;right:7.5%;bottom:5.5%;
+  display:flex;align-items:center;justify-content:space-between;
+  font-family:var(--mono);font-size:1cqw;letter-spacing:.14em;color:#4f658a;text-transform:uppercase}
+.hud-footer .logo i{height:1.5cqw;width:.55cqw}
+.hud-qr{position:absolute;right:7.5%;top:6%;width:9cqw;height:9cqw;
+  border-radius:.4cqw;background:#fff;padding:.3cqw;z-index:5}
+
+/* ================= CAPA ================= */
+.t-capa{justify-content:flex-end}
+.t-capa::after{ /* code rain */
+  content:"01001100 var promise(){return b} 0xF3 async fn(l) 1||b!== corp.ICE netrun eddies";
+  position:absolute;inset:0;font-family:var(--mono);font-size:2.4cqw;line-height:2.2;
+  color:rgba(61,155,255,.12);white-space:normal;word-break:break-all;padding:4cqw;
+  mask:radial-gradient(90% 70% at 80% 30%,#000,transparent 70%);pointer-events:none}
+.capa-logo{position:absolute;top:8%;left:7.5%}
+.capa-logo .logo i{height:3cqw;width:1cqw}
+.capa-body{position:relative;z-index:1;margin-bottom:2cqw}
+.t-capa .selo{display:inline-block;font-family:var(--mono);font-size:1.1cqw;letter-spacing:.24em;
+  text-transform:uppercase;color:var(--cyan);border:1px solid var(--line);border-radius:.4cqw;
+  padding:.5cqw 1cqw;margin-bottom:1.6cqw;box-shadow:var(--glow)}
+.t-capa h1{font-size:6.4cqw}
+.t-capa h1 .neon{color:var(--cyan);text-shadow:0 0 24px rgba(34,211,255,.55)}
+.t-capa .sub{color:var(--muted);font-size:1.7cqw;margin-top:1.4cqw;max-width:70%}
+.t-capa .rodape{margin-top:2.2cqw;font-family:var(--mono);font-size:1.1cqw;letter-spacing:.14em;color:#5a729b}
+
+/* ================= AGENDA ================= */
+.fases{list-style:none;margin-top:1cqw;display:grid;gap:1cqw}
+.fases li{display:flex;align-items:baseline;gap:1.6cqw;padding:1cqw 1.4cqw;
+  border-left:3px solid var(--cyan);background:linear-gradient(90deg,rgba(34,211,255,.07),transparent);
+  border-radius:.3cqw}
+.fases .fk{font-family:var(--mono);font-size:1.5cqw;color:var(--cyan);letter-spacing:.08em;min-width:14cqw}
+.fases .fd{font-size:1.5cqw;color:var(--ink)}
+
+/* ================= PILAR / LISTA ================= */
+.pilar-head{display:flex;align-items:center;gap:1.4cqw}
+.t-pilar h2,.t-lista h2,.t-stack h2{font-size:3.6cqw;color:var(--ink)}
+.t-pilar h2{color:var(--cyan);text-shadow:0 0 20px rgba(34,211,255,.35)}
+.bul{list-style:none;margin-top:1.6cqw;display:grid;gap:1.05cqw}
+.bul li{position:relative;padding-left:2.2cqw;font-size:1.55cqw;color:var(--muted);line-height:1.35}
+.bul li::before{content:"▸";position:absolute;left:0;color:var(--magenta);font-size:1.4cqw}
+.bul li b{color:var(--ink);font-weight:700}
+.bul.big li{font-size:1.8cqw}
+.bul .d{color:var(--muted)}
+
+/* reveal progressivo */
+.slide[data-revela] .reveal{opacity:0;transform:translateY(12px);filter:blur(2px);
+  transition:opacity .35s,transform .35s,filter .35s}
+.slide[data-revela] .reveal.on{opacity:1;transform:none;filter:none}
+
+/* ================= STACK (value stack) ================= */
+.stack{list-style:none;margin-top:1.4cqw;display:grid;gap:.7cqw;max-width:80%}
+.stack li{display:flex;justify-content:space-between;align-items:center;
+  padding:1cqw 1.4cqw;border:1px solid var(--line);border-radius:.5cqw;
+  background:rgba(61,155,255,.05);font-size:1.6cqw}
+.stack .s-t{color:var(--ink)}
+.stack .s-v{font-family:var(--mono);color:var(--cyan);font-weight:700}
+.stack .total{margin-top:.6cqw;border:1px solid var(--magenta);
+  background:rgba(255,61,180,.08);box-shadow:0 0 22px rgba(255,61,180,.25)}
+.stack .total .s-t{font-weight:800;font-size:1.8cqw}
+.stack .total .s-v{color:var(--magenta);font-size:1.9cqw}
+.stack .s-de{text-decoration:line-through;text-decoration-color:var(--magenta);color:var(--muted);
+  font-size:.6em;margin-right:.5cqw}
+
+/* ================= PREÇO ================= */
+.t-preco{align-items:center;text-align:center}
+.t-preco .de{font-family:var(--mono);font-size:2.4cqw;color:var(--muted);text-decoration:line-through;
+  text-decoration-color:var(--magenta);opacity:.8}
+.t-preco .valor{font-size:8cqw;font-weight:800;color:var(--cyan);text-shadow:0 0 34px rgba(34,211,255,.5);
+  line-height:1;margin:1cqw 0}
+.t-preco .lead{max-width:64%;text-align:center;color:var(--ink)}
+
+/* ================= CONFRONTO (valor x preço) ================= */
+.t-confronto{align-items:center;justify-content:center;text-align:center}
+.cf-row{display:flex;align-items:center;justify-content:center;gap:4cqw;width:100%}
+.cf-col{display:flex;flex-direction:column;align-items:center;gap:1.8cqw}
+.cf-word{font-size:5cqw;font-weight:800;letter-spacing:-.01em}
+.cf-col:first-child .cf-word{color:var(--cyan);text-shadow:0 0 30px rgba(34,211,255,.5)}
+.cf-col:last-child .cf-word{color:var(--magenta);text-shadow:0 0 30px rgba(255,61,180,.4)}
+.cf-x{font-size:3cqw;color:var(--muted);font-family:var(--mono)}
+.cf-icon{width:4.6cqw;height:4.6cqw;border-radius:50%;border:2px solid currentColor;
+  display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:1.7cqw;font-weight:700}
+.cf-col:first-child .cf-icon{color:var(--cyan);box-shadow:var(--glow)}
+.cf-col:last-child .cf-icon{color:var(--magenta);box-shadow:0 0 22px rgba(255,61,180,.35)}
+
+/* ================= CHECKPOINT / DIVISOR / FIM ================= */
+.t-checkpoint,.t-divisor,.t-fim{align-items:center;text-align:center}
+.t-checkpoint h1,.t-fim h1{font-size:5.4cqw;color:var(--ink)}
+.t-checkpoint h1{text-shadow:0 0 30px rgba(61,155,255,.4)}
+.t-divisor h1{font-size:5cqw;color:var(--cyan);text-shadow:0 0 30px rgba(34,211,255,.5)}
+.t-divisor .sub,.t-fim .rodape{color:var(--muted);font-family:var(--mono);letter-spacing:.14em;
+  margin-top:1.4cqw;font-size:1.4cqw}
+
+/* ================= RESULTADO ================= */
+.t-resultado{align-items:center;text-align:center}
+.shots{display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:1.8cqw;width:100%;height:62vh}
+.shot{flex:1 1 0;min-height:0;max-width:60%;display:flex;align-items:center;justify-content:center;
+  border:1px solid var(--line);border-radius:.8cqw;overflow:hidden;padding:.5cqw;
+  box-shadow:0 0 40px rgba(34,211,255,.18);background:#0a1220}
+.shots-1 .shot{flex:none;height:100%;max-width:56%}
+.shot img{display:block;max-width:100%;max-height:100%;width:auto;height:auto;
+  object-fit:contain;border-radius:.4cqw}
+.legenda{color:var(--muted);font-size:1.2cqw;margin-top:.8cqw}
+
+/* variante lado a lado — para prints de mobile (retrato) */
+.shots-row{flex-direction:row;align-items:stretch;justify-content:center;gap:2.6cqw}
+.shots-row .shot{flex:1 1 0;min-width:0;max-width:38%;height:100%}
+
+/* ================= TIMELINE (gráfico econômico) ================= */
+.t-timeline h2{font-size:2.5cqw;max-width:82%;margin-bottom:5cqw;color:var(--ink)}
+.tl-wrap{position:relative;height:2cqw}
+.tl-track{position:absolute;left:0;right:12%;top:0;height:1.4cqw;border-radius:.3cqw;
+  background:rgba(138,160,198,.16);overflow:hidden}
+.tl-fill{position:absolute;inset:0;transform:scaleX(0);transform-origin:left;
+  background:repeating-linear-gradient(90deg,var(--cyan) 0 1.1cqw,transparent 1.1cqw 1.8cqw);
+  box-shadow:0 0 16px rgba(34,211,255,.5);transition:transform .5s ease}
+.tl-wrap:has(.tl-group2.on) .tl-fill{transform:scaleX(1)}
+.tl-mark{position:absolute;top:0;display:flex;flex-direction:column;align-items:flex-start;gap:.5cqw}
+.tl-mark i{width:2px;height:2.6cqw;background:var(--cyan);display:block;box-shadow:0 0 8px rgba(34,211,255,.6)}
+.tl-mark b{font-family:var(--mono);font-size:1.3cqw;color:var(--ink);margin-top:.3cqw}
+.tl-mark-a{left:0}
+.tl-mark-b{left:88%}
+.tl-tag{position:absolute;top:-4.6cqw;display:flex;flex-direction:column;align-items:center;gap:.4cqw;
+  font-family:var(--mono);font-size:1.05cqw;letter-spacing:.08em;color:var(--ink);text-align:center;
+  text-transform:uppercase;line-height:1.3;white-space:nowrap}
+.tl-tag .tl-chev{width:1.7cqw;height:1.7cqw;border-radius:50%;border:1px solid var(--cyan);color:var(--cyan);
+  display:flex;align-items:center;justify-content:center;font-size:1cqw}
+.tl-tag-b{left:auto;right:12%;align-items:flex-end}
+.tl-tag-a{left:0}
+.tl-nota{position:absolute;left:0;top:6cqw;max-width:56%;color:var(--muted);font-size:1.4cqw;line-height:1.4}
+
+/* ================= CRONOLOGIA (roadmap conectado) ================= */
+.t-cronologia h2{font-size:2.6cqw;margin-bottom:1.6cqw}
+.cronologia{list-style:none;display:grid;gap:1.15cqw;max-width:88%}
+.cronologia li{list-style:none}
+.cr-row{display:flex;align-items:center;gap:1.3cqw;position:relative}
+.cr-num{position:relative;flex:0 0 auto;width:2.4cqw;height:2.4cqw;border-radius:50%;
+  border:2px solid var(--cyan);display:flex;align-items:center;justify-content:center;
+  font-family:var(--mono);font-weight:700;font-size:1.2cqw;color:var(--cyan);
+  background:rgba(34,211,255,.08);box-shadow:var(--glow)}
+.cr-linked .cr-num::before{content:"";position:absolute;bottom:100%;left:50%;width:2px;height:1.15cqw;
+  transform:translateX(-50%);background:var(--cyan);box-shadow:0 0 8px rgba(34,211,255,.5)}
+.cr-box{flex:1;font-size:1.35cqw;color:var(--ink);background:rgba(61,155,255,.05);
+  border:1px solid var(--line);border-radius:.5cqw;padding:.75cqw 1.2cqw}
+.cr-cycle-group{position:relative;display:grid;gap:1.15cqw;padding-right:6cqw}
+.cr-bracket{position:absolute;top:1.2cqw;bottom:1.2cqw;right:2.6cqw;width:1.7cqw;
+  border:2px solid var(--magenta);border-left:none;border-radius:0 1cqw 1cqw 0;
+  transition:opacity .4s ease}
+/* com revelação progressiva o ciclo só aparece depois do último passo */
+.slide[data-revela] .cr-bracket{opacity:0}
+.slide[data-revela] .cronologia li.cr-cycle-group:has(.cr-row:nth-last-child(2).on) .cr-bracket{opacity:1}
+/* selo de ciclo: anel tracejado com a duração dentro */
+.cr-ciclo{position:absolute;left:100%;top:50%;transform:translateY(-50%);margin-left:1.1cqw;
+  width:7cqw;height:7cqw;border-radius:50%;border:2px dashed var(--magenta);
+  display:flex;align-items:center;justify-content:center;text-align:center;
+  background:rgba(255,61,180,.08);box-shadow:0 0 22px rgba(255,61,180,.25)}
+.cr-ciclo b{font-family:var(--mono);font-size:1.15cqw;font-weight:700;letter-spacing:.06em;
+  line-height:1.25;text-transform:uppercase;color:var(--magenta);max-width:5.2cqw}
+.cr-ciclo i{position:absolute;top:-.85cqw;left:50%;transform:translateX(-50%) rotate(12deg);
+  font-style:normal;font-size:1.7cqw;line-height:1;color:var(--magenta);
+  background:var(--bg);padding:0 .1cqw;text-shadow:0 0 10px rgba(255,61,180,.6)}
+
+/* ================= PREÇO DUPLA (downsell vs protagonista) ================= */
+.t-precodupla{flex-direction:row;align-items:center}
+.pd-col{flex:1;display:flex;flex-direction:column;align-items:center;text-align:center;gap:.6cqw}
+.pd-div{width:1px;align-self:stretch;margin:0 4%;
+  background:linear-gradient(180deg,transparent,var(--line) 20%,var(--line) 80%,transparent)}
+.pd-k{font-family:var(--mono);font-size:1.15cqw;letter-spacing:.2em;text-transform:uppercase;color:var(--magenta)}
+.pd-v{font-size:3cqw;font-weight:800;color:var(--cyan);text-shadow:0 0 26px rgba(34,211,255,.45);line-height:1.1}
+.pd-v-alt{color:var(--ink);text-shadow:0 0 26px rgba(255,61,180,.35)}
+.pd-p{font-family:var(--mono);font-size:1.3cqw;color:var(--muted)}
+
+/* ================= CHROME (progress, dots) ================= */
+.progresso{position:fixed;left:0;top:0;height:3px;background:linear-gradient(90deg,var(--cyan),var(--magenta));
+  width:0;box-shadow:0 0 12px var(--cyan);transition:width .35s;z-index:9}
+.dots{position:fixed;bottom:2.5vh;left:50%;transform:translateX(-50%);display:flex;gap:.7vw;z-index:9}
+.dot{width:.7vw;height:.7vw;border-radius:50%;border:1px solid var(--line);background:transparent;cursor:pointer;padding:0}
+.dot.ativo{background:var(--cyan);box-shadow:var(--glow);border-color:var(--cyan)}
+.nav-hint{position:fixed;right:2vw;bottom:2.2vh;font-family:var(--mono);font-size:1vh;letter-spacing:.2em;
+  color:#3d5171;text-transform:uppercase;z-index:9}
+
+/* ================= LOGOS (background / empresas) ================= */
+.t-logos h2{font-size:3.6cqw;color:var(--ink)}
+.logos-grid{display:flex;flex-wrap:wrap;gap:1.6cqw;margin-top:2.4cqw;max-width:90%}
+.logo-card{flex:1 1 28%;min-width:26%;height:11cqw;display:flex;align-items:center;justify-content:center;
+  border:1px solid var(--line);border-radius:.6cqw;background:rgba(61,155,255,.05);padding:1.4cqw;
+  box-shadow:0 0 22px rgba(34,211,255,.10)}
+.logo-card img{max-width:82%;max-height:72%;object-fit:contain}
+.logo-card.cl{gap:1.1cqw;font-weight:800;font-size:1.7cqw;color:var(--ink)}
+.logo-card.cl .logo i{height:2.4cqw;width:.85cqw}
+
+/* ================= FOTO (imagem grande com título) ================= */
+.t-foto h2{font-size:3.6cqw;color:var(--ink)}
+.foto-frame{margin-top:1.6cqw;height:60vh;border:1px solid var(--line);border-radius:.8cqw;overflow:hidden;
+  box-shadow:0 0 40px rgba(34,211,255,.18);background:#0a1220}
+.foto-frame img{width:100%;height:100%;object-fit:cover;display:block}
+.foto-frame.contain{background:#fff}
+.foto-frame.contain img{object-fit:contain}
+
+/* ================= PERFIL (foto/logo + bullets) ================= */
+.t-perfil h2{font-size:3.6cqw;color:var(--ink)}
+.perfil-row{display:flex;align-items:center;gap:3.4cqw;margin-top:1.8cqw}
+.perfil-img{flex:0 0 22cqw;height:22cqw;border:1px solid var(--line);border-radius:.8cqw;overflow:hidden;
+  box-shadow:0 0 40px rgba(34,211,255,.18);background:#0a1220}
+.perfil-img img{width:100%;height:100%;object-fit:cover;display:block}
+.perfil-row .bul{margin-top:0;flex:1}
+
+/* ================= LOOP (ciclo da carreira) ================= */
+.t-loop h2{font-size:3.6cqw;color:var(--ink)}
+.loop-wrap{position:relative;flex:1;margin-top:1cqw;min-height:0}
+.loop-ring{position:absolute;left:25%;top:12%;width:50%;height:72%;border-radius:50%;
+  border:2px dashed rgba(34,211,255,.45);box-shadow:0 0 30px rgba(34,211,255,.15),inset 0 0 30px rgba(34,211,255,.08)}
+.loop-node{position:absolute;transform:translate(-50%,-50%);white-space:nowrap;
+  font-size:1.45cqw;font-weight:700;color:var(--ink);
+  background:rgba(61,155,255,.08);border:1px solid var(--cyan);border-radius:.5cqw;
+  padding:.7cqw 1.3cqw;box-shadow:var(--glow)}
+.loop-arrow{position:absolute;transform:translate(-50%,-50%) rotate(var(--r));
+  color:var(--magenta);font-size:2.2cqw;line-height:1;text-shadow:0 0 12px rgba(255,61,180,.6)}
+
+/* ================= COLAGEM (fotos sobrepostas, tela cheia) ================= */
+.t-colagem{padding:0}
+.cg-wrap{position:absolute;inset:0;overflow:hidden}
+.cg-i{position:absolute;margin:0;overflow:hidden;transform:rotate(var(--r));
+  border:.28cqw solid rgba(226,238,255,.9);border-radius:.4cqw;
+  box-shadow:0 .4cqw 2.4cqw rgba(0,0,0,.65),0 0 3cqw rgba(34,211,255,.18)}
+/* corta pelo pé, não pela cabeça: foto retrato em moldura deitada recorta na vertical */
+.cg-i img{width:100%;height:100%;object-fit:cover;object-position:center 18%;display:block}
+/* scrim pro rodapé continuar legível em cima das fotos */
+.cg-wrap:after{content:"";position:absolute;inset:auto 0 0 0;height:24%;z-index:4;
+  pointer-events:none;background:linear-gradient(transparent,rgba(2,4,10,.88))}
+.t-colagem .hud-footer{z-index:5;color:#b9cbe6;text-shadow:0 1px .6cqw #000}
+
+/* ================= DEPOIMENTOS (5 prints retrato lado a lado) ================= */
+.t-depoimentos h2{font-size:3.6cqw;color:var(--ink)}
+.dp-row{display:flex;gap:1.4cqw;margin-top:1.6cqw;justify-content:center}
+.dp-i{flex:0 0 15.6cqw;aspect-ratio:9/16;margin:0;border:1px solid var(--line);border-radius:.8cqw;
+  overflow:hidden;box-shadow:0 0 40px rgba(34,211,255,.18);background:#0a1220}
+.dp-i img{width:100%;height:100%;object-fit:cover;display:block}
+
+/* ================= MOSAICO (prints largos, colunas CSS, tela cheia) ================= */
+.t-mosaico{padding:0}
+.mo-wrap{position:absolute;inset:2.2cqw 2.2cqw 5.5cqw;column-count:3;column-gap:1.4cqw}
+.mo-i{break-inside:avoid;margin:0 0 1.2cqw;transform:rotate(var(--r));
+  border:.2cqw solid rgba(226,238,255,.9);border-radius:.4cqw;overflow:hidden;background:#fff;
+  box-shadow:0 .4cqw 2cqw rgba(0,0,0,.65),0 0 3cqw rgba(34,211,255,.18)}
+.mo-i img{width:100%;height:auto;display:block}
+.t-mosaico .hud-footer{z-index:5}
+
+/* ================= MARCA (capa só com a logo) ================= */
+.t-marca{align-items:center;justify-content:center}
+.marca-img{height:82%;width:auto;max-width:62cqw;object-fit:contain;
+  filter:drop-shadow(0 0 40px rgba(34,211,255,.35))}
+
+/* ================= PERFIL — faixa de logos das empresas ================= */
+.perfil-logos{display:flex;align-items:center;justify-content:center;gap:3.4cqw;margin-top:2.2cqw}
+.perfil-logos img{height:4cqw;max-width:14cqw;object-fit:contain;opacity:.9}
+
+/* ================= DUPLO (conteúdo | valor pra você) ================= */
+.t-duplo h2{font-size:3.1cqw;color:var(--ink)}
+.dp-row{display:flex;gap:2.2cqw;margin-top:1.8cqw;align-items:stretch}
+.dp-card{flex:1;border:1px solid var(--line);border-radius:.8cqw;padding:1.6cqw 1.9cqw;
+  background:rgba(61,155,255,.05);box-shadow:0 0 26px rgba(34,211,255,.10)}
+.dp-card h3{font-family:var(--mono);font-size:1.15cqw;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--cyan);margin-bottom:1.1cqw}
+.dp-card ul{list-style:none;display:grid;gap:.85cqw}
+.dp-card li{position:relative;padding-left:1.8cqw;font-size:1.4cqw;color:var(--muted);line-height:1.35}
+.dp-card li::before{content:"▸";position:absolute;left:0;color:var(--blue)}
+.dp-card.dp-b{border-color:rgba(255,61,180,.35);background:rgba(255,61,180,.05);
+  box-shadow:0 0 26px rgba(255,61,180,.14)}
+.dp-card.dp-b h3{color:var(--magenta)}
+.dp-card.dp-b li{color:var(--ink)}
+.dp-card.dp-b li::before{color:var(--magenta)}
+
+/* ================= PLANOS (3 caixas de preço) ================= */
+.t-planos h2{font-size:3.1cqw;color:var(--ink)}
+.pl-row{display:flex;gap:2cqw;margin-top:2cqw;align-items:stretch}
+.pl-card{flex:1;display:flex;flex-direction:column;align-items:center;text-align:center;gap:.5cqw;
+  border:1px solid var(--line);border-radius:.8cqw;padding:2cqw 1.6cqw;
+  background:rgba(61,155,255,.05);box-shadow:0 0 26px rgba(34,211,255,.10)}
+.pl-nome{font-family:var(--mono);font-size:1.2cqw;letter-spacing:.2em;text-transform:uppercase;color:var(--cyan)}
+.pl-preco{font-size:3.4cqw;font-weight:800;color:var(--ink);line-height:1.1;margin-top:.6cqw}
+.pl-ano{font-family:var(--mono);font-size:1.2cqw;color:var(--muted)}
+.pl-desc{font-size:1.3cqw;color:var(--muted);line-height:1.35;margin-top:1cqw}
+.pl-itens{list-style:none;display:grid;gap:.65cqw;margin-top:1.2cqw;width:100%;text-align:left}
+.pl-itens li{position:relative;padding-left:1.7cqw;font-size:1.3cqw;color:var(--muted);line-height:1.35}
+.pl-itens li::before{content:"▸";position:absolute;left:0;color:var(--cyan)}
+.pl-card.destaque .pl-itens li{color:var(--ink)}
+.pl-card.destaque .pl-itens li::before{color:var(--magenta)}
+/* 1 ou 2 boxes: não esticam na largura toda */
+.pl-1,.pl-2{justify-content:center}
+.pl-1 .pl-card{flex:0 1 64cqw}
+.pl-2 .pl-card{flex:0 1 41cqw}
+.pl-card.destaque{border-color:var(--magenta);background:rgba(255,61,180,.07);
+  box-shadow:0 0 30px rgba(255,61,180,.25)}
+.pl-card.destaque .pl-nome{color:var(--magenta)}
+.pl-card.destaque .pl-preco{color:var(--magenta);text-shadow:0 0 26px rgba(255,61,180,.4)}
+
+/* ================= PIRÂMIDE (camadas da carreira) ================= */
+.t-piramide h2{font-size:3.1cqw;color:var(--ink)}
+/* rótulos sobrepostos, centralizados no eixo da pirâmide — podem passar das laterais */
+.pr-wrap{position:relative;width:46cqw;height:30cqw;margin-top:1.8cqw;align-self:center}
+.pr-svg{position:absolute;inset:0;width:100%;height:100%;
+  filter:drop-shadow(0 0 30px rgba(34,211,255,.22))}
+.pr-f{fill:rgba(34,211,255,.16);stroke:rgba(4,6,12,.85);stroke-width:1.2;vector-effect:non-scaling-stroke}
+.pr-f0{fill:rgba(255,61,180,.45)}
+.pr-f1{fill:rgba(34,211,255,.36)}
+.pr-f2{fill:rgba(34,211,255,.26)}
+.pr-labels{position:absolute;inset:0;display:flex;flex-direction:column}
+.pr-label{flex:1;display:flex;align-items:center;justify-content:center;text-align:center;
+  font-size:1.9cqw;font-weight:700;color:var(--ink);white-space:nowrap;
+  text-shadow:0 0 16px rgba(4,6,12,.95),0 0 6px rgba(4,6,12,.9)}
+
+/* ================= MÉTODO (pirâmide + flecha subindo pra direita) ================= */
+.t-metodo h2{font-size:3.1cqw;color:var(--ink)}
+.mt-stage{position:relative;width:84cqw;height:34cqw;align-self:center;margin-top:1.2cqw}
+.mt-svg{position:absolute;inset:0;width:100%;height:100%;
+  filter:drop-shadow(0 0 30px rgba(34,211,255,.18))}
+.mt-f{fill:rgba(34,211,255,.13);stroke:rgba(4,6,12,.85);stroke-width:1.5}
+.mt-f.on{fill:rgba(255,61,180,.45)}
+.mt-l{font-family:var(--sans);font-size:17px;font-weight:700;fill:var(--ink);opacity:.5;
+  paint-order:stroke;stroke:#04060c;stroke-width:5px;stroke-linejoin:round}
+.mt-l.on{opacity:1}
+.mt-arrow{fill:none;stroke:var(--magenta);stroke-width:5px;stroke-linecap:round;
+  filter:drop-shadow(0 0 8px rgba(255,61,180,.7))}
+.mt-svg marker path{fill:var(--magenta)}
+.mt-card{position:absolute;left:64.9%;width:35%;transform:translateY(-50%)}
+.mt-card h3{font-size:2.3cqw;font-weight:800;color:var(--magenta);line-height:1.1;
+  text-shadow:0 0 22px rgba(255,61,180,.35)}
+.mt-card ul{list-style:none;display:grid;gap:.85cqw;margin-top:1.2cqw}
+.mt-card li{position:relative;padding-left:1.8cqw;font-size:1.45cqw;color:var(--ink);line-height:1.35}
+.mt-card li::before{content:"▸";position:absolute;left:0;color:var(--cyan)}
+
+/* ================= TURMA FUNDADORA · acréscimos ================= */
+/* marca: tagline + selo embaixo da logo */
+.t-marca{gap:1.4cqw}
+.t-marca .marca-img{height:62%}
+.marca-sub{font-size:2cqw;color:var(--ink);font-weight:700;letter-spacing:-.01em}
+.t-marca .selo{font-family:var(--mono);font-size:1.1cqw;letter-spacing:.24em;text-transform:uppercase;
+  color:var(--cyan);border:1px solid var(--line);border-radius:.4cqw;padding:.5cqw 1cqw;box-shadow:var(--glow)}
+
+/* checkpoint: frase de apoio embaixo da promessa */
+.t-checkpoint .sub{color:var(--muted);font-size:1.7cqw;line-height:1.4;margin-top:1.8cqw;max-width:66%}
+
+/* pirâmide com texto de apoio: pirâmide um pouco menor pra caber */
+.t-piramide .lead{margin-top:.5cqw;max-width:86%}
+.t-piramide .lead+.pr-wrap{height:25cqw;width:40cqw;margin-top:1cqw}
+
+/* método: "onde você trabalha isso" */
+.mt-onde{margin-top:1.1cqw;font-size:1.2cqw;color:var(--muted);line-height:1.35}
+.mt-onde b{display:block;font-family:var(--mono);font-size:.9cqw;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--cyan);margin-bottom:.25cqw}
+
+/* duplo com selos grandes (garantia) */
+.dp-selos .dp-card h3{font-family:var(--sans);font-size:2.6cqw;letter-spacing:-.01em;text-transform:none;font-weight:800}
+.dp-selos .dp-card li{font-size:1.55cqw;color:var(--ink)}
+
+/* ================= TABELA (semana, comparativo) ================= */
+.t-tabela h2{font-size:3.1cqw;color:var(--ink)}
+.tb{width:100%;border-collapse:collapse;margin-top:1.6cqw;font-size:1.35cqw}
+.tb th{font-family:var(--mono);font-size:1cqw;letter-spacing:.2em;text-transform:uppercase;color:var(--cyan);
+  text-align:left;padding:.6cqw 1.2cqw;border-bottom:1px solid var(--line)}
+.tb td{padding:.7cqw 1.2cqw;border-bottom:1px solid var(--line);color:var(--muted);line-height:1.35;vertical-align:top}
+.tb td b{color:var(--ink)}
+.tb td:first-child{color:var(--ink);font-weight:700;white-space:nowrap}
+.tb tr:last-child td{border-bottom:none}
+/* coluna em destaque (Programa) em rosa */
+.tb th.on{color:var(--magenta)}
+.tb td.on{color:var(--ink);background:rgba(255,61,180,.06);font-weight:700}
+.tb-nota{margin-top:1.4cqw;font-size:1.5cqw;color:var(--ink);font-weight:700}
+
+/* duplo com 3 cards: fonte menor, terceiro card em azul */
+.dp-3{gap:1.6cqw}
+.dp-3 .dp-card{padding:1.3cqw 1.4cqw}
+.dp-3 .dp-card ul{gap:.7cqw}
+.dp-3 .dp-card li{font-size:1.15cqw;padding-left:1.5cqw}
+.dp-card.dp-c{border-color:rgba(61,155,255,.4);background:rgba(61,155,255,.06);box-shadow:0 0 26px rgba(61,155,255,.14)}
+.dp-card.dp-c h3{color:var(--blue)}
+.dp-card.dp-c li{color:var(--ink)}
+.dp-card.dp-c li::before{color:var(--blue)}
+
+/* 2 cards lado a lado (preço + a conta): tipo menor pra caber */
+.pl-2 .pl-card{padding:1.6cqw 1.5cqw}
+.pl-2 .pl-itens li{font-size:1.15cqw}
+.pl-2 .pl-itens{gap:.55cqw}

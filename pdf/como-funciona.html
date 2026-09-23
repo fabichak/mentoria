@@ -20,129 +20,122 @@
     background:var(--bg);color:var(--ink);
     font-family:'Segoe UI',system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif;
     -webkit-print-color-adjust:exact; print-color-adjust:exact;
-    padding:14mm 16mm;
-    display:flex;flex-direction:column;gap:6mm;
+    padding:12mm 16mm;
+    display:flex;flex-direction:column;gap:4mm;
   }
 
-  header{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:5mm}
-  header img{height:9mm}
-  header .tag{font-size:9pt;color:var(--muted);letter-spacing:.05em;text-transform:uppercase}
+  header{display:flex;align-items:center;gap:6mm}
+  header img{height:40mm}
+  header h1{font-size:20pt;color:var(--ink);letter-spacing:-.01em;line-height:1.25}
+  header h1 span{color:var(--cyan)}
 
-  h1{font-size:17pt;color:var(--ink);letter-spacing:-.01em}
-  h1 span{color:var(--cyan)}
-  .subtitle{font-size:9.5pt;color:var(--muted);margin-top:1mm}
+  .subtitle{font-size:9pt;color:var(--muted)}
 
-  .grid{display:grid;grid-template-columns:1fr 1fr;gap:5mm}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:4mm}
 
   .card{
     background:var(--panel);border:1px solid var(--line);border-radius:3mm;
-    padding:5mm;
+    padding:4mm 5mm;
   }
-  .card h2{font-size:10.5pt;color:var(--cyan);margin-bottom:2.5mm;display:flex;align-items:center;gap:2mm}
+  .card h2{font-size:11pt;color:var(--cyan);margin-bottom:2mm;display:flex;align-items:center;gap:2mm}
   .card h2 .n{
     display:inline-flex;align-items:center;justify-content:center;
     width:5.5mm;height:5.5mm;border-radius:50%;
     background:rgba(34,211,255,.12);border:1px solid var(--line);
     font-size:8pt;color:var(--cyan);
   }
-  .card p, .card li{font-size:8.7pt;color:var(--muted);line-height:1.45}
-  .card ul{list-style:none;display:flex;flex-direction:column;gap:1.3mm}
+  
+  .card p, .card li{font-size:9pt;color:var(--muted);line-height:1.35}
+  .card ul{list-style:none;display:flex;flex-direction:column;gap:1mm}
   .card li::before{content:"—";color:var(--blue);margin-right:1.5mm}
 
-  .tiers{display:flex;flex-direction:column;gap:2mm}
-  .tier{display:flex;justify-content:space-between;gap:3mm;border-top:1px solid var(--line);padding-top:2mm}
+  .tiers{display:flex;flex-direction:column;gap:1.5mm}
+  .tier{display:flex;justify-content:space-between;align-items:baseline;gap:3mm;border-top:1px solid var(--line);padding-top:1.5mm}
   .tier:first-child{border-top:none;padding-top:0}
-  .tier b{font-size:8.7pt;color:var(--ink);min-width:30mm}
-  .tier span{font-size:8.3pt;color:var(--muted)}
+  .tier b{font-size:8.7pt;color:var(--ink);min-width:44mm}
+  .tier span{font-size:8.3pt;color:var(--muted);flex:1}
+  .tier .price{font-size:10pt;color:var(--cyan);font-weight:700;white-space:nowrap;min-width:24mm;text-align:right;line-height:1.25}
+  .tier .price i{font-size:7.5pt;color:var(--muted);font-weight:400;font-style:normal}
 
   .wide{grid-column:1 / -1}
 
-  .pills{display:flex;flex-wrap:wrap;gap:2mm}
-  .pill{
-    font-size:8pt;color:var(--ink);
-    background:rgba(61,155,255,.10);border:1px solid var(--line);
-    border-radius:20mm;padding:1.5mm 3mm;
-  }
+  .about{display:flex;gap:5mm;align-items:center}
+  .about img{width:22mm;height:22mm;border-radius:50%;object-fit:cover;border:1px solid var(--line);flex-shrink:0}
+  .about p{font-size:8.4pt;color:var(--muted);line-height:1.4}
 
-  footer{margin-top:auto;border-top:1px solid var(--line);padding-top:3mm;
+  footer{margin-top:auto;border-top:1px solid var(--line);padding-top:2.5mm;
     display:flex;justify-content:space-between;font-size:7.5pt;color:var(--muted)}
 </style>
 </head>
 <body>
 
   <header>
-    <img src="assets/logo.png" alt="logo">
-    <div class="tag">Clube de Devs · Como funciona</div>
+    <img src="assets/3.png" alt="logo">
+    <h1>A evolução da sua <span>carreira</span>,<br>com mentoria, método e comunidade</h1>
   </header>
 
-  <div>
-    <h1>Sua evolução como <span>líder técnico</span>, com estrutura e comunidade</h1>
-    <p class="subtitle">Módulos gravados + encontros ao vivo + uma comunidade de devs que se ajudam a virar líderes de verdade.</p>
-  </div>
+  <p class="subtitle">Por quem passou por 20 anos de desenvolvimento, liderança e empreendorismo na área de desenvolvimento de software</p>
 
   <div class="grid">
 
     <div class="card">
-      <h2><span class="n">1</span> Conteúdo</h2>
+      <h2><span class="n">1</span> Conteúdo + encontros ao vivo</h2>
       <ul>
-        <li>Módulos com aulas em vídeo, liberados por trilha (fundamentos → carreira → liderança)</li>
+        <li>Módulos com aulas em vídeo, liberados por trilha (técnico, liderança, soft-skill)</li>
         <li>Comentários em cada aula — tire dúvidas e receba resposta no site e no Discord</li>
-        <li>Feed de gravações: todo encontro ao vivo fica disponível em até 48h</li>
+        <li>Encontros semanais com conteúdo e espaço pra dúvidas</li>
+        <li>Todo encontro ao vivo fica disponível em até 48h</li>
+        <li>Palestas e AMA com convidados externo, mock interviews e coworking digital</li>
       </ul>
     </div>
 
     <div class="card">
-      <h2><span class="n">2</span> Encontros ao vivo</h2>
-      <ul>
-        <li>Calendário com data, tema e link do Google Meet de cada encontro</li>
-        <li>Hot seat mensal: um mentorado traz um problema real, o grupo resolve junto</li>
-        <li>AMA mensal com convidado externo (CTO/Head de mercado)</li>
-        <li>Mock interviews e coworking em salas de voz no Discord</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <h2><span class="n">3</span> Comunidade</h2>
+      <h2><span class="n">2</span> Comunidade</h2>
       <ul>
         <li>Discord com canais por tema: carreira, conteúdo, oportunidades, encontros</li>
-        <li>Clube do livro mensal (biblioteca TL;DR de liderança)</li>
-        <li>Blog comunitário — você escreve, eu reviso, vira portfólio de marca pessoal</li>
+        <li>Clube do livro e do filme mensal (biblioteca TL;DR de liderança)</li>
+        <li>Blog comunitário</li>
         <li>Peer review de CV, status report e roadmap entre os membros</li>
       </ul>
     </div>
 
     <div class="card">
-      <h2><span class="n">4</span> Oportunidades</h2>
+      <h2><span class="n">3</span> Oportunidades</h2>
       <ul>
-        <li>Banco de vagas com bounty entre membros</li>
         <li>Programa de indicação — indique e ganhe por afiliação</li>
-        <li>Vire sub-mentor, palestrante ou criador de conteúdo remunerado dentro do clube</li>
+        <li>Vire mentor, palestrante ou criador de conteúdo remunerado dentro do clube</li>
+        <li>Banco de vagas com bounty entre membros</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2><span class="n">4</span> Mentoria comigo</h2>
+      <ul>
+        <li>Sessões individuais 1:1 focadas na sua carreira e nos seus desafios de liderança</li>
+        <li>Acompanhamento contínuo — não é conselho pontual, é plano de evolução</li>
+        <li>Prioridade nos hot seats e revisão direta de artefatos (CV, roadmap, status report)</li>
+        <li>Construa o seu plano de carreira e próximos passos comigo</li>
       </ul>
     </div>
 
     <div class="card wide">
-      <h2><span class="n">$</span> Planos</h2>
+      <h2><span class="n">$</span> Planos (12 meses) <span class="n">!</span> Preços promocionais - primeiros 100 integrantes</h2>
       <div class="tiers">
-        <div class="tier"><b>Gravado</b><span>Acesso a todos os módulos e ao feed de gravações dos encontros</span></div>
-        <div class="tier"><b>Gravado + Comunidade</b><span>Tudo do plano anterior + encontros ao vivo + Discord</span></div>
-        <div class="tier"><b>Gravado + Comunidade + Mentoria</b><span>Tudo do plano anterior + mentoria individual comigo</span></div>
+        <div class="tier"><b>Comunidade</b><span>Acesso a todos os módulos e ao feed de gravações dos encontros</span><span class="price">12x R$ 48<br><i>R$ 480/ano</i></span></div>
+        <div class="tier"><b>Gravado + Comunidade</b><span>Tudo do plano anterior + encontros ao vivo + Comunidade</span><span class="price">12x R$ 120<br><i>R$ 1.200</i></span></div>
+        <div class="tier"><b>Mentoria comigo</b><span>Tudo do plano anterior + mentoria individual comigo</span><span class="price">12x R$ 480<br><i>R$ 4.800</i></span></div>
       </div>
     </div>
 
   </div>
 
-  <div class="pills">
-    <span class="pill">Hot seat mensal</span>
-    <span class="pill">Clube do livro</span>
-    <span class="pill">Mock interview</span>
-    <span class="pill">AMA com convidados</span>
-    <span class="pill">Coworking</span>
-    <span class="pill">Blog comunitário</span>
-    <span class="pill">Banco de vagas</span>
+  <div class="card about">
+    <img src="assets/martinf-rosto.png" alt="Martin Fabichak">
+    <p><b style="color:var(--ink)">Martin Fabichak</b> — Matemático pelo IME-USP, 20 anos de desenvolvimento de software, 16 anos de líder, head of development e 5 anos de CTO. Depois de anos liderando times e projetos, criei essa mentoria pra passar adiante o que aprendi na prática: como sair de dev pra referência técnica e de liderança, sem perder o rigor de engenharia.</p>
   </div>
 
   <footer>
-    <span>Mentoria — Clube de Devs</span>
+    <span>Você está pronto pro próximo passo da sua carreira?</span>
     <span>devadvance.club</span>
   </footer>
 

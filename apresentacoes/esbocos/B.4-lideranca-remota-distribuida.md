@@ -1,5 +1,6 @@
 # B.4: Liderança Remota/Distribuída
 **Bônus (v2 / premium)**
+*Conteúdo avançado pra quem já lidera time remoto ou está caminhando pra uma posição de liderança. Não é pré-requisito da trilha técnica.*
 
 ## Esqueleto (o que falar)
 - Gancho: liderando times entre Brasil e Europa, aprendi na pele: remoto não é "o mesmo trabalho por vídeo". É outro sistema operacional. Quem tenta liderar remoto com as ferramentas do presencial (supervisão por presença, alinhamento por corredor, cultura por osmose) não perde o time de uma vez; perde aos poucos, e só percebe no pedido de demissão.

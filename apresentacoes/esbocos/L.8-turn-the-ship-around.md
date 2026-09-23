@@ -1,5 +1,6 @@
 # L.8: TL;DR: Turn the Ship Around! (David Marquet)
 **Biblioteca de livros**
+*Conteúdo da trilha de liderança/gestão. Se você está na trilha técnica ou não lidera pessoas, pode pular.*
 
 ## Esqueleto (o que falar)
 - Por que importa: é a melhor história já escrita sobre parar de ser o gargalo. Marquet assumiu o pior submarino nuclear da marinha americana e o transformou no melhor, sem trocar a tripulação, trocando o modelo de liderança. Se num submarino nuclear dá pra distribuir decisão, no seu squad dá.

@@ -1,0 +1,46 @@
+index:
+aumentar o logo
+falar que tem conta free
+
+Free:
+botão de assinar
+
+Basico:
+benefícios
+	1 encontro e ganha outro em 30 dias
+	pesquisa de membros (3 por semana)
+
+Onboarding:
+criar conta -> assinar -> responder perguntas
+
+Ecnontros:
+free, basico: pagar pelos cafés
+
+ui:
+mostrar tier do lado direito no nome
+
+admin não ta logando
+
+170 por 99 até dia 17/09
+
+
+Custos:
+- infinitepay, cakto, recebepay (Lari me passar)
+- CRM (conta fb)
+- Criar Apresentação pra quinta
+	- Poder de relacionamento
+	- Falar App: relacionamento, desenvolvimento e geração de negócio
+		- Encontros: relacionamento
+		- app: geração de negócio e acesso a grandes empresas 
+		- Desenvolvimento: mentoria
+		
+Impacto FN:
+- 2.5k panfletos -> ir para o stand para ganhar estadia no hotel Hilton
+
+Depois:
+- Eventos organizados por membros da comunidade
+- compartilhar no encontros pro instagram
+- Indicação
+- primeira semana de outubro marca um cowork -> crm
+
+Contador: andré chaves

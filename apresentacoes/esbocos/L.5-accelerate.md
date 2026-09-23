@@ -1,5 +1,6 @@
 # L.5: TL;DR: Accelerate (Forsgren, Humble, Kim)
 **Biblioteca de livros**
+*Conteúdo útil pra qualquer trilha (é sobre engenharia e dados, não sobre gerenciar pessoas), mas entra aqui porque quem lidera time ou processo é quem mais usa esses argumentos no dia a dia.*
 
 ## Esqueleto (o que falar)
 - Por que importa: é o livro que te dá MUNIÇÃO CIENTÍFICA pra brigar por qualidade, CI/CD e autonomia com o diretor que só quer "entregar mais rápido". Pesquisa com milhares de empresas, não opinião de guru.

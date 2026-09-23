@@ -1,5 +1,6 @@
 # B.3: Outsourcing e Cliente Externo
 **Bônus (v2 / premium)**
+*Conteúdo avançado pra quem já gerencia fornecedor/cliente externo ou está caminhando pra uma posição de liderança. Não é pré-requisito da trilha técnica.*
 
 ## Esqueleto (o que falar)
 - Gancho: em algum momento da trilha pra head, você vai gerir gente que NÃO é do seu time (fornecedor, consultoria, squad terceirizada) ou vai entregar pra alguém que NÃO é seu chefe: o cliente externo. E as ferramentas de liderança direta (1:1, feedback, cultura) simplesmente não funcionam aqui. A alavanca muda: de influência pra contrato + interface.

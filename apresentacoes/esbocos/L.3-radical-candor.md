@@ -1,5 +1,6 @@
 # L.3: TL;DR: Radical Candor (Kim Scott)
 **Biblioteca de livros**
+*Conteúdo da trilha de liderança/gestão. Vale também pra quem dá feedback sem cargo de líder, mas o foco aqui é gestão de pessoas: quem está na trilha técnica pode pular.*
 
 ## Esqueleto (o que falar)
 - Por que importa: feedback é a ferramenta nº 1 do líder e a que o dev brasileiro menos treinou. Esse livro dá o framework pra falar a verdade sem virar babaca, e sem virar omisso.

@@ -1,0 +1,93 @@
+/* Overrides retrato 1080×1412 (stream Instagram via OBS).
+   Carregar DEPOIS de styles.css. Fonte base ~1.35x maior (frame mais estreito). */
+
+/* palco 1080:1412 ≈ 27:35 */
+.palco{width:100vw;height:130.74vw;max-height:100vh;max-width:76.49vh}
+
+.slide{padding:9% 7.5%}
+.slide::before{background:
+  linear-gradient(rgba(61,155,255,.06) 1px,transparent 1px) 0 0/100% 4.4cqw,
+  linear-gradient(90deg,rgba(61,155,255,.06) 1px,transparent 1px) 0 0/4.4cqw 100%}
+
+h2{font-size:4.2cqw}
+.lead{font-size:2cqw;max-width:100%}
+
+.badge{top:4.5%;font-size:1.5cqw;padding:.6cqw 1.2cqw}
+.hud-footer{bottom:3.6%;right:7.5%;font-size:1.35cqw}
+.hud-footer .logo i{height:2cqw;width:.75cqw}
+.hud-qr{width:13cqw;height:13cqw;top:4.5%}
+
+/* capa */
+.t-capa{justify-content:center}
+.t-capa h1{font-size:12cqw}
+.t-capa .selo{font-size:1.9cqw;padding:.9cqw 1.6cqw}
+.t-capa .sub{font-size:2.8cqw;max-width:90%}
+.t-capa .rodape{font-size:1.9cqw}
+.t-capa::after{font-size:3.2cqw}
+.capa-logo .logo i{height:4cqw;width:1.35cqw}
+
+/* confronto */
+.cf-row{gap:6cqw}
+.cf-col{gap:2.6cqw}
+.cf-word{font-size:8cqw}
+.cf-x{font-size:4.2cqw}
+.cf-icon{width:7cqw;height:7cqw;font-size:2.6cqw}
+
+/* lista / pilar */
+.t-pilar h2,.t-lista h2,.t-stack h2{font-size:6.4cqw}
+.bul{gap:2.4cqw;margin-top:3.2cqw}
+.bul li{font-size:3cqw;padding-left:4cqw}
+.bul li::before{font-size:2.7cqw}
+.bul.big li{font-size:3.6cqw}
+
+/* agenda */
+.fases{gap:1.4cqw}
+.fases li{flex-direction:column;gap:.5cqw;padding:1.6cqw 2cqw}
+.fases .fk{font-size:2.2cqw;min-width:0;line-height:1.25}
+.fases .fd{font-size:2.2cqw;line-height:1.25}
+
+/* cronologia */
+.t-cronologia h2{font-size:3.6cqw}
+.cronologia{gap:1.7cqw;max-width:100%}
+.cr-num{width:3.6cqw;height:3.6cqw;font-size:1.8cqw}
+.cr-linked .cr-num::before{height:1.7cqw}
+.cr-box{font-size:2cqw;padding:1.1cqw 1.7cqw}
+.cr-bracket{width:2.4cqw}
+.cr-bracket-arrow{font-size:1.8cqw}
+
+/* checkpoint / divisor — t-fim costuma levar frase longa (CTA), t-checkpoint/divisor são curtos */
+.t-checkpoint h1{font-size:8cqw;max-width:92%;line-height:1.15}
+.t-fim h1{font-size:6cqw;max-width:92%;line-height:1.2}
+.t-divisor h1{font-size:7cqw;max-width:92%;line-height:1.15}
+.t-divisor .sub,.t-fim .rodape{font-size:1.9cqw}
+
+/* logos: 2 por linha */
+.logos-grid{gap:2.2cqw;margin-top:3cqw;max-width:100%}
+.logo-card{flex:1 1 40%;min-width:40%;height:18cqw;padding:2cqw}
+.logo-card.cl{font-size:2.4cqw}
+.logo-card.cl .logo i{height:3.2cqw;width:1.1cqw}
+.t-logos h2,.t-foto h2,.t-perfil h2,.t-loop h2{font-size:4.8cqw}
+
+/* foto */
+.foto-frame{height:56vh;margin-top:2.2cqw}
+
+/* perfil: foto em cima, bullets embaixo */
+.perfil-row{flex-direction:column;align-items:center;gap:3cqw;margin-top:2.4cqw}
+.perfil-img{flex:0 0 auto;width:34cqw;height:34cqw}
+.perfil-row .bul{width:100%}
+
+/* loop (nós e setas em % do wrap — geometria original se mantém).
+   Retrato é estreito: nó quebra linha pra não colidir com o vizinho. */
+.loop-node{font-size:1.9cqw;padding:.9cqw 1.6cqw;
+  white-space:normal;max-width:24cqw;text-align:center;line-height:1.25}
+.loop-arrow{font-size:2.8cqw}
+
+/* pirâmide — frame estreito: cresce o triângulo e os rótulos */
+.t-piramide h2{font-size:4.8cqw}
+.pr-wrap{width:80cqw;height:58cqw;margin-top:4cqw}
+.pr-label{font-size:2.9cqw}
+
+/* chrome — sem hint no stream (colide com o QR) */
+.nav-hint{display:none}
+.dots{gap:1vw}
+.dot{width:1vw;height:1vw}

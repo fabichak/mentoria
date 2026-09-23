@@ -1,5 +1,5 @@
 # A.2 - Exercícios Práticos de Auto-estima
-**Mentoria 2.0: Trilha Auto-estima e Mentalidade (com Alan)**
+**Módulo 13: Mentalidade e Auto-estima**
 
 ## Esqueleto (o que falar)
 - Gancho: no vídeo anterior você entendeu de onde vem o "não sou bom o suficiente". Entender não basta: insight sem prática é só uma frase bonita. Hoje é mão na massa: exercícios que o Alan aplica com clientes reais, adaptados pra rotina de dev.
@@ -20,7 +20,7 @@
 - Exercício 5: Higiene de comparação.
   - Auditoria de feed: 15 dias sem (ou com corte drástico de) conteúdo que dispara "estou atrasado". Substituir comparação com os outros por comparação com você-de-1-ano-atrás, a única com denominador honesto.
 - Como montar a rotina sem virar mais uma cobrança: escolha DOIS exercícios (inventário + diálogo interno é o combo recomendado), 10 minutos por dia, 30 dias. Melhor 2 exercícios feitos que 5 planejados. Falhou um dia? Retoma no seguinte sem drama: a autocrítica pelo exercício não feito é exatamente o padrão que estamos desmontando.
-- Aviso honesto (Alan): esses exercícios são treino, não tratamento. Se a baixa estima vem com sofrimento persistente, ansiedade forte ou depressão, terapia individual não é fraqueza, é o mesmo movimento de contratar um especialista pro problema difícil. Líder faz isso com sistema, pode fazer consigo.
+- Aviso honesto (Alan): esses exercícios são treino, não tratamento. Se a baixa estima vem com sofrimento persistente, ansiedade forte ou depressão, terapia individual não é fraqueza, é o mesmo movimento de contratar um especialista pro problema difícil, o mesmo que você já faz quando chama alguém mais experiente pra revisar um código complicado.
 - Fechamento: daqui a 30 dias você não vai estar "curado", vai estar treinado a pegar o pensamento distorcido no ar e responder com fato. Isso muda como você entra numa reunião, num 1:1, numa negociação. E prepara o terreno pro próximo vídeo: confronto.
 
 ## O que mostrar (complementos visuais)

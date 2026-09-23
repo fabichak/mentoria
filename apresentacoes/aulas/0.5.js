@@ -3,8 +3,8 @@ window.SLIDES = [
 
   { tipo:'capa',
     selo:'Fase 0 · Fundamentos',
-    titulo:'O jogo agora é', destaque:'mentalidade',
-    sub:'Entre o sênior que sobe e o que estagna, a diferença raramente é técnica.',
+    titulo:'Mentalidade', destaque:'',
+    sub:'Entre quem sobe e estagna, a diferença raramente é técnica.',
     rodape:'Martin Fabichak · DevAdvance.club' },
 
   /* gancho */

@@ -1,0 +1,24 @@
+Ellen
+
+TL Itau
+Tenho encontrado muitos desafios, time de produtos/negócios muito bagunçado com as demandas e sem saber oq priorizar, time técnico muito prolixo e acabo demorando muito pra fazer refinamentos. entao gostaria de ajuda pra conseguir direcionar melhor os assuntos de cada lado.
+
+
+Dois pontos
+	negócios bagunçado 
+	time técnico prolixo
+
+Tl de um time de pagamento
+Escalabidade do payment as a service. integra com todos times de pagamento (pix, boleto, cartao)
+Problemas de resiliência, problemas técnicos.
+Tem problema de visibilidade com time de negócios.
+
+não tem rate-limit.
+
+time de negócios não "sabe o que quer"
+
+Vocês tem número/KPIs?
+tem contato com o pessoal de negócio?
+
+temas do problema do passado
+não tem metrificado, mas acontece.

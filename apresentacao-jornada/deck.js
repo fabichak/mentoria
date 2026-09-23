@@ -14,7 +14,7 @@
   function footer(){ return '<div class="hud-footer"><span>Mentoria · DevAdvance.club</span>'+logo()+'</div>'; }
 
   function wrap(s, cls, inner){
-    var chrome = (s.tipo==='capa') ? '' : footer();
+    var chrome = (s.tipo==='capa'||s.tipo==='marca') ? '' : footer();
     if (s.qr) chrome += '<img class="hud-qr" src="assets/qrcode.png" alt="QR code">';
     return '<div class="slide '+cls+'"'+(s.revela?' data-revela="1"':'')+'>'+inner+chrome+'</div>';
   }
@@ -134,6 +134,25 @@
       }).join('')
       +'</div>'); }
 
+  function tplPiramide(s){
+    // triângulo real: as faixas fatiam o mesmo triângulo (largura ∝ altura), rótulos sobrepostos
+    var n = s.itens.length, faixas = '', labels = '';
+    for (var i=0;i<n;i++){
+      var y0 = 100*i/n, y1 = 100*(i+1)/n;
+      var pts = [[50-y0/2,y0],[50+y0/2,y0],[50+y1/2,y1],[50-y1/2,y1]].map(function(p){
+        return p[0].toFixed(2)+','+p[1].toFixed(2); }).join(' ');
+      faixas += '<polygon points="'+pts+'" class="pr-f pr-f'+i+'"/>';
+      labels += '<div class="pr-label'+(s.revela?' reveal':'')+'">'
+        +'<span>'+esc(s.itens[i])+'</span></div>';
+    }
+    return wrap(s,'t-piramide',
+      badge(s)+(s.titulo?'<h2>'+esc(s.titulo)+'</h2>':'')
+      +(s.sub?'<p class="lead">'+esc(s.sub)+'</p>':'')
+      +'<div class="pr-wrap">'
+        +'<svg class="pr-svg" viewBox="0 0 100 100" preserveAspectRatio="none">'+faixas+'</svg>'
+        +'<div class="pr-labels">'+labels+'</div>'
+      +'</div>'); }
+
   function tplCheckpoint(s){
     return wrap(s,'t-checkpoint', badge(s)+'<h1>'+esc(s.titulo)+'</h1>'); }
 
@@ -194,6 +213,50 @@
         +'</div>'
       +'</div>'); }
 
+  function tplMarca(s){
+    return wrap(s,'t-marca','<img class="marca-img" src="'+esc(s.img)+'" alt="DevAdvance.club">'
+      +(s.sub?'<p class="marca-sub">'+esc(s.sub)+'</p>':'')
+      +(s.selo?'<div class="selo">'+esc(s.selo)+'</div>':'')); }
+
+  function tplDuplo(s){
+    function card(c, cls){
+      return '<div class="dp-card '+cls+'"><h3>'+esc(c.titulo)+'</h3><ul>'
+        +c.itens.map(function(t){ return '<li>'+esc(t)+'</li>'; }).join('')+'</ul></div>';
+    }
+    // centro opcional → 3 cards (esquerda ciano, centro rosa, direita azul)
+    // `cards:[...]` → n cards; senão esquerda/centro?/direita
+    var list = s.cards || (s.centro ? [s.esquerda,s.centro,s.direita] : [s.esquerda,s.direita]);
+    var cards = list.map(function(c,i){ return card(c,'dp-'+'abcd'[i%4]); }).join('');
+    return wrap(s,'t-duplo'+(s.cls?' '+s.cls:''),
+      badge(s)+'<h2>'+esc(s.titulo)+'</h2>'
+      +'<div class="dp-row'+(list.length>2?' dp-'+list.length:'')+'">'+cards+'</div>'); }
+
+  function tplPlanos(s){
+    return wrap(s,'t-planos',
+      badge(s)+'<h2>'+esc(s.titulo)+'</h2>'
+      +(s.sub?'<p class="lead">'+esc(s.sub)+'</p>':'')
+      +'<div class="pl-row pl-'+s.planos.length+'">'+s.planos.map(function(p){
+        return '<div class="pl-card'+(p.destaque?' destaque':'')+'">'
+          +'<div class="pl-nome">'+esc(p.nome)+'</div>'
+          +'<div class="pl-preco">'+esc(p.preco)+'</div>'
+          +'<div class="pl-ano">'+esc(p.ano)+'</div>'
+          +(p.itens?'<ul class="pl-itens">'+p.itens.map(function(t){
+            return '<li>'+esc(t)+'</li>'; }).join('')+'</ul>':'')
+          +'</div>';
+      }).join('')+'</div>'); }
+
+  function tplTabela(s){
+    var on = function(j){ return j===s.destaque?' class="on"':''; };
+    function cell(c){ return (c&&c.t!==undefined) ? '<b>'+esc(c.t)+'</b> '+esc(c.d||'') : esc(c); }
+    return wrap(s,'t-tabela',
+      badge(s)+'<h2>'+esc(s.titulo)+'</h2>'
+      +'<table class="tb"><thead><tr>'+s.colunas.map(function(c,j){
+        return '<th'+on(j)+'>'+esc(c)+'</th>'; }).join('')+'</tr></thead><tbody>'
+      +s.linhas.map(function(r){
+        return '<tr>'+r.map(function(c,j){ return '<td'+on(j)+'>'+cell(c)+'</td>'; }).join('')+'</tr>';
+      }).join('')+'</tbody></table>'
+      +(s.nota?'<p class="tb-nota">'+esc(s.nota)+'</p>':'')); }
+
   function tplFim(s){
     return wrap(s,'t-fim',
       '<h1>'+esc(s.titulo)+'</h1>'
@@ -203,7 +266,8 @@
     stack:tplStack, preco:tplPreco, checkpoint:tplCheckpoint, divisor:tplDivisor,
     resultado:tplResultado, timeline:tplTimeline, precoDupla:tplPrecoDupla, cronologia:tplCronologia,
     confronto:tplConfronto, fim:tplFim,
-    logos:tplLogos, foto:tplFoto, perfil:tplPerfil, loop:tplLoop };
+    logos:tplLogos, foto:tplFoto, perfil:tplPerfil, loop:tplLoop, piramide:tplPiramide,
+    marca:tplMarca, duplo:tplDuplo, planos:tplPlanos, tabela:tplTabela };
 
   // ---- revelação progressiva ----
   function activeEl(){ return palco.querySelectorAll('.slide')[idx]; }
@@ -247,7 +311,7 @@
   document.addEventListener('keydown',function(e){
     if(e.key==='ArrowRight'||e.key===' '||e.key==='PageDown'){ e.preventDefault(); next(); }
     else if(e.key==='ArrowLeft'||e.key==='PageUp'){ e.preventDefault(); prev(); }
-    else if(e.key==='Escape'){ e.preventDefault(); location.href='index.html'; }
+    else if(e.key==='Escape'){ e.preventDefault(); location.href=document.querySelector('link[href="vertical.css"]')?'index-vertical.html':'index.html'; }
   });
 
   document.addEventListener('DOMContentLoaded',function(){
