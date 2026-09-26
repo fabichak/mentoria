@@ -1,96 +1,116 @@
-/* Aula 0.5 — Mentalidade. 1 objeto por slide. Edite só aqui. */
+/* Aula 0.5 — O mapa das 3 trilhas. 1 objeto por slide. Edite só aqui. Esboço: esbocos/0.5-mapa-das-3-trilhas.md */
 window.SLIDES = [
 
   { tipo:'capa',
-    selo:'Fase 0 · Fundamentos',
-    titulo:'Mentalidade', destaque:'',
-    sub:'Entre quem sobe e estagna, a diferença raramente é técnica.',
+    selo:'Bloco 0 · Onboarding',
+    titulo:'O mapa das', destaque:'3 trilhas',
+    sub:'Ninguém te ensinou a ter carreira. Te ensinaram a programar.',
     rodape:'Martin Fabichak · DevAdvance.club' },
 
   /* gancho */
   { tipo:'divisor',
-    titulo:'Ficou calado com a opinião melhor da sala?',
-    sub:'isso não é humildade, é auto-sabotagem com fantasia de modéstia' },
+    titulo:'Quantos anos de carreira você tem?',
+    sub:'e quantas vezes, nesse tempo, escolheu conscientemente o próximo passo em vez de aceitar o que apareceu?' },
 
-  /* tese */
-  { tipo:'divisor',
-    titulo:'Mentalidade se treina',
-    sub:'como se treina código: com prática deliberada' },
-
-  /* pilar 1 */
-  { tipo:'pilar', badge:'PILAR 1', tag:'01/04',
-    titulo:'Ocupar espaço',
-    sub:'ninguém te dá espaço de líder, você ocupa antes do título',
-    bullets:[
-      {t:'1 posição clara por reunião importante', d:'"eu faria X porque Y", não só pergunta'},
-      {t:'Assumir responsabilidade órfã', d:'a retro difícil, o resumo que ninguém mandou'},
-      {t:'≠ falar mais alto', d:'frase-modelo: "posso assumir isso"'} ] },
-
-  /* pilar 2 + reframe */
-  { tipo:'confronto', badge:'PILAR 2 · O REFRAME',
+  /* problema */
+  { tipo:'lista', revela:false, badge:'O PROBLEMA',
+    titulo:'Te ensinaram a programar, não a ter carreira',
     itens:[
-      {titulo:'"Problema"', icone:'✗'},
-      {titulo:'"Oportunidade"', icone:'◎'} ] },
+      {t:'Sem mapa, você não fica parado por falta de talento'},
+      {t:'Fica parado porque nunca decidiu pra onde ir'},
+      {t:'Decidir errado é melhor que não decidir'} ] },
 
-  { tipo:'divisor',
-    titulo:'Reclamar e achar uma solução gasta a mesma energia',
-    sub:'Qual te leva mais próximo pro seu objetivo?' },
+  /* mapa visual */
+  { tipo:'foto', badge:'AS 3 TRILHAS', contain:true,
+    titulo:'Rotas, não escada. Não são mutuamente exclusivas',
+    img:'assets/caminhos-renda.svg' },
+
+  /* progressões */
+  { tipo:'agenda', badge:'PROGRESSÃO',
+    titulo:'Os cargos de cada trilha',
+    itens:[
+      {k:'TÉCNICA',       d:'Jr → Pleno → Sênior → Staff → Principal → Distinguished'},
+      {k:'GESTÃO',        d:'Sênior → TL → EM → Head → Diretor → CTO'},
+      {k:'EMPREENDEDORA', d:'SaaS ou produto próprio · consultoria ou freela high-ticket · agência ou estúdio'} ] },
+
+  /* glossário gestão */
+  { tipo:'agenda', badge:'SIGLAS DA GESTÃO',
+    titulo:'Quem faz o quê',
+    itens:[
+      {k:'TL',      d:'Tech Lead: lidera tecnicamente um time e ainda coda'},
+      {k:'EM',      d:'Engineering Manager: cuida das pessoas e da entrega do time'},
+      {k:'HEAD',    d:'responde por uma área inteira, com vários times'},
+      {k:'DIRETOR', d:'responde por várias áreas'},
+      {k:'CTO',     d:'responde pela tecnologia da empresa inteira'} ] },
+
+  /* escopo de impacto */
+  { tipo:'cronologia', revela:false, badge:'O QUE MUDA POR NÍVEL',
+    titulo:'Escopo de impacto, nas 3 trilhas',
+    itens:[
+      {t:'Tarefa'},
+      {t:'Projeto'},
+      {t:'Time'},
+      {t:'Organização'},
+      {t:'Indústria'} ] },
+
+  { tipo:'lista', revela:false, badge:'O INSTRUMENTO MUDA',
+    titulo:'Mesmo escopo crescendo, jeitos diferentes',
+    itens:[
+      {t:'Técnica', d:'o que muda não é quanto código você escreve, é o alcance da sua decisão'},
+      {t:'Gestão', d:'deixa de produzir e multiplica o que os outros produzem. Responde por valor de negócio'},
+      {t:'Empreendedora', d:'a porta lateral: risco maior, sem teto'} ] },
+
+  /* mitos */
+  { tipo:'divisor', badge:'MITO 1 · TÉCNICA',
+    titulo:'Staff+ não é o sênior que programa mais rápido',
+    sub:'é influência técnica sem cargo: muda a direção de uma arquitetura e organiza vários times, sem gerenciar ninguém' },
+
+  { tipo:'divisor', badge:'MITO 2 · GESTÃO',
+    titulo:'Gestão não é promoção, é mudança de profissão',
+    sub:'ser o melhor da trilha técnica não te qualifica. E não ir pra gestão não é problema, é escolha' },
+
+  /* o pêndulo */
+  { tipo:'cronologia', revela:false, badge:'PÊNDULO VÁLIDO',
+    titulo:'Ir e voltar é estratégia, não fracasso',
+    itens:[
+      {t:'Trilha técnica'},
+      {t:'TL / EM: descobre como o negócio pensa', cycle:true},
+      {t:'Volta pra técnica mais forte'} ] },
 
   /* exemplo real */
   { tipo:'cronologia', revela:false, badge:'EXEMPLO REAL',
-    titulo:'Do problema órfão à promoção',
+    titulo:'Eu passei pelas 3',
     itens:[
-      {t:'Deploy manual que todo mundo odiava'},
-      {t:'Um dev assumiu, sem ninguém pedir'},
-      {t:'Automatizou de ponta a ponta'},
-      {t:'Virou a referência do assunto'},
-      {t:'Citado na rodada de promoção'} ] },
+      {t:'Técnica: adolescente em Flash, sozinho, sem saber se estava fazendo certo'},
+      {t:'Empreendedora: sócio de estúdio. Chico Bento, 5M+ jogadores, primeiro jogo de PSP da América Latina'},
+      {t:'Gestão: Alemanha em 2015, Head of Development, depois CTO da Magic Media por 5 anos'},
+      {t:'100+ engenheiros contratados, 150 pessoas lideradas'} ] },
 
-  /* pilar 3 */
-  { tipo:'pilar', badge:'PILAR 3', tag:'03/04',
-    titulo:'Fazer entrevistas sempre',
-    sub:'2 por semestre, mesmo feliz no emprego',
-    bullets:[
-      {t:'Régua externa do seu nível real', d:'feedback de mercado > voz da insegurança'},
-      {t:'Vacina contra "será que sou bom?"', d:'evidência no lugar de sensação'},
-      {t:'Poder de negociação', d:'entrevista sem desespero é treino barato, só quando precisa é prova sem estudar'} ] },
-
- { tipo:'pilar', badge:'PILAR 3', tag:'03/04',
-    titulo:'Eventos e networking',
-    sub:'1 evento por semestre',
-    bullets:[
-      {t:'Conversar com outras pessoas', d:'referências e network'},
-      {t:'Exposição a outras tecnologias', d:''},
-      {t:'Vencer seus medos', d:'Só converse com quem você não conhece'} ] },
-
-
-  /* pilar 4 — a curva */
-  { tipo:'foto', badge:'PILAR 4', contain:true,
-    titulo:'Dunning-Kruger: a régua quebrada',
-    img:'assets/dunning-kruger.png' },
-
-  { tipo:'lista', revela:false, badge:'PILAR 4',
-    titulo:'Os dois lados da régua quebrada',
+  /* perguntas */
+  { tipo:'lista', revela:true, badge:'PERGUNTAS · TRILHA ATUAL',
+    titulo:'Onde você está',
     itens:[
-      {t:'Início de domínio novo: excesso de confiança', d:'quanto menos sabe, menos vê o que não sabe'},
-      {t:'A sensação de fraude CRESCE com a competência', d:'quanto mais aprende, mais enxerga o iceberg'},
-      {t:'Sentir-se impostor ≈ estar no nível certo', d:'cercado de gente boa'},
-      {t:'Antídoto: trocar sensação por evidência', d:'registro escrito de resultados'} ] },
+      {t:'Eu escolhi, ou foi escolhida por mim?'},
+      {t:'Eu gosto do que faço?'},
+      {t:'Sou bom no que faço?'},
+      {t:'O que é um dia muito bom? E um muito ruim?'},
+      {t:'O que eu realmente não gosto de fazer?'} ] },
 
-  /* síntese: ciclo dos 4 pilares */
-  { tipo:'foto', badge:'SÍNTESE', contain:true,
-    titulo:'Os 4 pilares se reforçam',
-    img:'assets/4-pilares-ciclo.svg' },
+  { tipo:'lista', revela:true, badge:'PERGUNTAS · PRA ONDE VOU',
+    titulo:'Pra onde você vai',
+    itens:[
+      {t:'Qual trilha e cargo é minha meta final?', d:'em quantos anos, e por quê'},
+      {t:'Qual trilha e cargo é o próximo passo?', d:'e por quê'} ] },
 
   /* ação prática */
   { tipo:'agenda', badge:'AÇÃO',
-    titulo:'Esta semana',
+    titulo:'Antes do próximo vídeo',
+    texto:'Não precisa estar certo, precisa estar honesto. Vai direto pra ficha de onboarding (0.10).',
     itens:[
-      {k:'1 REUNIÃO',   d:'contribuir com posição clara: "eu faria X porque Y"'},
-      {k:'3 PROBLEMAS', d:'listar os órfãos do seu time, adotar 1 e falar com lead/PM'},
-      {k:'1 ENTREVISTA',d:'candidatar em 2 meses'} ] },
+      {k:'1 LINHA',  d:'por pergunta, por escrito'},
+      {k:'NÃO SEI?', d:'escreva "ainda explorando"'} ] },
 
   { tipo:'fim',
-    titulo:'Mentalidade se renova, se aprender, se treina e se lembra',
-    rodape:'Próximo: o hábito' }
+    titulo:'Mapa na mão. Agora a escolha mais comum.',
+    rodape:'Próximo: trilha desenvolvedor vs gestão' }
 ];

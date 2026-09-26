@@ -236,18 +236,29 @@ window.SLIDES = [
     sub:'' },
 
   { tipo:'lista', revela:false, badge:'ARMADILHA 1',
-    titulo:'Baixa auto-estima',
+    titulo:'Baixa auto-estima e auto-sabotagem',
     itens:[
       {t:'Sintoma', d:'"será que sou bom o suficiente?"'},
       {t:'Custo', d:'não aplica pra vaga, não pede aumento, aceita menos'},
-      {t:'Antídoto', d:'evidências escritas'} ] },
+      {t:'Antídoto', d:'evidências escritas'},
+	  {t:'Sintoma', d:'não aplica "porque não preencho 100% dos requisitos"'},
+      {t:'Custo', d:'entrevista vira evento raro, não hábito'},
+      {t:'Antídoto', d:'fazer entrevistas sempre'}
+	  ] },
 
   { tipo:'lista', revela:false, badge:'ARMADILHA 2',
-    titulo:'Auto-sabotagem',
+    titulo:'Não arriscar, não pedir, não ocupar espaço',
     itens:[
-      {t:'Sintoma', d:'não aplica "porque não preencho 100% dos requisitos"'},
-      {t:'Custo', d:'entrevista vira evento raro, não hábito'},
-      {t:'Antídoto', d:'fazer entrevistas sempre'} ] },
+      {t:'Sintoma', d:'Você acredita que seu trabalho deve ser visto e recompensando porque ele é bom'},
+      {t:'Custo', d:'Fica no mesmo lugar, vendo amigos menos capazes sendo promovido'},
+      {t:'Antídoto', d:'Ocupar espaço, ser visto'} ] },
+
+  { tipo:'lista', revela:false, badge:'ARMADILHA 4',
+    titulo:'Focar só na parte técnica',
+    itens:[
+      {t:'Sintoma', d:'mais um curso, mais um framework, mais uma pós'},
+      {t:'Custo', d:'Ser passado pra trás'},
+      {t:'Antídoto', d:'Liderança, comunicação e mentoria'} ] },
 
   { tipo:'lista', revela:false, badge:'ARMADILHA 3',
     titulo:'Falta de networking',
@@ -255,13 +266,6 @@ window.SLIDES = [
       {t:'Sintoma', d:'"bom trabalho fala por si" é mentira'},
       {t:'Custo', d:'Vagas boas circulam por indicação'},
       {t:'Antídoto', d:'network interno e externo deliberado'} ] },
-
-  { tipo:'lista', revela:false, badge:'ARMADILHA 4',
-    titulo:'Focar só na parte técnica',
-    itens:[
-      {t:'Sintoma', d:'mais um curso, mais um framework, mais uma pós'},
-      {t:'Custo', d:'Ser passado pra trás'},
-      {t:'Antídoto', d:'Liderança, comunicação. Mentoria'} ] },
 
   { tipo:'lista', revela:false, badge:'ARMADILHA 5',
     titulo:'Falta de comunidade',
@@ -298,6 +302,16 @@ window.SLIDES = [
       {k:'4. 2 ARMADILHAS',  d:'das 5, quais me pegam hoje'},
       {k:'5. PRÓXIMOS 3 PASSOS', d:'1 esta semana · 1 este mês · 1 este trimestre'} ] },
 
+  { tipo:'agenda', badge:'MAPA DA JORNADA',
+    titulo:'Dicas',
+    itens:[
+      {k:'Escolher trilha',       d:'O que te motiva, o que você é bom, o que dá dinheiro'},
+      {k:'Dinheiro',     d:'Dinheiro possibilita arriscar'},
+      {k:'Trabalhar fora', d:'Veja condições e o quão difícil é ir pra um lugar ou trabalhar em um segmento: use linkedin '},
+      {k:'2 armadilhas',  d:'Terapia, comunidade, falar com pessoas experientes'},
+      {k:'Fale com alguém', d:'Não saia escolhendo curso sem falar com alguém antes'} ] },
+	  
+	  
   /* ===== G. COMUNIDADE + ENCERRAMENTO (8min) ===== */
 
   { tipo:'divisor',
@@ -384,8 +398,7 @@ window.SLIDES = [
       ['Retorno pessoal meu toda semana', '✅', '—'],
       ['Pod com buddy', '✅', '—'],
       ['Office hours abertas', '✅', '—'],
-      ['Revisão de CV, roadmap, status report', '✅ comigo', 'entre membros'],
-      ['Garantia de execução de 90 dias', '✅', '—'] ] },
+      ['Revisão de CV, roadmap, status report', '✅ comigo', 'entre membros'], ] },
 
   { tipo:'planos', badge:'TURMA',
     titulo:'Programa ADVANCE',
@@ -425,7 +438,7 @@ window.SLIDES = [
       'Ao fim de 30 dias, se achar que não avançou no objetivo que definimos juntos, eu devolvo tudo o que você pagou' ] } },
 
   { tipo:'planos', badge:'PROMOÇÃO · 15 VAGAS',
-    titulo:'SÓ ATÉ SEXTA',
+    titulo:'SÓ ATÉ SEXTA - Preencher form hoje',
     sub:'',
     planos:[
       { nome:'Programa ADVANCE', preco:'R$ 197/mês', ano:'ou R$ 1.997 no pix ou cartão', destaque:true, itens:[

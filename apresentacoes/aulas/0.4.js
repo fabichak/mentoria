@@ -1,104 +1,118 @@
-/* Aula 0.4 — Auto-liderança e metas. 1 objeto por slide. Edite só aqui. */
+/* Aula 0.4 — Autodiagnóstico de carreira. 1 objeto por slide. Edite só aqui. Esboço: esbocos/0.4-autodiagnostico-de-carreira.md */
 window.SLIDES = [
 
   { tipo:'capa',
-    selo:'Fase 0 · Fundamentos',
-    titulo:'Auto-liderança', destaque:'e metas',
-    sub:'Seja o leader da sua própria carreira.',
+    selo:'Bloco 0 · Onboarding',
+    titulo:'O autodiagnóstico', destaque:'de carreira',
+    sub:'Quase ninguém falta em tudo. Falta em 2 ou 3 coisas específicas.',
     rodape:'Martin Fabichak · DevAdvance.club' },
 
   /* gancho */
   { tipo:'divisor',
-    titulo:'Você planeja o sprint toda semana',
-    sub:'quando foi a última vez que planejou a SUA carreira com o mesmo rigor?' },
+    titulo:'"Não sei o que falta pro próximo passo"',
+    sub:'a frase que mais escuto, de estagiário a sênior. O problema é não saber QUAIS 2 ou 3 coisas' },
 
-  /* ninguém vai fazer por você */
-  { tipo:'lista', revela:false, badge:'A VERDADE',
-    titulo:'Ninguém vai fazer esse roadmap por você',
+  /* esforço aleatório */
+  { tipo:'confronto', badge:'DIAGNÓSTICO RUIM = ESFORÇO ALEATÓRIO',
     itens:[
-      {t:'Seu gestor não vai', d:'ele tem 8 diretos e as prioridades dele'},
-      {t:'A empresa não vai', d:'o plano dela é pra ela, não pra você'},
-      {t:'Sobra uma pessoa', d:'auto-liderança = ser o tech lead da própria carreira'} ] },
+      {titulo:'Mais um curso, certificado, pós, horas', icone:'✗'},
+      {titulo:'Atacar a lacuna que segura o próximo passo', icone:'✓'} ] },
 
-  /* o framework */
-  { tipo:'agenda', badge:'O FRAMEWORK',
-    titulo:'4 blocos',
+  /* pirâmide ≠ mapa */
+  { tipo:'confronto', badge:'NÃO CONFUNDA',
     itens:[
-      {k:'META',    d:'direção de vida: o que o trabalho te dá, dinheiro, autonomia, tempo?'},
-      {k:'ESTADO',  d:'diagnóstico honesto: cargo, competências, visibilidade, escrito, dinheiro'},
-      {k:'OBJETIVO',d:'12–24 meses, específico e verificável'},
-      {k:'PASSOS',  d:'a lacuna quebrada em ações de 30–90 dias'} ] },
+      {titulo:'Pirâmide: o que a mentoria ensina', icone:'▲'},
+      {titulo:'Mapa: como você analisa sua carreira', icone:'◎'} ] },
 
-  /* diagrama: blocos + loop */
-  { tipo:'foto', badge:'O FRAMEWORK', contain:true,
-    titulo:'Os 4 blocos ligados ao loop',
-    img:'assets/framework-4-blocos.svg' },
-
-  /* erros clássicos */
-  { tipo:'lista', revela:false, badge:'ERROS CLÁSSICOS',
-    titulo:'Onde quase todo mundo quebra',
+  /* ferramenta 1: mapa */
+  { tipo:'agenda', badge:'FERRAMENTA 1',
+    titulo:'Mapa de competências: 4 domínios',
+    texto:'Serve pras 3 trilhas. Muda o peso de cada domínio.',
     itens:[
-      {t:'Objetivo sem estado atual', d:'vira sonho: sem ponto de partida não há rota'},
-      {t:'Passos sem objetivo', d:'vira scholar: curso atrás de curso sem direção'},
-      {t:'Sem meta, promoção vira troféu vazio', d:'você chega e pergunta "era isso?"'} ] },
+      {k:'TÉCNICO',     d:'profundidade na stack, qualidade de código, visão de sistema'},
+      {k:'EXECUÇÃO',    d:'priorização, entrega previsível, autonomia, delegar (se lidera)'},
+      {k:'COMUNICAÇÃO', d:'PR claro, feedback, se posicionar em reunião, negociar prazo, outras áreas, valor de negócio'},
+      {k:'CARREIRA',    d:'visibilidade, rede, clareza de destino, clareza de tarefas'} ] },
 
-  /* objetivo bem escrito */
-  { tipo:'foto', badge:'ANTES × DEPOIS', contain:true,
-    titulo:'Objetivo que funciona',
-    img:'assets/objetivo-antes-depois.svg' },
-
-  /* o loop da carreira */
-  { tipo:'loop', badge:'O LOOP',
-    titulo:'Cada ciclo de 30–90 dias é uma volta',
-    itens:['Meta','Estado atual','Objetivo','Passos','Resultado'] },
-
-  /* exemplo real 1 */
-  { tipo:'cronologia', revela:false, badge:'EXEMPLO REAL · GESTÃO',
-    titulo:'Sênior → Tech Lead em 9 meses',
+  /* como preencher */
+  { tipo:'lista', revela:false, badge:'COMO PREENCHER',
+    titulo:'Duas colunas, régua honesta',
     itens:[
-      {t:'Estado: forte tecnicamente, zero liderança, gestor nem sabe da ambição'},
-      {t:'Volta 1: contar a ambição no 1:1'},
-      {t:'Volta 1: onboarding do próximo dev + 1 iniciativa ponta a ponta'},
-      {t:'Volta 2: feedback estruturado, medir, mostrar resultado', cycle:true},
-      {t:'Pedir a próxima responsabilidade'} ] },
+      {t:'Nota 1–5 em cada competência'},
+      {t:'Coluna 1', d:'sua autoavaliação'},
+      {t:'Coluna 2', d:'a régua do próximo passo que VOCÊ quer dar, não a média do mercado'},
+      {t:'Calibre com 2–3 pessoas', d:'gestor, par, alguém que revisa seu código'} ] },
 
-  /* exemplo real 2 */
-  { tipo:'pilar', badge:'EXEMPLO REAL · DESENVOLVEDOR',
-    titulo:'Pleno-sênior → Staff',
-    sub:'lacuna mapeada: só resolve problema do próprio squad',
-    bullets:[
-      {t:'Passar autonomia através de treinamentos', d:'sair do dia a dia do squad'},
-      {t:'Apresentar em guild', d:'visibilidade técnica além do time'},
-      {t:'Virar referência num domínio', d:'o nome que vem à cabeça quando o assunto aparece'} ] },
+  /* dunning-kruger */
+  { tipo:'foto', badge:'PONTO CEGO · DUNNING-KRUGER', contain:true,
+    titulo:'Quem sabe pouco se superestima. Quem sabe muito se subestima',
+    img:'assets/dunning-kruger.png' },
 
-{ tipo:'pilar', badge:'EXEMPLO REAL · DESENVOLVEDOR',
-    titulo:'Dinheiro',
-    sub:'Dinheiro possibilita planos ousados',
-    bullets:[
-      {t:'Fazer um curso ou mentoria', d:''},
-      {t:'Pular pra outra empresa e ganhar menos'},
-      {t:'Ser mais "agressivo" no trabalho'} ] },
-	  
-  /* teste do passo bom */
   { tipo:'divisor',
-    titulo:'O teste do passo bom',
-    sub:'em 90 dias dá pra dizer "fiz ou não fiz" e "funcionou ou não"? se não, o passo está mal escrito' },
+    titulo:'Por isso você precisa de nota externa',
+    sub:'onde a percepção dos outros diverge da sua, mora o ponto cego. Aprofundamos em 1.2' },
+
+  /* mensagem-modelo */
+  { tipo:'agenda', badge:'MENSAGEM-MODELO',
+    titulo:'Pedindo calibração sem constrangimento',
+    texto:'"Tô fazendo um diagnóstico de carreira e sua visão vale muito. Pode me dar nota de 1 a 5 nessas competências? Leva 5 minutos, e pode ser sincero."',
+    itens:[
+      {k:'QUEM',  d:'gestor, par, alguém que revisa seu código'},
+      {k:'O QUÊ', d:'as mesmas competências do seu mapa'},
+      {k:'QUANDO',d:'esta semana'} ] },
+
+  /* exemplos reais */
+  { tipo:'agenda', badge:'EXEMPLO REAL 1 · PLENO',
+    titulo:'2 anos de casa',
+    itens:[
+      {k:'MAPA',  d:'técnica 3/5 · comunicação 2/5 · visibilidade 2/5'},
+      {k:'KPI 1', d:'1 tech talk interno'},
+      {k:'KPI 2', d:'1 PR grande revisado sem retrabalho'},
+      {k:'KPI 3', d:'1 conversa de carreira agendada com o gestor'} ] },
+
+  { tipo:'agenda', badge:'EXEMPLO REAL 2 · SÊNIOR → GESTÃO',
+    titulo:'Mesmo formato, peso diferente',
+    itens:[
+      {k:'MAPA',  d:'técnica 4/5 · delegação 2/5 · visibilidade com stakeholders 2/5'},
+      {k:'POR QUÊ',d:'a trilha escolhida é outra, então o peso de cada domínio muda'} ] },
+
+  /* ferramenta 2 */
+  { tipo:'lista', revela:false, badge:'FERRAMENTA 2',
+    titulo:'Top-3 lacunas com KPI',
+    itens:[
+      {t:'KPI', d:'um número que dá pra checar. Outra pessoa conseguiria verificar'},
+      {t:'Só 3 lacunas', d:'maior gap ponderado pelo impacto no próximo passo (trilha: 0.5 e 0.6)'},
+      {t:'Atacar 8 lacunas = atacar nenhuma'},
+      {t:'Comportamento também tem KPI', d:'frequência + feedback observável, não sentimento'} ] },
+
+  /* KPI bom vs ruim */
+  { tipo:'confronto', badge:'KPI RUIM × KPI BOM',
+    itens:[
+      {titulo:'"Melhorar comunicação"', icone:'✕'},
+      {titulo:'1 update/mês pro time, feedback ≥4/5', icone:'✓'} ] },
 
   /* anti-sabotagem */
   { tipo:'divisor',
-    titulo:'Meta grande assusta',
-    sub:'"será que sou capaz?" Por isso o sistema só te pede o próximo passo de 30 dias, nunca o salto inteiro' },
+    titulo:'Lacuna mapeada é lacuna com plano',
+    sub:'a alternativa é a ansiedade difusa de "falta algo e não sei o quê"' },
+
+  /* pra onde vai */
+  { tipo:'cronologia', revela:false, badge:'PRA ONDE VAI',
+    titulo:'O diagnóstico alimenta o resto do bloco',
+    itens:[
+      {t:'Top-3 lacunas com KPI'},
+      {t:'Meta, objetivos e tarefas (0.9)'},
+      {t:'Ficha de onboarding (0.10)'} ] },
 
   /* ação prática */
   { tipo:'agenda', badge:'AÇÃO',
-    titulo:'Ainda hoje',
-    texto:'Versão feia em 25 minutos vale mais que versão perfeita nunca:',
+    titulo:'Esta semana',
     itens:[
-      {k:'PREENCHER', d:'o template dos 4 blocos: Meta, Estado, Objetivo, Passos'},
-      {k:'VOLTA 1',   d:'definir a primeira ação de 30 dias'},
-      {k:'AGENDAR',   d:'checkpoint de medição no calendário'} ] },
+      {k:'30 MIN',   d:'preencha o mapa de competências'},
+      {k:'2 PESSOAS',d:'peça calibração externa nas mesmas competências'},
+      {k:'TOP-3',    d:'escreva as 3 lacunas com KPI e guarde'} ] },
 
   { tipo:'fim',
-    titulo:'Meta definida. O inimigo agora é interno.',
-    rodape:'Próximo: mentalidade · Martin Fabichak · DevAdvance.club' }
+    titulo:'Diagnóstico pronto. Agora falta saber pra onde ir.',
+    rodape:'Próximo: o mapa das 3 trilhas' }
 ];

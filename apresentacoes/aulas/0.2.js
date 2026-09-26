@@ -1,81 +1,79 @@
-/* Aula 0.2 — A mudança de papel. 1 objeto por slide. Edite só aqui. */
+/* Aula 0.2 — Disclaimer. 1 objeto por slide. Edite só aqui. Esboço: esbocos/0.2-disclaimer.md */
 window.SLIDES = [
 
   { tipo:'capa',
-    selo:'Fase 0 · Fundamentos',
-    titulo:'A mudança de', destaque:'papel',
-    sub:'A habilidade que te trouxe até aqui é a que vai te travar daqui pra frente.',
+    selo:'Bloco 0 · Onboarding',
+    titulo:'Disclaimer', destaque:'',
+    sub:'Algumas coisas não funcionam da maneira que você espera.',
     rodape:'Martin Fabichak · DevAdvance.club' },
 
-  /* aviso: vale pra todo mundo */
+  /* gancho */
   { tipo:'divisor',
-    titulo:'Líder é papel, não cargo',
-    sub:'vale pra quem lidera E pra quem não lidera: desenvolvedor também gera impacto através de outros: mentoria, RFC, influência' },
+    titulo:'Isso aqui não é um curso',
+    sub:'curso você assiste. Mentoria você executa. Quem só assiste sai igual entrou' },
 
-  /* história típica */
-  { tipo:'cronologia', revela:false, badge:'A HISTÓRIA TÍPICA',
-    titulo:'O melhor dev vira líder',
+  /* expectativa × realidade */
+  { tipo:'confronto', badge:'EXPECTATIVA × REALIDADE',
     itens:[
-      {t:'Melhor dev do time é promovido'},
-      {t:'Continua resolvendo tudo sozinho'},
-      {t:'Vira gargalo, o time para'},
-      {t:'Se frita tentando dar conta'},
-      {t:'Conclui: "não sirvo pra liderar". Errado: jogou o jogo antigo no tabuleiro novo'} ] },
+      {titulo:'Assistir tudo e "estar pronto"', icone:'✗'},
+      {titulo:'Rodar uma volta e ajustar', icone:'↻'} ] },
 
-  /* a mudança fundamental */
-  { tipo:'confronto', badge:'A MUDANÇA FUNDAMENTAL',
+  /* o que não funciona */
+  { tipo:'lista', revela:true, badge:'O QUE NÃO FUNCIONA',
+    titulo:'6 coisas que vão te frustrar se você não souber antes',
     itens:[
-      {titulo:'O que EU entrego', icone:'‹/›'},
-      {titulo:'O que acontece POR CAUSA de mim', icone:'⇶'} ] },
+      {t:'Não é linear', d:'você vai avançar, travar, voltar. Faz parte'},
+      {t:'Nem toda ferramenta serve pro seu contexto', d:'adapte, descarte, traga pro check-in. Framework é mapa, não território'},
+      {t:'Nem todo mundo joga limpo', d:'algumas técnicas assumem boa-fé. Algumas situações não têm resolução, e reconhecer isso também é decisão'},
+      {t:'Resultado demora mais que 14 dias', d:'a primeira vitória é rápida; promoção e salário levam meses'},
+      {t:'Eu não vou fazer por você', d:'dou direção e cobrança. A conversa difícil é sua'},
+      {t:'Minha opinião não é lei', d:'discorda? Traz o argumento pro hot seat, office hours ou comunidade'} ] },
 
-  /* tabela dev vs líder */
-  { tipo:'foto', badge:'DOIS JOGOS', contain:true,
-    titulo:'Bom dev × bom líder',
-    img:'assets/dev-vs-lider.svg' },
-
-  /* herói vs sistema */
-  { tipo:'lista', revela:false, badge:'HERÓI × SISTEMA',
-    titulo:'Resolver sozinho × construir sistema',
+  /* você não assiste tudo */
+  { tipo:'confronto', badge:'SOBRE AS AULAS',
     itens:[
-      {t:'Bug às 2h da manhã', d:'herói uma vez'},
-      {t:'Runbook + time treinado', d:'líder para sempre'} ] },
+      {titulo:'66 aulas no catálogo', icone:'▦'},
+      {titulo:'10 a 12 pra sua fase', icone:'✓'} ] },
 
-  /* diagrama gargalo */
-  { tipo:'foto', badge:'O GARGALO', contain:true,
-    titulo:'Você no meio × sistema que roda',
-    img:'assets/gargalo.svg' },
-
-  /* frase-âncora */
-  { tipo:'divisor',
-    titulo:'"Se eu sumir 2 semanas, o que quebra?"',
-    sub:'o que quebra é o que você ainda não sistematizou' },
-
-  /* impacto através de outros */
-  { tipo:'lista', revela:false, badge:'NA PRÁTICA',
-    titulo:'Impacto através de outros',
+  { tipo:'lista', revela:false, badge:'SOBRE AS AULAS',
+    titulo:'Como consumir o catálogo',
     itens:[
-      {t:'Delegar não é largar', d:'contexto + critério de pronto + espaço pra errar barato'},
-      {t:'Aceite o 80% do outro', d:'refazer no seu 100% = time nunca cresce'},
-      {t:'Novo backlog: destravar, alinhar, remover atrito', d:'trabalho invisível que multiplica'} ] },
+      {t:'Mentoria', d:'no onboarding 1:1 eu indico as aulas da sua fase. O Bloco 0 todo mundo vê'},
+      {t:'Só vídeos', d:'use o autodiagnóstico (0.4) e as trilhas (0.5) pra escolher as suas'},
+      {t:'Líder é papel, não cargo', d:'vídeo que fala "líder" vale pra todo mundo'},
+      {t:'A ação é a aula', d:'cada vídeo termina com uma. Sem ela, não aconteceu'} ] },
 
-  /* a dor da transição */
-  { tipo:'lista', revela:false, badge:'A DOR',
-    titulo:'"Passei o dia em conversa, não entreguei nada"',
+  /* glossário */
+  { tipo:'agenda', badge:'COMO FUNCIONA A MENTORIA',
+    titulo:'O que cada palavra quer dizer',
     itens:[
-      {t:'Conversa que destrava 3 pessoas vale mais que seu PR'},
-      {t:'A métrica antiga (código) sumiu', d:'e a nova ainda não existe'},
-      {t:'"Será que sou bom o suficiente?"', d:'normal, esperado, passa com sistema'} ] },
+      {k:'CHECK-IN',     d:'5 min por escrito, toda semana: o que fiz, onde travei, próximo passo. Retorno meu em até 48h úteis'},
+      {k:'POD',          d:'até 6 pessoas com objetivo parecido, 1h, 2x por mês. Cada um traz o que prometeu'},
+      {k:'HOT SEAT',     d:'20 min no SEU problema real, na frente do grupo. Agendado por mim, com roteiro'},
+      {k:'OFFICE HOURS', d:'sala aberta, sem agendar. Pra onde vai a urgência de verdade'},
+      {k:'DISCORD',      d:'a comunidade, inclusive quem comprou só os vídeos'} ] },
+
+  /* o contrato */
+  { tipo:'agenda', badge:'O CONTRATO',
+    titulo:'O que eu espero de você',
+    itens:[
+      {k:'HONESTIDADE', d:'responda o que É, não o que gostaria que fosse. Ninguém além de nós lê'},
+      {k:'CONSTÂNCIA',  d:'check-in toda semana, mesmo na semana ruim. Principalmente na semana ruim'},
+      {k:'AÇÃO',        d:'versão feia executada vale mais que versão perfeita imaginada'} ] },
+
+  /* garantia */
+  { tipo:'divisor', badge:'GARANTIA · MENTORIA',
+    titulo:'7 dias: não fez sentido, devolvo tudo',
+    sub:'90 dias de execução (check-ins + pod + encontros) sem avançar no objetivo que definimos juntos: também' },
 
   /* ação prática */
   { tipo:'agenda', badge:'AÇÃO',
-    titulo:'Esta semana',
-    texto:'O exercício "o que só eu faço":',
+    titulo:'Antes do próximo vídeo',
     itens:[
-      {k:'LISTAR',   d:'tudo que só você faz no time hoje'},
-      {k:'ESCOLHER', d:'1 item da lista'},
-      {k:'SISTEMATIZAR', d:'doc, runbook, par ou delegação, ainda esta semana'} ] },
+      {k:'DERRUBADA', d:'1 expectativa que você tinha e este vídeo derrubou'},
+      {k:'DIFERENTE', d:'1 coisa que você vai fazer diferente por causa disso'} ] },
 
   { tipo:'fim',
-    titulo:'Antes de construir o sistema, escolha o tabuleiro.',
-    rodape:'desenvolvedor ou gestão? · Próximo: trilha desenvolvedor vs gestão' }
+    titulo:'Expectativa alinhada. Agora o método.',
+    rodape:'Próximo: o método' }
 ];

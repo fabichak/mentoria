@@ -1,94 +1,137 @@
-/* Aula 0.8 — Alta performance e gestão de tempo. 1 objeto por slide. Edite só aqui. */
+/* Aula 0.8 — As armadilhas que travam carreira. 1 objeto por slide. Edite só aqui. */
 window.SLIDES = [
 
   { tipo:'capa',
-    selo:'Fase 0 · Fundamentos',
-    titulo:'Alta performance e', destaque:'gestão de tempo',
-    sub:'Plano sem tempo é lista de desejos.',
+    selo:'Bloco 0 · Onboarding',
+    titulo:'As armadilhas que', destaque:'travam carreira',
+    sub:'Nenhuma delas tem a ver com código.',
     rodape:'Martin Fabichak · DevAdvance.club' },
 
   /* gancho */
   { tipo:'divisor',
-    titulo:'Você vai falhar no plano',
-    sub:'não por falta de vontade, pela agenda que você tem hoje' },
+    titulo:'O técnico é necessário, mas não é suficiente.',
+    sub:'quanto mais você sobe, menos ele sozinho explica quem cresce e quem trava' },
 
-  /* tese */
-  { tipo:'confronto', badge:'A TESE',
+  /* problema */
+  { tipo:'lista', revela:false, badge:'O PROBLEMA',
+    titulo:'O que trava não tá no editor de código',
     itens:[
-      {titulo:'Ocupado', icone:'×'},
-      {titulo:'Produtivo', icone:'✓'} ] },
+      {t:'Dev bom acha que o problema é sempre técnico', d:'então resolve tudo estudando mais'},
+      {t:'O que trava está em comportamentos invisíveis'},
+      {t:'Anota em quais você se reconhece', d:'vai pra ficha de onboarding (0.10)'} ] },
 
-  /* passo 1 — auditoria */
-  { tipo:'lista', revela:false, badge:'PASSO 1',
-    titulo:'Auditoria de tempo',
+  /* o que toda trilha exige */
+  { tipo:'agenda', badge:'TÉCNICA, GESTÃO OU EMPREENDEDORA',
+    titulo:'O que toda trilha exige',
     itens:[
-      {t:'1 semana, blocos de 30 min', d:'código · reunião · interrupção · incêndio · desenvolvimento próprio'},
-      {t:'Não julgar durante a coleta', d:'primeiro medir, depois otimizar, igual performance de sistema'},
-      {t:'O choque típico', d:'60–70% reativo, quase 0% nas lacunas do seu plano'} ] },
+      {k:'COMUNICAÇÃO',    d:'trabalho em grupo é mais valioso do que nunca'},
+      {k:'LIDERANÇA',      d:'de pessoas, de situações ou de processos'},
+      {k:'NETWORKING',     d:'grande parte das vagas altas não passa pelo LinkedIn'},
+      {k:'VISIBILIDADE',   d:'mostrar seu trabalho é obrigatório'},
+      {k:'AUTO-LIDERANÇA', d:'o seu emocional vai ditar como você é visto'} ] },
 
-  { tipo:'foto', badge:'PASSO 1', contain:true,
-    titulo:'Onde o tempo foi × onde precisava',
-    img:'assets/auditoria-tempo.svg' },
+  /* armadilha 1 */
+  { tipo:'pilar', badge:'ARMADILHA · PONTO CEGO', tag:'BAIXA AUTO-ESTIMA E AUTO-SABOTAGEM',
+    titulo:'"Será que eu sou bom o suficiente?"',
+    sub:'sintoma → custo → antídoto',
+    bullets:[
+      {t:'Sintoma', d:'não aplica "porque não preenche 100% dos requisitos", adia a entrevista "porque não tá pronto"'},
+      {t:'Custo', d:'não aplica, não pede aumento, aceita menos do que vale. Entrevista vira evento raro'},
+      {t:'Antídoto 1', d:'evidência escrita: o que você resolveu, com o número de antes e depois'},
+      {t:'Antídoto 2', d:'fazer entrevistas sempre. Entrevista é treino'} ] },
 
-  /* passo 2 — priorização */
-  { tipo:'foto', badge:'PASSO 2', contain:true,
-    titulo:'Importante × urgente',
-    img:'assets/matriz-tempo.svg' },
-
-  { tipo:'lista', revela:false, badge:'PASSO 2',
-    titulo:'Blocos de carreira',
+  /* checklist entrevista é treino */
+  { tipo:'cronologia', revela:false, badge:'ENTREVISTA É TREINO',
+    titulo:'O checklist',
     itens:[
-      {t:'2 blocos de 90 min por semana', d:'na agenda, com nome: "bloco carreira: KPI da lacuna 1"'},
-      {t:'Protegidos como reunião com o CEO', d:'não se move por Slack'},
-      {t:'"Não" com alternativa', d:'"não consigo hoje; consigo quinta OU o fulano resolve agora"'} ] },
+      {t:'Ache vagas parecidas com o que você quer'},
+      {t:'Ordene os requisitos por prioridade'},
+      {t:'Estude o que você não sabe'},
+      {t:'Aplique pra todas as vagas parecidas'},
+      {t:'Grave as entrevistas só pra você revisar. Nunca publique'},
+      {t:'Anote todas as perguntas e responda de novo'} ] },
 
-  /* passo 3 — foco */
-  { tipo:'lista', revela:false, badge:'PASSO 3',
-    titulo:'Foco de verdade',
-    itens:[
-      {t:'Cada interrupção custa ~20 min', d:'10 espiadas no Slack = manhã destruída'},
-      {t:'Notificações em lote', d:'3 janelas por dia, status de foco visível'},
-      {t:'Celular fora da mesa', d:'ambiente vence força de vontade'} ] },
+  /* armadilha 2 */
+  { tipo:'pilar', badge:'ARMADILHA · PONTO CEGO', tag:'NÃO OCUPAR ESPAÇO',
+    titulo:'Não arriscar, não pedir',
+    sub:'sintoma → custo → antídoto',
+    bullets:[
+      {t:'Sintoma', d:'acredita que o trabalho vai ser visto e recompensado só porque é bom'},
+      {t:'Custo', d:'fica no mesmo lugar, vendo colegas menos capazes sendo promovidos'},
+      {t:'Antídoto', d:'ocupar espaço e ser visto. Lembra do 0.7: tome reconhecimento'} ] },
 
-  /* passo 4 — disciplina */
-  { tipo:'lista', revela:false, badge:'PASSO 4',
-    titulo:'Disciplina > motivação',
-    itens:[
-      {t:'Motivação é clima, disciplina é infraestrutura', d:'sistema bom funciona nos dias ruins'},
-      {t:'Hábito mínimo viável', d:'encolher até ser impossível falhar: 10 min de journal na sexta'},
-      {t:'Gatilho: "depois de X, faço Y"', d:'depois da daily de sexta, abro o journal'} ] },
+  /* armadilha 3 */
+  { tipo:'pilar', badge:'ARMADILHA · PONTO CEGO', tag:'FOCO SÓ NO TÉCNICO',
+    titulo:'"Vou fazer mais um curso"',
+    sub:'sintoma → custo → antídoto',
+    bullets:[
+      {t:'Sintoma', d:'mais um curso, framework, pós, sempre que a carreira trava. Confortável porque é o que você já sabe'},
+      {t:'Custo', d:'ser passado pra trás por quem se comunica e aparece'},
+      {t:'Antídoto', d:'liderança, comunicação e mentoria. Não escolha curso sem falar com alguém experiente'} ] },
 
-  /* passo 5 — energia */
-  { tipo:'lista', revela:false, badge:'PASSO 5',
-    titulo:'Energia é recurso, não detalhe',
-    itens:[
-      {t:'Revisão mensal do Problem Journal', d:'progresso escrito mata o "não estou saindo do lugar"'},
-      {t:'Cognitivo pesado no pico, operacional no vale', d:'gerencie energia, não só horas'},
-      {t:'Tanque vazio = incidente', d:'irritabilidade, procrastinação, sono ruim → reduzir carga. burnout não é medalha'} ] },
+  /* armadilha 4 */
+  { tipo:'pilar', badge:'ARMADILHA · PONTO CEGO', tag:'FALTA DE NETWORKING',
+    titulo:'Esperar ser descoberto',
+    sub:'sintoma → custo → antídoto',
+    bullets:[
+      {t:'Sintoma', d:'acreditar que "bom trabalho fala por si"'},
+      {t:'Custo', d:'vagas e promoções circulam por indicação antes de virar anúncio. Você nem sabe que existiram'},
+      {t:'Antídoto', d:'network deliberado: interno (quem te indica, te ensina, fala bem de você numa sala que você não tá) e externo'} ] },
 
-  /* amarração da Fase 0 */
-  { tipo:'agenda', badge:'FASE 0 COMPLETA',
-    titulo:'Checklist dos 8 entregáveis',
+  { tipo:'divisor',
+    titulo:'"Bom trabalho fala por si"',
+    sub:'✗ é mentira' },
+
+  /* armadilha 5 */
+  { tipo:'pilar', badge:'ARMADILHA · PONTO CEGO', tag:'FALTA DE COMUNIDADE',
+    titulo:'Carreira solo',
+    sub:'sintoma → custo → antídoto',
+    bullets:[
+      {t:'Sintoma', d:'ninguém pra comparar nota'},
+      {t:'Custo', d:'ponto cego permanente: não sabe se ganha bem, se está no nível certo, se a decisão faz sentido'},
+      {t:'Antídoto', d:'comunidade certa: pares alguns passos à frente ou vivendo o mesmo momento'} ] },
+
+  /* exemplo real: funil */
+  { tipo:'cronologia', revela:true, badge:'EXEMPLO REAL · MEU FUNIL PRA EUROPA',
+    titulo:'6 meses',
     itens:[
-      {k:'0.1', d:'as 3 frases (hoje · 12 meses · lacuna)'},
-      {k:'0.2', d:'lista "só eu faço"'},
-      {k:'0.3', d:'trilha escolhida'},
-      {k:'0.4', d:'template de metas'},
-      {k:'0.5', d:'exercício de mentalidade'},
-      {k:'0.6', d:'Problem Journal criado'},
-      {k:'0.7', d:'mapa + top-3 KPIs'},
-      {k:'0.8', d:'auditoria + blocos de carreira'} ] },
+      {t:'110 CVs enviados'},
+      {t:'81 primeiras entrevistas'},
+      {t:'57 testes técnicos'},
+      {t:'4 ofertas'} ] },
+
+  { tipo:'divisor',
+    titulo:'130 entrevistas no total',
+    sub:'somando todas as etapas. Resiliência não é dom, é repetição' },
+
+  /* como sair */
+  { tipo:'lista', revela:false, badge:'COMO SAIR',
+    titulo:'Armadilha de comportamento raramente se resolve sozinha',
+    itens:[
+      {t:'Terapia'},
+      {t:'Comunidade'},
+      {t:'Falar com pessoas experientes'} ] },
+
+  /* autodiagnóstico */
+  { tipo:'lista', revela:false, badge:'AUTODIAGNÓSTICO',
+    titulo:'Em quais eu me reconheço?',
+    itens:[
+      {t:'☐ Baixa auto-estima e auto-sabotagem'},
+      {t:'☐ Não arriscar, não pedir, não ocupar espaço'},
+      {t:'☐ Foco só no técnico'},
+      {t:'☐ Falta de networking'},
+      {t:'☐ Falta de comunidade'},
+      {t:'Escolha as 2 que mais pegam', d:'vão pra ficha de onboarding (0.10)'} ] },
 
   /* ação prática */
   { tipo:'agenda', badge:'AÇÃO',
-    titulo:'Antes de fechar este vídeo',
-    texto:'Pausa agora e faz os 3:',
+    titulo:'Escreva as 2 armadilhas que mais pegam você hoje',
+    texto:'Com um exemplo concreto de cada: a vaga que não aplicou, a conversa que evitou, o aumento que não pediu.',
     itens:[
-      {k:'SEGUNDA', d:'começar a auditoria de tempo: 1 semana'},
-      {k:'AGORA',   d:'criar os 2 blocos de carreira na agenda'},
-      {k:'1 HÁBITO',d:'mínimo viável, com gatilho "depois de X, faço Y"'} ] },
+      {k:'ARMADILHA 1', d:'+ exemplo concreto'},
+      {k:'ARMADILHA 2', d:'+ exemplo concreto'} ] },
 
   { tipo:'fim',
-    titulo:'Fase 0 concluída.',
-    rodape:'Você tem sistema, régua e tempo · Próximo: Fase 1, PREPARAR' }
+    titulo:'Você acabou de identificar onde trava.',
+    rodape:'Próximo: auto-liderança e metas' }
 ];

@@ -18,19 +18,19 @@
 
   <!-- caminho técnico -->
   <rect x="620" y="80" rx="12" width="480" height="120" fill="rgba(34,211,255,.06)" stroke="#22d3ff" stroke-width="2"/>
-  <text x="860" y="130" text-anchor="middle" fill="#22d3ff" font-size="30" font-weight="800">PATH TÉCNICO</text>
+  <text x="860" y="130" text-anchor="middle" fill="#22d3ff" font-size="30" font-weight="800">TRILHA TÉCNICA</text>
   <text x="860" y="168" text-anchor="middle" fill="#eaf2ff" font-size="22">Sênior → Staff → Principal</text>
 
   <!-- caminho liderança -->
   <rect x="620" y="260" rx="12" width="480" height="120" fill="rgba(34,211,255,.06)" stroke="#22d3ff" stroke-width="2"/>
-  <text x="860" y="310" text-anchor="middle" fill="#22d3ff" font-size="30" font-weight="800">PATH LIDERANÇA</text>
+  <text x="860" y="310" text-anchor="middle" fill="#22d3ff" font-size="30" font-weight="800">TRILHA DE GESTÃO</text>
   <text x="860" y="348" text-anchor="middle" fill="#eaf2ff" font-size="22">Tech Lead → Head → CTO</text>
 
   <!-- caminho empreendedor -->
   <rect x="620" y="440" rx="12" width="480" height="120" fill="rgba(255,61,180,.05)" stroke="#ff3db4" stroke-width="2" stroke-dasharray="10 8"/>
-  <text x="860" y="490" text-anchor="middle" fill="#ff3db4" font-size="30" font-weight="800">EMPREENDEDOR</text>
-  <text x="860" y="528" text-anchor="middle" fill="#8aa0c6" font-size="22">dev → dono do próprio produto (futuro)</text>
+  <text x="860" y="490" text-anchor="middle" fill="#ff3db4" font-size="30" font-weight="800">EMPREENDEDORA</text>
+  <text x="860" y="528" text-anchor="middle" fill="#8aa0c6" font-size="22">dev → dono do próprio negócio</text>
 
   <!-- rodapé -->
-  <text x="600" y="616" text-anchor="middle" fill="#8aa0c6" font-size="22" letter-spacing="4">NORTE: MAIS DINHEIRO · CAMINHO DE RENDA</text>
+  <text x="600" y="616" text-anchor="middle" fill="#8aa0c6" font-size="22" letter-spacing="4">NORTE: MAIS DINHEIRO · CAMINHO CLARO</text>
 </svg>

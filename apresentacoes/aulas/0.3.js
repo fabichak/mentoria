@@ -1,74 +1,97 @@
-/* Aula 0.3 — Trilha desenvolvedor vs Gestão. 1 objeto por slide. Edite só aqui. */
+/* Aula 0.3 — O método. 1 objeto por slide. Edite só aqui. Esboço: esbocos/0.3-o-metodo.md */
 window.SLIDES = [
 
   { tipo:'capa',
-    selo:'Fase 0 · Fundamentos',
-    titulo:'Trilha', destaque:'desenvolvedor vs Gestão',
-    sub:'A maioria dos devs vira gestor por acidente e passa anos infeliz sem saber por quê.',
-    rodape:'Martin Fabichak · DevAdvance.club' },
+    selo:'Bloco 0 · Onboarding',
+    titulo:'O método', destaque:'ADVANCE',
+    sub:'Carreira se planeja.',
+    rodape:'Martin Fabichak' },
 
-  /* desmontar o mito */
+  /* gancho */
   { tipo:'divisor',
-    titulo:'Gestão não é promoção',
-    sub:'é mudança de profissão, e desenvolvedor sênior+ não é "quem não quis liderar"' },
+    titulo:'Carreira não se resolve com motivação',
+    sub:'se resolve com sistema. Esse é o sistema' },
 
-  /* as duas trilhas */
-  { tipo:'foto', badge:'AS DUAS TRILHAS', contain:true,
-    titulo:'Lado a lado',
-    img:'assets/trilhas-ic-gestao.svg' },
+  /* recap do norte */
+  { tipo:'foto', badge:'O NORTE', contain:true,
+    titulo:'Mais dinheiro e caminho claro, nas 3 trilhas',
+    img:'assets/caminhos-renda.svg' },
 
-  /* o que desenvolvedor exige */
-  { tipo:'pilar', badge:'TRILHA DESENVOLVEDOR', tag:'O QUE EXIGE DE VERDADE',
-    titulo:'Sênior → Staff → Principal',
-    bullets:[
-      {t:'Problemas que atravessam times', d:'arquitetura, padrões, decisões caras de errar'},
-      {t:'Escrever e comunicar', d:'TDDs, design docs: Staff que não escreve não escala'},
-      {t:'Influenciar sem mandar', d:'convencer 5 times sem ser chefe de nenhum'} ] },
-
-  /* o que gestão exige */
-  { tipo:'pilar', badge:'TRILHA GESTÃO', tag:'O QUE EXIGE DE VERDADE',
-    titulo:'Tech Lead → EM → Head → CTO',
-    bullets:[
-      {t:'Energia genuína para pessoas', d:'1:1s, feedback difícil, contratação, demissão'},
-      {t:'Tolerar distância do código', d:'abstinência de codar faz EM sofrer'},
-      {t:'Prestar contas sem executar', d:'resultado que não sai das suas mãos'} ] },
-
-  /* 3 perguntas-filtro */
-  { tipo:'agenda', badge:'COMO ESCOLHER',
-    titulo:'3 perguntas-filtro',
+  /* a pirâmide */
+  { tipo:'agenda', badge:'PARTE 1 · A PIRÂMIDE',
+    titulo:'Nas 3 de baixo você cria valor, no topo você captura',
     itens:[
-      {k:'ENERGIA',  d:'destravar um problema técnico cabeludo ou destravar uma pessoa?'},
-      {k:'INVISÍVEL',d:'aceito que meu sucesso seja invisível e indireto?'},
-      {k:'1:1',      d:'faria 1:1s bem feitos sem ninguém cobrar? "não" = sinal amarelo forte'} ] },
+      {k:'VALORIZAÇÃO', d:'CAPTURA · mostrar o trabalho e ser pago por ele: promoção, CV, entrevista, negociação'},
+      {k:'RESOLUÇÃO',   d:'CRIA · ferramentas pra decidir melhor e convencer pessoas'},
+      {k:'LIDERANÇA',   d:'CRIA · auto-liderança, mentalidade, tempo, emocional, gestão de pessoas'},
+      {k:'TÉCNICO',     d:'CRIA · fundação: decidir, avaliar e cobrar com propriedade'} ] },
 
-  /* verdades desconfortáveis */
-  { tipo:'lista', revela:false, badge:'VERDADES DESCONFORTÁVEIS',
-    titulo:'O que ninguém te conta',
+  /* erro clássico */
+  { tipo:'lista', revela:false, badge:'ERRO CLÁSSICO',
+    titulo:'Pular camada',
     itens:[
-      {t:'Dá pra voltar', d:'o pêndulo TL → desenvolvedor → EM é comum e saudável, não é fracasso'},
-      {t:'Trilha desenvolvedor no Brasil é imatura', d:'seguir Staff+ pode exigir trocar de empresa'},
-      {t:'Salário topo é parecido nas duas', d:'escolher gestão "pelo dinheiro" é a pior razão'} ] },
+      {t:'Querer valorização', d:'sem ter resolvido problema visível'},
+      {t:'Empilhar técnico', d:'quando a trava está em liderança e resolução'} ] },
 
-  /* conexão com a dor */
+  /* pirâmide = catálogo */
+  { tipo:'agenda', badge:'A PIRÂMIDE É O CATÁLOGO',
+    titulo:'Cada camada é um bloco',
+    texto:'Começamos por liderança: técnico é o que você já tem mais.',
+    itens:[
+      {k:'BLOCO 1', d:'liderança e soft skill'},
+      {k:'BLOCO 2', d:'resolução de problemas'},
+      {k:'BLOCO 3', d:'valorização'},
+      {k:'BLOCO 4', d:'técnico'} ] },
+
+  /* o ciclo */
+  { tipo:'cronologia', revela:true, badge:'PARTE 2 · O CICLO',
+    titulo:'Como agir no seu emprego atual',
+    itens:[
+      {t:'PREPARAR: onde você está, o que falta. E onde está seu time, quais problemas a empresa tem agora'},
+      {t:'AGIR: executar nas lacunas certas, não em tudo ao mesmo tempo, dentro e fora da empresa'},
+      {t:'MOSTRAR: impacto invisível não conta, quem decide sua promoção precisa ver'},
+      {t:'OTIMIZAR: medir, ajustar, subir a régua', cycle:true},
+      {t:'Recomeçar: PREPARAR de novo'} ] },
+
+  /* MOSTRAR */
   { tipo:'divisor',
-    titulo:'Sem trilha, não existe régua',
-    sub:'"não sei o que falta pro próximo nível" quase sempre começa por não saber QUAL trilha' },
+    titulo:'MOSTRAR',
+    sub:'a fase que devs mais odeiam e mais precisam. Não é marketing pessoal, é tornar o trabalho visível pra quem decide' },
+
+  /* exemplo */
+  { tipo:'cronologia', revela:true, badge:'EXEMPLO · DEV PLENO, 90 DIAS',
+    titulo:'Uma volta do ciclo',
+    itens:[
+      {t:'PREPARAR: time sofre com deploy manual toda sexta. Sua lacuna: visibilidade fora do squad'},
+      {t:'AGIR: assume o deploy, automatiza, manda update quinzenal pro gestor e pro PM'},
+      {t:'MOSTRAR: no 1:1, antes e depois com número: 3h → 15 min, 0 incidentes em 6 semanas'},
+      {t:'OTIMIZAR: o que funcionou, o que não, qual a próxima régua', cycle:true},
+      {t:'Próxima volta'} ] },
+
+  /* pirâmide = o quê, ciclo = como */
+  { tipo:'confronto', badge:'COMO SE ENCAIXAM',
+    itens:[
+      {titulo:'Pirâmide = O QUÊ', icone:'▲'},
+      {titulo:'Ciclo = COMO', icone:'↻'} ] },
+
+  /* por que ciclo */
+  { tipo:'lista', revela:false, badge:'POR QUÊ',
+    titulo:'Ciclo, não linha reta',
+    itens:[
+      {t:'Cada nível novo zera parte do jogo'},
+      {t:'Quem tem o ciclo internalizado não entra em pânico', d:'roda mais uma volta'},
+      {t:'Cada volta ataca uma lacuna', d:'em alguma camada da pirâmide'} ] },
 
   /* ação prática */
   { tipo:'agenda', badge:'AÇÃO',
-    titulo:'Escreva',
-    texto:'',
+    titulo:'Antes do próximo vídeo',
+    texto:'Escreva 3 frases e guarde: vão pro autodiagnóstico (0.4) e pra ficha (0.10).',
     itens:[
-      {k:'RESPONDER', d:'as 3 perguntas-filtro'},
-      {k:'MAPEAR',    d:'última semana: quais atividades deram energia?'},
-      {k:'MARCAR',    d:'cada uma como técnica ou pessoas'} ] },
-{ tipo:'agenda', badge:'COMO ESCOLHER',
-    titulo:'3 perguntas-filtro',
-    itens:[
-      {k:'ENERGIA',  d:'destravar um problema técnico cabeludo ou destravar uma pessoa?'},
-      {k:'INVISÍVEL',d:'aceito que meu sucesso seja invisível e indireto?'},
-      {k:'1:1',      d:'faria 1:1s bem feitos sem ninguém cobrar? "não" = sinal amarelo forte'} ] },
+      {k:'HOJE',     d:'onde você está'},
+      {k:'12 MESES', d:'onde quer estar'},
+      {k:'LACUNA',   d:'a maior distância entre os dois'} ] },
+
   { tipo:'fim',
-    titulo:'Escolhida a trilha, vire meta.',
-    rodape:'Passos concretos · Próximo: auto-liderança e metas' }
+    titulo:'Você não precisa se sentir pronto.',
+    rodape:'Precisa rodar a primeira volta do ciclo · Próximo: autodiagnóstico de carreira' }
 ];

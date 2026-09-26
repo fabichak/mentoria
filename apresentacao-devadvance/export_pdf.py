@@ -1,15 +1,15 @@
-"""Exporta uma aula pra PDF: python export_pdf.py 0.1"""
+"""Exporta o deck pra PDF. Sem arg: index.html (venda). `python export_pdf.py pitch`: pitch.html -> devadvance-pitch.pdf"""
 import pathlib
 import sys
 from playwright.sync_api import sync_playwright
 from PIL import Image
 
-AULA = sys.argv[1] if len(sys.argv) > 1 else "0.1"
+DECK = sys.argv[1] if len(sys.argv) > 1 else ""
 ROOT = pathlib.Path(__file__).resolve().parent
-URL = ROOT.joinpath("index.html").as_uri()
+URL = ROOT.joinpath((DECK or "index") + ".html").as_uri()
 W, H = 1920, 1080
 # (nome, quantos slides do fim ficam de fora). Os 2 últimos são o plano B (Comunidade + comparativo).
-OUTS = [
+OUTS = [(f"devadvance-{DECK}.pdf", 0)] if DECK else [
     ("devadvance-programa-full.pdf", 0),
     ("devadvance-programa.pdf", 1),
 ]
