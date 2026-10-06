@@ -1,0 +1,64 @@
+Martin Fabichak
+São José dos Campos, Brazil
+mfabichak@gmail.com - +5511962719203
+linkedin.com/in/martinfabichak - instagram.com/martin.fabichak
+Summary
+________________
+CTO and Head of Engineering with 20 years in software development, 16 of them leading technical teams, specialized in real-time multiplayer, network architecture and large-scale backend systems. At Magic Media I sold over $25M in projects, hired 100+ engineers and led up to 160 across 20+ concurrent projects on PC, consoles, VR and mobile. At Chimera I rewrote the real-time multiplayer architecture of Monopoly Go, taken to worldwide soft launch, and worked with Rovio, Take-2 and Paradox. Before that I co-founded Insolita Studios, shipping Latin America's first PSP game and a social game with 5M+ players. Now I’m an entrepreneur with 3 early stage companies in different industries, developing daily with AI, SDD and being on the forefront of AI software development with 4 systems in production 100% developed with AI. Talking to non-technical professionals and translating business value into features and products is my greatest skill, proven over time in different industries.
+“His great people skills and outstanding technical understanding made it easy for Martin to establish himself as the leader to guide his team through challenging tasks while always looking out for the needs and challenges of other departments around him.” - Patrik Wilkens, VP Mobile at Spil Games
+Professional Experience (earlier roles on LinkedIn)
+DevAdvance Club (devadvance.club)
+March 2026 - Present        Founder and Mentor
+Founded a mentorship program for software engineers growing into senior and leadership roles: technical decision-making, leadership, problem solving, CV, interviews and salary negotiation.
+* Mentored 17 developers, all with positive feedback. 3 were promoted to tech lead, 2 found new jobs abroad, 3x their salary;
+* Built the program end to end: 60+ recorded lessons, weekly live sessions, peer accountability pods and an interview-prep ebook.
+* Weekly free classes to the brazilian developer community;
+
+
+Magic Media Entertainment Studios Remote
+March 2021 – January 2026 CTO and Head of Game Development
+Involved in virtually all aspects of the game development studio: Estimations, sales, client relationship, production plans, budget tracking, recruitment, HR, mentorship and all technical plans for internal advancement.
+* Sold $25M+ in projects as main point of contact and pitch lead, and supported many more;
+* Hired 100+ engineers and built the technical leadership layer; managed up to 160 engineers, and no project was ever lost due to technical issues;
+* Turned around 5+ at-risk projects on arrival, restoring expected quality and retaining the clients;
+* Designed the CI/CD pipeline and shared Unity/Unreal frameworks, reused across dozens of projects, saving thousands of man-hour;
+* Mentored production leads and co-created production plans, resulting in 95% of the projects been on budget;
+* Rebuilt the pitching pipeline to handle more pitches and raise conversion from around 5% to 15%;
+* Shipped original IPs, IP-based games and ports on PC, Gen9/8 consoles, VR, blockchain and mobile, with 20+ projects running concurrently;
+
+
+Chimera Entertainment GmbH Munich - Germany
+May 2017 – February 2021 Head of Development and interim Technical Director
+Technical director of 3 different AAA mobile projects with major publishers totalling over 25 different engineers; Previous technical project lead of 4 different teams into a AAA pvp synchronous multiplayer mobile game in a $5M+ production from early stage production to live ops; Corporate head of development: Hiring from juniors to lead developers; Annual reviews and feedback sessions for career growth; new pitches, due diligence and estimations and product owner of central tech architecture. Worked with Rovio, Take-2 and Paradox.
+* Built shared architecture, tooling and guidelines so projects could be led by less experienced leads;
+* Built 5+ internal tools for debugging, performance and automated testing, used daily by 15+ developers, cutting bug incidence by 60%;
+* Mentored 4 developers into technical leads, resolving interpersonal and communication issues in their teams;
+* Solely responsible for the post-launch technical roadmap; defined technical KPIs (Crash rate, DNR, backend error rates) that let stakeholders assess product quality;
+* Designed and rolled out development-process changes that improved quality and speed each iteration (Using time spent on tasks as metric);
+* Designed the client architecture that let 3 teams work in parallel from early development to post-launch;
+* Rewrote from scratch the real-time multiplayer architecture of Monopoly Go and proved it at global scale in worldwide soft launch (100k CCU, 50ms latency average);
+* Built the team's engineering culture as manager reducing turnover (from 9 months average to 2 years)
+
+
+Insolita Studios/ Kidguru Studios São Paulo - Brazil
+July 2008 – March 2013 Partner & Technical Director
+Mainly involved in new pitches and hiring, while overseeing the development process, tools creation and all server cloud architecture; Prototypes design with the creative director.
+* Turma do Chico Bento: Facebook/Orkut social game on one of Brazil's best-known IPs; 5M+ registered players, 500k+ MAU, 100k+ DAU, 20k peak CCU. Led the full technical implementation from prototype to live ops with weekly quests;
+* Globo Futebol: 5-a-side football multiplayer mini-games for TV Globo, Brazil's largest TV network, likely the first large-scale web multiplayer game in Unity. Built all gameplay and the multiplayer layer;
+* Freekscape: Escape from Hell, the first PSP game developed in Latin America ([your role]);
+* Ludo Park, a 40-player LAN multiplayer teaching entrepreneurship. Implemented the whole economic simulation and the multiplayer layer.
+Technical and key experiences
+________________
+
+
+* AI driven development with SDD (Spec-driven development), with 5 systems in production
+* Tech stack: Unity, Unreal, C++ (proprietary engines), C#, Node.js, TypeScript, React, Java, Ruby on Rails, HTML5/Phaser; CI/CD, cloud cost optimization, real-time networking.
+Education and Life
+________________
+
+
+2006-2009 Bachelor Degree - Applied and Computational Math - Graduated with honors
+Mathematics and Statistics Institute - University of São Paulo (IME-USP)
+
+
+Hobbies: public speaking, music festivals, dogs and gaming.

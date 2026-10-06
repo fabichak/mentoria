@@ -16,33 +16,28 @@ window.SLIDES = [
   { tipo:'lista', revela:false, badge:'AUTO-LIDERANÇA',
     titulo:'Ninguém vai fazer esse roadmap por você',
     itens:[
-      {t:'Seu gestor não vai', d:'ele tem 8 diretos e as prioridades dele'},
-      {t:'Tech lead da própria carreira', d:'o roadmap é seu'},
+      {t:'Seja o CTO da própria carreira', d:'o roadmap é seu'},
       {t:'Liderar o próprio estado emocional', d:'também é auto-liderança'} ] },
 
   /* o framework */
   { tipo:'agenda', badge:'O FRAMEWORK',
     titulo:'4 blocos, cada um com seu horizonte',
     itens:[
-      {k:'META',      d:'destino final, prazo seu (1 a 15 anos): cargo, dinheiro, tempo livre, liberdade geográfica, autonomia, reconhecimento'},
-      {k:'ESTADO',    d:'cargo, competências (mapa do 0.4), visibilidade, rede, salário, dinheiro guardado'},
-      {k:'OBJETIVOS', d:'1 ano, específicos e verificáveis'},
-      {k:'TAREFAS',   d:'de 1 dia a 3 meses'} ] },
+      {k:'META',      d:'destino final, prazo seu (1 a 15 anos): cargo, dinheiro, tempo livre, liberdade geográfica, autonomia, reconhecimento (1-2)'},
+      {k:'ESTADO',    d:'cargo, competências, visibilidade, rede, salário, dinheiro guardado'},
+      {k:'OBJETIVOS', d:'1 ano, específicos e verificáveis (1-5)'},
+      {k:'TAREFAS',   d:'de 1 dia a 1 mês'} ] },
 
   /* de onde vêm as tarefas */
   { tipo:'divisor', badge:'COMO DESCOBRIR AS TAREFAS',
-    titulo:'Top-3 lacunas (0.4) → tarefas',
+    titulo:'Top-3 lacunas → tarefas',
     sub:'cada lacuna com KPI vira pelo menos uma tarefa' },
 
   /* erros clássicos */
   { tipo:'confronto', badge:'OS 2 ERROS CLÁSSICOS',
     itens:[
       {titulo:'Objetivo sem estado atual = sonho', icone:'☁'},
-      {titulo:'Tarefas sem objetivo = busyness', icone:'↺'} ] },
-
-  { tipo:'divisor',
-    titulo:'Busyness',
-    sub:'ocupado o tempo todo sem sair do lugar: curso atrás de curso sem direção' },
+      {titulo:'Tarefas sem objetivo = ?', icone:'↺'} ] },
 
   /* objetivo bem escrito */
   { tipo:'confronto', badge:'OBJETIVO MAL × BEM ESCRITO',
@@ -68,23 +63,15 @@ window.SLIDES = [
       {t:'Contar a ambição no 1:1 (1 dia)'},
       {t:'Assumir o onboarding do próximo dev (1 mês)'},
       {t:'Liderar uma iniciativa pequena de ponta a ponta (3 meses)', cycle:true},
-      {t:'Feedback estruturado, mostrar resultado, pedir a próxima responsabilidade'} ] },
-
-  /* exemplo real 2 */
-  { tipo:'pilar', badge:'EXEMPLO REAL · TÉCNICA', tag:'LACUNA: SÓ RESOLVE O PRÓPRIO SQUAD',
-    titulo:'Pleno-sênior → Staff',
-    bullets:[
-      {t:'1 RFC cross-team por trimestre', d:'RFC = proposta técnica aberta pra outros times comentarem'},
-      {t:'Apresentar numa guild', d:'guild = grupo de devs de vários times em torno de um tema, tipo frontend ou dados'},
-      {t:'Virar referência num domínio', d:'o nome que vem à cabeça quando o assunto aparece'} ] },
+      {t:'Sempre pedir feedback estruturado, mostrar o resultado, tomar a próxima responsabilidade'} ] },
 
   /* dinheiro */
   { tipo:'pilar', badge:'POR QUE DINHEIRO IMPORTA',
-    titulo:'Dinheiro guardado = margem pra arriscar',
+    titulo:'Dinheiro guardado dá margem pra arriscar',
     bullets:[
       {t:'Mudar de área'},
       {t:'Aceitar um salário menor'},
-      {t:'Investir em curso'} ] },
+      {t:'Investir em curso ou mentoria'} ] },
 
   /* tarefa boa */
   { tipo:'divisor', badge:'O TESTE DA TAREFA BOA',
@@ -96,14 +83,20 @@ window.SLIDES = [
     titulo:'Meta grande assusta',
     sub:'"será que sou capaz?" Por isso o sistema só te pede a próxima tarefa, nunca o salto inteiro' },
 
+  /* anti-sabotagem */
+  { tipo:'divisor', badge:'ANTI-SABOTAGEM',
+    titulo:'Metas e objetivos podem mudar',
+    sub:'E tudo bem, desde que seja consciente.' },
+
+
   /* ação prática */
   { tipo:'agenda', badge:'AÇÃO',
     titulo:'Escreva a sua meta',
     itens:[
       {k:'MENTORIA',   d:'só a meta. Objetivos e tarefas a gente fecha no 1:1 de onboarding'},
-      {k:'SÓ VÍDEOS',  d:'meta, objetivos e tarefas: tudo na ficha do próximo vídeo (0.10)'} ] },
+      {k:'SÓ VÍDEOS',  d:'meta, objetivos e tarefas: tudo na ficha do próximo vídeo'} ] },
 
   { tipo:'fim',
-    titulo:'Meta definida. Agora vai tudo pro papel.',
+    titulo:'Meta definida.',
     rodape:'Próximo: o Mapa da Jornada e a ficha de onboarding' }
 ];

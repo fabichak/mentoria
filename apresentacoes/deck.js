@@ -199,11 +199,30 @@
       '<h1>'+esc(s.titulo)+'</h1>'
       +(s.rodape?'<div class="rodape">'+esc(s.rodape)+'</div>':'')); }
 
+  function tplPiramide(s){
+    // triângulo real: as faixas fatiam o mesmo triângulo (largura ∝ altura), rótulos ao lado
+    var n = s.itens.length, faixas = '', labels = '';
+    for (var i=0;i<n;i++){
+      var y0 = 100*i/n, y1 = 100*(i+1)/n;
+      var pts = [[50-y0/2,y0],[50+y0/2,y0],[50+y1/2,y1],[50-y1/2,y1]].map(function(p){
+        return p[0].toFixed(2)+','+p[1].toFixed(2); }).join(' ');
+      faixas += '<polygon points="'+pts+'" class="pr-f pr-f'+i+'"/>';
+      labels += '<div class="pr-label'+(s.revela?' reveal':'')+'">'
+        +'<span>'+esc(s.itens[i])+'</span></div>';
+    }
+    return wrap(s,'t-piramide',
+      badge(s)+(s.titulo?'<h2>'+esc(s.titulo)+'</h2>':'')
+      +(s.sub?'<p class="lead">'+esc(s.sub)+'</p>':'')
+      +'<div class="pr-wrap">'
+        +'<svg class="pr-svg" viewBox="0 0 100 100" preserveAspectRatio="none">'+faixas+'</svg>'
+        +'<div class="pr-labels">'+labels+'</div>'
+      +'</div>'); }
+
   var TEMPLATES = { capa:tplCapa, agenda:tplAgenda, pilar:tplPilar, lista:tplLista,
     stack:tplStack, preco:tplPreco, checkpoint:tplCheckpoint, divisor:tplDivisor,
     resultado:tplResultado, timeline:tplTimeline, precoDupla:tplPrecoDupla, cronologia:tplCronologia,
     confronto:tplConfronto, fim:tplFim,
-    logos:tplLogos, foto:tplFoto, perfil:tplPerfil, loop:tplLoop };
+    logos:tplLogos, foto:tplFoto, perfil:tplPerfil, loop:tplLoop, piramide:tplPiramide };
 
   // ---- revelação progressiva ----
   function activeEl(){ return palco.querySelectorAll('.slide')[idx]; }

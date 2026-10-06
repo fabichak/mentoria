@@ -18,42 +18,34 @@ window.SLIDES = [
       {titulo:'Mais um curso, certificado, pós, horas', icone:'✗'},
       {titulo:'Atacar a lacuna que segura o próximo passo', icone:'✓'} ] },
 
-  /* pirâmide ≠ mapa */
-  { tipo:'confronto', badge:'NÃO CONFUNDA',
-    itens:[
-      {titulo:'Pirâmide: o que a mentoria ensina', icone:'▲'},
-      {titulo:'Mapa: como você analisa sua carreira', icone:'◎'} ] },
-
   /* ferramenta 1: mapa */
   { tipo:'agenda', badge:'FERRAMENTA 1',
     titulo:'Mapa de competências: 4 domínios',
     texto:'Serve pras 3 trilhas. Muda o peso de cada domínio.',
     itens:[
       {k:'TÉCNICO',     d:'profundidade na stack, qualidade de código, visão de sistema'},
-      {k:'EXECUÇÃO',    d:'priorização, entrega previsível, autonomia, delegar (se lidera)'},
-      {k:'COMUNICAÇÃO', d:'PR claro, feedback, se posicionar em reunião, negociar prazo, outras áreas, valor de negócio'},
-      {k:'CARREIRA',    d:'visibilidade, rede, clareza de destino, clareza de tarefas'} ] },
+      {k:'EXECUÇÃO',    d:'priorização, entrega previsível, autonomia, delegar'},
+      {k:'COMUNICAÇÃO', d:'PR claro, feedback, se posicionar em reunião, negociar prazo, falar com outras áreas, valor de negócio'},
+      {k:'VISIBILIDADE',    d:'interna, externa, networking, clareza de destino'} ] },
 
   /* como preencher */
   { tipo:'lista', revela:false, badge:'COMO PREENCHER',
-    titulo:'Duas colunas, régua honesta',
+    titulo:'3 colunas, régua honesta',
     itens:[
       {t:'Nota 1–5 em cada competência'},
       {t:'Coluna 1', d:'sua autoavaliação'},
-      {t:'Coluna 2', d:'a régua do próximo passo que VOCÊ quer dar, não a média do mercado'},
-      {t:'Calibre com 2–3 pessoas', d:'gestor, par, alguém que revisa seu código'} ] },
+      {t:'Coluna 2', d:'O quanto precisa crescer para próximo passo que VOCÊ quer dar'}, 
+      {t:'Coluna 3', d:'Como você mede isso'}, 
+	  ] },
 
   /* dunning-kruger */
   { tipo:'foto', badge:'PONTO CEGO · DUNNING-KRUGER', contain:true,
     titulo:'Quem sabe pouco se superestima. Quem sabe muito se subestima',
     img:'assets/dunning-kruger.png' },
 
-  { tipo:'divisor',
-    titulo:'Por isso você precisa de nota externa',
-    sub:'onde a percepção dos outros diverge da sua, mora o ponto cego. Aprofundamos em 1.2' },
 
   /* mensagem-modelo */
-  { tipo:'agenda', badge:'MENSAGEM-MODELO',
+  { tipo:'agenda', badge:'COLEGAS',
     titulo:'Pedindo calibração sem constrangimento',
     texto:'"Tô fazendo um diagnóstico de carreira e sua visão vale muito. Pode me dar nota de 1 a 5 nessas competências? Leva 5 minutos, e pode ser sincero."',
     itens:[
@@ -65,7 +57,7 @@ window.SLIDES = [
   { tipo:'agenda', badge:'EXEMPLO REAL 1 · PLENO',
     titulo:'2 anos de casa',
     itens:[
-      {k:'MAPA',  d:'técnica 3/5 · comunicação 2/5 · visibilidade 2/5'},
+      {k:'MAPA',  d:'TÉCNICO 3/5 · EXECUÇÃO 2/5 · COMUNICAÇÃO 2/5 · VISIBILIDADE 2/5'},
       {k:'KPI 1', d:'1 tech talk interno'},
       {k:'KPI 2', d:'1 PR grande revisado sem retrabalho'},
       {k:'KPI 3', d:'1 conversa de carreira agendada com o gestor'} ] },
@@ -73,15 +65,19 @@ window.SLIDES = [
   { tipo:'agenda', badge:'EXEMPLO REAL 2 · SÊNIOR → GESTÃO',
     titulo:'Mesmo formato, peso diferente',
     itens:[
-      {k:'MAPA',  d:'técnica 4/5 · delegação 2/5 · visibilidade com stakeholders 2/5'},
-      {k:'POR QUÊ',d:'a trilha escolhida é outra, então o peso de cada domínio muda'} ] },
+      {k:'MAPA',  d:'TÉCNICO 4/5 · EXECUÇÃO 2/5 · COMUNICAÇÃO 1/5 · VISIBILIDADE 1/5'},
+      {k:'KPI 1', d:'1 papo com CTO'},
+      {k:'KPI 2', d:'1 palestra inter e externa'},
+      {k:'KPI 3', d:'1 feature que eu sou responsável'}  
+	  
+	] },
 
   /* ferramenta 2 */
   { tipo:'lista', revela:false, badge:'FERRAMENTA 2',
     titulo:'Top-3 lacunas com KPI',
     itens:[
       {t:'KPI', d:'um número que dá pra checar. Outra pessoa conseguiria verificar'},
-      {t:'Só 3 lacunas', d:'maior gap ponderado pelo impacto no próximo passo (trilha: 0.5 e 0.6)'},
+      {t:'Só 3 lacunas', d:'maior gap ponderado pelo impacto no próximo passo'},
       {t:'Atacar 8 lacunas = atacar nenhuma'},
       {t:'Comportamento também tem KPI', d:'frequência + feedback observável, não sentimento'} ] },
 
@@ -101,18 +97,18 @@ window.SLIDES = [
     titulo:'O diagnóstico alimenta o resto do bloco',
     itens:[
       {t:'Top-3 lacunas com KPI'},
-      {t:'Meta, objetivos e tarefas (0.9)'},
-      {t:'Ficha de onboarding (0.10)'} ] },
+      {t:'Meta, objetivos e tarefas'},
+      {t:'Ficha de onboarding'} ] },
 
   /* ação prática */
   { tipo:'agenda', badge:'AÇÃO',
-    titulo:'Esta semana',
+    titulo:'Agora',
     itens:[
       {k:'30 MIN',   d:'preencha o mapa de competências'},
-      {k:'2 PESSOAS',d:'peça calibração externa nas mesmas competências'},
+      {k:'2 PESSOAS, essa semana',d:'peça calibração externa'},
       {k:'TOP-3',    d:'escreva as 3 lacunas com KPI e guarde'} ] },
 
   { tipo:'fim',
-    titulo:'Diagnóstico pronto. Agora falta saber pra onde ir.',
+    titulo:'Diagnóstico pronto.',
     rodape:'Próximo: o mapa das 3 trilhas' }
 ];

@@ -270,3 +270,23 @@ h2{font-size:3.1vw;color:var(--blue)}
   padding:.7vw 1.3vw;box-shadow:var(--glow)}
 .loop-arrow{position:absolute;transform:translate(-50%,-50%) rotate(var(--r));
   color:var(--magenta);font-size:2.2vw;line-height:1;text-shadow:0 0 12px rgba(255,61,180,.6)}
+
+/* ================= PIRÂMIDE (camadas da carreira) ================= */
+.t-piramide h2{font-size:3.1vw;color:var(--ink)}
+/* rótulos sobrepostos, centralizados no eixo da pirâmide — podem passar das laterais */
+.pr-wrap{position:relative;width:46vw;height:30vw;margin-top:1.8vw;align-self:center}
+.pr-svg{position:absolute;inset:0;width:100%;height:100%;
+  filter:drop-shadow(0 0 30px rgba(34,211,255,.22))}
+.pr-f{fill:rgba(34,211,255,.16);stroke:rgba(4,6,12,.85);stroke-width:1.2;vector-effect:non-scaling-stroke}
+.pr-f0{fill:rgba(255,61,180,.45)}
+.pr-f1{fill:rgba(34,211,255,.36)}
+.pr-f2{fill:rgba(34,211,255,.26)}
+.pr-labels{position:absolute;inset:0;display:flex;flex-direction:column}
+.pr-label{flex:1;display:flex;align-items:center;justify-content:center;text-align:center;
+  font-size:1.9vw;font-weight:700;color:var(--ink);white-space:nowrap;
+  text-shadow:0 0 16px rgba(4,6,12,.95),0 0 6px rgba(4,6,12,.9)}
+
+/* pirâmide com texto de apoio: pirâmide um pouco menor pra caber */
+.t-piramide .lead{margin-top:.5vw;max-width:86%}
+.t-piramide .lead+.pr-wrap{height:25vw;width:40vw;margin-top:1vw}
+

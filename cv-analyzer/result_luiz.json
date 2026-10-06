@@ -1,0 +1,127 @@
+{
+ "summary": {
+  "says_level": 0.99,
+  "concrete_wins": 0.85,
+  "generic_adjectives": 0.11,
+  "target_role": 0.43,
+  "short": 0.7
+ },
+ "sections": {
+  "Technical Lead, DOit Systems (DOit ERP)": [
+   {
+    "text": "Lidero a equipe de desenvolvedores full stack, formada internamente em sua maioria (de estagiário à pleno).",
+    "has_result": 0.04,
+    "has_metric": 0.02,
+    "has_scope": 0.06,
+    "names_tech": 0.07,
+    "action_verb": 0.38,
+    "grammar": 0.17,
+    "vague_claim": 0.11
+   },
+   {
+    "text": "Liderei integrações críticas com parceiros externos como EPCIS para DSC act (lei americana dos setor pharma), PlugNotas (NFSe), OOBJ (NFe) e E-Sales (boleto)",
+    "has_result": 0.06,
+    "has_metric": 0.03,
+    "has_scope": 0.04,
+    "names_tech": 0.97,
+    "action_verb": 0.89,
+    "grammar": 0.42,
+    "vague_claim": 0.36
+   },
+   {
+    "text": "Uso do Datadog para redução de gargalos como redução em 70% no registro de números de série de ordem de entrega e de cerca de 50% em APIS de ordem de entrega e faturamento além de identificação de N+1s ao redor do sistema.",
+    "has_result": 0.96,
+    "has_metric": 0.98,
+    "has_scope": 0.08,
+    "names_tech": 0.99,
+    "action_verb": 0.33,
+    "grammar": 0.47,
+    "vague_claim": 0.08
+   },
+   {
+    "text": "Definição do uso de ferramentas AWS como SNS e SQS para comunicação assíncronona e S3 para arquivos XMLs gerados por microsserviços.",
+    "has_result": 0.12,
+    "has_metric": 0.07,
+    "has_scope": 0.03,
+    "names_tech": 0.99,
+    "action_verb": 0.4,
+    "grammar": 0.73,
+    "vague_claim": 0.05
+   },
+   {
+    "text": "Traduzo requisitos de negócio complexos, junto aos stakeholders, em soluções técnicas escaláveis.",
+    "has_result": 0.05,
+    "has_metric": 0.03,
+    "has_scope": 0.03,
+    "names_tech": 0.05,
+    "action_verb": 0.26,
+    "grammar": 0.37,
+    "vague_claim": 0.39
+   }
+  ],
+  "Desenvolvedor, DOit Systems (DOit ERP)": [
+   {
+    "text": "Desenvolvi regras de negócio complexas para fluxos financeiros e operacionais.",
+    "has_result": 0.04,
+    "has_metric": 0.02,
+    "has_scope": 0.02,
+    "names_tech": 0.03,
+    "action_verb": 0.96,
+    "grammar": 0.1,
+    "vague_claim": 0.7
+   },
+   {
+    "text": "Projetei e implementei APIs RESTful em Java e Quarkus.",
+    "has_result": 0.04,
+    "has_metric": 0.01,
+    "has_scope": 0.02,
+    "names_tech": 0.99,
+    "action_verb": 0.87,
+    "grammar": 0.14,
+    "vague_claim": 0.04
+   },
+   {
+    "text": "Otimizei queries PostgreSQL e melhorei a performance do banco de dados.",
+    "has_result": 0.75,
+    "has_metric": 0.02,
+    "has_scope": 0.02,
+    "names_tech": 0.99,
+    "action_verb": 0.95,
+    "grammar": 0.14,
+    "vague_claim": 0.33
+   },
+   {
+    "text": "Construí integrações em MuleSoft Anypoint Platform conectando sistemas internos e serviços de terceiros.",
+    "has_result": 0.06,
+    "has_metric": 0.01,
+    "has_scope": 0.02,
+    "names_tech": 0.99,
+    "action_verb": 0.91,
+    "grammar": 0.19,
+    "vague_claim": 0.04
+   },
+   {
+    "text": "Implementei funcionalidades cloud com AWS (S3, SQS, SNS).",
+    "has_result": 0.07,
+    "has_metric": 0.01,
+    "has_scope": 0.01,
+    "names_tech": 0.99,
+    "action_verb": 0.89,
+    "grammar": 0.16,
+    "vague_claim": 0.04
+   },
+   {
+    "text": "Participei de discussões de arquitetura, code reviews, planejamento de sprints e troubleshooting de incidentes em produção.",
+    "has_result": 0.05,
+    "has_metric": 0.01,
+    "has_scope": 0.02,
+    "names_tech": 0.09,
+    "action_verb": 0.84,
+    "grammar": 0.21,
+    "vague_claim": 0.05
+   }
+  ]
+ },
+ "code_issues": [],
+ "model": "jev-1.13.0"
+}

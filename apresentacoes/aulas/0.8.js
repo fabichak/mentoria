@@ -7,19 +7,6 @@ window.SLIDES = [
     sub:'Nenhuma delas tem a ver com código.',
     rodape:'Martin Fabichak · DevAdvance.club' },
 
-  /* gancho */
-  { tipo:'divisor',
-    titulo:'O técnico é necessário, mas não é suficiente.',
-    sub:'quanto mais você sobe, menos ele sozinho explica quem cresce e quem trava' },
-
-  /* problema */
-  { tipo:'lista', revela:false, badge:'O PROBLEMA',
-    titulo:'O que trava não tá no editor de código',
-    itens:[
-      {t:'Dev bom acha que o problema é sempre técnico', d:'então resolve tudo estudando mais'},
-      {t:'O que trava está em comportamentos invisíveis'},
-      {t:'Anota em quais você se reconhece', d:'vai pra ficha de onboarding (0.10)'} ] },
-
   /* o que toda trilha exige */
   { tipo:'agenda', badge:'TÉCNICA, GESTÃO OU EMPREENDEDORA',
     titulo:'O que toda trilha exige',
@@ -91,19 +78,6 @@ window.SLIDES = [
       {t:'Custo', d:'ponto cego permanente: não sabe se ganha bem, se está no nível certo, se a decisão faz sentido'},
       {t:'Antídoto', d:'comunidade certa: pares alguns passos à frente ou vivendo o mesmo momento'} ] },
 
-  /* exemplo real: funil */
-  { tipo:'cronologia', revela:true, badge:'EXEMPLO REAL · MEU FUNIL PRA EUROPA',
-    titulo:'6 meses',
-    itens:[
-      {t:'110 CVs enviados'},
-      {t:'81 primeiras entrevistas'},
-      {t:'57 testes técnicos'},
-      {t:'4 ofertas'} ] },
-
-  { tipo:'divisor',
-    titulo:'130 entrevistas no total',
-    sub:'somando todas as etapas. Resiliência não é dom, é repetição' },
-
   /* como sair */
   { tipo:'lista', revela:false, badge:'COMO SAIR',
     titulo:'Armadilha de comportamento raramente se resolve sozinha',
@@ -121,17 +95,9 @@ window.SLIDES = [
       {t:'☐ Foco só no técnico'},
       {t:'☐ Falta de networking'},
       {t:'☐ Falta de comunidade'},
-      {t:'Escolha as 2 que mais pegam', d:'vão pra ficha de onboarding (0.10)'} ] },
-
-  /* ação prática */
-  { tipo:'agenda', badge:'AÇÃO',
-    titulo:'Escreva as 2 armadilhas que mais pegam você hoje',
-    texto:'Com um exemplo concreto de cada: a vaga que não aplicou, a conversa que evitou, o aumento que não pediu.',
-    itens:[
-      {k:'ARMADILHA 1', d:'+ exemplo concreto'},
-      {k:'ARMADILHA 2', d:'+ exemplo concreto'} ] },
+      {t:'Escolha as 2 que mais pegam', d:'vão pra ficha de onboarding'} ] },
 
   { tipo:'fim',
-    titulo:'Você acabou de identificar onde trava.',
+    titulo:'Você possivelmente acabou de identificar onde trava.',
     rodape:'Próximo: auto-liderança e metas' }
 ];

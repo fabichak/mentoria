@@ -241,11 +241,12 @@
       +'<div class="pl-row pl-'+ps.length+'">'+ps.map(function(p){
         return '<div class="pl-card'+(p.destaque?' destaque':'')+'">'
           +'<div class="pl-nome">'+esc(p.nome)+'</div>'
+          +(p.de?'<div class="pl-de">'+esc(p.de)+'</div>':'')
           +'<div class="pl-preco">'+esc(p.preco)+'</div>'
           +'<div class="pl-ano">'+esc(p.ano)+'</div>'
           +(p.desc?'<p class="pl-desc">'+esc(p.desc)+'</p>':'')
           +(p.itens?'<ul class="pl-itens">'+p.itens.map(function(t){
-            return '<li>'+esc(t)+'</li>'; }).join('')+'</ul>':'')
+            return '<li>'+hl(t)+'</li>'; }).join('')+'</ul>':'')
           +'</div>';
       }).join('')+'</div>'); }
 
@@ -276,8 +277,9 @@
       }).join('')
       +'</div>'); }
 
+  function hl(t){ return esc(t).replace(/\*\*(.+?)\*\*/g,'<em class="hl">$1</em>'); }  // **x** → destaque amarelo
   function tplCheckpoint(s){
-    return wrap(s,'t-checkpoint', badge(s)+'<h1>'+esc(s.titulo)+'</h1>'
+    return wrap(s,'t-checkpoint', badge(s)+'<h1>'+hl(s.titulo)+'</h1>'
       +(s.sub?'<p class="sub">'+esc(s.sub)+'</p>':'')); }
 
   function tplConfronto(s){

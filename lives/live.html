@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Live — DevAdvance.club</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="deck"></div>
+<script src="decks/manifest.js"></script>
+<script>
+  // carrega decks/<id>.js conforme ?a=2026-10-08 — document.write mantém a ordem (dados antes do motor, funciona em file://)
+  (function(){
+    var id = new URLSearchParams(location.search).get('a') || (window.LIVES[0] && window.LIVES[0].id);
+    var meta = (window.LIVES||[]).find(function(a){ return a.id === id; });
+    if (meta) document.title = meta.id + ' — ' + meta.titulo;
+    document.write('<script src="decks/' + encodeURIComponent(id) + '.js"><\/script>');
+  })();
+</script>
+<script src="deck.js"></script>
+</body>
+</html>

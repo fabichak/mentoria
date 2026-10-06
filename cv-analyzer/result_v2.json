@@ -1,0 +1,306 @@
+{
+ "summary": {
+  "says_level": 0.99,
+  "concrete_wins": 0.99,
+  "generic_adjectives": 0.16,
+  "target_role": 0.32,
+  "short": 0.3
+ },
+ "sections": {
+  "DevAdvance Club (devadvance.club)": [
+   {
+    "text": "Founded a mentorship program for software engineers growing into senior and leadership roles: technical decision-making, leadership, problem solving, CV, interviews and salary negotiation.",
+    "has_result": 0.06,
+    "has_metric": 0.03,
+    "has_scope": 0.04,
+    "names_tech": 0.03,
+    "action_verb": 0.89,
+    "grammar": 0.26,
+    "vague_claim": 0.1
+   },
+   {
+    "text": "Mentored 17 developers, all with positive feedback. 3 were promoted to tech lead, 2 found new jobs abroad, 3x their salary;",
+    "has_result": 0.94,
+    "has_metric": 0.97,
+    "has_scope": 0.97,
+    "names_tech": 0.02,
+    "action_verb": 0.9,
+    "grammar": 0.68,
+    "vague_claim": 0.67
+   },
+   {
+    "text": "Built the program end to end: 60+ recorded lessons, weekly live sessions, peer accountability pods and an interview-prep ebook.",
+    "has_result": 0.15,
+    "has_metric": 0.52,
+    "has_scope": 0.45,
+    "names_tech": 0.04,
+    "action_verb": 0.95,
+    "grammar": 0.26,
+    "vague_claim": 0.06
+   },
+   {
+    "text": "Weekly free classes to the brazilian developer community;",
+    "has_result": 0.05,
+    "has_metric": 0.07,
+    "has_scope": 0.05,
+    "names_tech": 0.02,
+    "action_verb": 0.35,
+    "grammar": 0.63,
+    "vague_claim": 0.06
+   }
+  ],
+  "Magic Media Entertainment Studios Remote": [
+   {
+    "text": "Involved in virtually all aspects of the game development studio: Estimations, sales, client relationship, production plans, budget tracking, recruitment, HR, mentorship and all technical plans for internal advancement.",
+    "has_result": 0.03,
+    "has_metric": 0.02,
+    "has_scope": 0.04,
+    "names_tech": 0.02,
+    "action_verb": 0.35,
+    "grammar": 0.48,
+    "vague_claim": 0.32
+   },
+   {
+    "text": "Sold $25M+ in projects as main point of contact and pitch lead, and supported many more;",
+    "has_result": 0.93,
+    "has_metric": 0.98,
+    "has_scope": 0.96,
+    "names_tech": 0.02,
+    "action_verb": 0.95,
+    "grammar": 0.53,
+    "vague_claim": 0.06
+   },
+   {
+    "text": "Hired 100+ engineers and built the technical leadership layer; managed up to 160 engineers, and no project was ever lost due to technical issues;",
+    "has_result": 0.91,
+    "has_metric": 0.63,
+    "has_scope": 0.97,
+    "names_tech": 0.03,
+    "action_verb": 0.93,
+    "grammar": 0.43,
+    "vague_claim": 0.15
+   },
+   {
+    "text": "Turned around 5+ at-risk projects on arrival, restoring expected quality and retaining the clients;",
+    "has_result": 0.97,
+    "has_metric": 0.65,
+    "has_scope": 0.42,
+    "names_tech": 0.02,
+    "action_verb": 0.95,
+    "grammar": 0.29,
+    "vague_claim": 0.41
+   },
+   {
+    "text": "Designed the CI/CD pipeline and shared Unity/Unreal frameworks, reused across dozens of projects, saving thousands of man-hour;",
+    "has_result": 0.97,
+    "has_metric": 0.88,
+    "has_scope": 0.82,
+    "names_tech": 0.99,
+    "action_verb": 0.9,
+    "grammar": 0.25,
+    "vague_claim": 0.1
+   },
+   {
+    "text": "Mentored production leads and co-created production plans, resulting in 95% of the projects been on budget;",
+    "has_result": 0.94,
+    "has_metric": 0.98,
+    "has_scope": 0.44,
+    "names_tech": 0.04,
+    "action_verb": 0.89,
+    "grammar": 0.84,
+    "vague_claim": 0.08
+   },
+   {
+    "text": "Rebuilt the pitching pipeline to handle more pitches and raise conversion from around 5% to 15%;",
+    "has_result": 0.97,
+    "has_metric": 0.98,
+    "has_scope": 0.11,
+    "names_tech": 0.05,
+    "action_verb": 0.92,
+    "grammar": 0.28,
+    "vague_claim": 0.05
+   },
+   {
+    "text": "Shipped original IPs, IP-based games and ports on PC, Gen9/8 consoles, VR, blockchain and mobile, with 20+ projects running concurrently;",
+    "has_result": 0.21,
+    "has_metric": 0.74,
+    "has_scope": 0.89,
+    "names_tech": 0.52,
+    "action_verb": 0.82,
+    "grammar": 0.41,
+    "vague_claim": 0.05
+   }
+  ],
+  "Chimera Entertainment GmbH Munich - Germany": [
+   {
+    "text": "Technical director of 3 different AAA mobile projects with major publishers totalling over 25 different engineers; Previous technical project lead of 4 different teams into a AAA pvp synchronous multiplayer mobile game in a $5M+ production from early stage production to live ops; Corporate head of development: Hiring from juniors to lead developers; Annual reviews and feedback sessions for career growth; new pitches, due diligence and estimations and product owner of central tech architecture. Worked with Rovio, Take-2 and Paradox.",
+    "has_result": 0.17,
+    "has_metric": 0.87,
+    "has_scope": 0.99,
+    "names_tech": 0.05,
+    "action_verb": 0.46,
+    "grammar": 0.78,
+    "vague_claim": 0.33
+   },
+   {
+    "text": "Built shared architecture, tooling and guidelines so projects could be led by less experienced leads;",
+    "has_result": 0.53,
+    "has_metric": 0.03,
+    "has_scope": 0.09,
+    "names_tech": 0.03,
+    "action_verb": 0.92,
+    "grammar": 0.26,
+    "vague_claim": 0.18
+   },
+   {
+    "text": "Built 5+ internal tools for debugging, performance and automated testing, used daily by 15+ developers, cutting bug incidence by 60%;",
+    "has_result": 0.97,
+    "has_metric": 0.98,
+    "has_scope": 0.93,
+    "names_tech": 0.05,
+    "action_verb": 0.96,
+    "grammar": 0.25,
+    "vague_claim": 0.08
+   },
+   {
+    "text": "Mentored 4 developers into technical leads, resolving interpersonal and communication issues in their teams;",
+    "has_result": 0.79,
+    "has_metric": 0.71,
+    "has_scope": 0.76,
+    "names_tech": 0.02,
+    "action_verb": 0.95,
+    "grammar": 0.18,
+    "vague_claim": 0.24
+   },
+   {
+    "text": "Solely responsible for the post-launch technical roadmap; defined technical KPIs (Crash rate, DNR, backend error rates) that let stakeholders assess product quality;",
+    "has_result": 0.46,
+    "has_metric": 0.58,
+    "has_scope": 0.11,
+    "names_tech": 0.04,
+    "action_verb": 0.87,
+    "grammar": 0.41,
+    "vague_claim": 0.16
+   },
+   {
+    "text": "Designed and rolled out development-process changes that improved quality and speed each iteration (Using time spent on tasks as metric);",
+    "has_result": 0.92,
+    "has_metric": 0.07,
+    "has_scope": 0.06,
+    "names_tech": 0.03,
+    "action_verb": 0.93,
+    "grammar": 0.45,
+    "vague_claim": 0.48
+   },
+   {
+    "text": "Designed the client architecture that let 3 teams work in parallel from early development to post-launch;",
+    "has_result": 0.4,
+    "has_metric": 0.2,
+    "has_scope": 0.87,
+    "names_tech": 0.03,
+    "action_verb": 0.91,
+    "grammar": 0.39,
+    "vague_claim": 0.08
+   },
+   {
+    "text": "Rewrote from scratch the real-time multiplayer architecture of Monopoly Go and proved it at global scale in worldwide soft launch (100k CCU, 50ms latency average);",
+    "has_result": 0.89,
+    "has_metric": 0.87,
+    "has_scope": 0.95,
+    "names_tech": 0.06,
+    "action_verb": 0.92,
+    "grammar": 0.42,
+    "vague_claim": 0.07
+   },
+   {
+    "text": "Built the team's engineering culture as manager reducing turnover (from 9 months average to 2 years)",
+    "has_result": 0.96,
+    "has_metric": 0.98,
+    "has_scope": 0.13,
+    "names_tech": 0.03,
+    "action_verb": 0.93,
+    "grammar": 0.49,
+    "vague_claim": 0.22
+   }
+  ],
+  "Insolita Studios/ Kidguru Studios São Paulo - Brazil": [
+   {
+    "text": "Mainly involved in new pitches and hiring, while overseeing the development process, tools creation and all server cloud architecture; Prototypes design with the creative director.",
+    "has_result": 0.04,
+    "has_metric": 0.02,
+    "has_scope": 0.04,
+    "names_tech": 0.08,
+    "action_verb": 0.07,
+    "grammar": 0.78,
+    "vague_claim": 0.14
+   },
+   {
+    "text": "Turma do Chico Bento: Facebook/Orkut social game on one of Brazil's best-known IPs; 5M+ registered players, 500k+ MAU, 100k+ DAU, 20k peak CCU. Led the full technical implementation from prototype to live ops with weekly quests;",
+    "has_result": 0.63,
+    "has_metric": 0.93,
+    "has_scope": 0.93,
+    "names_tech": 0.42,
+    "action_verb": 0.21,
+    "grammar": 0.61,
+    "vague_claim": 0.66
+   },
+   {
+    "text": "Globo Futebol: 5-a-side football multiplayer mini-games for TV Globo, Brazil's largest TV network, likely the first large-scale web multiplayer game in Unity. Built all gameplay and the multiplayer layer;",
+    "has_result": 0.35,
+    "has_metric": 0.33,
+    "has_scope": 0.18,
+    "names_tech": 0.97,
+    "action_verb": 0.26,
+    "grammar": 0.53,
+    "vague_claim": 0.47
+   },
+   {
+    "text": "Freekscape: Escape from Hell, the first PSP game developed in Latin America ([your role]);",
+    "has_result": 0.29,
+    "has_metric": 0.04,
+    "has_scope": 0.06,
+    "names_tech": 0.46,
+    "action_verb": 0.08,
+    "grammar": 0.43,
+    "vague_claim": 0.17
+   },
+   {
+    "text": "Ludo Park, a 40-player LAN multiplayer teaching entrepreneurship. Implemented the whole economic simulation and the multiplayer layer.",
+    "has_result": 0.06,
+    "has_metric": 0.11,
+    "has_scope": 0.5,
+    "names_tech": 0.06,
+    "action_verb": 0.46,
+    "grammar": 0.32,
+    "vague_claim": 0.08
+   }
+  ],
+  "Technical and key experiences": [
+   {
+    "text": "AI driven development with SDD (Spec-driven development), with 5 systems in production",
+    "has_result": 0.55,
+    "has_metric": 0.86,
+    "has_scope": 0.6,
+    "names_tech": 0.34,
+    "action_verb": 0.07,
+    "grammar": 0.25,
+    "vague_claim": 0.17
+   },
+   {
+    "text": "Tech stack: Unity, Unreal, C++ (proprietary engines), C#, Node.js, TypeScript, React, Java, Ruby on Rails, HTML5/Phaser; CI/CD, cloud cost optimization, real-time networking.",
+    "has_result": 0.08,
+    "has_metric": 0.04,
+    "has_scope": 0.07,
+    "names_tech": 1.0,
+    "action_verb": 0.02,
+    "grammar": 0.28,
+    "vague_claim": 0.06
+   }
+  ]
+ },
+ "code_issues": [
+  "placeholder left: [your role]",
+  "conflicting 'systems in production' counts: ['4', '5']"
+ ],
+ "model": "jev-1.13.0"
+}

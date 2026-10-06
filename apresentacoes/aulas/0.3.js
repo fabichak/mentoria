@@ -10,28 +10,18 @@ window.SLIDES = [
   /* gancho */
   { tipo:'divisor',
     titulo:'Carreira não se resolve com motivação',
-    sub:'se resolve com sistema. Esse é o sistema' },
+    sub:'se resolve com sistema.' },
 
   /* recap do norte */
   { tipo:'foto', badge:'O NORTE', contain:true,
     titulo:'Mais dinheiro e caminho claro, nas 3 trilhas',
     img:'assets/caminhos-renda.svg' },
 
-  /* a pirâmide */
-  { tipo:'agenda', badge:'PARTE 1 · A PIRÂMIDE',
-    titulo:'Nas 3 de baixo você cria valor, no topo você captura',
-    itens:[
-      {k:'VALORIZAÇÃO', d:'CAPTURA · mostrar o trabalho e ser pago por ele: promoção, CV, entrevista, negociação'},
-      {k:'RESOLUÇÃO',   d:'CRIA · ferramentas pra decidir melhor e convencer pessoas'},
-      {k:'LIDERANÇA',   d:'CRIA · auto-liderança, mentalidade, tempo, emocional, gestão de pessoas'},
-      {k:'TÉCNICO',     d:'CRIA · fundação: decidir, avaliar e cobrar com propriedade'} ] },
-
-  /* erro clássico */
-  { tipo:'lista', revela:false, badge:'ERRO CLÁSSICO',
-    titulo:'Pular camada',
-    itens:[
-      {t:'Querer valorização', d:'sem ter resolvido problema visível'},
-      {t:'Empilhar técnico', d:'quando a trava está em liderança e resolução'} ] },
+  /* pirâmide visual */
+  { tipo:'piramide', badge:'PARTE 1 · A PIRÂMIDE',
+    titulo:'Método ADVANCE',
+    sub:'Nas três camadas de baixo você cria valor. No topo você captura esse valor',
+    itens:['Valorização','Resolução de problemas','Liderança e soft-skill','Técnico'] },
 
   /* pirâmide = catálogo */
   { tipo:'agenda', badge:'A PIRÂMIDE É O CATÁLOGO',
@@ -44,7 +34,7 @@ window.SLIDES = [
       {k:'BLOCO 4', d:'técnico'} ] },
 
   /* o ciclo */
-  { tipo:'cronologia', revela:true, badge:'PARTE 2 · O CICLO',
+  { tipo:'cronologia', revela:false, badge:'PARTE 2 · O CICLO',
     titulo:'Como agir no seu emprego atual',
     itens:[
       {t:'PREPARAR: onde você está, o que falta. E onde está seu time, quais problemas a empresa tem agora'},
@@ -59,7 +49,7 @@ window.SLIDES = [
     sub:'a fase que devs mais odeiam e mais precisam. Não é marketing pessoal, é tornar o trabalho visível pra quem decide' },
 
   /* exemplo */
-  { tipo:'cronologia', revela:true, badge:'EXEMPLO · DEV PLENO, 90 DIAS',
+  { tipo:'cronologia', revela:false, badge:'EXEMPLO · DEV PLENO, 90 DIAS',
     titulo:'Uma volta do ciclo',
     itens:[
       {t:'PREPARAR: time sofre com deploy manual toda sexta. Sua lacuna: visibilidade fora do squad'},
@@ -85,7 +75,7 @@ window.SLIDES = [
   /* ação prática */
   { tipo:'agenda', badge:'AÇÃO',
     titulo:'Antes do próximo vídeo',
-    texto:'Escreva 3 frases e guarde: vão pro autodiagnóstico (0.4) e pra ficha (0.10).',
+    texto:'Escreva 3 frases e guarde: vão pro autodiagnóstico e pra ficha.',
     itens:[
       {k:'HOJE',     d:'onde você está'},
       {k:'12 MESES', d:'onde quer estar'},

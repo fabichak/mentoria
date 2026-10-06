@@ -1,0 +1,575 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8">
+<link rel="stylesheet" href="ebook.css"></head><body><div class="capa">
+<img src="assets/logo.png" class="capa-logo" alt="DevAdvance Club">
+<p class="capa-kicker">DEVADVANCE CLUB · EBOOK</p>
+<h1 class="capa-titulo">Guia de entrevista para desenvolvedores</h1>
+<p class="capa-sub">O processo que eu usaria hoje para conseguir uma vaga em tecnologia</p>
+<p class="capa-autor">Martin Fabichak · DEVADVANCE CLUB</p>
+</div>
+
+<h1>Quem sou eu</h1>
+<p><img src="assets/martin.png" class="foto" alt="Martin Fabichak"></p>
+<p>Oi! Meu nome é Martin eu comecei a programar ainda adolescente, fazendo animação em Flash e scripts em ActionScript. Depois vieram uns scripts para servidores de Ultima Online, que eram basicamente a minha desculpa para jogar mais. Entrei em Matemática Aplicada e Computacional no IME-USP, me formei com honra ao mérito em 2009 e, no meio do caminho, já estava trabalhando com PHP, HTML e jogos de propaganda, desde 2007. Não tinha Git. Não tinha CSS.</p>
+<p>Os jogos me levaram a programar C++ para multiplayer, e rede virou a coisa que eu sei fazer melhor, até hoje. Me tornei sócio e diretor técnico da Insolita Studios em 2008, e fizemos o primeiro jogo de PSP da América Latina (Freekscape: Escape from hell), um jogo multiplayer de futebol para a Globo e o jogo da Turma do Chico Bento no Facebook e no Orkut, que passou de 5 milhões de jogadores cadastrados e 20k CCU.</p>
+<p>Em 2015 fui para a Alemanha. Liderei um time com gente do mundo inteiro (Polônia, Finlândia, Armênia, México, Bósnia etc.). Era backend que não escalava, bug que ninguém admitia ser bug, todo tipo de problema. Eu provei que o problema existia em outras equipes também, juntei três ou quatro times para fazer load test e resolvemos. Foi a primeira vez que percebi que o meu diferencial não era só técnico: era chegar com um plano, sentar para programar junto e convencer gente que não se reportava a mim, para alcançar meus objetivos. Foi lá também que eu conheci o Larry, o meu mentor, que mudou o rumo da minha carreira e da minha vida. Sem ele, eu não estaria escrevendo isso.</p>
+<p>Na Chimera, em Munique, virei Head of Development aos 30. Reescrevi do zero a arquitetura do Monopoly Go, jogo 100% multiplayer, que depois rodou no mundo inteiro em soft-launch e trabalhei com a Rovio, Take-2 e Paradox.</p>
+<p>E finalmente, em 2001 me tornei CTO na Magic Media, onde fiquei por quase cinco anos, a partir dos 34: vendi mais de 25 milhões de dólares em projetos, cheguei a liderar 160 engenheiros e mais de 20 projetos rodando ao mesmo tempo. E contratei mais de 100 pessoas.</p>
+<p>É por isso que este ebook existe. Passei anos do lado de lá da mesa. Fiz centenas de entrevistas e vi gente boa sendo reprovada por motivos que tinham conserto. Mas eu já fui o candidato nervoso e hoje ajudo devs a cuidarem da carreira com intencionalidade, em vez de esperar ela acontecer.</p>
+<h1>O DevAdvance Club</h1>
+<p>O DevAdvance Club é uma comunidade de devs que querem crescer na carreira com método. Dentro dele roda o <strong>Programa ADVANCE</strong>, a minha mentoria, que ensina o que nenhum outro curso ensina: soft skills, liderança e resolução de problemas.</p>
+<p>O método tem quatro camadas:</p>
+<ol>
+<li><strong>Técnico.</strong> A base. Como tomar decisões técnicas e usar dados para influenciar o desenvolvimento.</li>
+<li><strong>Liderança e soft skills.</strong> Gestão: 1:1, feedback, delegação, contratação, e a parte que ninguém ensina: parar de se sabotar, comunicação.</li>
+<li><strong>Resolução de problemas.</strong> Métricas, KPIs, OKRs, crises, débito técnico, como tomar decisões por dado em vez de achismo e como convencer pessoas.</li>
+<li><strong>Valorização.</strong> Ser reconhecido e pago pelo valor que você já gera. É aqui que moram CV, LinkedIn, entrevistas e negociação, e é daqui que este ebook saiu.</li>
+</ol>
+<p>Nas três camadas de baixo você cria valor. Na de cima, você captura esse valor.</p>
+<p>Na prática, uma semana no programa é assim: um dia você faz um check-in rápido (o que fez, onde travou, o próximo passo), e eu respondo pessoalmente, em áudio ou texto, em 48h. Toda semana tem um encontro ao vivo com conteúdo e hot seats, que são 20-30 minutos inteiros em cima do problema real de alguém: a proposta, a promoção, o time que não entrega. Você também entra num pod de até seis pessoas com objetivo parecido, que se encontram quase toda semana e cobram uns aos outros. Terça e quinta tem office hours abertas pra conversar comigo. E tem mais de 60 aulas gravadas, a base teórica pra crescer na sua carreira.</p>
+<p>O 1:1 comigo acontece nos momentos que decidem: no onboarding, quando a gente monta seu plano (meta de 12 meses, objetivo de 90 dias e tarefas a serem cumpridas), nos pods, na reunião semanal e nos office hours.</p>
+<p>E pra terminar, temos nossa comunidade no Discord. Conversamos, trocamos vagas e dicas, e também aparecem outras oportunidades de ganhar dinheiro com a própria comunidade.</p>
+<p>Conteúdo você encontra em qualquer lugar, inclusive neste ebook. O que muda carreira é direção, cobrança e alguém experiente olhando as suas decisões. Se fizer sentido para você, o endereço é <strong>devadvance.club</strong> ou fale comigo no WhatsApp: (12) 99785-8529</p>
+<h1>Antes de tudo: três verdades sobre entrevista</h1>
+<p>Se você guardar só uma coisa deste ebook, que seja esta: <strong>entrevista é uma habilidade, e habilidade se treina.</strong> Não é um julgamento sobre o seu valor como pessoa, nem uma prova de que você "é bom" ou "é ruim". É uma conversa com formato previsível, e quem pratica esse formato vai melhor. Ponto.</p>
+<p>A segunda verdade é que as entrevistas são muito mais parecidas entre si do que parecem. Muda a empresa, muda o sotaque do recrutador, mas as perguntas se repetem. "Me fala de você." "Por que você quer sair da sua empresa atual?" "Conta de um conflito." "Como você resolveria este problema?" Depois de dez entrevistas você vai notar que já ouviu quase tudo. Depois de vinte, vai ter resposta pronta para quase tudo.</p>
+<p>A terceira é a mais difícil de engolir: <strong>existe muito timing envolvido.</strong> Você pode passar numa empresa numa semana e ser reprovado na seguinte. O orçamento do time foi congelado. O gestor saiu. Apareceu um candidato interno. O entrevistador dormiu mal. Nada disso tem a ver com você, e uma reprovação isolada não diz nada sobre a sua capacidade. Fica triste, é normal. Depois segue o jogo, prepara pra próxima.</p>
+<p>Mas cuidado. "Foi timing" é uma explicação ótima para <em>uma</em> reprovação e uma desculpa péssima para <em>cinco reprovações na mesma etapa</em>. Se você cai sempre no teste técnico, não é timing. É o teste técnico. O resto do processo existe exatamente para separar o que é azar do que é padrão.</p>
+<p>O processo tem seis passos:</p>
+<ol>
+<li>Escolher a vaga alvo e entender o mercado</li>
+<li>Mapear o que você sabe e o que falta</li>
+<li>Fechar as lacunas que importam</li>
+<li>Reescrever CV e LinkedIn</li>
+<li>Se candidatar com volume e medir o funil</li>
+<li>Fazer entrevistas, registrar resultados, revisar e repetir</li>
+</ol>
+<h1>Passo 1: escolha o alvo e leia o mercado</h1>
+<p>Existem dois caminhos, e é bom você saber em qual está antes de começar.</p>
+<p><strong>Caminho 1: uma vaga parecida com a que você já tem, ou um degrau acima.</strong> Sua experiência atual é suficiente, ou quase. É o caminho mais curto, e é o que eu recomendo para a maioria das pessoas. Pleno indo para sênior, sênior indo para tech lead ou staff, dev de uma fintech indo para outra.</p>
+<p><strong>Caminho 2: mudar de área.</strong> Do front para o back, de agência para produto, de jogos para banco, de dev para dados. Dá, mas custa mais: além da tecnologia, você vai precisar aprender o contexto do negócio, e vai concorrer com gente que já tem esse contexto. Conta com mais tempo e mais entrevistas. Mas é possível sim.</p>
+<p>Um aviso sobre o caminho 2: a mudança de área mais fácil que existe é <strong>dentro da empresa onde você já está.</strong> Lá você já tem reputação, e o gestor da outra área pode te testar sem risco. Antes de mandar currículo para fora, pergunta se isso é possível aí dentro.</p>
+<h2>Descubra 10 a 20 vagas de verdade</h2>
+<p>Independente do caminho, o primeiro trabalho é de pesquisa. Entra no LinkedIn, no Gupy, no Programathor, no site de carreiras das empresas que você admira, e separa de 10 a 20 vagas que você gostaria de conseguir. Vagas próximas da sua experiência e, de preferência, um passo acima.</p>
+<p>Salve cada uma como PDF ou .md (só o anúncio, sem o resto da página) e joga tudo numa LLM com o prompt do Anexo D. A ideia é descobrir o que o mercado está pedindo de fato para o cargo que você quer: o que aparece em quase todas as vagas, o que aparece em metade, e o que é enfeite.</p>
+<p>E aqui vai uma coisa que muita gente não sabe: <strong>anúncio de vaga é lista de desejos.</strong> Quem escreveu pediu o candidato perfeito, sabendo que ele não existe. Se você cobre uns 70% do que é pedido e todos os itens que aparecem como obrigatórios em quase todas as vagas, se candidata. Esperar cumprir 100% é a forma mais comum de nunca se candidatar e esse candidato quase nunca existe.</p>
+<h1>Passo 2: o que você tem e o que falta</h1>
+<p>Pega o resumo que a LLM gerou e monta uma tabela simples. Uma linha para cada requisito, e três colunas como no exemplo abaixo:</p>
+<table>
+<thead>
+<tr>
+<th>Requisito</th>
+<th>Frequência nas vagas</th>
+<th>Onde eu estou</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Node.js / TypeScript</td>
+<td>18 de 20</td>
+<td>Tenho: 4 anos em produção</td>
+</tr>
+<tr>
+<td>AWS</td>
+<td>15 de 20</td>
+<td>Parcial: uso S3 e Lambda, nunca montei nada do zero</td>
+</tr>
+<tr>
+<td>Mensageria (Kafka/SQS)</td>
+<td>11 de 20</td>
+<td>Não tenho</td>
+</tr>
+<tr>
+<td>Liderança técnica</td>
+<td>9 de 20</td>
+<td>Tenho, mas nunca escrevi isso no CV</td>
+</tr>
+<tr>
+<td>Kubernetes</td>
+<td>4 de 20</td>
+<td>Não tenho, e é pouco pedido</td>
+</tr>
+</tbody>
+</table>
+<p>Seja honesto na terceira coluna. "Já vi num tutorial" não é "tenho". Ter experiência em produção é o ideal. Se você não tem, pelo menos um teste/projeto no GitHub.</p>
+<p>Com a tabela pronta, a decisão fica quase óbvia. O que você <strong>tem</strong> vai para o CV, com prova (Passo 4). O que você <strong>não tem e aparece muito</strong> vira plano de estudo (Passo 3). O que você não tem e aparece pouco, esquece por enquanto. Você não precisa de Kubernetes se só 4 de 20 vagas pedem.</p>
+<p>Repara no item "liderança técnica" da tabela. Ele é o mais comum de todos: gente que <em>tem</em> a experiência e não fala dela. Muitas vezes a lacuna não está no seu conhecimento, está no seu currículo. E também temos que considerar que este é um termo razoavelmente abstrato.</p>
+<h1>Passo 3: feche as lacunas que importam</h1>
+<h2>Lacuna técnica</h2>
+<p>Para um framework, um provedor de cloud (AWS/Azure), uma ferramenta que aparece em muitas vagas e você não domina, a versão enxuta é esta:</p>
+<ol>
+<li><strong>Descubra os conceitos básicos da área.</strong> Não tudo. Ninguém aprende React ou AWS inteiros sem ter colocado algo em produção. Mas toda tecnologia tem um núcleo que qualquer entrevistador espera que você saiba.</li>
+<li><strong>Construa um projeto pequeno que resolva um problema de verdade.</strong> Não um "hello world na AWS": uma API que recebe um arquivo, guarda no S3, processa numa fila e avisa quando terminou. Um projeto com uma decisão difícil dentro vale mais que cinco tutoriais repetidos. E coloque tudo no GitHub.</li>
+<li><strong>Escreva um README muito bem explicado.</strong> O que o projeto faz, como rodar, e principalmente <em>por que</em> você fez cada escolha e o que faria diferente com mais tempo. O README é onde você prova que entende.</li>
+<li><strong>Explique o projeto em voz alta.</strong> Grava um vídeo para pôr no README explicando o projeto, tecnicamente. O código pode até ter sido escrito com ajuda de uma LLM, tudo bem. Mas você precisa conseguir explicar cada linha e cada decisão, porque é exatamente isso que o entrevistador vai perguntar. Você não precisa passar por todas as linhas, mas é bom passar pela arquitetura e regras de negócio importantes. No geral: provar que você entende o CONCEITO por trás do framework.</li>
+</ol>
+<p>Sobre GitHub: recrutador de RH raramente abre. Quem abre é o gestor técnico e ele vai olhar um ou dois repositórios, não vinte. Então é melhor ter dois projetos bons e fixados no perfil do que trinta forks e exercícios de curso.</p>
+<p>E o ponto mais importante desta seção: <strong>projeto pessoal não é experiência profissional, e você não deve apresentar como se fosse.</strong> No CV, ele entra numa seção de projetos, com o nome certo. Na entrevista, você fala "não usei isso em produção, mas construí tal coisa e aprendi tal coisa". Essa frase honesta passa muito mais confiança do que um "sim, tenho experiência com Kafka" que desmorona na segunda pergunta.</p>
+<h2>Certificação</h2>
+<p>Em algumas áreas, certificação pesa: nuvem, segurança, consultorias e empresas que vendem para governo. Descubra se é o seu caso olhando a sua tabela do Passo 2. Se as vagas pedem, tente fazer as certificações.</p>
+<p>Mas cuidado com a certificação "mais fácil". A AWS Cloud Practitioner, por exemplo, é pensada para quem não é técnico. Para um dev, ela quase não diz nada. Se for tirar uma, mira no nível associate (AWS Developer ou Solutions Architect Associate, AZ-204 na Azure, Associate Cloud Engineer no Google). Dá mais trabalho, e é por isso que vale mais.</p>
+<h2>Como descobrir o que é "básico"</h2>
+<p>YouTube e LLM ajudam a montar a primeira lista. Mas a melhor fonte é <strong>gente que trabalha com aquilo, de preferência nas empresas onde você quer entrar.</strong> Manda uma mensagem curta no LinkedIn, dizendo o que você está tentando aprender e pedindo 20 minutos de call ou umas perguntas por mensagem. Tem até um modelo no Anexo D.</p>
+<p>A maioria dos devs responde. Nem todos, e tudo bem: manda para dez, conversa com três ou quatro. E presta atenção: essa conversa às vezes termina com a pessoa perguntando "quer que eu te indique?". <strong>Indicação é, de longe, o canal que mais converte em contratação.</strong> Nunca peça logo de cara. Mas também não finja que não quer.</p>
+<h2>Lacuna de domínio (caminho 2)</h2>
+<p>Se você está mudando de área, a tecnologia é só metade. A outra metade é o negócio. Em banco, por exemplo: segurança, conciliação, diferença entre Pix, TED, boleto e cartão, o que é uma transação internacional, o que o Banco Central regula. Em saúde: prontuário, LGPD de dado sensível, integração com laboratório. Em jogos: game loop, rede, monetização, live ops.</p>
+<p>O jeito de aprender é o mesmo: lista de conceitos, conversa com quem trabalha na área, e um projeto pequeno que use aquele vocabulário. Na entrevista, falar a língua do negócio é o que separa você do candidato que "sabe programar, mas nunca trabalhou com isso".</p>
+<p>Isso também mostra proatividade e que você quer muito passar na vaga, o que conta MUITO.</p>
+<h1>Passo 4: CV e LinkedIn</h1>
+<p>Não precisa terminar todos os projetos do Passo 3 para mexer no currículo. Começa agora, porque ele é o gargalo de quase todo mundo.</p>
+<p>Três regras:</p>
+<p><strong>1. Mostre o resultado, e deixe a tecnologia como contexto.</strong> "Desenvolvi APIs em Node.js" é uma descrição de cargo. "Reduzi o tempo de resposta do checkout de 2,3s para 400ms reescrevendo as consultas em Node.js e adicionando cache em Redis" é uma conquista. A tecnologia continua lá, e precisa continuar, porque recrutador e ATS filtram por palavra-chave. Só que agora ela está servindo a um resultado.</p>
+<p><strong>2. Abra o CV com um resumo das suas maiores conquistas.</strong> Resumo no topo, dizendo quem você é, em que nível, e as duas ou três coisas que você fez que mais importam para a vaga. Muito recrutador decide nesses primeiros segundos se continua lendo.</p>
+<p><strong>3. Mostre impacto e escopo.</strong> Quanto você economizou, acelerou, destravou, vendeu. Quantas pessoas, quantos usuários, quantos times dependiam daquilo. Se você não tem o número exato, use uma estimativa honesta ("cerca de", "mais de"), e esteja pronto para explicar de onde ela veio e como foi mensurada. Número inventado é pior que nenhum número.</p>
+<p>Use as palavras da sua tabela do Passo 2. Se 18 de 20 vagas pedem "TypeScript", a palavra "TypeScript" tem que estar no seu CV, e não só "JS/TS" perdido numa lista.</p>
+<p>E faz uma versão levemente ajustada para cada <em>tipo</em> de vaga. Não para cada vaga: para cada tipo. Uma versão backend, uma versão tech lead, se você está mirando os dois. <strong>Por isso, comece focando em UM tipo de vaga</strong>.</p>
+<p>No LinkedIn a lógica é a mesma, com mais espaço. O título não precisa ser só o cargo: "Tech Lead Backend · Node.js, AWS · pagamentos e sistemas de alta escala" aparece muito mais em busca de recrutador do que "Desenvolvedor na Empresa X". O "Sobre" pode contar a história em primeira pessoa. E liga o "aberto a oportunidades" para recrutadores (a opção privada, sem a moldura verde, se você está empregado).</p>
+<p>Tem exemplos de antes e depois no Anexo A.</p>
+<h1>Passo 5: candidatura com volume, e com método</h1>
+<p>Divida todas as vagas que achar para se candidatar em dois grupos:</p>
+<ul>
+<li><strong>Vagas de treino.</strong> Empresas e vagas que você aceitaria, mas não são o sonho. Outra cidade, modelo híbrido, um segmento que você acha ok. É aqui que você erra as primeiras vezes, fica nervoso, descobre as perguntas que não sabe.</li>
+<li><strong>Vagas-alvo.</strong> As empresas que você realmente quer. Você entra nelas depois de umas cinco ou seis entrevistas de treino, quando já está afiado. Deixe para depois.</li>
+</ul>
+<p>Pode se candidatar sabendo que não vai aceitar? Pode. Não é perfeito, mas é bom pra treinar, e é necessário às vezes.</p>
+<h2>Meça o funil</h2>
+<p>Monta uma planilha simples (modelo no Anexo E) e registra cada candidatura: empresa, vaga, data, canal (candidatura direta, recrutador, indicação) e até que etapa você chegou.</p>
+<p>Parece burocracia mas não é. Essa planilha é o que vai te dizer, daqui a um mês, <em>onde</em> o seu processo está quebrado. E vamos usar isso pra treinar ainda mais o que está errado.</p>
+<h1>Passo 6: entrevistar, registrar, revisar</h1>
+<h2>Antes</h2>
+<p><strong>Monte um banco de respostas, não um roteiro.</strong> Decorar resposta palavra por palavra deixa a fala robótica, e entrevistador experiente percebe na hora. Em vez disso, escolhe de seis a oito histórias reais da sua carreira: um problema difícil que você resolveu, um conflito, um erro seu, uma entrega sob pressão, uma vez em que você liderou sem ter o cargo, uma decisão técnica que você defendeu. Com oito histórias bem contadas você responde praticamente qualquer pergunta comportamental, adaptando na hora.</p>
+<p><strong>Treine em voz alta, e ouça a si mesmo.</strong> Grave-se respondendo às perguntas do Anexo B no celular e ouve depois. Você vai perceber os "né", as respostas de quatro minutos, as histórias que não chegam no resultado. Melhor ainda: pede para alguém fazer uma entrevista simulada com você. (Num pod do DevAdvance, é o tipo de coisa que a gente faz toda semana.)</p>
+<p><strong>Estude a empresa por meia hora.</strong> O que ela vende, quem são os clientes, o que saiu na imprensa, quem vai te entrevistar (olha o LinkedIn da pessoa), olhe o Glassdoor e o perfil no Instagram. E prepare duas ou três perguntas para fazer no final. Tem sugestões no Anexo B.</p>
+<p><strong>Arrume o ambiente.</strong> Para empresa tradicional, como banco, uma camisa social resolve, sem precisar de terno. Para empresa de jogos ou startup, pode ser mais casual. Na dúvida, vista-se um pouco melhor que o time da empresa. Fundo limpo, sem gente nem bicho passando, luz na frente do rosto e não atrás. E testa câmera, microfone e internet dez minutos antes, não na hora.</p>
+<h2>Durante</h2>
+<p><strong>Pense em voz alta nas perguntas técnicas.</strong> O entrevistador está avaliando como você raciocina, não só se você chega na resposta. Silêncio de dois minutos seguido de uma resposta certa vale menos que um raciocínio visível que chega quase lá.</p>
+<p><strong>Quando não souber, diga.</strong> "Não sei, mas eu começaria olhando tal coisa" é uma resposta boa. Inventar é a pior resposta possível, porque o entrevistador quase sempre sabe mais que você sobre aquela pergunta específica.</p>
+<p><strong>Se o entrevistador discordar de você</strong>, não brigue e não se dobre. Pergunte o raciocínio dele, explique o seu uma vez, e siga. Depois da entrevista você vai pesquisar quem estava certo. E às vezes vai ser ele, às vezes você. Entrevistador também erra, e não é raro. Mas a entrevista não é o lugar para provar isso.</p>
+<p><strong>Grave a entrevista</strong>. No Brasil, gravar uma conversa da qual você participa em geral não é crime, mas muita empresa proíbe em política interna, e se descobrirem você sai do processo. Em outros países pode ser crime mesmo: na Alemanha e em alguns estados americanos, gravar sem consentimento dá processo. Então grave, e tenha certeza de que está seguro e ninguém mais vai ver. Vamos usar o transcript para depois da entrevista.</p>
+<p>E uma coisa que precisa ser dita em 2026: <strong>não use IA escondida durante a entrevista.</strong> Ferramenta que "sopra" resposta em tempo real é detectável (o olhar desvia, o ritmo muda, a resposta vem perfeita demais e rasa demais), e quem é pego é eliminado e lembrado. Além de ser trapaça, ela te tira exatamente o treino que você foi buscar.</p>
+<h2>Depois</h2>
+<p><strong>Nos primeiros dez minutos depois da call, despeje tudo.</strong> Abre um app de ditado (Wispr Flow, o gravador do celular, qualquer um) e fala tudo o que você lembra: cada pergunta, o que você respondeu, onde travou, o que achou que foi bem. A memória some rápido. Se você gravou com permissão, transcreve o áudio.</p>
+<p><strong>Joga isso num documento único de perguntas.</strong> Uma LLM pode extrair as perguntas e classificar entre comportamentais e técnicas (prompt no Anexo D). Com o tempo, esse documento vira o seu material de estudo mais valioso, porque é feito das perguntas que o <em>seu</em> mercado faz, e não de lista genérica da internet.</p>
+<p>Com o documento crescendo:</p>
+<ul>
+<li>Atualize depois de toda entrevista.</li>
+<li>Revise uma vez por semana.</li>
+<li>Estude os conceitos por trás das perguntas técnicas que você errou. Use a LLM para entender, mas escreva a resposta final com as suas palavras. Resposta com cara de ChatGPT soa como resposta com cara de ChatGPT.</li>
+<li>Treine em voz alta as perguntas que mais se repetem.</li>
+</ul>
+<p><strong>Peça feedback quando for reprovado.</strong> Responde o e-mail de reprovação agradecendo e pergunta, de forma curta, se a pessoa pode compartilhar um ou dois pontos para você melhorar. Se o processo foi longo e você teve boa relação com a recrutadora, pode perguntar se ela topa uma ligação de cinco minutos. Mas saiba que muita empresa não dá feedback detalhado por política (medo de processo), e insistir queima a relação. Pergunte uma vez. O que vier é lucro.</p>
+<p><strong>Quando a proposta chegar, não responda na hora.</strong> Agradeça, peça a proposta por escrito e um ou dois dias para avaliar. Quase toda proposta tem alguma margem, e a hora de negociar é antes de aceitar, nunca depois.</p>
+<h1>Quando não está funcionando</h1>
+<p>Se você fez muitas entrevistas e não passou em nenhuma, a pergunta certa não é "o que tem de errado comigo?". É "<strong>em que etapa eu estou caindo?</strong>". Abre a planilha do funil.</p>
+<table>
+<thead>
+<tr>
+<th>Onde você cai</th>
+<th>O que provavelmente é</th>
+<th>O que fazer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Se candidata e ninguém responde (menos de 1 retorno a cada 10 ou 15 candidaturas)</td>
+<td>CV, LinkedIn ou vagas erradas para o seu nível</td>
+<td>Refaça o Passo 4. Peça para alguém sênior ler seu CV. Busque indicação. Confira se não está mirando alto demais</td>
+</tr>
+<tr>
+<td>Passa pelo RH e cai na primeira conversa</td>
+<td>Comunicação, motivação mal explicada, pretensão salarial desalinhada</td>
+<td>Grave as respostas do Anexo B e ouça. Revise o seu "por que quero sair"</td>
+</tr>
+<tr>
+<td>Cai no técnico</td>
+<td>Lacuna técnica real</td>
+<td>Volte ao Passo 3, usando o seu documento de perguntas como mapa</td>
+</tr>
+<tr>
+<td>Chega na final e não leva</td>
+<td>Comparação com outro candidato, fit, senioridade percebida, ou timing</td>
+<td>Peça feedback. Reforce histórias de impacto e liderança. Aqui o timing pesa de verdade</td>
+</tr>
+</tbody>
+</table>
+<p>Uma regra de bolso: se você chegou a umas <strong>10 entrevistas de verdade</strong> (não candidaturas, entrevistas) e continua caindo na mesma etapa, algo precisa mudar. As opções são:</p>
+<ul>
+<li>Aprofundar a parte técnica, com projetos mais completos e revisando os que você já tem.</li>
+<li>Mirar em outro segmento, onde o seu perfil é mais raro.</li>
+<li>Descer um degrau. Tentar pleno em vez de sênior, por exemplo. Isso não é fracasso. Entrar um nível abaixo numa empresa melhor, e subir lá dentro em um ano, é uma das jogadas de carreira mais subestimadas e é ótimo.</li>
+</ul>
+<p>E se você não sabe dizer em que etapa está caindo, é porque não fez a planilha. <strong>Faça a planilha.</strong></p>
+<h1>Próximo passo</h1>
+<p>Este ebook é o processo. Ele funciona se você fizer, e a parte difícil nunca foi saber o que fazer: é continuar fazendo na décima reprovação, quando dá vontade de largar tudo.</p>
+<p>É para isso que existe o Programa ADVANCE. Check-in toda semana, alguém que já contratou mais de 100 pessoas olhando o seu CV e as suas respostas, um pod de gente passando pela mesma coisa, e hot seats onde a gente simula a entrevista antes da entrevista.</p>
+<p>Se quiser conversar, me chama em <strong>devadvance.club</strong> ou no WhatsApp: (12) 99785-8529</p>
+<p>Boa entrevista. E lembra: é treino. Você pode, você merece.</p>
+<h1>Anexo A · Currículo: antes e depois</h1>
+<p>A regra de todos os exemplos é a mesma: <strong>verbo de ação + o que você fez + resultado com número + tecnologia como contexto.</strong> Os números abaixo são exemplos. Use os seus.</p>
+<h2>Resumo do topo</h2>
+<p><strong>Antes</strong></p>
+<blockquote>
+<p>Desenvolvedor Full Stack com 6 anos de experiência, proativo, apaixonado por tecnologia e com facilidade para trabalhar em equipe. Conhecimentos em React, Node.js, AWS, Docker, SQL e metodologias ágeis.</p>
+</blockquote>
+<p>Qualquer pessoa pode escrever isso. "Proativo" e "apaixonado" não provam nada, e a lista de tecnologias não diz o que você fez com elas.</p>
+<p><strong>Depois</strong></p>
+<blockquote>
+<p>Desenvolvedor sênior com 6 anos em produtos de pagamento, os últimos 2 como referência técnica de um time de 5 pessoas. Liderei a migração do monolito de cobrança para serviços em Node.js na AWS, reduzindo incidentes em produção em 60%. Experiência com sistemas de alto volume (2 milhões de transações por mês), React e TypeScript.</p>
+</blockquote>
+<h2>Experiência: backend</h2>
+<p><strong>Antes:</strong> Desenvolvimento e manutenção de APIs REST em Node.js.</p>
+<p><strong>Depois:</strong> Reescrevi as consultas e adicionei cache em Redis nas APIs de checkout, reduzindo o tempo de resposta de 2,3s para 400ms e a taxa de abandono em 8%.</p>
+<p><strong>Antes:</strong> Responsável pela integração com gateways de pagamento.</p>
+<p><strong>Depois:</strong> Integrei 3 gateways de pagamento com fallback automático entre eles, o que eliminou as quedas de checkout quando um provedor saía do ar (antes, cerca de 4 por mês).</p>
+<h2>Experiência: frontend</h2>
+<p><strong>Antes:</strong> Desenvolvimento de telas em React seguindo o design system.</p>
+<p><strong>Depois:</strong> Criei 40 componentes do design system em React e TypeScript, hoje usados por 4 times, o que cortou pela metade o tempo de entrega de telas novas.</p>
+<p><strong>Antes:</strong> Melhorias de performance no site.</p>
+<p><strong>Depois:</strong> Reduzi o LCP da página de produto de 4,1s para 1,8s com lazy loading e divisão de bundle, o que acompanhou um aumento de 12% na conversão mobile.</p>
+<h2>Experiência: infra e qualidade</h2>
+<p><strong>Antes:</strong> Configuração de pipelines de CI/CD.</p>
+<p><strong>Depois:</strong> Montei o pipeline de CI/CD no GitHub Actions com testes automatizados e deploy por branch, levando os deploys de 1 por semana (manual, às sextas) para 10 por dia.</p>
+<p><strong>Antes:</strong> Escrita de testes unitários.</p>
+<p><strong>Depois:</strong> Subi a cobertura de testes do módulo de faturamento de 15% para 70%, e os bugs de faturamento reportados por clientes caíram de 20 para 3 por trimestre.</p>
+<h2>Experiência: liderança</h2>
+<p><strong>Antes:</strong> Tech lead de um time de desenvolvimento.</p>
+<p><strong>Depois:</strong> Tech lead de 6 devs. Implantei 1:1 quinzenal e revisão de código por pares; em 12 meses, 2 pessoas do time foram promovidas e ninguém pediu demissão.</p>
+<p><strong>Antes:</strong> Participação em processos seletivos.</p>
+<p><strong>Depois:</strong> Redesenhei a entrevista técnica do time (de teste teórico para pair programming com problema real), entrevistei mais de 40 candidatos e contratei 5, todos aprovados no período de experiência.</p>
+<h2>Projeto pessoal (sem fingir que é experiência)</h2>
+<p><strong>Antes:</strong> Conhecimento em AWS e mensageria.</p>
+<p><strong>Depois (na seção Projetos):</strong> <em>Processador de notas fiscais.</em> API em Node.js que recebe XMLs, enfileira no SQS e processa com Lambda, com retentativa e fila de erros. README com as decisões de arquitetura e os custos estimados. github.com/seu-usuario/processador-nf</p>
+<h2>Se você não tem números</h2>
+<p>Nem todo mundo tem acesso a métricas, principalmente em início de carreira. Nesse caso, mostre <strong>escopo</strong> e <strong>consequência</strong>:</p>
+<ul>
+<li>Quem usava o que você fez? ("usado diariamente por 30 atendentes")</li>
+<li>O que deixou de acontecer? ("acabou com a planilha manual de conciliação")</li>
+<li>Quanto tempo economizou, mesmo estimado? ("cerca de 5 horas por semana do time financeiro")</li>
+<li>Quem pediu, e para quê? ("pedido pela diretoria para a auditoria anual")</li>
+</ul>
+<h2>LinkedIn</h2>
+<p><strong>Título, antes:</strong> Desenvolvedor na Empresa X</p>
+<p><strong>Título, depois:</strong> Desenvolvedor Backend Sênior · Node.js, TypeScript, AWS · Pagamentos e sistemas de alto volume</p>
+<p><strong>"Sobre", depois (exemplo):</strong></p>
+<blockquote>
+<p>Trabalho há seis anos com sistemas de pagamento. Gosto do tipo de problema em que um erro custa dinheiro de verdade, e por isso gosto de teste, de observabilidade e de deploy pequeno.</p>
+<p>Na Empresa X, liderei a migração do sistema de cobrança para serviços na AWS e ajudei o time a sair de um deploy por semana para dez por dia. Hoje sou a referência técnica de um time de cinco pessoas.</p>
+<p>Quero continuar em produto financeiro, de preferência num papel com mais liderança técnica. Se você trabalha com isso, me chama para conversar.</p>
+</blockquote>
+<h1>Anexo B · Perguntas de RH e comportamentais</h1>
+<p>Para cada pergunta: o que o entrevistador quer descobrir de verdade, e como responder. <strong>Não decore frases.</strong> Use as suas histórias (o banco de 6 a 8 histórias do Passo 6) e adapte.</p>
+<h2>As que aparecem em quase toda entrevista</h2>
+<p><strong>"Me fala um pouco sobre você."</strong>
+Querem ver se você consegue se apresentar de forma organizada, e se o seu perfil bate com a vaga. Responda em até três minutos: quem você é profissionalmente hoje, uma ou duas conquistas relevantes para a vaga, e por que você está conversando com eles. Não conte a vida desde a faculdade. Foque no que é relevante.</p>
+<p><strong>"Por que você quer sair do seu emprego atual?"</strong> (ou "por que saiu?")
+Querem saber se você é problema e se vai sair deles também. Fale do que você está <em>buscando</em>, não do que está fugindo. "Quero trabalhar com sistemas de maior escala, e lá o produto estabilizou" é boa. "Meu chefe é péssimo" é ruim, mesmo que seja verdade. Se foi demitido num layoff, diga isso direto; é comum e ninguém julga.</p>
+<p><strong>"Por que essa empresa?"</strong>
+Querem saber se você pesquisou ou está atirando para todo lado. Cite algo específico: o produto, um desafio técnico que eles descreveram, um post do blog de engenharia, alguém que trabalha lá e falou bem.</p>
+<p><strong>"Quais são seus pontos fortes?"</strong>
+Um ou dois, com prova. "Sou bom em destravar problemas entre times: na Empresa X, eu..." vale mais que cinco adjetivos.</p>
+<p><strong>"E seus pontos fracos?"</strong>
+Querem ver autoconhecimento. Escolha uma fraqueza real, que não seja central para a vaga, e mostre o que você está fazendo sobre ela. Fuja do clichê "sou perfeccionista". Todo recrutador já ouviu mil vezes.</p>
+<p><strong>"Onde você se vê em cinco anos?"</strong>
+Querem saber se a vaga faz sentido no seu plano e se você vai ficar. Fale de direção (mais liderança técnica, mais profundidade em tal área), não de cargo exato. E não diga "no seu lugar".</p>
+<p><strong>"Qual a sua pretensão salarial?"</strong>
+Querem saber se você cabe no orçamento. Pesquise antes (Glassdoor, levels.fyi, conversas com gente da área) e tenha uma <strong>faixa</strong>. Se possível, pergunte primeiro: "Qual é a faixa prevista para a vaga?". Se insistirem, dê a faixa e deixe claro que depende do pacote todo (benefícios, bônus, modelo de contratação CLT ou PJ). Nunca diga um número que você não aceitaria.</p>
+<p><strong>"Por que devemos te contratar?"</strong>
+Resuma em três frases a ligação entre o que a vaga pede e o que você já provou que faz. É basicamente o seu resumo do topo do CV, dito em voz alta. Demonstre também interesse e motivação para crescer.</p>
+<p><strong>"Você tem alguma pergunta?"</strong>
+Sempre tenha. Não ter pergunta soa como falta de interesse. Sugestões mais abaixo.</p>
+<h2>Outras perguntas comportamentais</h2>
+<ul>
+<li>"Conta de uma vez que você discordou do seu gestor ou de um colega. O que aconteceu?"</li>
+<li>"Conta de um erro que você cometeu em produção."</li>
+<li>"Conta de um projeto que atrasou ou deu errado. O que você aprendeu?"</li>
+<li>"Conta de uma vez em que você teve que entregar com prazo apertado."</li>
+<li>"Conta de uma situação com um colega difícil."</li>
+<li>"Conta de uma vez em que você teve que aprender algo novo muito rápido."</li>
+<li>"Conta de uma decisão técnica que você tomou e depois se arrependeu."</li>
+<li>"Conta de uma vez que você influenciou uma decisão sem ter autoridade formal."</li>
+<li>"Como você lida com prioridade que muda toda semana?"</li>
+<li>"Conta de um feedback difícil que você recebeu. O que fez com ele?"</li>
+</ul>
+<p><strong>Para quem mira liderança</strong>, some estas:</p>
+<ul>
+<li>"Conta de uma vez em que você deu um feedback difícil."</li>
+<li>"Como você lida com alguém do time que não está entregando?"</li>
+<li>"Como você decide o que o time faz agora e o que fica para depois?"</li>
+<li>"Como você equilibra débito técnico e entrega de funcionalidade?"</li>
+<li>"Conta de uma contratação que deu errado."</li>
+<li>"Como você explica um atraso para alguém de negócio?"</li>
+</ul>
+<h2>Um exemplo de resposta</h2>
+<p><strong>"Conta de um erro que você cometeu em produção."</strong></p>
+<blockquote>
+<p>Na Empresa X, eu fiz o deploy de uma mudança no cálculo de frete numa sexta à tarde. Era uma correção pequena, e eu testei só o caso que estava quebrado. Em uma hora começaram a chegar tickets de frete zerado para o Nordeste. Eu fiz o rollback, avisei o time de atendimento e, na segunda, escrevi um post-mortem com a causa: não tinha teste para as faixas de CEP. Adicionei os testes e propus a regra de não fazer deploy de cálculo financeiro na sexta. O prejuízo foi de uns 3 mil reais em frete não cobrado, a regra virou padrão do time e nunca mais tivemos incidente de frete.</p>
+</blockquote>
+<p>Repare: tem número, tem responsabilidade assumida, e o foco está no que mudou depois.</p>
+<h2>Perguntas para você fazer no final</h2>
+<ul>
+<li>"Como é um dia normal de quem ocupa essa vaga?"</li>
+<li>"Qual o maior desafio técnico do time hoje?"</li>
+<li>"Como vocês medem se alguém nessa posição está indo bem depois de seis meses?"</li>
+<li>"Por que essa vaga está aberta? É reposição ou crescimento?"</li>
+<li>"Como funciona o processo de promoção aqui?"</li>
+<li>"O que você mais gosta e o que menos gosta de trabalhar aqui?" (para o gestor ou alguém do time)</li>
+<li>"Quais são os próximos passos do processo?"</li>
+</ul>
+<h1>Anexo C · Perguntas técnicas mais comuns</h1>
+<p>Esta lista é um ponto de partida. O seu documento de perguntas, construído a partir das suas próprias entrevistas, vai ser mais útil que ela em poucas semanas. Use-a para saber o que estudar antes da primeira.</p>
+<h2>Como responder uma pergunta técnica</h2>
+<ol>
+<li><strong>Repita a pergunta com as suas palavras</strong> e confirme que entendeu. Metade das respostas ruins é resposta certa para a pergunta errada.</li>
+<li><strong>Pergunte as restrições.</strong> Quantos usuários? Precisa ser em tempo real? Pode perder dado?</li>
+<li><strong>Comece simples</strong>, e só depois melhore. "A versão mais simples seria X. O problema dela é Y. Então eu faria Z."</li>
+<li><strong>Fale dos trade-offs.</strong> Quase toda pergunta de sênior para cima é, no fundo, uma pergunta sobre trade-offs.</li>
+<li><strong>Diga quando não sabe</strong>, mas fale como descobriria.</li>
+</ol>
+<h2>Fundamentos (todo nível)</h2>
+<ul>
+<li>Qual a diferença entre processo e thread? E entre concorrência e paralelismo?</li>
+<li>O que acontece quando você digita uma URL no navegador e aperta Enter?</li>
+<li>Qual a diferença entre HTTP e HTTPS? O que é TLS, por alto?</li>
+<li>Quais os métodos HTTP e quando usar cada um? O que é idempotência?</li>
+<li>O que é complexidade de algoritmo (Big O)? Qual a complexidade de buscar num array e num hash map?</li>
+<li>O que é Git rebase e qual a diferença para merge?</li>
+<li>Explique os princípios SOLID com um exemplo real seu.</li>
+<li>O que é injeção de dependência e por que ela ajuda a testar?</li>
+</ul>
+<h2>Backend</h2>
+<ul>
+<li>REST, GraphQL, gRPC: quando usar cada um?</li>
+<li>Como você versiona uma API sem quebrar os clientes?</li>
+<li>Como funciona autenticação com JWT? Onde guardar o token? Quais os riscos?</li>
+<li>Diferença entre autenticação e autorização.</li>
+<li>O que é uma fila de mensagens e quando ela faz sentido? O que acontece quando uma mensagem é processada duas vezes?</li>
+<li>Como você implementaria rate limiting?</li>
+<li>O que é cache? Quais as estratégias de invalidação? Onde colocaria cache numa API lenta?</li>
+<li>Como você garante que um pagamento não seja cobrado duas vezes?</li>
+<li>Como você lida com uma chamada para um serviço externo que às vezes demora 30 segundos?</li>
+</ul>
+<h2>Frontend</h2>
+<ul>
+<li>Como funciona o ciclo de renderização no React? O que causa re-render desnecessário?</li>
+<li>Estado local, contexto, ou uma biblioteca de estado: como você decide?</li>
+<li>Diferença entre renderização no cliente, no servidor (SSR) e estática (SSG).</li>
+<li>Como você mede e melhora a performance de uma página? O que são Core Web Vitals?</li>
+<li>O que é o event loop do JavaScript? Diferença entre microtask e macrotask.</li>
+<li>O que são CORS, XSS e CSRF, e como se proteger?</li>
+<li>Como você garante acessibilidade básica numa tela?</li>
+</ul>
+<h2>Banco de dados</h2>
+<ul>
+<li>SQL ou NoSQL: como você escolhe?</li>
+<li>O que é um índice? Quando ele atrapalha?</li>
+<li>O que é uma transação? O que significa ACID?</li>
+<li>O que é o problema N+1 e como resolver?</li>
+<li>Como você investigaria uma consulta lenta em produção?</li>
+<li>Normalização: o que é, e quando desnormalizar?</li>
+<li>Como fazer uma migração de schema numa tabela grande sem derrubar o sistema?</li>
+</ul>
+<h2>Cloud, DevOps e observabilidade</h2>
+<ul>
+<li>O que um pipeline de CI/CD deve ter, no mínimo?</li>
+<li>Diferença entre container e máquina virtual. O que o Docker resolve?</li>
+<li>O que é infraestrutura como código? Já usou Terraform ou algo parecido?</li>
+<li>Blue-green, canary e rolling deploy: diferenças.</li>
+<li>Logs, métricas e traces: para que serve cada um?</li>
+<li>O sistema está lento e ninguém sabe por quê. Por onde você começa?</li>
+<li>Como você reduziria o custo de nuvem de um sistema que está caro demais?</li>
+</ul>
+<h2>Testes e qualidade</h2>
+<ul>
+<li>Pirâmide de testes: unitário, integração, ponta a ponta. Quanto de cada?</li>
+<li>O que é um bom teste? O que torna um teste frágil?</li>
+<li>TDD: usa? Quando faz sentido e quando não faz?</li>
+<li>Como você revisa um pull request? O que você procura primeiro?</li>
+</ul>
+<h2>Design de sistemas</h2>
+<p>Aqui não existe resposta certa, e o entrevistador quer ver o seu processo: requisitos, estimativa de volume, desenho simples, gargalos, e evolução.</p>
+<ul>
+<li>Desenhe um encurtador de URL.</li>
+<li>Desenhe um sistema de notificações (e-mail, push, SMS) para milhões de usuários.</li>
+<li>Desenhe o backend de um chat.</li>
+<li>Desenhe um sistema de pagamentos com retentativa.</li>
+<li>Como você faria um feed como o do Instagram?</li>
+<li>Como escalar um sistema que hoje roda num único servidor e começou a cair nos horários de pico?</li>
+</ul>
+<h2>Live coding</h2>
+<p>Os clássicos continuam aparecendo, principalmente em empresa grande: manipulação de string e array, hash map, dois ponteiros, árvore e grafo básico (busca em largura e profundidade). Faça uns 30 ou 40 exercícios fáceis e médios no LeetCode ou no NeetCode, sempre falando em voz alta. Mais que isso raramente compensa, a não ser que você mire em big tech.</p>
+<p>Cada vez mais empresas trocam o algoritmo por um problema prático: "aqui está um repositório pequeno com um bug, conserte" ou "adicione esta funcionalidade". Nesse formato, contam ler código dos outros, fazer perguntas e escrever teste.</p>
+<h2>IA no dia a dia (2026)</h2>
+<p>Essas perguntas já são comuns e vão ficar mais:</p>
+<ul>
+<li>Como você usa ferramentas de IA para programar? Onde elas ajudam e onde atrapalham?</li>
+<li>Como você revisa código gerado por IA?</li>
+<li>Como você evita que dado sensível da empresa vá parar numa ferramenta externa?</li>
+<li>Já integrou um modelo de linguagem num produto? Como lidou com custo, latência e respostas erradas?</li>
+</ul>
+<h2>Para quem mira tech lead</h2>
+<ul>
+<li>Como você decide entre reescrever um sistema ou refatorar aos poucos?</li>
+<li>Como você convence o produto a priorizar débito técnico?</li>
+<li>Como você conduz uma decisão técnica em que o time está dividido?</li>
+<li>Como você faz um novo dev ser produtivo nas primeiras duas semanas?</li>
+<li>Como você estima um projeto grande? E o que faz quando a estimativa estoura?</li>
+<li>Quais métricas você acompanha para saber se o time está bem?</li>
+</ul>
+<h1>Anexo D · Prompts prontos</h1>
+<p>Copie, cole e ajuste. Funcionam em qualquer LLM boa (Claude, ChatGPT, Gemini).</p>
+<h2>1. Análise das vagas (Passo 1)</h2>
+<p>Anexe os 10 a 20 PDFs e use:</p>
+<pre><code>Anexei todos os anúncios de vaga para [cargo], nível [nível] na pasta [pasta].
+Quero entender o que o mercado está pedindo para esse cargo.
+
+1. Liste todos os requisitos técnicos e comportamentais que aparecem.
+   Para cada um, diga em quantas vagas aparece (ex.: 14 de 20).
+2. Separe em três grupos:
+   - obrigatórios de fato (aparecem em 70% ou mais, ou marcados como obrigatórios)
+   - diferenciais frequentes (entre 30% e 70%)
+   - raros (menos de 30%)
+3. Liste as palavras e expressões exatas que mais se repetem
+   (vou usar no meu currículo).
+4. Resuma em um parágrafo o perfil que essas empresas parecem buscar.
+5. Aponte padrões por tipo de empresa, se houver
+   (startup vs. grande empresa, por exemplo).
+
+Seja literal: não invente requisito que não está nas vagas.
+</code></pre>
+<h2>2. O que eu tenho e o que falta (Passo 2)</h2>
+<pre><code>Abaixo está a análise das vagas e o meu currículo.
+
+[cole a análise]
+[cole o currículo]
+
+Monte uma tabela com: requisito | frequência nas vagas |
+o que o meu currículo mostra sobre isso (cite o trecho) |
+classificação (tenho e está no CV / tenho mas não está no CV /
+parcial / não tenho).
+
+Depois, me faça perguntas sobre os itens &quot;parcial&quot; e &quot;não tenho&quot;,
+porque eu posso ter experiência que não coloquei no CV.
+Não suponha que eu tenho algo só porque é comum ter.
+</code></pre>
+<h2>3. Reescrever um item do currículo (Passo 4)</h2>
+<pre><code>Reescreva este item do meu currículo no formato:
+verbo de ação + o que fiz + resultado com número + tecnologia como contexto.
+
+Item: &quot;[cole o item]&quot;
+
+Antes de reescrever, me faça as perguntas que precisar para
+descobrir o resultado real (números, escopo, quem usava, o que mudou).
+Não invente números. Se eu não souber o número, sugira como
+estimar de forma honesta ou use escopo em vez de número.
+Use estas palavras-chave, se fizer sentido: [lista do prompt 1].
+</code></pre>
+<p><strong>Atenção:</strong> use isto para ter uma IDEIA do que escrever. Não copie e cole. Escreva você mesmo no seu CV.</p>
+<h2>4. Extrair perguntas de uma entrevista (Passo 6)</h2>
+<pre><code>Abaixo está a transcrição de uma entrevista
+para [cargo] na [empresa], etapa [RH / técnica / final].
+
+[cole o texto]
+
+1. Liste todas as perguntas que me fizeram, com as palavras mais
+   próximas possíveis das originais.
+2. Classifique cada uma: comportamental, técnica (diga a área),
+   ou sobre a empresa/vaga.
+3. Para cada uma, diga em uma linha como foi a minha resposta
+   (boa, incompleta, errada, fugi da pergunta) e por quê.
+4. Liste os conceitos técnicos que eu devo estudar por causa dessa entrevista.
+
+Formate para eu colar no meu documento de perguntas.
+</code></pre>
+<h2>5. Entrevista simulada</h2>
+<pre><code>Você é [cargo do entrevistador, ex.: tech lead] na [tipo de empresa],
+entrevistando para a vaga abaixo.
+
+[cole a vaga]
+
+Faça uma pergunta por vez e espere a minha resposta.
+Misture perguntas comportamentais e técnicas, como numa entrevista real
+de 45 minutos. Se a minha resposta for vaga, aprofunde como um
+entrevistador de verdade faria.
+No final, me dê um feedback duro: onde eu fui bem, onde fui mal,
+e se você me passaria para a próxima etapa. Não seja gentil demais.
+</code></pre>
+<div class="junto">
+<h2>6. Mensagem para pedir conversa no LinkedIn</h2>
+<p>Isso não é prompt, é modelo. Curta, específica, e fácil de dizer sim:</p>
+<pre><code>Oi, [nome]! Vi que você trabalha com [tecnologia/área] na [empresa].
+Estou me preparando para vagas de [cargo] e queria entender
+o que é essencial saber para começar em [tecnologia/área].
+Você toparia 20 minutos de conversa nas próximas semanas,
+ou responder umas 3 perguntas por aqui mesmo? Se não der, sem problema.
+Obrigado!
+</code></pre>
+</div>
+<h1>Anexo E · Planilha do funil</h1>
+<table>
+<thead>
+<tr>
+<th>Empresa</th>
+<th>Vaga</th>
+<th>Tipo</th>
+<th>Canal</th>
+<th>Data</th>
+<th>Etapa alcançada</th>
+<th>Resultado</th>
+<th>Motivo / feedback</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Empresa A</td>
+<td>Backend Sênior</td>
+<td>Treino</td>
+<td>Candidatura direta</td>
+<td>02/10</td>
+<td>RH</td>
+<td>Reprovado</td>
+<td>"Buscando mais experiência com Kafka"</td>
+</tr>
+<tr>
+<td>Empresa B</td>
+<td>Tech Lead</td>
+<td>Alvo</td>
+<td>Indicação</td>
+<td>05/10</td>
+<td>Técnica</td>
+<td>Em andamento</td>
+<td></td>
+</tr>
+<tr>
+<td>Empresa C</td>
+<td>Backend Sênior</td>
+<td>Treino</td>
+<td>Recrutador</td>
+<td>06/10</td>
+<td>Sem resposta</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Etapas:</strong> Sem resposta → RH → Técnica → Final → Proposta.</p>
+<p>Uma vez por semana, conte:</p>
+<ul>
+<li>Quantas candidaturas você mandou.</li>
+<li>Quantas viraram primeira conversa (taxa de resposta).</li>
+<li>Em que etapa cada processo parou.</li>
+<li>Qual canal está convertendo melhor (quase sempre é indicação).</li>
+</ul>
+<p>Com três ou quatro semanas de dados, a tabela da seção "Quando não está funcionando" deixa de ser teoria e vira diagnóstico.</p><h1>O DevAdvance Club</h1><div class="fim-logo"><img src="assets/logo.png" alt="DevAdvance Club"></div>
+<p>O DevAdvance Club é uma comunidade de devs que querem crescer na carreira com método. Dentro dele roda o <strong>Programa ADVANCE</strong>, a minha mentoria, que ensina o que nenhum outro curso ensina: soft skills, liderança e resolução de problemas.</p>
+<p>O método tem quatro camadas:</p>
+<ol>
+<li><strong>Técnico.</strong> A base. Como tomar decisões técnicas e usar dados para influenciar o desenvolvimento.</li>
+<li><strong>Liderança e soft skills.</strong> Gestão: 1:1, feedback, delegação, contratação, e a parte que ninguém ensina: parar de se sabotar, comunicação.</li>
+<li><strong>Resolução de problemas.</strong> Métricas, KPIs, OKRs, crises, débito técnico, como tomar decisões por dado em vez de achismo e como convencer pessoas.</li>
+<li><strong>Valorização.</strong> Ser reconhecido e pago pelo valor que você já gera. É aqui que moram CV, LinkedIn, entrevistas e negociação, e é daqui que este ebook saiu.</li>
+</ol>
+<p>Nas três camadas de baixo você cria valor. Na de cima, você captura esse valor.</p>
+<p>Na prática, uma semana no programa é assim: um dia você faz um check-in rápido (o que fez, onde travou, o próximo passo), e eu respondo pessoalmente, em áudio ou texto, em 48h. Toda semana tem um encontro ao vivo com conteúdo e hot seats, que são 20-30 minutos inteiros em cima do problema real de alguém: a proposta, a promoção, o time que não entrega. Você também entra num pod de até seis pessoas com objetivo parecido, que se encontram quase toda semana e cobram uns aos outros. Terça e quinta tem office hours abertas pra conversar comigo. E tem mais de 60 aulas gravadas, a base teórica pra crescer na sua carreira.</p>
+<p>O 1:1 comigo acontece nos momentos que decidem: no onboarding, quando a gente monta seu plano (meta de 12 meses, objetivo de 90 dias e tarefas a serem cumpridas), nos pods, na reunião semanal e nos office hours.</p>
+<p>E pra terminar, temos nossa comunidade no Discord. Conversamos, trocamos vagas e dicas, e também aparecem outras oportunidades de ganhar dinheiro com a própria comunidade.</p>
+<p>Conteúdo você encontra em qualquer lugar, inclusive neste ebook. O que muda carreira é direção, cobrança e alguém experiente olhando as suas decisões. Se fizer sentido para você, o endereço é <strong>devadvance.club</strong> ou fale comigo no WhatsApp: (12) 99785-8529</p>
+</body></html>

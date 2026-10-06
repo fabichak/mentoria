@@ -18,7 +18,7 @@ window.SLIDES = [
     itens:[
       {t:'Sem mapa, você não fica parado por falta de talento'},
       {t:'Fica parado porque nunca decidiu pra onde ir'},
-      {t:'Decidir errado é melhor que não decidir'} ] },
+      {t:'Decidir com intencionalidade'} ] },
 
   /* mapa visual */
   { tipo:'foto', badge:'AS 3 TRILHAS', contain:true,
@@ -56,8 +56,8 @@ window.SLIDES = [
   { tipo:'lista', revela:false, badge:'O INSTRUMENTO MUDA',
     titulo:'Mesmo escopo crescendo, jeitos diferentes',
     itens:[
-      {t:'Técnica', d:'o que muda não é quanto código você escreve, é o alcance da sua decisão'},
-      {t:'Gestão', d:'deixa de produzir e multiplica o que os outros produzem. Responde por valor de negócio'},
+      {t:'Técnica', d:'o que muda não é quanto código ou velocidade que você escreve, é a qualidade e o alcance da sua decisão'},
+      {t:'Gestão', d:'deixa de produzir e multiplica o que os outros produzem. Adicionar valor de negócio nas decisões e empoderar os membros da equipe.'},
       {t:'Empreendedora', d:'a porta lateral: risco maior, sem teto'} ] },
 
   /* mitos */
@@ -81,11 +81,17 @@ window.SLIDES = [
   { tipo:'cronologia', revela:false, badge:'EXEMPLO REAL',
     titulo:'Eu passei pelas 3',
     itens:[
-      {t:'Técnica: adolescente em Flash, sozinho, sem saber se estava fazendo certo'},
+      {t:'Técnica: Desenvolvedor de site, saas, mobile, jogos (Advergame, serious games, entretenimento)'},
       {t:'Empreendedora: sócio de estúdio. Chico Bento, 5M+ jogadores, primeiro jogo de PSP da América Latina'},
-      {t:'Gestão: Alemanha em 2015, Head of Development, depois CTO da Magic Media por 5 anos'},
-      {t:'100+ engenheiros contratados, 150 pessoas lideradas'} ] },
-
+      {t:'Gestão: Insolita, Goodgames studios (mobile), Head of Development (mobile, pc), depois CTO da Magic Media (mobile, pc, console, saas, backend, vr, etc).'},
+      {t:'200+ engenheiros contratados, 160 pessoas lideradas'} ] },
+  /* ação prática */
+  { tipo:'agenda', badge:'AÇÃO',
+    titulo:'Antes do próximo vídeo',
+    texto:'Não precisa estar certo, precisa estar honesto.',
+    itens:[
+      {k:'1 LINHA',  d:'por pergunta, por escrito'},
+      {k:'NÃO SEI?', d:'escreva "ainda explorando"'} ] },
   /* perguntas */
   { tipo:'lista', revela:true, badge:'PERGUNTAS · TRILHA ATUAL',
     titulo:'Onde você está',
@@ -99,18 +105,12 @@ window.SLIDES = [
   { tipo:'lista', revela:true, badge:'PERGUNTAS · PRA ONDE VOU',
     titulo:'Pra onde você vai',
     itens:[
-      {t:'Qual trilha e cargo é minha meta final?', d:'em quantos anos, e por quê'},
-      {t:'Qual trilha e cargo é o próximo passo?', d:'e por quê'} ] },
+      {t:'Qual trilha e cargo é minha meta final?', d:'por quê'},
+      {t:'Qual trilha e cargo é o próximo passo?', d:'por quê'} ] },
 
-  /* ação prática */
-  { tipo:'agenda', badge:'AÇÃO',
-    titulo:'Antes do próximo vídeo',
-    texto:'Não precisa estar certo, precisa estar honesto. Vai direto pra ficha de onboarding (0.10).',
-    itens:[
-      {k:'1 LINHA',  d:'por pergunta, por escrito'},
-      {k:'NÃO SEI?', d:'escreva "ainda explorando"'} ] },
+
 
   { tipo:'fim',
-    titulo:'Mapa na mão. Agora a escolha mais comum.',
-    rodape:'Próximo: trilha desenvolvedor vs gestão' }
+    titulo:'Próximo: trilha desenvolvedor vs gestão',
+    rodape:'' }
 ];

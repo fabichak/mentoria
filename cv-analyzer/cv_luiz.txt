@@ -1,0 +1,21 @@
+Luiz Alfredo Carrara Bertusso
+Tech Lead de plataforma ERP usada por 300+ empresas. Java, Quarkus, AWS, MuleSoft
+Summary
+________________
+Tech Lead há 5 anos na DOit Systems, onde estou há 10 anos. Lidero uma equipe full stack formada em grande parte internamente, de estagiário a pleno/sênior, em uma plataforma ERP usada por cerca de 300 empresas com clientes no Brasil e EUA. Foco em arquitetura de sistemas, modelagem de dados e regras de negócio complexas com integrações críticas a parceiros externos, uso de Datadog para ajustes de performance (redução de até 70% para registro de números de séries, AWS. Atuo próximo aos stakeholders para traduzir necessidades de negócio em soluções técnicas escaláveis.
+Technical Lead, DOit Systems (DOit ERP)
+Jul 2021 – Present
+* Lidero a equipe de desenvolvedores full stack, formada internamente em sua maioria (de estagiário à pleno).
+* Liderei integrações críticas com parceiros externos como EPCIS para DSC act (lei americana dos setor pharma), PlugNotas (NFSe), OOBJ (NFe) e E-Sales (boleto)
+* Uso do Datadog para redução de gargalos como redução em 70% no registro de números de série de ordem de entrega e de cerca de 50% em APIS de ordem de entrega e faturamento além de identificação de N+1s ao redor do sistema.
+* Definição do uso de ferramentas AWS como SNS e SQS para comunicação assíncronona e S3 para arquivos XMLs gerados por microsserviços.
+* Traduzo requisitos de negócio complexos, junto aos stakeholders, em soluções técnicas escaláveis.
+Desenvolvedor, DOit Systems (DOit ERP)
+Feb 2016 – Jun 2021
+* Desenvolvi regras de negócio complexas para fluxos financeiros e operacionais.
+* Projetei e implementei APIs RESTful em Java e Quarkus.
+* Otimizei queries PostgreSQL e melhorei a performance do banco de dados.
+* Construí integrações em MuleSoft Anypoint Platform conectando sistemas internos e serviços de terceiros.
+* Implementei funcionalidades cloud com AWS (S3, SQS, SNS).
+* Participei de discussões de arquitetura, code reviews, planejamento de sprints e troubleshooting de incidentes em produção.
+Education and Life

@@ -4,13 +4,13 @@ window.SLIDES = [
   { tipo:'capa',
     selo:'Bloco 0 · Onboarding',
     titulo:'O platô', destaque:'de renda',
-    sub:'Você programa bem. Ninguém te disse quais decisões definem se você trava num salário.',
+    sub:'Quais decisões definem se você trava num salário?',
     rodape:'Martin Fabichak · DevAdvance.club' },
 
   /* problema */
   { tipo:'divisor',
     titulo:'Existe um platô que pega a maioria dos sêniors',
-    sub:'e ele não tem nada a ver com quão bom técnico você é' },
+    sub:'' },
 
   { tipo:'confronto', badge:'O PROBLEMA',
     itens:[
@@ -30,6 +30,8 @@ window.SLIDES = [
   { tipo:'divisor',
     titulo:'A progressão não é tempo de casa',
     sub:'é escopo de impacto' },
+	
+
 
   { tipo:'agenda', badge:'A MECÂNICA',
     titulo:'Escopo de impacto por nível',
@@ -37,6 +39,13 @@ window.SLIDES = [
       {k:'JÚNIOR', d:'resolve tarefa com ajuda'},
       {k:'PLENO',  d:'resolve projeto sozinho'},
       {k:'SÊNIOR', d:'decide o que deve ser feito, não só como fazer'} ] },
+	  
+   { tipo:'agenda', badge:'A MECÂNICA',
+    titulo:'Escopo de impacto por nível',
+    itens:[
+      {k:'JÚNIOR', d:'Faz perguntas abertas'},
+      {k:'PLENO',  d:'Faz perguntas e sugere soluções'},
+      {k:'SÊNIOR', d:'Faz pergunta, sugere soluções e diz qual é a melhor'} ] },	  
 
   /* o platô */
   { tipo:'lista', revela:false, badge:'O PLATÔ',
@@ -64,6 +73,11 @@ window.SLIDES = [
   { tipo:'divisor',
     titulo:'Não espere reconhecimento.',
     sub:'Tome reconhecimento.' },
+	
+	/* framework: escopo de impacto */
+  { tipo:'divisor',
+    titulo:'Ninguém vai enxergar o seu trabalho',
+    sub:'Você precisa mostrar' },	
 
   { tipo:'divisor', badge:'SE VOCÊ É TECH LEAD',
     titulo:'Reconheça seu time em público',
@@ -79,21 +93,17 @@ window.SLIDES = [
       {k:'GANHA', d:'arquitetura: como construir sem quebrar depois'},
       {k:'GANHA', d:'comunicação: convencer os outros da decisão certa'} ] },
 
-  /* exemplo real */
-  { tipo:'lista', revela:false, badge:'EXEMPLO REAL',
-    titulo:'O salto não veio de mais uma linguagem',
-    itens:[
-      {t:'CTO', d:'expandindo de técnico pra gestão e visão de negócio'},
-      {t:'100+ engenheiros contratados'},
-      {t:'R$25 milhões', d:'faturados por projetos que eu vendi e entraram na empresa'},
-      {t:'Veio de aprender a liderar gente e conversar com o negócio'} ] },
-
   /* ação prática */
   { tipo:'agenda', badge:'AÇÃO',
     titulo:'Olha seu salário atual e responde com honestidade',
-    texto:'Guarda a resposta. Vai pra ficha de onboarding (0.10).',
+    texto:'Guarda a resposta. Vai pra ficha de onboarding.',
     itens:[
-      {k:'12 MESES', d:'mudou meu escopo de impacto ou só meu conhecimento técnico?'} ] },
+      {k:'12 MESES', d:'mudou meu escopo de impacto ou só meu conhecimento técnico?'},
+      {k:'Dinheiro', d:'Quantos meses consigo viver se reduzir bem meu estilo de vida?'},
+      {k:'Dinheiro', d:'Na minha área específica, quanto posso ganhar vs mudar?'},
+	  
+	  
+	  ] },
 
   { tipo:'fim',
     titulo:'Saber que existe um platô não resolve o platô.',

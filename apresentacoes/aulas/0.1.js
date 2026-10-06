@@ -13,7 +13,7 @@ window.SLIDES = [
     sub:'é falta de método' },
 
   /* as dores */
-  { tipo:'lista', revela:true, badge:'AS DORES',
+  { tipo:'lista', revela:false, badge:'AS DORES',
     titulo:'O que essa mentoria ataca de frente',
     itens:[
       {t:'Não saber quais passos tomar e em qual ordem', d:'o que importa no SEU momento de carreira'},
@@ -37,9 +37,12 @@ window.SLIDES = [
     itens:[
       {t:'20 anos em tecnologia'},
       {t:'Flash', d:'adolescente programando sozinho'},
+      {t:'Web e Saas', d:'ASP e PHP'},
       {t:'Estúdio de jogos', d:'sócio, Chico Bento com 5M+ jogadores'},
-      {t:'CTO na Alemanha', d:'150 pessoas lideradas'},
-      {t:'A história completa', d:'no vídeo 0.5'} ] },
+      {t:'Tech lead na Alemanha', d:'~30 pessoas'},
+      {t:'Head em Munique', d:'~50'},
+      {t:'CTO remoto, em portugal', d:'160 pessoas lideradas'},
+      {t:'Agora: empresário', d:'Spa, Mentoria e app para empreendedores'} ] },
 
   /* líder é papel */
   { tipo:'divisor',
@@ -54,10 +57,16 @@ window.SLIDES = [
   /* método em 1 frase */
   { tipo:'agenda', badge:'O MÉTODO',
     titulo:'O que desenvolver e como rodar',
-    texto:'Os detalhes vêm no vídeo 0.3.',
+    texto:'',
     itens:[
       {k:'PIRÂMIDE', d:'O QUÊ: técnico, liderança/soft skill, resolução de problemas, valorização'},
       {k:'CICLO',    d:'COMO: PREPARAR → AGIR → MOSTRAR → OTIMIZAR no seu emprego atual'} ] },
+
+  /* pirâmide visual */
+  { tipo:'piramide', badge:'MÉTODO ADVANCE',
+    titulo:'Método ADVANCE',
+    sub:'Nas três camadas de baixo você cria valor. No topo você captura esse valor',
+    itens:['Valorização','Resolução de problemas','Liderança e soft-skill','Técnico'] },
 
   /* mapa da mentoria */
   { tipo:'agenda', badge:'MAPA DA MENTORIA',

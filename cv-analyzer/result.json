@@ -1,0 +1,344 @@
+{
+ "summary": {
+  "says_level": 0.98,
+  "concrete_wins": 0.19,
+  "generic_adjectives": 0.81,
+  "target_role": 0.35,
+  "short": 0.38
+ },
+ "sections": {
+  "Magic Media Entertainment Studios Remote": [
+   {
+    "text": "CTO and Head of Game Development Involved in virtually all aspects of the game development studio: Estimations, sales, client relationship, production plans, budget tracking, recruitment, HR, mentorship and all technical plans for internal advancement.",
+    "has_result": 0.05,
+    "has_metric": 0.03,
+    "has_scope": 0.06,
+    "names_tech": 0.03,
+    "action_verb": 0.04,
+    "vague_claim": 0.29
+   },
+   {
+    "text": "Sold more than $25M worth of projects as the main point of contact, pitch creator and organizer and supported many others;",
+    "has_result": 0.94,
+    "has_metric": 0.98,
+    "has_scope": 0.96,
+    "names_tech": 0.02,
+    "action_verb": 0.94,
+    "vague_claim": 0.06
+   },
+   {
+    "text": "Hired and envisioned the technical leadership that was able to support all projects that has never lost any project due to technical issues or concerns; Hired more than 100 members for the technical team; Managed up to 150 engineers;",
+    "has_result": 0.94,
+    "has_metric": 0.72,
+    "has_scope": 0.97,
+    "names_tech": 0.05,
+    "action_verb": 0.93,
+    "vague_claim": 0.25
+   },
+   {
+    "text": "Turned around existing projects upon arrival to deliver expected quality and keep client relationship;",
+    "has_result": 0.91,
+    "has_metric": 0.04,
+    "has_scope": 0.04,
+    "names_tech": 0.03,
+    "action_verb": 0.92,
+    "vague_claim": 0.55
+   },
+   {
+    "text": "Envisioned the CI/CD and unity/unreal frameworks being used in dozens of projects;",
+    "has_result": 0.34,
+    "has_metric": 0.46,
+    "has_scope": 0.81,
+    "names_tech": 0.98,
+    "action_verb": 0.65,
+    "vague_claim": 0.1
+   },
+   {
+    "text": "Improved the production department by co-creating plans and mentoring;",
+    "has_result": 0.58,
+    "has_metric": 0.02,
+    "has_scope": 0.04,
+    "names_tech": 0.04,
+    "action_verb": 0.76,
+    "vague_claim": 0.37
+   },
+   {
+    "text": "Improved the pitching pipeline to support more projects and convert more sales;",
+    "has_result": 0.71,
+    "has_metric": 0.03,
+    "has_scope": 0.06,
+    "names_tech": 0.06,
+    "action_verb": 0.71,
+    "vague_claim": 0.33
+   },
+   {
+    "text": "Delivered projects for PC, Gen9/8 consoles, VR, blockchain and mobile;",
+    "has_result": 0.23,
+    "has_metric": 0.04,
+    "has_scope": 0.1,
+    "names_tech": 0.36,
+    "action_verb": 0.81,
+    "vague_claim": 0.05
+   },
+   {
+    "text": "Delivered original IPs, IP-based games, ports and small projects.",
+    "has_result": 0.19,
+    "has_metric": 0.03,
+    "has_scope": 0.07,
+    "names_tech": 0.12,
+    "action_verb": 0.83,
+    "vague_claim": 0.05
+   }
+  ],
+  "Chimera Entertainment GmbH Munich - Germany": [
+   {
+    "text": "Head of Development and interim Technical Director Technical director of 3 different AAA mobile projects with major publishers totalling over 25 different engineers; Previous technical project lead of 4 different teams into a AAA pvp synchronous multiplayer mobile game in a $5M+ production from early stage production to live ops; Corporate head of development: Hiring from juniors to lead developers; Annual reviews and feedback sessions for career growth; new pitches, due diligence and estimations and product owner of central tech architecture.",
+    "has_result": 0.18,
+    "has_metric": 0.68,
+    "has_scope": 0.98,
+    "names_tech": 0.04,
+    "action_verb": 0.21,
+    "vague_claim": 0.27
+   },
+   {
+    "text": "Created a solid foundation for all projects so that they can be lead by less experienced members;",
+    "has_result": 0.65,
+    "has_metric": 0.02,
+    "has_scope": 0.07,
+    "names_tech": 0.02,
+    "action_verb": 0.93,
+    "vague_claim": 0.9
+   },
+   {
+    "text": "Created over 5 different tools that are daily used in the development and speed up processes;",
+    "has_result": 0.86,
+    "has_metric": 0.7,
+    "has_scope": 0.09,
+    "names_tech": 0.03,
+    "action_verb": 0.91,
+    "vague_claim": 0.51
+   },
+   {
+    "text": "Mentored 4 people from developers to technical leaders which turned around difficult interpersonal and team communication issues;",
+    "has_result": 0.81,
+    "has_metric": 0.45,
+    "has_scope": 0.16,
+    "names_tech": 0.03,
+    "action_verb": 0.85,
+    "vague_claim": 0.68
+   },
+   {
+    "text": "Sole responsible for the technical roadmap after project went live; Achieved proven technical KPIs which allowed stakeholders to make correct assessment of the quality of the product;",
+    "has_result": 0.92,
+    "has_metric": 0.04,
+    "has_scope": 0.07,
+    "names_tech": 0.02,
+    "action_verb": 0.89,
+    "vague_claim": 0.73
+   },
+   {
+    "text": "Idealized, delegated and controlled several changes to development process that achieved better quality and speed at every iteration;",
+    "has_result": 0.37,
+    "has_metric": 0.24,
+    "has_scope": 0.85,
+    "names_tech": 0.03,
+    "action_verb": 0.91,
+    "vague_claim": 0.14
+   },
+   {
+    "text": "Architected the client architecture that enabled 3 teams to work together from early phases of development to post-launch;",
+    "has_result": 0.43,
+    "has_metric": 0.27,
+    "has_scope": 0.84,
+    "names_tech": 0.05,
+    "action_verb": 0.85,
+    "vague_claim": 0.13
+   },
+   {
+    "text": "Conceptualized and implemented the realtime multiplayer layer and proved that it worked on a global scale using technical KPIs and data analysis;",
+    "has_result": 0.48,
+    "has_metric": 0.05,
+    "has_scope": 0.06,
+    "names_tech": 0.05,
+    "action_verb": 0.84,
+    "vague_claim": 0.31
+   },
+   {
+    "text": "Optimized development through conceptualization and creation of several tools for debugging, performance, development cycle and automated testing;",
+    "has_result": 0.6,
+    "has_metric": 0.03,
+    "has_scope": 0.06,
+    "names_tech": 0.03,
+    "action_verb": 0.76,
+    "vague_claim": 0.95
+   },
+   {
+    "text": "Fostered the tech culture as manager that made every developer happier and more engaged.",
+    "has_result": 0.75,
+    "has_metric": 0.05,
+    "has_scope": 0.1,
+    "names_tech": 0.03,
+    "action_verb": 0.77,
+    "vague_claim": 0.94
+   }
+  ],
+  "Insolita Studios/ Kidguru Studios São Paulo - Brasil": [
+   {
+    "text": "Partner & Technical Director Mainly involved in new pitches and hiring, while overseeing the development process, tools creation and all server cloud architecture; Prototypes design with the creative director.",
+    "has_result": 0.04,
+    "has_metric": 0.02,
+    "has_scope": 0.04,
+    "names_tech": 0.1,
+    "action_verb": 0.04,
+    "vague_claim": 0.1
+   },
+   {
+    "text": "Turma do Chico Bento, a Facebook and Orkut social game based on one of the most recognized brazilian IP. 5M+ registered players with 500k+ MAU, 100K+ DAU. Managed the whole technical implementation from prototype to live-ops and weekly new quests;",
+    "has_result": 0.67,
+    "has_metric": 0.93,
+    "has_scope": 0.93,
+    "names_tech": 0.64,
+    "action_verb": 0.26,
+    "vague_claim": 0.13
+   },
+   {
+    "text": "Globo Futebol, a five football (soccer) multiplayer mini-games for the biggest TV channel in Brasil (Globo). Probably the first widespread web multiplayer game in Unity. Implemented the whole game-play and multiplayer layer;",
+    "has_result": 0.24,
+    "has_metric": 0.45,
+    "has_scope": 0.32,
+    "names_tech": 0.97,
+    "action_verb": 0.26,
+    "vague_claim": 0.29
+   },
+   {
+    "text": "Freekscape: Escape from Hell, the first PSP game from latin-america;",
+    "has_result": 0.33,
+    "has_metric": 0.04,
+    "has_scope": 0.05,
+    "names_tech": 0.53,
+    "action_verb": 0.08,
+    "vague_claim": 0.12
+   },
+   {
+    "text": "Ludo Park, a 40-player LAN multiplayer teaching entrepreneurship. Implemented the whole economic simulation and the multiplayer layer.",
+    "has_result": 0.07,
+    "has_metric": 0.2,
+    "has_scope": 0.53,
+    "names_tech": 0.06,
+    "action_verb": 0.26,
+    "vague_claim": 0.07
+   }
+  ],
+  "Technical and key experiences": [
+   {
+    "text": "Excellent communication, expertly driving conversations on difficult technical topics with non-technical key people;",
+    "has_result": 0.06,
+    "has_metric": 0.02,
+    "has_scope": 0.02,
+    "names_tech": 0.02,
+    "action_verb": 0.07,
+    "vague_claim": 0.94
+   },
+   {
+    "text": "Estimation and pitching for a plethora of different projects and consoles;",
+    "has_result": 0.03,
+    "has_metric": 0.02,
+    "has_scope": 0.08,
+    "names_tech": 0.08,
+    "action_verb": 0.12,
+    "vague_claim": 0.27
+   },
+   {
+    "text": "Technical vision for the future years of the company with tangible plans and budget;",
+    "has_result": 0.05,
+    "has_metric": 0.03,
+    "has_scope": 0.04,
+    "names_tech": 0.03,
+    "action_verb": 0.05,
+    "vague_claim": 0.43
+   },
+   {
+    "text": "Technical direction for client and server side of single and multiplayer games;",
+    "has_result": 0.03,
+    "has_metric": 0.01,
+    "has_scope": 0.02,
+    "names_tech": 0.06,
+    "action_verb": 0.07,
+    "vague_claim": 0.12
+   },
+   {
+    "text": "Extensive experience in creating technical product roadmap and breaking down big problems and vision in tangible, measurable steps;",
+    "has_result": 0.05,
+    "has_metric": 0.03,
+    "has_scope": 0.04,
+    "names_tech": 0.05,
+    "action_verb": 0.08,
+    "vague_claim": 0.54
+   },
+   {
+    "text": "Extensive knowledge of metrics. From setting up technical kpis, implementing metrics backends, analyzing data and refining assumptions with product owners;",
+    "has_result": 0.12,
+    "has_metric": 0.02,
+    "has_scope": 0.04,
+    "names_tech": 0.06,
+    "action_verb": 0.15,
+    "vague_claim": 0.27
+   },
+   {
+    "text": "Conceptualization, integration and feedback loops for several different tools to increase productivity of developers, designers, artists and product managers;",
+    "has_result": 0.05,
+    "has_metric": 0.02,
+    "has_scope": 0.02,
+    "names_tech": 0.07,
+    "action_verb": 0.33,
+    "vague_claim": 0.13
+   },
+   {
+    "text": "Continuous integration implementation and management using different tools;",
+    "has_result": 0.05,
+    "has_metric": 0.02,
+    "has_scope": 0.03,
+    "names_tech": 0.09,
+    "action_verb": 0.25,
+    "vague_claim": 0.33
+   },
+   {
+    "text": "Conceptualization of several different automated testing methods and tools for games;",
+    "has_result": 0.04,
+    "has_metric": 0.02,
+    "has_scope": 0.03,
+    "names_tech": 0.04,
+    "action_verb": 0.19,
+    "vague_claim": 0.27
+   },
+   {
+    "text": "Management and coaching of engineers and other technical managers;",
+    "has_result": 0.2,
+    "has_metric": 0.02,
+    "has_scope": 0.03,
+    "names_tech": 0.18,
+    "action_verb": 0.14,
+    "vague_claim": 0.51
+   },
+   {
+    "text": "Extensive network experience, from code/architecture to elaborate network strategies to create a reliable product; Management and cost-optimization of cloud architectures.",
+    "has_result": 0.04,
+    "has_metric": 0.02,
+    "has_scope": 0.03,
+    "names_tech": 0.99,
+    "action_verb": 0.17,
+    "vague_claim": 0.1
+   },
+   {
+    "text": "Projects delivered in: Unity, Unreal, C++ (proprietary engines), Node.js, Java, Ruby on Rails, C#, HTML5 (Typescript, Phaser, react)",
+    "has_result": 0.07,
+    "has_metric": 0.02,
+    "has_scope": 0.03,
+    "names_tech": 0.96,
+    "action_verb": 0.27,
+    "vague_claim": 0.14
+   }
+  ]
+ },
+ "model": "jev-1.13.0"
+}

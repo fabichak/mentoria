@@ -7,31 +7,32 @@ var CAMADAS = ['Valorização','Resolução de problemas','Liderança e soft-ski
 window.SLIDES = [
 
   /* 1 — CAPA · 0:00 */
-  { tipo:'marca', img:'assets/logo.png', sub:'', selo:'Turma Fundadora · 15/30 vagas' },
+  { tipo:'marca', img:'assets/logo.png', sub:'', selo:'Turma Fundadora ·17/20 vagas sobrando' },
 
   /* 3 — QUEM SOU EU · 0:55 */
   { tipo:'perfil', badge:'QUEM SOU EU',
     titulo:'Martin Fabichak',
     img:'assets/martin.png',
     itens:[
-      {t:'Matemática no IME-USP', d:'formado com honra ao mérito'},
       {t:'20 anos de desenvolvimento de software', d:'jogos, SaaS, web, mobile, embarcado'},
       {t:'16 anos de liderança', d:'até 160 pessoas lideradas'},
-      {t:'Europa desde 2015', d:'Alemanha e Portugal, 10 anos fora'},
+      {t:'10 anos de Europa', d:'Alemanha e Portugal'},
       {t:'Head of Development aos 30, CTO aos 34', d:'+ €100M operados'},
-      {t:'Já sentei dos dois lados da mesa:', d:'fui o dev que queria crescer e o CTO que decidia quem crescia'} ],
+      {t:'Já sentei dos dois lados da mesa:', d:'fui o dev que queria crescer e o CTO que decidia quem crescia'},
+      {t:'Matemática no IME-USP', d:'formado com honra ao mérito'},
+      {t:'Hoje sou Empreendedor', d:'Sócios de 4 empresas'} ],
     logos:['assets/insolita.png','assets/magicmedia.png','assets/goodgame.png','assets/chimera.png'] },
 
   /* 3 — QUEM SOU EU · 0:55 */
-  { tipo:'perfil', badge:'QUEM SOU EU',
+  { tipo:'perfil', badge:'PQ',
     titulo:'Porque devadvance club?',
     img:'assets/logo.png',
     itens:[
-      {t:'Mentoro há muitos anos', d:'formado com honra ao mérito'},
-      {t:'Matemática no IME-USP', d:'formado com honra ao mérito'},
-      {t:'Matemática no IME-USP', d:'formado com honra ao mérito'},
-      {t:'Matemática no IME-USP', d:'formado com honra ao mérito'},
-      {t:'Matemática no IME-USP', d:'formado com honra ao mérito'},
+      {t:'Mentoro e lidero pessoas', d:'desde 2009'},
+      {t:'Padrões em devs que eu vejo', d:'Não sabe os próximos passos de carreira, auto-sabotagem'},
+      {t:'Comunidade e networking', d:'Essencial para desenvolvedores'},
+      {t:'Aprender o que não ensinam', d:'E eu aprendi com meu mentor'},
+      {t:'Transformar competência técnica', d:'em dinheiro e oportunidades'},
       ],
     logos:[] },
 
@@ -50,23 +51,11 @@ window.SLIDES = [
     titulo:'O ciclo advance',
     itens:[
       {t:'Dia 0: acesso liberado, vídeo de introdução e ficha de onboarding'},
-      {t:'Dias 2 a 5: onboarding 1:1 comigo. Saímos com a sua meta de 12 meses, o objetivo de 90 dias e tarefas'},
-      {t:'check-in semanal com retorno pessoal meu', cycle:true, cicloTexto:'12 meses'},
-      {t:'Pod, encontro ao vivo com hot seats e office hours abertas'},
-      {t:'Revisão do plano a cada 90 dias'} ] },
-	  
-  /* 7 — SUA SEMANA · 3:00 */
-  { tipo:'tabela', badge:'COMO FUNCIONA · SEMANA',
-    titulo:'Sua semana no programa',
-    colunas:['Quando','O que acontece','Seu tempo'],
-    linhas:[
-      ['Segunda ou Quarta', {t:'Check-in semanal:', d:'o que fiz, onde travei, próximo passo'}, '5 min'],
-      ['Terça ou quinta', {t:'Retorno pessoal meu', d:'sobre o seu check-in (áudio ou texto), em até 48h úteis'}, '5 min'],
-      ['3 vezes na semana', {t:'Office hours abertas:', d:'sala aberta, sem agendar, aparece quem precisa'}, 'opcional'],
-      ['Quarta', {t:'Encontro ao vivo de 2h:', d:'conteúdo + hot seats (fica gravado)'}, '2h'],
-      ['2x por mês', {t:'Seu pod:', d:'até 6 pessoas com objetivo parecido'}, '1h'],
-      ['Quando puder', {t:'Vídeos indicados pra sua fase'}, '~1h'] ],
-    nota:'Total: cerca de 4 horas por semana. Numa semana ruim, check-in + pod: pouco mais de 1 hora.' },
+      {t:'Semana 1: onboarding 1:1 comigo. Saímos com a sua meta de 12 meses, objetivos e tarefas'},
+      {t:'Check-in semanal com retorno pessoal meu', cycle:true, cicloTexto:'12 meses'},
+      {t:'Encontro ao vivo com hot seats e office hours abertas'},
+      {t:'Pods 2x por semana'} 
+	  ] },
 
   /* 8 — POD · HOT SEAT · OFFICE HOURS · 3:50 */
   { tipo:'duplo', badge:'COMO FUNCIONA · POD · HOT SEAT · OFFICE HOURS',
@@ -84,7 +73,6 @@ window.SLIDES = [
       'De 2h a 4h por semana: sala aberta, sem agendar. Aparece quem precisa',
       'Traz a dúvida da semana: a conversa difícil, a decisão travada, o CV antes de enviar',
       'Em grupo: você resolve a sua e aprende com a dos outros' ] } },
-
 
 
   /* 10 — RESULTADOS · 5:10 */
@@ -105,18 +93,31 @@ window.SLIDES = [
       'Ao fim de 90 dias, se achar que não avançou no objetivo que definimos juntos, eu devolvo tudo o que você pagou' ] } },
 
   /* 12 — TURMA FUNDADORA · 6:00 */
-  { tipo:'planos', badge:'TURMA FUNDADORA · 20 VAGAS',
+  { tipo:'planos', badge:'TURMA FUNDADORA · 30 VAGAS',
     titulo:'Turma Fundadora',
-    sub:'Entrada dia [DATA] · fecha em [DATA] ou quando lotar, o que vier primeiro.',
+    sub:'',
     planos:[
-      { nome:'Programa ADVANCE', preco:'R$ 197/mês', ano:'ou R$ 1.970 no Pix: 12 meses pelo preço de 10', destaque:true, itens:[
-        'Preço travado enquanto você continuar. Depois: R$ 247/mês',
-        'Boleto ou cartão. Mínimo de 3 meses, os 90 dias da garantia',
+      { nome:'Programa ADVANCE', de:'R$297/mês', preco:'R$247/mês', ano:'ou R$ 2.470 + taxa de matrícula de R$250', destaque:true, itens:[
+        'Boleto ou cartão. **Mínimo de 3 meses**, os 90 dias da garantia',
+        'Valor menor de renovação',
         'Nota fiscal pra reembolso pela sua empresa',
-        'Só fundador: onboarding 1:1 de 60 min e voz ativa no formato' ] },
-      { nome:'A conta', preco:'R$ 6,57 por dia', ano:'R$ 197/mês ÷ 30 dias', itens:[
+        'Só fundador: voz ativa no formato' ] },
+      { nome:'A conta', preco:'R$ 8,23 por dia', ano:'R$ 247/mês ÷ 30 dias', itens:[
         'Um aumento de R$ 2.000/mês pagaria os 12 meses em 5 semanas',
         'Uma pós ou MBA em tech passa de R$ 10 mil, sem personalização',
-        'Quanto custa ficar mais 12 meses no mesmo lugar?' ] } ] },
+         ] } ] },
+
+  /* 13 — PERGUNTA */
+  { tipo:'checkpoint', titulo:'Imagine onde você pode estar em 12 meses se **começar hoje**.' },
+
+  /* 14 — OFERTA FINAL */
+  { tipo:'planos', badge:'TURMA FUNDADORA · 30 VAGAS',
+    titulo:'Turma Fundadora',
+    sub:'',
+    planos:[
+      { nome:'Programa ADVANCE', de:'R$247/mês', preco:'R$199/mês', ano:'+ taxa de matrícula de R$250', destaque:true, itens:[
+        'Boleto ou cartão. Mínimo de 3 meses',
+        '**Garantia de 90 dias**: se empenhou sem resultado, devolvo tudo'
+        ] } ] },
 
 ];
